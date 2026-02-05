@@ -344,6 +344,263 @@ AIモデル（Google AI Studio、Claude Code等）に本ドキュメントを参
 
 ---
 
+## React/Next.js コンポーネント版テンプレート
+
+以下はNext.js App Router用のReactコンポーネント版テンプレートです。
+`website-component-format.md`で定義されたコンポーネントを使用します。
+
+### ページファイル構成
+
+```
+app/
+├── articles/
+│   └── {記事スラッグ}/
+│       └── page.tsx
+```
+
+### page.tsx テンプレート
+
+```tsx
+import { Metadata } from "next"
+import PageLayout from "@/components/layout/PageLayout"
+import ArticleHeader from "@/components/article/ArticleHeader"
+import ArticleContent from "@/components/article/ArticleContent"
+import TableOfContents from "@/components/article/TableOfContents"
+import PromptBlock from "@/components/article/PromptBlock"
+import PromptInfoCard from "@/components/article/PromptInfoCard"
+import ResponseExample from "@/components/article/ResponseExample"
+import AffiliateBox from "@/components/cta/AffiliateBox"
+import RelatedArticles from "@/components/cta/RelatedArticles"
+
+// メタデータ設定
+export const metadata: Metadata = {
+  title: "{記事タイトル}",
+  description: "{メタディスクリプション：120字以内でメインKWを含む}",
+  openGraph: {
+    title: "{記事タイトル}",
+    description: "{メタディスクリプション}",
+    images: ["{アイキャッチ画像URL}"],
+    type: "article",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "{記事タイトル}",
+    description: "{メタディスクリプション}",
+    images: ["{アイキャッチ画像URL}"],
+  },
+}
+
+// ヘッダー・フッター設定（実際の値に置き換え）
+const headerProps = {
+  logoSrc: "/logo.svg",
+  siteName: "AIプロンプト活用ガイド",
+  navItems: [
+    { label: "ホーム", href: "/" },
+    { label: "プロンプト一覧", href: "/prompts" },
+    { label: "使い方ガイド", href: "/guide" },
+  ],
+}
+
+const footerProps = {
+  categories: [
+    {
+      name: "ビジネス文書",
+      articles: [
+        { title: "ビジネスメール作成", href: "/articles/business-email" },
+        // ...
+      ],
+    },
+    // ...他のカテゴリ
+  ],
+  copyright: "© 2025 AIプロンプト活用ガイド",
+}
+
+// 目次データ
+const tocItems = [
+  { id: "intro", title: "{導入見出し}", level: 2 },
+  { id: "about-chatgpt", title: "ChatGPTとは？初心者向けにわかりやすく解説", level: 2 },
+  { id: "prompts", title: "{テーマ}に使えるプロンプト4選", level: 2 },
+  { id: "prompt-1", title: "プロンプト1：{タイトル}", level: 3 },
+  { id: "prompt-2", title: "プロンプト2：{タイトル}", level: 3 },
+  { id: "prompt-3", title: "プロンプト3：{タイトル}", level: 3 },
+  { id: "prompt-4", title: "プロンプト4：{タイトル}", level: 3 },
+  { id: "tips", title: "プロンプトをさらに活用するコツ", level: 2 },
+  { id: "caution", title: "ChatGPT利用時の注意点", level: 2 },
+  { id: "summary", title: "まとめ", level: 2 },
+]
+
+export default function ArticlePage() {
+  return (
+    <PageLayout headerProps={headerProps} footerProps={footerProps}>
+      <ArticleHeader
+        title="{記事タイトル}"
+        publishDate="{YYYY-MM-DD}"
+        updateDate="{YYYY-MM-DD}"
+        eyecatchSrc="{アイキャッチ画像URL}"
+        eyecatchAlt="{記事タイトル}"
+      />
+
+      <TableOfContents items={tocItems} />
+
+      <ArticleContent>
+        {/* 導入部 */}
+        <section id="intro">
+          <h2>{メインKWを含む導入見出し}</h2>
+          <p>
+            「ChatGPTを使ってみたけれど、どう指示すればいいかわからない…」
+            そんな悩みをお持ちの皆さんに向けて、この記事では【テーマ】に使える
+            実践的なプロンプトを4つご紹介します。
+          </p>
+          <p>コピペするだけで使えるので、初心者の方でも安心です。</p>
+        </section>
+
+        {/* ChatGPT基礎説明 */}
+        <section id="about-chatgpt">
+          <h2>ChatGPTとは？初心者向けにわかりやすく解説</h2>
+          <p>
+            ChatGPTは、OpenAIが開発したAIチャットサービスです。
+            質問を入力するだけで、自然な日本語で回答を得ることができます。
+          </p>
+          <p>
+            基本機能は無料で利用でき、より高精度な回答が必要な方には
+            ChatGPT Plus（月額20ドル）がおすすめです。
+          </p>
+        </section>
+
+        {/* プロンプトセクション */}
+        <section id="prompts">
+          <h2>{テーマ}に使えるプロンプト4選</h2>
+
+          {/* プロンプト1 */}
+          <div id="prompt-1" className="mt-8">
+            <h3>プロンプト1：{プロンプトの目的を示すタイトル}</h3>
+
+            <PromptInfoCard type="response" title="どんな回答が返ってくるか">
+              このプロンプトを使うとChatGPTがどのような回答を生成するか、
+              具体的かつ簡潔に説明する。50〜100字程度。
+            </PromptInfoCard>
+
+            <PromptInfoCard type="usecase" title="こんなときに使おう">
+              このプロンプトを使う具体的なシチュエーション・タイミングを説明。
+              読者が「自分もこの場面あるな」と思えるよう具体的に記述。
+            </PromptInfoCard>
+
+            <PromptBlock title="プロンプト">
+{`あなたは【役割】の専門家です。
+以下の条件で【タスク】を作成してください。
+
+## 入力情報
+- 【項目1を入力】
+- 【項目2を入力】
+
+## 出力形式
+【希望する形式を指定】`}
+            </PromptBlock>
+
+            <ResponseExample title="回答例">
+{`ChatGPTの実際の出力例をここに記載します。
+そのまま添付し、編集は最小限に留めます。`}
+            </ResponseExample>
+
+            <PromptInfoCard type="tips" title="ポイント解説">
+              <ul>
+                <li>このプロンプトを使う際のコツ1</li>
+                <li>カスタマイズ方法2</li>
+                <li>効果を高めるポイント3</li>
+              </ul>
+            </PromptInfoCard>
+          </div>
+
+          {/* プロンプト2〜4も同様の構成で記述 */}
+        </section>
+
+        {/* 活用のコツ */}
+        <section id="tips">
+          <h2>プロンプトをさらに活用するコツ</h2>
+          {/* コンテンツ */}
+        </section>
+
+        {/* 注意事項 */}
+        <section id="caution">
+          <h2>ChatGPT利用時の注意点</h2>
+          {/* コンテンツ */}
+        </section>
+
+        {/* まとめ */}
+        <section id="summary">
+          <h2>まとめ</h2>
+          {/* コンテンツ */}
+        </section>
+      </ArticleContent>
+
+      {/* CTAセクション */}
+      <AffiliateBox
+        title="ChatGPTをもっと活用したい方へ"
+        description="ChatGPT Plusなら、より高精度なGPT-4が使い放題。月額20ドルでビジネス文書作成の効率が大幅アップします。"
+        buttonText="ChatGPT Plusを詳しく見る"
+        buttonHref="https://chat.openai.com/subscribe"
+        features={[
+          "GPT-4が使い放題",
+          "応答速度が高速",
+          "新機能への優先アクセス",
+        ]}
+      />
+
+      {/* 関連記事 */}
+      <RelatedArticles
+        articles={[
+          {
+            title: "関連記事タイトル1",
+            href: "/articles/related-1",
+            description: "関連記事の一行説明",
+          },
+          // ...
+        ]}
+      />
+    </PageLayout>
+  )
+}
+```
+
+### プロンプトセクションの記述パターン
+
+各プロンプトは以下の5つのコンポーネントで構成します：
+
+| 順序 | コンポーネント | type | 用途 |
+|------|---------------|------|------|
+| 1 | PromptInfoCard | response | どんな回答が返ってくるかの説明 |
+| 2 | PromptInfoCard | usecase | こんなときに使おうの説明 |
+| 3 | PromptBlock | - | コピー可能なプロンプト本文 |
+| 4 | ResponseExample | - | ChatGPTの回答例 |
+| 5 | PromptInfoCard | tips | ポイント解説（リスト形式推奨） |
+
+### PromptInfoCard の3タイプ
+
+```tsx
+// タイプ1: response（どんな回答が返ってくるか）
+// 背景色: #EBF5FF, ボーダー: #5B9BD5, アイコン: MessageCircle
+<PromptInfoCard type="response" title="どんな回答が返ってくるか">
+  このプロンプトで得られる回答の概要を説明
+</PromptInfoCard>
+
+// タイプ2: usecase（こんなときに使おう）
+// 背景色: #FFF8E6, ボーダー: #FF9800, アイコン: Lightbulb
+<PromptInfoCard type="usecase" title="こんなときに使おう">
+  プロンプトを使う具体的なシチュエーションを説明
+</PromptInfoCard>
+
+// タイプ3: tips（ポイント解説）
+// 背景色: #E8F5E9, ボーダー: #4CAF50, アイコン: CheckCircle
+<PromptInfoCard type="tips" title="ポイント解説">
+  <ul>
+    <li>ポイント1</li>
+    <li>ポイント2</li>
+  </ul>
+</PromptInfoCard>
+```
+
+---
+
 ## 記事間の内部リンク設計
 
 ### 10記事のリンク構造
@@ -403,11 +660,20 @@ AIモデル（Google AI Studio、Claude Code等）に本ドキュメントを参
 - [ ] アフィリエイトリンク設置箇所が明示されている
 - [ ] AdSense配置に適切な余白がある
 
-### 技術
+### 技術（HTML版）
 - [ ] 作成日・更新日が記載されている
 - [ ] OGP設定が完了している
 - [ ] 構造化データ（JSON-LD）が設定されている
 - [ ] アイキャッチ画像が生成・設定されている
+
+### 技術（React/Next.js版）
+- [ ] ファイル拡張子が.tsx
+- [ ] Metadata APIでメタ情報を設定
+- [ ] 全プロンプトでPromptInfoCardを3タイプ使用（response/usecase/tips）
+- [ ] PromptBlockとResponseExampleでコード表示
+- [ ] "use client"が必要なコンポーネントに付与
+- [ ] lucide-reactアイコンを使用
+- [ ] cn()ユーティリティでクラス名を結合
 
 ---
 
