@@ -4,28 +4,30 @@ import { Noto_Sans_JP } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const notoSansJP = Noto_Sans_JP({ 
+const notoSansJP = Noto_Sans_JP({
   subsets: ['latin'],
   weight: ['400', '700'],
 })
 
 export const metadata: Metadata = {
-  title: '会議議事録をChatGPTで自動作成するプロンプト4選【コピペOK】 | AIプロンプト活用ガイド',
-  description: 'ChatGPTを使って会議の議事録を効率的に作成する方法を解説。コピペで使えるプロンプト4選と実際の回答例を紹介。初心者でも簡単に議事録作成の時間を大幅短縮できます。',
-  keywords: 'ChatGPT, 議事録, プロンプト, 会議, 自動作成, AI',
+  title: {
+    default: 'AIプロンプト活用ガイド｜コピペで使えるChatGPTプロンプト集',
+    template: '%s | AIプロンプト活用ガイド',
+  },
+  description: 'ChatGPTやAIを活用したプロンプト集。ビジネスメール、議事録作成、敬語文章など、コピペで使える実践的なプロンプトを無料で提供しています。',
+  keywords: 'ChatGPT, プロンプト, AI, ビジネス, 無料, 使い方',
   openGraph: {
-    title: '会議議事録をChatGPTで自動作成するプロンプト4選【コピペOK】',
-    description: 'ChatGPTを使って会議の議事録を効率的に作成する方法を解説。コピペで使えるプロンプト4選と実際の回答例を紹介。',
-    type: 'article',
-    images: ['/images/meeting-minutes-eyecatch.jpg'],
+    title: 'AIプロンプト活用ガイド｜コピペで使えるChatGPTプロンプト集',
+    description: 'ChatGPTやAIを活用したプロンプト集。ビジネスメール、議事録作成、敬語文章など、コピペで使える実践的なプロンプトを無料で提供しています。',
+    type: 'website',
+    siteName: 'AIプロンプト活用ガイド',
+    locale: 'ja_JP',
   },
   twitter: {
     card: 'summary_large_image',
-    title: '会議議事録をChatGPTで自動作成するプロンプト4選【コピペOK】',
-    description: 'ChatGPTを使って会議の議事録を効率的に作成する方法を解説。',
-    images: ['/images/meeting-minutes-eyecatch.jpg'],
+    title: 'AIプロンプト活用ガイド｜コピペで使えるChatGPTプロンプト集',
+    description: 'ChatGPTやAIを活用したプロンプト集。コピペで使える実践的なプロンプトを無料で提供。',
   },
-    generator: 'v0.app'
 }
 
 export default function RootLayout({
