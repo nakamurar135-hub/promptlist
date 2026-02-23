@@ -106,7 +106,21 @@ export async function getSubscriptionByUserId(userId: number) {
 }
 
 /**
- * サブスクリプションを作成または更新する
+ * Stripe Customer ID からサブスクリプション情報を取得する
+ */
+export async function getUserByStripeCustomerId(stripeCustomerId: string) {
+  const db = await getDb();
+  if (!db) return undefined;
+  const result = await db
+    .select()
+    .from(subscriptions)
+    .where(eq(subscriptions.stripeCustomerId, stripeCustomerId))
+    .limit(1);
+  return result.length > 0 ? result[0] : undefined;
+}
+
+/**
+ * サブスクリプションを作成または更新する（userId をキーに upsert）
  */
 export async function upsertSubscription(data: InsertSubscription): Promise<void> {
   const db = await getDb();
@@ -120,9 +134,54 @@ export async function upsertSubscription(data: InsertSubscription): Promise<void
       plan: data.plan,
       isActive: data.isActive,
       expiresAt: data.expiresAt,
+      stripeCustomerId: data.stripeCustomerId,
+      stripeSubscriptionId: data.stripeSubscriptionId,
       updatedAt: new Date(),
     },
   });
+}
+
+/**
+ * Stripe Subscription ID でサブスクリプションを更新する
+ */
+export async function updateSubscriptionByStripeId(
+  stripeSubscriptionId: string,
+  data: Partial<InsertSubscription>
+): Promise<void> {
+  const db = await getDb();
+  if (!db) return;
+  await db
+    .update(subscriptions)
+    .set({ ...data, updatedAt: new Date() })
+    .where(eq(subscriptions.stripeSubscriptionId, stripeSubscriptionId));
+}
+
+/**
+ * ユーザーの stripeCustomerId をサブスクリプションレコードに保存する
+ */
+export async function updateUserStripeCustomerId(
+  userId: number,
+  stripeCustomerId: string
+): Promise<void> {
+  const db = await getDb();
+  if (!db) return;
+  await db
+    .insert(subscriptions)
+    .values({
+      userId,
+      plan: "free",
+      isActive: true,
+      startedAt: new Date(),
+      expiresAt: null,
+      stripeCustomerId,
+      stripeSubscriptionId: null,
+    })
+    .onDuplicateKeyUpdate({
+      set: {
+        stripeCustomerId,
+        updatedAt: new Date(),
+      },
+    });
 }
 
 /**

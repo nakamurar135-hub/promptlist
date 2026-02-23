@@ -3,6 +3,7 @@ import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { protectedProcedure, publicProcedure, router } from "./_core/trpc";
 import { getSubscriptionByUserId, isUserPremium, upsertSubscription } from "./db";
+import { createCheckoutSession, createPortalSession } from "./stripe";
 
 export const appRouter = router({
   system: systemRouter,
@@ -47,6 +48,35 @@ export const appRouter = router({
         expiresAt: null,
       });
       return { success: true };
+    }),
+
+    /**
+     * Stripe Checkout Session を作成してリダイレクト URL を返す
+     */
+    createCheckoutSession: protectedProcedure.mutation(async ({ ctx }) => {
+      const origin =
+        (ctx.req.headers.origin as string | undefined) ??
+        `${ctx.req.protocol}://${ctx.req.headers.host}`;
+      const url = await createCheckoutSession({
+        userId: ctx.user.id,
+        userEmail: ctx.user.email,
+        origin,
+      });
+      return { url };
+    }),
+
+    /**
+     * Stripe Customer Portal Session を作成して解約・変更 URL を返す
+     */
+    createPortalSession: protectedProcedure.mutation(async ({ ctx }) => {
+      const origin =
+        (ctx.req.headers.origin as string | undefined) ??
+        `${ctx.req.protocol}://${ctx.req.headers.host}`;
+      const url = await createPortalSession({
+        userId: ctx.user.id,
+        origin,
+      });
+      return { url };
     }),
   }),
 });

@@ -10,6 +10,7 @@ import SkillsList from "./pages/skills/SkillsList";
 import AiAgentBasics from "./pages/skills/AiAgentBasics";
 import PromptEngineering from "./pages/skills/PromptEngineering";
 import Upgrade from "./pages/account/Upgrade";
+import Account from "./pages/account/Account";
 
 function Router() {
   return (
@@ -26,6 +27,7 @@ function Router() {
       <Route path="/skills/prompt-engineering" component={PromptEngineering} />
 
       {/* アカウント */}
+      <Route path="/account" component={Account} />
       <Route path="/account/upgrade" component={Upgrade} />
 
       {/* 404 */}

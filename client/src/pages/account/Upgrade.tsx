@@ -1,11 +1,11 @@
 import PageLayout from "@/components/layout/PageLayout";
-import { Crown, CheckCircle, ArrowRight, Zap } from "lucide-react";
+import { Crown, CheckCircle, ArrowRight, Zap, AlertCircle, PartyPopper } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
 import { getLoginUrl } from "@/const";
-import { Link } from "wouter";
+import { Link, useSearch } from "wouter";
 
 const freeFeatures = [
   "初心者向けプロンプト記事（全記事）",
@@ -24,12 +24,27 @@ const premiumFeatures = [
 export default function Upgrade() {
   const { isAuthenticated, user } = useAuth();
   const utils = trpc.useUtils();
+  const search = useSearch();
+  const params = new URLSearchParams(search);
+  const isSuccess = params.get("success") === "true";
+  const isCanceled = params.get("canceled") === "true";
 
   const { data: subscription, isLoading } = trpc.subscription.getMySubscription.useQuery(undefined, {
     enabled: isAuthenticated,
   });
   const isPremium = !!(subscription?.plan === "premium" && subscription?.isActive);
 
+  // Stripe Checkout Session を作成してリダイレクト
+  const checkoutMutation = trpc.subscription.createCheckoutSession.useMutation({
+    onSuccess: ({ url }) => {
+      window.location.href = url;
+    },
+    onError: (err) => {
+      toast.error(`エラーが発生しました: ${err.message}`);
+    },
+  });
+
+  // デモ用: activatePremium（Stripeなしで即時プレミアム化）
   const activateMutation = trpc.subscription.activatePremium.useMutation({
     onSuccess: () => {
       toast.success("プレミアム会員になりました！全ガイドが読み放題です。");
@@ -41,9 +56,35 @@ export default function Upgrade() {
     },
   });
 
+  const handleUpgrade = () => {
+    checkoutMutation.mutate();
+  };
+
   return (
     <PageLayout>
       <div className="max-w-3xl mx-auto px-4 py-10">
+        {/* 決済完了バナー */}
+        {isSuccess && (
+          <div className="mb-8 bg-green-50 border border-green-200 rounded-xl p-5 flex items-start gap-3">
+            <PartyPopper className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
+            <div>
+              <p className="font-bold text-green-800">プレミアム会員へのアップグレードが完了しました！</p>
+              <p className="text-sm text-green-700 mt-1">すべてのプレミアムコンテンツにアクセスできるようになりました。</p>
+            </div>
+          </div>
+        )}
+
+        {/* キャンセルバナー */}
+        {isCanceled && (
+          <div className="mb-8 bg-amber-50 border border-amber-200 rounded-xl p-5 flex items-start gap-3">
+            <AlertCircle className="w-6 h-6 text-amber-600 flex-shrink-0 mt-0.5" />
+            <div>
+              <p className="font-bold text-amber-800">決済がキャンセルされました</p>
+              <p className="text-sm text-amber-700 mt-1">いつでもアップグレードできます。ご不明な点はお気軽にお問い合わせください。</p>
+            </div>
+          </div>
+        )}
+
         {/* ヘッダー */}
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 bg-[#FFF8E6] text-[#FF9800] px-4 py-2 rounded-full text-sm font-bold mb-4">
@@ -69,7 +110,9 @@ export default function Upgrade() {
                 <p className="font-bold text-[#333333]">{user?.name ?? "ユーザー"}</p>
                 <p className="text-sm text-[#666666]">
                   現在のプラン：
-                  {isPremium ? (
+                  {isLoading ? (
+                    <span className="text-[#999999] ml-1">読み込み中...</span>
+                  ) : isPremium ? (
                     <span className="text-[#FF9800] font-bold ml-1">プレミアム会員</span>
                   ) : (
                     <span className="text-[#666666] ml-1">無料会員</span>
@@ -81,7 +124,7 @@ export default function Upgrade() {
         )}
 
         {/* プラン比較 */}
-        <div className="grid md:grid-cols-2 gap-5 mb-10">
+        <div className="grid md:grid-cols-2 gap-6 mb-10">
           {/* 無料プラン */}
           <div className="bg-white border border-[#E5E7EB] rounded-xl p-6">
             <div className="mb-4">
@@ -120,7 +163,8 @@ export default function Upgrade() {
                 <Crown className="w-5 h-5 text-[#FF9800]" />
                 <h2 className="text-lg font-bold">プレミアムプラン</h2>
               </div>
-              <p className="text-3xl font-bold">¥980<span className="text-sm font-normal opacity-70">/月</span></p>
+              <p className="text-3xl font-bold">¥500<span className="text-sm font-normal opacity-70">/月</span></p>
+              <p className="text-xs opacity-60 mt-1">税込・いつでも解約可能</p>
             </div>
             <ul className="space-y-2 mb-6">
               {premiumFeatures.map((f) => (
@@ -140,23 +184,34 @@ export default function Upgrade() {
               </a>
             )}
             {isAuthenticated && !isPremium && (
-              <Button
-                className="w-full bg-[#FF9800] hover:bg-[#E68900] text-white font-bold"
-                onClick={() => activateMutation.mutate()}
-                disabled={activateMutation.isPending}
-              >
-                {activateMutation.isPending ? (
-                  <span className="flex items-center gap-2">
-                    <Zap className="w-4 h-4 animate-spin" />
-                    処理中...
-                  </span>
-                ) : (
-                  <span className="flex items-center gap-2">
-                    <Crown className="w-4 h-4" />
-                    プレミアムにアップグレード（デモ）
-                  </span>
-                )}
-              </Button>
+              <div className="space-y-2">
+                <Button
+                  className="w-full bg-[#FF9800] hover:bg-[#E68900] text-white font-bold"
+                  onClick={handleUpgrade}
+                  disabled={checkoutMutation.isPending}
+                >
+                  {checkoutMutation.isPending ? (
+                    <span className="flex items-center gap-2">
+                      <Zap className="w-4 h-4 animate-spin" />
+                      Stripeへ移動中...
+                    </span>
+                  ) : (
+                    <span className="flex items-center gap-2">
+                      <Crown className="w-4 h-4" />
+                      プレミアムにアップグレード（¥500/月）
+                    </span>
+                  )}
+                </Button>
+                {/* デモ用ボタン（Stripeキー未設定時のフォールバック） */}
+                <Button
+                  variant="ghost"
+                  className="w-full text-white/60 hover:text-white hover:bg-white/10 text-xs"
+                  onClick={() => activateMutation.mutate()}
+                  disabled={activateMutation.isPending}
+                >
+                  デモ用：決済なしでプレミアムを試す
+                </Button>
+              </div>
             )}
             {isPremium && (
               <Button className="w-full bg-[#4CAF50] hover:bg-[#43A047] text-white font-bold" disabled>
@@ -196,7 +251,7 @@ export default function Upgrade() {
         </div>
 
         <p className="text-xs text-center text-[#999999]">
-          ※ 現在はデモ版のため、「プレミアムにアップグレード」ボタンで無料でプレミアム機能をお試しいただけます。
+          ※ 決済はStripeの安全な決済システムを使用しています。クレジットカード情報は当サイトに保存されません。
         </p>
       </div>
     </PageLayout>
