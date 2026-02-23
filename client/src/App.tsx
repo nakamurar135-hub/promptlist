@@ -5,31 +5,40 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
+import ChatgptMeetingMinutes from "./pages/articles/ChatgptMeetingMinutes";
+import SkillsList from "./pages/skills/SkillsList";
+import AiAgentBasics from "./pages/skills/AiAgentBasics";
+import PromptEngineering from "./pages/skills/PromptEngineering";
+import Upgrade from "./pages/account/Upgrade";
 
 function Router() {
-  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
+      {/* トップページ */}
+      <Route path="/" component={Home} />
+
+      {/* 初心者向け記事 */}
+      <Route path="/articles/chatgpt-meeting-minutes" component={ChatgptMeetingMinutes} />
+
+      {/* 中級者向けスキルガイド */}
+      <Route path="/skills" component={SkillsList} />
+      <Route path="/skills/ai-agent-basics" component={AiAgentBasics} />
+      <Route path="/skills/prompt-engineering" component={PromptEngineering} />
+
+      {/* アカウント */}
+      <Route path="/account/upgrade" component={Upgrade} />
+
+      {/* 404 */}
+      <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>
   );
 }
 
-// NOTE: About Theme
-// - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
-//   to keep consistent foreground/background color across components
-// - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
-
 function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider
-        defaultTheme="light"
-        // switchable
-      >
+      <ThemeProvider defaultTheme="light">
         <TooltipProvider>
           <Toaster />
           <Router />
