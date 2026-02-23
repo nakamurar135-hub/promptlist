@@ -15,6 +15,13 @@
       "when": 1771820231936,
       "tag": "0001_handy_black_bolt",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1771861241166,
+      "tag": "0002_eminent_mathemanic",
+      "breakpoints": true
     }
   ]
 }

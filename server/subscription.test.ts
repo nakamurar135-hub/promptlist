@@ -90,25 +90,10 @@ describe("subscription.checkPremium", () => {
   });
 });
 
-describe("subscription.activatePremium", () => {
-  beforeEach(() => {
-    vi.clearAllMocks();
-  });
-
-  it("プレミアムを有効化してsuccess: trueを返す", async () => {
-    vi.mocked(upsertSubscription).mockResolvedValue(undefined);
-
+describe("subscription.getMySubscription", () => {
+  it("未登録ユーザーはnullを返す", async () => {
     const caller = appRouter.createCaller(createAuthContext());
-    const result = await caller.subscription.activatePremium();
-
-    expect(result).toEqual({ success: true });
-    expect(upsertSubscription).toHaveBeenCalledWith(
-      expect.objectContaining({
-        userId: 1,
-        plan: "premium",
-        isActive: true,
-        expiresAt: null,
-      })
-    );
+    const result = await caller.subscription.getMySubscription();
+    expect(result).toBeNull();
   });
 });

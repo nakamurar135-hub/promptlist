@@ -87,27 +87,49 @@ export async function getUserByOpenId(openId: string) {
   return result.length > 0 ? result[0] : undefined;
 }
 
-// ===== サブスクリプション関連 =====
-
-/**
- * ユーザーのサブスクリプション情報を取得する
- */
-export async function getSubscriptionByUserId(userId: number) {
+export async function getUserById(userId: number) {
   const db = await getDb();
   if (!db) return undefined;
-
-  const result = await db
-    .select()
-    .from(subscriptions)
-    .where(eq(subscriptions.userId, userId))
-    .limit(1);
-
+  const result = await db.select().from(users).where(eq(users.id, userId)).limit(1);
   return result.length > 0 ? result[0] : undefined;
 }
 
-/**
- * サブスクリプションを作成または更新する
- */
+/** StripeのCustomer IDでユーザーを検索する */
+export async function getUserByStripeCustomerId(stripeCustomerId: string) {
+  const db = await getDb();
+  if (!db) return undefined;
+  const result = await db.select().from(users).where(eq(users.stripeCustomerId, stripeCustomerId)).limit(1);
+  return result.length > 0 ? result[0] : undefined;
+}
+
+/** ユーザーのstripeCustomerIdを更新する */
+export async function updateUserStripeCustomerId(userId: number, stripeCustomerId: string): Promise<void> {
+  const db = await getDb();
+  if (!db) return;
+  await db.update(users).set({ stripeCustomerId }).where(eq(users.id, userId));
+}
+
+// ===== サブスクリプション関連 =====
+
+export async function getSubscriptionByUserId(userId: number) {
+  const db = await getDb();
+  if (!db) return undefined;
+  const result = await db.select().from(subscriptions).where(eq(subscriptions.userId, userId)).limit(1);
+  return result.length > 0 ? result[0] : undefined;
+}
+
+/** Stripe Subscription IDでサブスクリプションを検索する */
+export async function getSubscriptionByStripeId(stripeSubscriptionId: string) {
+  const db = await getDb();
+  if (!db) return undefined;
+  const result = await db
+    .select()
+    .from(subscriptions)
+    .where(eq(subscriptions.stripeSubscriptionId, stripeSubscriptionId))
+    .limit(1);
+  return result.length > 0 ? result[0] : undefined;
+}
+
 export async function upsertSubscription(data: InsertSubscription): Promise<void> {
   const db = await getDb();
   if (!db) {
@@ -119,15 +141,23 @@ export async function upsertSubscription(data: InsertSubscription): Promise<void
     set: {
       plan: data.plan,
       isActive: data.isActive,
+      stripeSubscriptionId: data.stripeSubscriptionId,
+      stripePriceId: data.stripePriceId,
       expiresAt: data.expiresAt,
       updatedAt: new Date(),
     },
   });
 }
 
-/**
- * ユーザーがプレミアム会員かどうかを確認する
- */
+/** サブスクリプションをキャンセル（非アクティブ化）する */
+export async function deactivateSubscription(userId: number): Promise<void> {
+  const db = await getDb();
+  if (!db) return;
+  await db.update(subscriptions)
+    .set({ isActive: false, plan: "free", updatedAt: new Date() })
+    .where(eq(subscriptions.userId, userId));
+}
+
 export async function isUserPremium(userId: number): Promise<boolean> {
   const sub = await getSubscriptionByUserId(userId);
   if (!sub) return false;
