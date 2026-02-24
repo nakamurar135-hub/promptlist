@@ -1,0 +1,9 @@
+{
+  "query": "ALTER TABLE subscriptions ADD COLUMN stripeCustomerId varchar(255) DEFAULT NULL AFTER expiresAt;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user L3s8DnvcARoeJmP.root --database HYWipvKGk8fhK2qJHDDAqB --execute ALTER TABLE subscriptions ADD COLUMN stripeCustomerId varchar(255) DEFAULT NULL AFTER expiresAt;",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1817
+}
