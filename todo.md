@@ -39,20 +39,7 @@
 - [ ] タスク自動化の基礎ガイド（/skills/task-automation）
 - [ ] マルチエージェントシステムガイド（/skills/multi-agent-systems）
 - [ ] RAG実装ガイド（/skills/rag-implementation）
-- [x] Stripe決済連携（本番プレミアム課金）
-- [x] マイページ（/account）
+- [ ] Stripe決済連携（本番プレミアム課金）
+- [ ] マイページ（/account）
 - [ ] ビジネスメール記事など初心者向け記事の追加
 - [ ] promptlist.jpカスタムドメイン設定
-
-## Stripe決済連携
-- [x] webdev_add_feature stripe でスキャフォールド追加
-- [x] Stripe APIキー設定（STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET, VITE_STRIPE_PUBLISHABLE_KEY）
-- [x] DBスキーマにstripeCustomerId / stripeSubscriptionId / stripePriceId を追加
-- [x] pnpm db:push でマイグレーション実行
-- [x] Stripe Checkout Sessionの作成エンドポイント（tRPC）
-- [x] Stripe Customer Portalエンドポイント（tRPC）
-- [x] Stripe Webhookハンドラ（checkout.session.completed / customer.subscription.updated / deleted）
-- [x] アップグレードページをStripe Checkoutに接続
-- [x] 決済完了後のサンクスページ（/account?checkout=successで処理）
-- [x] マイページ（/account）にサブスクリプション状態・次回請求日・解約ボタン
-- [x] Stripe関連のVitestテスト（stripe.test.ts 4件）

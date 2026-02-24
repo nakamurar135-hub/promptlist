@@ -1,10 +1,11 @@
 "use client";
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Bot } from "lucide-react";
+import { Menu, X, Bot, Crown } from "lucide-react";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { getLoginUrl } from "@/const";
 import { Button } from "@/components/ui/button";
+import { trpc } from "@/lib/trpc";
 
 const navItems = [
   { label: "ホーム", href: "/" },
@@ -16,6 +17,11 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [location] = useLocation();
   const { user, isAuthenticated, logout } = useAuth();
+
+  const { data: subscription } = trpc.subscription.getMySubscription.useQuery(undefined, {
+    enabled: isAuthenticated,
+  });
+  const isPremium = !!(subscription?.plan === "premium" && subscription?.isActive);
 
   return (
     <header className="bg-[#5B9BD5] text-white shadow-md sticky top-0 z-50">
@@ -47,6 +53,18 @@ export default function Header() {
           <div className="hidden md:flex items-center gap-3">
             {isAuthenticated ? (
               <div className="flex items-center gap-3">
+                {!isPremium && (
+                  <Link href="/account/upgrade" className="flex items-center gap-1 bg-[#FF9800] hover:bg-[#E68900] text-white text-xs font-bold px-3 py-1.5 rounded-full transition-colors">
+                    <Crown className="w-3 h-3" />
+                    アップグレード
+                  </Link>
+                )}
+                {isPremium && (
+                  <span className="flex items-center gap-1 bg-[#FFF8E6] text-[#FF9800] text-xs font-bold px-3 py-1.5 rounded-full">
+                    <Crown className="w-3 h-3" />
+                    プレミアム
+                  </span>
+                )}
                 <Link href="/account" className="text-sm opacity-90 hover:opacity-100">
                   {user?.name ?? "マイページ"}
                 </Link>

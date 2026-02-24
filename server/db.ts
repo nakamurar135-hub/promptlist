@@ -87,49 +87,64 @@ export async function getUserByOpenId(openId: string) {
   return result.length > 0 ? result[0] : undefined;
 }
 
-export async function getUserById(userId: number) {
-  const db = await getDb();
-  if (!db) return undefined;
-  const result = await db.select().from(users).where(eq(users.id, userId)).limit(1);
-  return result.length > 0 ? result[0] : undefined;
-}
-
-/** StripeのCustomer IDでユーザーを検索する */
-export async function getUserByStripeCustomerId(stripeCustomerId: string) {
-  const db = await getDb();
-  if (!db) return undefined;
-  const result = await db.select().from(users).where(eq(users.stripeCustomerId, stripeCustomerId)).limit(1);
-  return result.length > 0 ? result[0] : undefined;
-}
-
-/** ユーザーのstripeCustomerIdを更新する */
-export async function updateUserStripeCustomerId(userId: number, stripeCustomerId: string): Promise<void> {
-  const db = await getDb();
-  if (!db) return;
-  await db.update(users).set({ stripeCustomerId }).where(eq(users.id, userId));
-}
-
 // ===== サブスクリプション関連 =====
 
+/**
+ * ユーザーのサブスクリプション情報を取得する
+ */
 export async function getSubscriptionByUserId(userId: number) {
   const db = await getDb();
   if (!db) return undefined;
-  const result = await db.select().from(subscriptions).where(eq(subscriptions.userId, userId)).limit(1);
-  return result.length > 0 ? result[0] : undefined;
+
+  const result = await db
+    .select()
+    .from(subscriptions)
+    .where(eq(subscriptions.userId, userId))
+    .limit(1);
+
+  if (result.length > 0) {
+    return result[0];
+  }
+
+  // Create default free subscription if not exists
+  try {
+    await db.insert(subscriptions).values({
+      userId,
+      plan: "free",
+      isActive: true,
+      startedAt: new Date(),
+      expiresAt: null,
+    });
+    
+    const newResult = await db
+      .select()
+      .from(subscriptions)
+      .where(eq(subscriptions.userId, userId))
+      .limit(1);
+    return newResult.length > 0 ? newResult[0] : undefined;
+  } catch (error) {
+    console.warn(`[Database] Failed to create subscription for userId ${userId}:`, error);
+    return undefined;
+  }
 }
 
-/** Stripe Subscription IDでサブスクリプションを検索する */
-export async function getSubscriptionByStripeId(stripeSubscriptionId: string) {
+/**
+ * Stripe Customer ID からサブスクリプション情報を取得する
+ */
+export async function getUserByStripeCustomerId(stripeCustomerId: string) {
   const db = await getDb();
   if (!db) return undefined;
   const result = await db
     .select()
     .from(subscriptions)
-    .where(eq(subscriptions.stripeSubscriptionId, stripeSubscriptionId))
+    .where(eq(subscriptions.stripeCustomerId, stripeCustomerId))
     .limit(1);
   return result.length > 0 ? result[0] : undefined;
 }
 
+/**
+ * サブスクリプションを作成または更新する（userId をキーに upsert）
+ */
 export async function upsertSubscription(data: InsertSubscription): Promise<void> {
   const db = await getDb();
   if (!db) {
@@ -141,23 +156,60 @@ export async function upsertSubscription(data: InsertSubscription): Promise<void
     set: {
       plan: data.plan,
       isActive: data.isActive,
-      stripeSubscriptionId: data.stripeSubscriptionId,
-      stripePriceId: data.stripePriceId,
       expiresAt: data.expiresAt,
+      stripeCustomerId: data.stripeCustomerId,
+      stripeSubscriptionId: data.stripeSubscriptionId,
       updatedAt: new Date(),
     },
   });
 }
 
-/** サブスクリプションをキャンセル（非アクティブ化）する */
-export async function deactivateSubscription(userId: number): Promise<void> {
+/**
+ * Stripe Subscription ID でサブスクリプションを更新する
+ */
+export async function updateSubscriptionByStripeId(
+  stripeSubscriptionId: string,
+  data: Partial<InsertSubscription>
+): Promise<void> {
   const db = await getDb();
   if (!db) return;
-  await db.update(subscriptions)
-    .set({ isActive: false, plan: "free", updatedAt: new Date() })
-    .where(eq(subscriptions.userId, userId));
+  await db
+    .update(subscriptions)
+    .set({ ...data, updatedAt: new Date() })
+    .where(eq(subscriptions.stripeSubscriptionId, stripeSubscriptionId));
 }
 
+/**
+ * ユーザーの stripeCustomerId をサブスクリプションレコードに保存する
+ */
+export async function updateUserStripeCustomerId(
+  userId: number,
+  stripeCustomerId: string
+): Promise<void> {
+  const db = await getDb();
+  if (!db) return;
+  await db
+    .insert(subscriptions)
+    .values({
+      userId,
+      plan: "free",
+      isActive: true,
+      startedAt: new Date(),
+      expiresAt: null,
+      stripeCustomerId,
+      stripeSubscriptionId: null,
+    })
+    .onDuplicateKeyUpdate({
+      set: {
+        stripeCustomerId,
+        updatedAt: new Date(),
+      },
+    });
+}
+
+/**
+ * ユーザーがプレミアム会員かどうかを確認する
+ */
 export async function isUserPremium(userId: number): Promise<boolean> {
   const sub = await getSubscriptionByUserId(userId);
   if (!sub) return false;

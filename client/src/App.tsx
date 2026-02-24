@@ -6,6 +6,11 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Home from "./pages/Home";
 import ChatgptMeetingMinutes from "./pages/articles/ChatgptMeetingMinutes";
+import ChatgptQuestionTemplate from "./pages/articles/ChatgptQuestionTemplate";
+import ChatgptBusinessEmail from "./pages/articles/ChatgptBusinessEmail";
+import ChatgptJobMotivation from "./pages/articles/ChatgptJobMotivation";
+import ChatgptBlogWriting from "./pages/articles/ChatgptBlogWriting";
+import ChatgptLineReply from "./pages/articles/ChatgptLineReply";
 import SkillsList from "./pages/skills/SkillsList";
 import AiAgentBasics from "./pages/skills/AiAgentBasics";
 import PromptEngineering from "./pages/skills/PromptEngineering";
@@ -20,6 +25,11 @@ function Router() {
 
       {/* 初心者向け記事 */}
       <Route path="/articles/chatgpt-meeting-minutes" component={ChatgptMeetingMinutes} />
+      <Route path="/articles/chatgpt-question-template" component={ChatgptQuestionTemplate} />
+      <Route path="/articles/chatgpt-business-email" component={ChatgptBusinessEmail} />
+      <Route path="/articles/chatgpt-job-motivation" component={ChatgptJobMotivation} />
+      <Route path="/articles/chatgpt-blog-writing" component={ChatgptBlogWriting} />
+      <Route path="/articles/chatgpt-line-reply" component={ChatgptLineReply} />
 
       {/* 中級者向けスキルガイド */}
       <Route path="/skills" component={SkillsList} />

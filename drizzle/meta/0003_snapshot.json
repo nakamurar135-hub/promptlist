@@ -1,7 +1,7 @@
 {
   "version": "5",
   "dialect": "mysql",
-  "id": "45fe400f-149d-4e95-80b7-3984be0933a8",
+  "id": "f2b05dfc-fd57-416a-9769-2d0564239a65",
   "prevId": "e0393fc6-1766-4ff9-949d-0d990e14a81f",
   "tables": {
     "subscriptions": {
@@ -37,20 +37,6 @@
           "autoincrement": false,
           "default": true
         },
-        "stripeSubscriptionId": {
-          "name": "stripeSubscriptionId",
-          "type": "varchar(64)",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false
-        },
-        "stripePriceId": {
-          "name": "stripePriceId",
-          "type": "varchar(64)",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false
-        },
         "startedAt": {
           "name": "startedAt",
           "type": "timestamp",
@@ -62,6 +48,20 @@
         "expiresAt": {
           "name": "expiresAt",
           "type": "timestamp",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "stripeCustomerId": {
+          "name": "stripeCustomerId",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "stripeSubscriptionId": {
+          "name": "stripeSubscriptionId",
+          "type": "varchar(255)",
           "primaryKey": false,
           "notNull": false,
           "autoincrement": false
@@ -94,7 +94,14 @@
           ]
         }
       },
-      "uniqueConstraints": {},
+      "uniqueConstraints": {
+        "subscriptions_userId_unique": {
+          "name": "subscriptions_userId_unique",
+          "columns": [
+            "userId"
+          ]
+        }
+      },
       "checkConstraint": {}
     },
     "users": {
@@ -142,13 +149,6 @@
           "notNull": true,
           "autoincrement": false,
           "default": "'user'"
-        },
-        "stripeCustomerId": {
-          "name": "stripeCustomerId",
-          "type": "varchar(64)",
-          "primaryKey": false,
-          "notNull": false,
-          "autoincrement": false
         },
         "createdAt": {
           "name": "createdAt",

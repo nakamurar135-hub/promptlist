@@ -1,0 +1,13 @@
+{
+  "query": "SELECT COUNT(*) as count FROM subscriptions;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway04.us-east-1.prod.aws.tidbcloud.com --port 4000 --user L3s8DnvcARoeJmP.root --database HYWipvKGk8fhK2qJHDDAqB --execute SELECT COUNT(*) as count FROM subscriptions;",
+  "rows": [
+    {
+      "count": "0"
+    }
+  ],
+  "messages": [],
+  "stdout": "count\n0\n",
+  "stderr": "",
+  "execution_time_ms": 1540
+}
