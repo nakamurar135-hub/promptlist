@@ -43,3 +43,8 @@
 - [ ] マイページ（/account）
 - [ ] ビジネスメール記事など初心者向け記事の追加
 - [ ] promptlist.jpカスタムドメイン設定
+
+## SEO改善
+- [x] /articles/chatgpt-question-template: document.titleを30〜60文字に設定
+- [x] /articles/chatgpt-question-template: meta descriptionを50〜160文字で設定
+- [x] /articles/chatgpt-question-template: meta keywordsを設定

@@ -8,6 +8,7 @@ import TableOfContents from "@/components/article/TableOfContents";
 import AffiliateBox from "@/components/article/AffiliateBox";
 import RelatedArticles from "@/components/article/RelatedArticles";
 import { AlertTriangle } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
 
 const tocItems = [
   { id: "intro", label: "ChatGPTへの質問、うまくいっていますか？" },
@@ -42,6 +43,12 @@ const relatedArticles = [
 ];
 
 export default function ChatgptQuestionTemplate() {
+  useSEO({
+    title: "ChatGPTへの質問テンプレート集｜初心者でも失敗しないプロンプトの書き方5選",
+    description: "ChatGPTにうまく質問できない方向けに、コピペで使える質問テンプレートを5種類紹介。情報収集・文章作成・アイデア出し・手順確認・比較相談の各シーンで使える実践的なプロンプト集です。",
+    keywords: "ChatGPT,質問テンプレート,プロンプト,AI,初心者,質問の仕方,コピペ,ChatGPT使い方,プロンプトエンジニアリング,AIプロンプト",
+  });
+
   return (
     <PageLayout>
       <div className="max-w-3xl mx-auto px-4 py-8">
