@@ -102,7 +102,30 @@ export async function getSubscriptionByUserId(userId: number) {
     .where(eq(subscriptions.userId, userId))
     .limit(1);
 
-  return result.length > 0 ? result[0] : undefined;
+  if (result.length > 0) {
+    return result[0];
+  }
+
+  // Create default free subscription if not exists
+  try {
+    await db.insert(subscriptions).values({
+      userId,
+      plan: "free",
+      isActive: true,
+      startedAt: new Date(),
+      expiresAt: null,
+    });
+    
+    const newResult = await db
+      .select()
+      .from(subscriptions)
+      .where(eq(subscriptions.userId, userId))
+      .limit(1);
+    return newResult.length > 0 ? newResult[0] : undefined;
+  } catch (error) {
+    console.warn(`[Database] Failed to create subscription for userId ${userId}:`, error);
+    return undefined;
+  }
 }
 
 /**

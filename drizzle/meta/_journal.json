@@ -15,12 +15,19 @@
       "when": 1771820231936,
       "tag": "0001_handy_black_bolt",
       "breakpoints": true
-    }
-    ,{
+    },
+    {
       "idx": 2,
       "version": "5",
       "when": 1771900000000,
       "tag": "0002_add_stripe_columns",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1771896949333,
+      "tag": "0003_medical_photon",
       "breakpoints": true
     }
   ]
