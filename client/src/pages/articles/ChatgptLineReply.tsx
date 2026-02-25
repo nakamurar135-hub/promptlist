@@ -8,6 +8,7 @@ import TableOfContents from "@/components/article/TableOfContents";
 import AffiliateBox from "@/components/article/AffiliateBox";
 import RelatedArticles from "@/components/article/RelatedArticles";
 import { AlertTriangle } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
 
 const tocItems = [
   { id: "intro", label: "LINEの返信、悩んでいませんか？" },
@@ -41,6 +42,12 @@ const relatedArticles = [
 ];
 
 export default function ChatgptLineReply() {
+  useSEO({
+    title: "ChatGPTでLINE返信を作るプロンプト｜カジュアルからフォーマルまで対応",
+    description: "返信に悉むLINEメッセージへの対応をChatGPTがサポート。友人へのカジュアルな返信から、上司へのフォーマルな返信、断りの文面まで、コピペで使えるプロンプト5選をご紹介します。",
+    keywords: "ChatGPT,LINE返信,プロンプト,SNS,断り方,上司への返信,カジュアル,フォーマル,AI,日常会話",
+  });
+
   return (
     <PageLayout>
       <div className="max-w-3xl mx-auto px-4 py-8">

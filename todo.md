@@ -48,3 +48,8 @@
 - [x] /articles/chatgpt-question-template: document.titleを30〜60文字に設定
 - [x] /articles/chatgpt-question-template: meta descriptionを50〜160文字で設定
 - [x] /articles/chatgpt-question-template: meta keywordsを設定
+- [x] /articles/chatgpt-meeting-minutes: useSEOフック適用（タイトル・description・keywords）
+- [x] /articles/chatgpt-business-email: useSEOフック適用（タイトル・description・keywords）
+- [x] /articles/chatgpt-line-reply: useSEOフック適用（タイトル・description・keywords）
+- [x] /articles/chatgpt-blog-writing: useSEOフック適用（タイトル・description・keywords）
+- [x] /articles/chatgpt-job-motivation: useSEOフック適用（タイトル・description・keywords）
