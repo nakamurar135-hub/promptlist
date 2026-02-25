@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { getLoginUrl } from "@/const";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { trpc } from "@/lib/trpc";
+import { useSEO } from "@/hooks/useSEO";
 
 const skillGuides = [
   {
@@ -55,6 +56,12 @@ const skillGuides = [
 ];
 
 export default function SkillsList() {
+  useSEO({
+    title: "AIエージェントスキルガイド｜中級者向け実践ガイド",
+    description: "AIエージェントとタスク自動化の実践スキルを体系的に習得。プロンプトエンジニアリング、マルチエージェント、RAG実装など、中級者向けの充実したスキルガイド。",
+    keywords: "AIエージェント,スキルガイド,プロンプトエンジニアリング,タスク自動化,中級者,AIスキル,実践,ガイド,中級",
+  });
+
   const { isAuthenticated } = useAuth();
   const { data: user } = trpc.auth.me.useQuery();
   const { data: subscription } = trpc.subscription.getMySubscription.useQuery(undefined, {

@@ -13,6 +13,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { getLoginUrl } from "@/const";
 import { useAuth } from "@/_core/hooks/useAuth";
+import { useSEO } from "@/hooks/useSEO";
 
 // 初心者向け記事データ
 const beginnerArticles = [
@@ -93,6 +94,12 @@ const skillGuides = [
 ];
 
 export default function Home() {
+  useSEO({
+    title: "AIプロンプト活用ガイド｜ChatGPT完全ガイド",
+    description: "ChatGPTをはじめとするAIツールを効果的に活用するためのプロンプト集・スキルガイドサイト。初心者向けから中級者向けまで、実践的なテンプレートと詳細な解説を提供します。",
+    keywords: "ChatGPT,プロンプト,AI,プロンプトエンジニアリング,AIエージェント,初心者向け,スキルガイド,テンプレート,効率化,ビジネス",
+  });
+
   const { isAuthenticated } = useAuth();
 
   return (

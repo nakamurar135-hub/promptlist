@@ -53,3 +53,9 @@
 - [x] /articles/chatgpt-line-reply: useSEOフック適用（タイトル・description・keywords）
 - [x] /articles/chatgpt-blog-writing: useSEOフック適用（タイトル・description・keywords）
 - [x] /articles/chatgpt-job-motivation: useSEOフック適用（タイトル・description・keywords）
+
+## トップページ・スキルガイドのSEO改善
+- [x] /: Home.tsxにuseSEOフック適用（タイトル・description・keywords）
+- [x] /skills: SkillsList.tsxにuseSEOフック適用（タイトル・description・keywords）
+- [x] /skills/ai-agent-basics: AiAgentBasics.tsxにuseSEOフック適用
+- [x] /skills/prompt-engineering: PromptEngineering.tsxにuseSEOフック適用

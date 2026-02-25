@@ -7,6 +7,7 @@ import TableOfContents from "@/components/article/TableOfContents";
 import RelatedArticles from "@/components/article/RelatedArticles";
 import { Link } from "wouter";
 import { ArrowLeft, Crown } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
 
 const tocItems = [
   { id: "what-is-agent", label: "AIエージェントとは何か" },
@@ -30,6 +31,12 @@ const relatedArticles = [
 ];
 
 export default function AiAgentBasics() {
+  useSEO({
+    title: "AIエージェント入門｜自律的にAIを動かす仕組み",
+    description: "AIエージェントとは何か、どのように動作するのかを基礎から解説します。ツール呼び出し、メモリ、計画立案など、エージェントの核心的な概念を学びます。",
+    keywords: "AIエージェント,入門,基礎,仕組み,ReAct,ツール呼び出し,自動化,中級,学習",
+  });
+
   return (
     <PageLayout>
       <div className="max-w-3xl mx-auto px-4 py-8">
