@@ -36,9 +36,9 @@
 - [x] auth.logout.test.ts（既存・通過確認）
 
 ## 今後の追加予定
-- [ ] タスク自動化の基礎ガイド（/skills/task-automation）
-- [ ] マルチエージェントシステムガイド（/skills/multi-agent-systems）
-- [ ] RAG実装ガイド（/skills/rag-implementation）
+- [x] タスク自動化の基础ガイド（/skills/task-automation）
+- [x] マルチエージェントシステムガイド（/skills/multi-agent-systems）
+- [x] RAG実装ガイド（/skills/rag-implementation）
 - [ ] Stripe決済連携（本番プレミアム課金）
 - [ ] マイページ（/account）
 - [ ] ビジネスメール記事など初心者向け記事の追加
