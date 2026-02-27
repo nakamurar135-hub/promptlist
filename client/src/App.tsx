@@ -14,6 +14,9 @@ import ChatgptLineReply from "./pages/articles/ChatgptLineReply";
 import SkillsList from "./pages/skills/SkillsList";
 import AiAgentBasics from "./pages/skills/AiAgentBasics";
 import PromptEngineering from "./pages/skills/PromptEngineering";
+import TaskAutomation from "./pages/skills/TaskAutomation";
+import MultiAgentSystems from "./pages/skills/MultiAgentSystems";
+import RagImplementation from "./pages/skills/RagImplementation";
 import Upgrade from "./pages/account/Upgrade";
 import Account from "./pages/account/Account";
 
@@ -35,6 +38,9 @@ function Router() {
       <Route path="/skills" component={SkillsList} />
       <Route path="/skills/ai-agent-basics" component={AiAgentBasics} />
       <Route path="/skills/prompt-engineering" component={PromptEngineering} />
+      <Route path="/skills/task-automation" component={TaskAutomation} />
+      <Route path="/skills/multi-agent-systems" component={MultiAgentSystems} />
+      <Route path="/skills/rag-implementation" component={RagImplementation} />
 
       {/* アカウント */}
       <Route path="/account" component={Account} />
