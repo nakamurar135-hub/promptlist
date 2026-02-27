@@ -19,6 +19,8 @@ import MultiAgentSystems from "./pages/skills/MultiAgentSystems";
 import RagImplementation from "./pages/skills/RagImplementation";
 import Upgrade from "./pages/account/Upgrade";
 import Account from "./pages/account/Account";
+import Privacy from "./pages/legal/Privacy";
+import Terms from "./pages/legal/Terms";
 
 function Router() {
   return (
@@ -45,6 +47,10 @@ function Router() {
       {/* アカウント */}
       <Route path="/account" component={Account} />
       <Route path="/account/upgrade" component={Upgrade} />
+
+      {/* 法務 */}
+      <Route path="/privacy" component={Privacy} />
+      <Route path="/terms" component={Terms} />
 
       {/* 404 */}
       <Route path="/404" component={NotFound} />

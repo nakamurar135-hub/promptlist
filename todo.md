@@ -60,3 +60,8 @@
 - [x] /skills: SkillsList.tsxにuseSEOフック適用（タイトル・description・keywords）
 - [x] /skills/ai-agent-basics: AiAgentBasics.tsxにuseSEOフック適用
 - [x] /skills/prompt-engineering: PromptEngineering.tsxにuseSEOフック適用
+
+## 法務・コンプライアンス
+- [x] プライバシーポリシーページ（/privacy）を作成
+- [x] 利用規約ページ（/terms）を作成（個人利用・商用利用OK、許可不要を明記）
+- [x] App.tsxに2つのルートを追加
