@@ -1,5 +1,6 @@
 import PageLayout from "@/components/layout/PageLayout";
 import { useSEO } from "@/hooks/useSEO";
+import { useOGP } from "@/hooks/useOGP";
 import { Link } from "wouter";
 import { ArrowLeft } from "lucide-react";
 
@@ -8,6 +9,11 @@ export default function Privacy() {
     title: "プライバシーポリシー｜AIプロンプト活用ガイド",
     description: "AIプロンプト活用ガイドのプライバシーポリシーです。個人情報の取り扱い、データ保護、Cookie使用について説明しています。",
     keywords: "プライバシーポリシー,個人情報保護,データ保護,Cookie",
+  });
+  useOGP({
+    title: "プライバシーポリシー｜AIプロンプト活用ガイド",
+    description: "個人情報の取り扱い、データ保護、Cookie使用について説明しています。",
+    type: "website",
   });
 
   return (

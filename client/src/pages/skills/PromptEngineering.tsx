@@ -11,6 +11,7 @@ import { ArrowLeft } from "lucide-react";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { trpc } from "@/lib/trpc";
 import { useSEO } from "@/hooks/useSEO";
+import { useOGP } from "@/hooks/useOGP";
 
 const tocItems = [
   { id: "overview", label: "プロンプトエンジニアリングとは" },
@@ -37,6 +38,11 @@ export default function PromptEngineering() {
     title: "プロンプトエンジニアリング実践｜AIの性能を最大化する",
     description: "Chain-of-ThoughtやFew-shotなど、AIの出力品質を勇敷に向上させる高度なテクニックを習会します。実務で即使える実践的な内容です。",
     keywords: "プロンプトエンジニアリング,Chain-of-Thought,Few-shot,高度,テクニック,AI,性能,最大化,実践",
+  });
+  useOGP({
+    title: "プロンプトエンジニアリング実践：AIの性能を最大化する技術",
+    description: "Chain-of-ThoughtやFew-shotなど、AIの出力品質を劇的に向上させる高度なテクニックを習得します。",
+    type: "article",
   });
 
   const { isAuthenticated } = useAuth();

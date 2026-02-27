@@ -9,6 +9,7 @@ import AffiliateBox from "@/components/article/AffiliateBox";
 import RelatedArticles from "@/components/article/RelatedArticles";
 import { AlertTriangle } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
+import { useOGP } from "@/hooks/useOGP";
 
 const tocItems = [
   { id: "intro", label: "会議の議事録作成、面倒ではありませんか？" },
@@ -45,6 +46,11 @@ export default function ChatgptMeetingMinutes() {
     title: "ChatGPTで議事録を作成するプロンプト4選｜コピペで使える実践例",
     description: "ChatGPTで議事録を作成するプロンプト4つをご紹介。会議メモからの自動生成、要点整理、フォーマル形式、アクションアイテム抽出まで、コピペで使える実践的なプロンプト集です。",
     keywords: "ChatGPT,議事録,プロンプト,会議記録,ビジネス文書,AI,自動生成,会議、議事録作成,ビジネス効率化",
+  });
+  useOGP({
+    title: "ChatGPTで議事録を作成するプロンプト4選｜コピペで使える実践例",
+    description: "ChatGPTで議事録を作成するプロンプト4つをご紹介。会議メモからの自動生成、要点整理、フォーマル形式、アクションアイテム抽出まで、コピペで使える実践的なプロンプト集です。",
+    type: "article",
   });
 
   return (

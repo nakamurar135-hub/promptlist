@@ -1,5 +1,6 @@
 import PageLayout from "@/components/layout/PageLayout";
 import { useSEO } from "@/hooks/useSEO";
+import { useOGP } from "@/hooks/useOGP";
 import { Link } from "wouter";
 import { ArrowLeft } from "lucide-react";
 
@@ -8,6 +9,11 @@ export default function Terms() {
     title: "利用規約｜AIプロンプト活用ガイド",
     description: "AIプロンプト活用ガイドの利用規約です。個人利用・商用利用OK、許可不要で自由に利用できます。",
     keywords: "利用規約,Terms of Service,個人利用,商用利用",
+  });
+  useOGP({
+    title: "利用規約｜AIプロンプト活用ガイド",
+    description: "個人利用・商用利用OK、許可不要で自由に利用できます。",
+    type: "website",
   });
 
   return (

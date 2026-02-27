@@ -8,6 +8,7 @@ import RelatedArticles from "@/components/article/RelatedArticles";
 import { Link } from "wouter";
 import { ArrowLeft, Crown } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
+import { useOGP } from "@/hooks/useOGP";
 
 const tocItems = [
   { id: "what-is-agent", label: "AIエージェントとは何か" },
@@ -35,6 +36,11 @@ export default function AiAgentBasics() {
     title: "AIエージェント入門｜自律的にAIを動かす仕組み",
     description: "AIエージェントとは何か、どのように動作するのかを基礎から解説します。ツール呼び出し、メモリ、計画立案など、エージェントの核心的な概念を学びます。",
     keywords: "AIエージェント,入門,基礎,仕組み,ReAct,ツール呼び出し,自動化,中級,学習",
+  });
+  useOGP({
+    title: "AIエージェント入門：自律的に動くAIの仕組みを理解する",
+    description: "AIエージェントとは何か、どのように動作するのかを基礎から解説します。",
+    type: "article",
   });
 
   return (

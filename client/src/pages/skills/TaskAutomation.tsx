@@ -8,6 +8,7 @@ import RelatedArticles from "@/components/article/RelatedArticles";
 import { Link } from "wouter";
 import { ArrowLeft } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
+import { useOGP } from "@/hooks/useOGP";
 
 const tocItems = [
   { id: "what-is-automation", label: "タスク自動化とは" },
@@ -35,6 +36,11 @@ export default function TaskAutomation() {
     title: "タスク自動化の基礎｜AIに複数ステップの作業を任せる",
     description: "AIエージェントを使った自動化の実践的な手法を学びます。ワークフロー設計から実装、エラーハンドリングまで、具体的な事例を交えて解説します。",
     keywords: "タスク自動化,AIエージェント,ワークフロー,自動化,実践,中級,基礎,効率化,実装",
+  });
+  useOGP({
+    title: "タスク自動化の基礎：AIに複数ステップの作業を任せる",
+    description: "AIエージェントを使って繰り返し作業を自動化する実践的な手法を学びます。",
+    type: "article",
   });
 
   return (

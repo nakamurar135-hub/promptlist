@@ -65,3 +65,8 @@
 - [x] プライバシーポリシーページ（/privacy）を作成
 - [x] 利用規約ページ（/terms）を作成（個人利用・商用利用OK、許可不要を明記）
 - [x] App.tsxに2つのルートを追加
+
+## OGP（Open Graph Protocol）実装
+- [x] useOGPカスタムフックを作成（og:title、og:description、og:image、og:url）
+- [x] useOGPのVitestテストを作成
+- [x] 全15ページにuseOGPを適用

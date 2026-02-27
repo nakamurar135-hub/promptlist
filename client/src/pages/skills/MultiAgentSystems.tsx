@@ -11,6 +11,7 @@ import { ArrowLeft } from "lucide-react";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { trpc } from "@/lib/trpc";
 import { useSEO } from "@/hooks/useSEO";
+import { useOGP } from "@/hooks/useOGP";
 
 const tocItems = [
   { id: "what-is-mas", label: "マルチエージェントシステムとは" },
@@ -38,6 +39,11 @@ export default function MultiAgentSystems() {
     title: "マルチエージェントシステム｜複数のAIを連携させる",
     description: "複数のAIエージェントが協調するシステムの設計と実装を学びます。AutoGen、LangGraph、エージェント間通信など、上級者向けの実装パターンを解説します。",
     keywords: "マルチエージェント,AIエージェント,AutoGen,LangGraph,連携,上級,システム設計,実装,協調",
+  });
+  useOGP({
+    title: "マルチエージェントシステム：複数のAIを連携させる",
+    description: "複数のAIエージェントが協調して複雑なタスクを解決するシステムの設計と実装を学びます。",
+    type: "article",
   });
 
   const { isAuthenticated } = useAuth();
