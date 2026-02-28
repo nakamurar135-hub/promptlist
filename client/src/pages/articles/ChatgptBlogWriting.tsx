@@ -10,6 +10,7 @@ import RelatedArticles from "@/components/article/RelatedArticles";
 import { AlertTriangle } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 import { useOGP } from "@/hooks/useOGP";
+import { useStructuredData } from "@/hooks/useStructuredData";
 
 const tocItems = [
   { id: "intro", label: "ブログ記事の執筆、時間がかかっていませんか？" },
@@ -52,6 +53,10 @@ export default function ChatgptBlogWriting() {
     title: "ブログ記事をAIに書かせる日本語プロンプト",
     description: "ブログやSNS投稿のための文章作成をAIがサポート。構成から本文まで一貫して作成。",
     type: "article",
+  });
+  useStructuredData({
+    title: "ブログ記事をAIに書かせる日本語プロンプト",
+    description: "ブログやSNS投稿のための文章作成をAIがサポート。構成から本文まで一貫して作成。",
   });
 
   return (

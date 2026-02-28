@@ -70,3 +70,8 @@
 - [x] useOGPカスタムフックを作成（og:title、og:description、og:image、og:url）
 - [x] useOGPのVitestテストを作成
 - [x] 全15ページにuseOGPを適用
+
+### 構造化データ（Schema.org）実装
+- [x] useStructuredDataカスタムフックを作成（Article スキーマ）
+- [x] useStructuredDataのVitestテストを作成
+- [x] 全11ページ（記事6、スキルガイ5）にuseStructuredDataを適用

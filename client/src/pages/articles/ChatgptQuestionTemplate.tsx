@@ -10,6 +10,7 @@ import RelatedArticles from "@/components/article/RelatedArticles";
 import { AlertTriangle } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 import { useOGP } from "@/hooks/useOGP";
+import { useStructuredData } from "@/hooks/useStructuredData";
 
 const tocItems = [
   { id: "intro", label: "ChatGPTへの質問、うまくいっていますか？" },
@@ -53,6 +54,10 @@ export default function ChatgptQuestionTemplate() {
     title: "ChatGPTへの質問テンプレート集｜初心者でも失敗しないプロンプトの書き方5選",
     description: "ChatGPTにうまく質問できない方向けに、コピペで使える質問テンプレートさ30種類。情報収集、文章作成、アイデア出しまで対応。",
     type: "article",
+  });
+  useStructuredData({
+    title: "ChatGPTへの質問テンプレート集｜初心者でも失敗しないプロンプトの書き方5選",
+    description: "ChatGPTにうまく質問できない方向けに、コピペで使える質問テンプレートを5種類。",
   });
 
   return (

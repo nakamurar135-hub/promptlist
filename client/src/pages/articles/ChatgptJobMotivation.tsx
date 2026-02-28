@@ -10,6 +10,7 @@ import RelatedArticles from "@/components/article/RelatedArticles";
 import { AlertTriangle } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 import { useOGP } from "@/hooks/useOGP";
+import { useStructuredData } from "@/hooks/useStructuredData";
 
 const tocItems = [
   { id: "intro", label: "志望動機の作成、どうしていますか？" },
@@ -52,6 +53,10 @@ export default function ChatgptJobMotivation() {
     title: "ChatGPTで志望動機を書くプロンプト",
     description: "転職・就職活動で使える志望動機の作成をサポート。あなたの経験を効果的にアピール。",
     type: "article",
+  });
+  useStructuredData({
+    title: "ChatGPTで志望動機を書くプロンプト",
+    description: "転職・就職活動で使える志望動機の作成をサポート。あなたの経験を効果的にアピール。",
   });
 
   return (

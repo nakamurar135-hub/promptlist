@@ -7,6 +7,7 @@ import { useAuth } from "@/_core/hooks/useAuth";
 import { trpc } from "@/lib/trpc";
 import { useSEO } from "@/hooks/useSEO";
 import { useOGP } from "@/hooks/useOGP";
+import { useStructuredData } from "@/hooks/useStructuredData";
 
 const skillGuides = [
   {

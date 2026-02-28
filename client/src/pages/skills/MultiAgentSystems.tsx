@@ -12,6 +12,7 @@ import { useAuth } from "@/_core/hooks/useAuth";
 import { trpc } from "@/lib/trpc";
 import { useSEO } from "@/hooks/useSEO";
 import { useOGP } from "@/hooks/useOGP";
+import { useStructuredData } from "@/hooks/useStructuredData";
 
 const tocItems = [
   { id: "what-is-mas", label: "マルチエージェントシステムとは" },
@@ -44,6 +45,10 @@ export default function MultiAgentSystems() {
     title: "マルチエージェントシステム：複数のAIを連携させる",
     description: "複数のAIエージェントが協調して複雑なタスクを解決するシステムの設計と実装を学びます。",
     type: "article",
+  });
+  useStructuredData({
+    title: "マルチエージェントシステム：複数のAIを連携させる",
+    description: "複数のAIエージェントが協調して複雑なタスクを解決するシステムの設計と実装を学びます。",
   });
 
   const { isAuthenticated } = useAuth();

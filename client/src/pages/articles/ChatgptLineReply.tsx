@@ -10,6 +10,7 @@ import RelatedArticles from "@/components/article/RelatedArticles";
 import { AlertTriangle } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 import { useOGP } from "@/hooks/useOGP";
+import { useStructuredData } from "@/hooks/useStructuredData";
 
 const tocItems = [
   { id: "intro", label: "LINEの返信、悩んでいませんか？" },
@@ -52,6 +53,10 @@ export default function ChatgptLineReply() {
     title: "ChatGPTでLINE返信を作るプロンプト",
     description: "返信に悩むLINEメッセージへの対応をAIがサポート。カジュアルからフォーマルまで対応。",
     type: "article",
+  });
+  useStructuredData({
+    title: "ChatGPTでLINE返信を作るプロンプト",
+    description: "返信に悩むLINEメッセージへの対応をAIがサポート。カジュアルからフォーマルまで対応。",
   });
 
   return (

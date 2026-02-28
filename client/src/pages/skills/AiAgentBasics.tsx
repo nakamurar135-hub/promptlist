@@ -9,6 +9,7 @@ import { Link } from "wouter";
 import { ArrowLeft, Crown } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
 import { useOGP } from "@/hooks/useOGP";
+import { useStructuredData } from "@/hooks/useStructuredData";
 
 const tocItems = [
   { id: "what-is-agent", label: "AIエージェントとは何か" },
@@ -41,6 +42,10 @@ export default function AiAgentBasics() {
     title: "AIエージェント入門：自律的に動くAIの仕組みを理解する",
     description: "AIエージェントとは何か、どのように動作するのかを基礎から解説します。",
     type: "article",
+  });
+  useStructuredData({
+    title: "AIエージェント入門：自律的に動くAIの仕組みを理解する",
+    description: "AIエージェントとは何か、どのように動作するのかを基礎から解説します。",
   });
 
   return (

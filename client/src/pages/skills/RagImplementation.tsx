@@ -12,6 +12,7 @@ import { useAuth } from "@/_core/hooks/useAuth";
 import { trpc } from "@/lib/trpc";
 import { useSEO } from "@/hooks/useSEO";
 import { useOGP } from "@/hooks/useOGP";
+import { useStructuredData } from "@/hooks/useStructuredData";
 
 const tocItems = [
   { id: "what-is-rag", label: "RAGとは" },
@@ -44,6 +45,10 @@ export default function RagImplementation() {
     title: "RAG実装ガイド：AIに最新情報を参照させる",
     description: "Retrieval-Augmented Generation（RAG）の仕組みと実装方法を解説します。",
     type: "article",
+  });
+  useStructuredData({
+    title: "RAG実装ガイド：AIに最新情報を参照させる",
+    description: "Retrieval-Augmented Generation（RAG）の仕組みと実装方法を解説します。",
   });
 
   const { isAuthenticated } = useAuth();

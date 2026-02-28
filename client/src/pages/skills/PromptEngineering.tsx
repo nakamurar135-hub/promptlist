@@ -12,6 +12,7 @@ import { useAuth } from "@/_core/hooks/useAuth";
 import { trpc } from "@/lib/trpc";
 import { useSEO } from "@/hooks/useSEO";
 import { useOGP } from "@/hooks/useOGP";
+import { useStructuredData } from "@/hooks/useStructuredData";
 
 const tocItems = [
   { id: "overview", label: "プロンプトエンジニアリングとは" },
@@ -43,6 +44,10 @@ export default function PromptEngineering() {
     title: "プロンプトエンジニアリング実践：AIの性能を最大化する技術",
     description: "Chain-of-ThoughtやFew-shotなど、AIの出力品質を劇的に向上させる高度なテクニックを習得します。",
     type: "article",
+  });
+  useStructuredData({
+    title: "プロンプトエンジニアリング実践：AIの性能を最大化する技術",
+    description: "Chain-of-ThoughtやFew-shotなど、AIの出力品質を劇的に向上させる高度なテクニックを習得します。",
   });
 
   const { isAuthenticated } = useAuth();
