@@ -83,3 +83,5 @@
   - カードグリッド表示（記事へのリンク）
   - useSEO、useOGP、useStructuredData を適用
 - [x] App.tsx に /prompts ルートを追加
+## ナビゲーション修正
+- [x] Header.tsxの「初心者向けプロンプト」リンクを /prompts に 繋ぐ

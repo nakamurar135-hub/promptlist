@@ -9,7 +9,7 @@ import { trpc } from "@/lib/trpc";
 
 const navItems = [
   { label: "ホーム", href: "/" },
-  { label: "初心者向けプロンプト", href: "/articles" },
+  { label: "初心者向けプロンプト", href: "/prompts" },
   { label: "AIエージェントスキル", href: "/skills" },
 ];
 
