@@ -75,3 +75,11 @@
 - [x] useStructuredDataカスタムフックを作成（Article スキーマ）
 - [x] useStructuredDataのVitestテストを作成
 - [x] 全11ページ（記事6、スキルガイ5）にuseStructuredDataを適用
+
+## 初心者向けプロンプト一覧ページ
+- [x] PromptGallery.tsx を作成（/prompts）
+  - カテゴリボタン（質問、議事録、メール、LINE、ブログ、職务経歴書）
+  - カテゴリ絞り込み機能
+  - カードグリッド表示（記事へのリンク）
+  - useSEO、useOGP、useStructuredData を適用
+- [x] App.tsx に /prompts ルートを追加

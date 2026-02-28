@@ -21,12 +21,16 @@ import Upgrade from "./pages/account/Upgrade";
 import Account from "./pages/account/Account";
 import Privacy from "./pages/legal/Privacy";
 import Terms from "./pages/legal/Terms";
+import PromptGallery from "./pages/PromptGallery";
 
 function Router() {
   return (
     <Switch>
       {/* トップページ */}
       <Route path="/" component={Home} />
+
+      {/* 初心者向けプロンプト一覧 */}
+      <Route path="/prompts" component={PromptGallery} />
 
       {/* 初心者向け記事 */}
       <Route path="/articles/chatgpt-meeting-minutes" component={ChatgptMeetingMinutes} />
