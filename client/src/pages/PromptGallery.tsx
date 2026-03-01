@@ -162,8 +162,7 @@ export default function PromptGallery() {
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {filteredArticles.map((article) => (
-                  <Link key={article.id} href={article.path}>
-                    <a className="group h-full">
+                  <Link key={article.id} href={article.path} className="group h-full block">
                       <Card className="h-full hover:shadow-lg transition-shadow duration-300 cursor-pointer">
                         <CardHeader>
                           <div className="flex items-start justify-between mb-2">
@@ -185,7 +184,6 @@ export default function PromptGallery() {
                           </div>
                         </CardContent>
                       </Card>
-                    </a>
                   </Link>
                 ))}
               </div>
