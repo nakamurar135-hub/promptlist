@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "wouter";
+import PageLayout from "@/components/layout/PageLayout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useSEO } from "@/hooks/useSEO";
@@ -116,7 +117,8 @@ export default function PromptGallery() {
       : articles.filter((article) => article.category === selectedCategory);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-muted/20">
+    <PageLayout>
+      <div className="min-h-screen bg-gradient-to-b from-background to-muted/20">
       {/* ヘッダーセクション */}
       <section className="py-12 md:py-16 bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-950 dark:to-blue-900">
         <div className="container">
@@ -214,5 +216,6 @@ export default function PromptGallery() {
         </div>
       </section>
     </div>
+    </PageLayout>
   );
 }

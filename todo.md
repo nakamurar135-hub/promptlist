@@ -85,3 +85,6 @@
 - [x] App.tsx に /prompts ルートを追加
 ## ナビゲーション修正
 - [x] Header.tsxの「初心者向けプロンプト」リンクを /prompts に 繋ぐ
+
+## バグ修正
+- [x] PromptGallery.tsxにヘッダーが表示されていない問題を修正
