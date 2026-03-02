@@ -97,3 +97,11 @@
 ### 記事避移修正
 - [x] 全記事ページのタイトルid="article-title"アンカーを追加
 - [x] 記事カードのリンク先を#article-titleで指定するように修正
+
+## テーマ切り替え機能
+- [x] useThemeカスタムフックを作成（ダークモード・ライトモード管理）
+- [x] ThemeProviderコンテキストを実装
+- [x] Header.tsxにテーマ切り替えボタンを追加（Moon/Sun アイコン）
+- [x] localStorage にテーマ設定を永続化
+- [x] useThemeのVitestテストを作成（5テスト全て通過）
+- [x] 全ページでテーマ切り替えが正常に動作することを確認

@@ -1,11 +1,12 @@
 "use client";
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Menu, X, Bot, Crown } from "lucide-react";
+import { Menu, X, Bot, Crown, Moon, Sun } from "lucide-react";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { getLoginUrl } from "@/const";
 import { Button } from "@/components/ui/button";
 import { trpc } from "@/lib/trpc";
+import { useTheme } from "@/contexts/ThemeContext";
 
 const navItems = [
   { label: "ホーム", href: "/" },
@@ -17,6 +18,7 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [location] = useLocation();
   const { user, isAuthenticated, logout } = useAuth();
+  const { theme, toggleTheme } = useTheme();
 
   const { data: subscription } = trpc.subscription.getMySubscription.useQuery(undefined, {
     enabled: isAuthenticated,
@@ -33,6 +35,19 @@ export default function Header() {
             <span className="hidden sm:inline">AIプロンプト活用ガイド</span>
             <span className="sm:hidden">AIプロンプト</span>
           </Link>
+
+          {/* テーマ切り替えボタン */}
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-lg hover:bg-white/20 transition-colors"
+            aria-label="テーマ切り替え"
+          >
+            {theme === "dark" ? (
+              <Sun className="w-5 h-5 text-white" />
+            ) : (
+              <Moon className="w-5 h-5 text-white" />
+            )}
+          </button>
 
           {/* デスクトップナビ */}
           <nav className="hidden md:flex items-center gap-6">
@@ -114,6 +129,25 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
+            <div className="pt-2 border-t border-white/20">
+              <button
+                onClick={toggleTheme}
+                className="w-full flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors text-white text-sm mb-2"
+                aria-label="テーマ切り替え"
+              >
+                {theme === "dark" ? (
+                  <>
+                    <Sun className="w-4 h-4" />
+                    <span>ライトモード</span>
+                  </>
+                ) : (
+                  <>
+                    <Moon className="w-4 h-4" />
+                    <span>ダークモード</span>
+                  </>
+                )}
+              </button>
+            </div>
             <div className="pt-2 border-t border-white/20">
               {isAuthenticated ? (
                 <div className="flex flex-col gap-2">
