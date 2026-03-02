@@ -204,7 +204,7 @@ export default function Home() {
             {beginnerArticles.map((article) => (
               <Link
                 key={article.href}
-                href={article.href}
+                href={`${article.href}#article-title`}
                 className="block bg-white border border-[#E5E7EB] rounded-xl overflow-hidden hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 group"
               >
                 <div
