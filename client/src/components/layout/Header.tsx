@@ -30,8 +30,8 @@ export default function Header() {
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex items-center justify-between h-14">
           {/* ロゴ */}
-          <Link href="/" className="flex items-center gap-2 font-bold text-lg text-primary-foreground no-underline">
-            <Bot className="w-6 h-6" />
+          <Link href="/" className="flex items-center gap-2 font-bold text-lg text-primary-foreground no-underline dark:text-white">
+            <Bot className="w-6 h-6 dark:text-white" />
             <span className="hidden sm:inline">AIプロンプト活用ガイド</span>
             <span className="sm:hidden">AIプロンプト</span>
           </Link>
@@ -75,7 +75,7 @@ export default function Header() {
                   </Link>
                 )}
                 {isPremium && (
-                  <span className="flex items-center gap-1 bg-accent/10 text-accent text-xs font-bold px-3 py-1.5 rounded-full dark:bg-accent/20 dark:text-[#FFB84D]">
+                  <span className="flex items-center gap-1 bg-[#FFF8E6] text-[#FF9800] text-xs font-bold px-3 py-1.5 rounded-full dark:bg-accent/20 dark:text-[#FFB84D]">
                     <Crown className="w-3 h-3" />
                     プレミアム
                   </span>
