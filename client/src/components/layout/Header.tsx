@@ -43,7 +43,7 @@ export default function Header() {
             aria-label="テーマ切り替え"
           >
             {theme === "dark" ? (
-              <Sun className="w-5 h-5 text-primary-foreground" />
+              <Sun className="w-5 h-5 text-primary-foreground dark:text-white" />
             ) : (
               <Moon className="w-5 h-5 text-primary-foreground" />
             )}
