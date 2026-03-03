@@ -26,11 +26,11 @@ export default function Header() {
   const isPremium = !!(subscription?.plan === "premium" && subscription?.isActive);
 
   return (
-    <header className="bg-[#5B9BD5] text-white shadow-md sticky top-0 z-50">
+    <header className="bg-primary text-primary-foreground shadow-md sticky top-0 z-50 dark:bg-[#1A2332] dark:text-[#E8E8E0]">
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex items-center justify-between h-14">
           {/* ロゴ */}
-          <Link href="/" className="flex items-center gap-2 font-bold text-lg text-white no-underline">
+          <Link href="/" className="flex items-center gap-2 font-bold text-lg text-primary-foreground no-underline">
             <Bot className="w-6 h-6" />
             <span className="hidden sm:inline">AIプロンプト活用ガイド</span>
             <span className="sm:hidden">AIプロンプト</span>
@@ -39,13 +39,13 @@ export default function Header() {
           {/* テーマ切り替えボタン */}
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-lg hover:bg-white/20 transition-colors"
+            className="p-2 rounded-lg hover:bg-white/20 transition-colors dark:hover:bg-white/10"
             aria-label="テーマ切り替え"
           >
             {theme === "dark" ? (
-              <Sun className="w-5 h-5 text-white" />
+              <Sun className="w-5 h-5 text-primary-foreground" />
             ) : (
-              <Moon className="w-5 h-5 text-white" />
+              <Moon className="w-5 h-5 text-primary-foreground" />
             )}
           </button>
 
@@ -69,13 +69,13 @@ export default function Header() {
             {isAuthenticated ? (
               <div className="flex items-center gap-3">
                 {!isPremium && (
-                  <Link href="/account/upgrade" className="flex items-center gap-1 bg-[#FF9800] hover:bg-[#E68900] text-white text-xs font-bold px-3 py-1.5 rounded-full transition-colors">
+                  <Link href="/account/upgrade" className="flex items-center gap-1 bg-accent hover:bg-accent/90 text-accent-foreground text-xs font-bold px-3 py-1.5 rounded-full transition-colors dark:bg-[#FFB84D] dark:hover:bg-[#FFA500] dark:text-[#0F1419]">
                     <Crown className="w-3 h-3" />
                     アップグレード
                   </Link>
                 )}
                 {isPremium && (
-                  <span className="flex items-center gap-1 bg-[#FFF8E6] text-[#FF9800] text-xs font-bold px-3 py-1.5 rounded-full">
+                  <span className="flex items-center gap-1 bg-accent/10 text-accent text-xs font-bold px-3 py-1.5 rounded-full dark:bg-accent/20 dark:text-[#FFB84D]">
                     <Crown className="w-3 h-3" />
                     プレミアム
                   </span>
@@ -87,7 +87,7 @@ export default function Header() {
                   variant="outline"
                   size="sm"
                   onClick={() => logout()}
-                  className="text-[#5B9BD5] bg-white border-white hover:bg-white/90 text-xs"
+                  className="text-primary bg-primary-foreground border-primary-foreground hover:bg-primary-foreground/90 text-xs dark:text-[#0F1419] dark:bg-[#E8E8E0] dark:border-[#E8E8E0]"
                 >
                   ログアウト
                 </Button>
@@ -96,9 +96,9 @@ export default function Header() {
               <a href={getLoginUrl()}>
                 <Button
                   size="sm"
-                  className="bg-[#FF9800] hover:bg-[#E68900] text-white border-0 text-xs font-bold"
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground border-0 text-xs font-bold dark:bg-[#FFB84D] dark:hover:bg-[#FFA500] dark:text-[#0F1419]"
                 >
-                  ログイン / 会員登録
+                  ログイン / 会员登録
                 </Button>
               </a>
             )}
@@ -117,22 +117,22 @@ export default function Header() {
 
       {/* モバイルメニュー */}
       {menuOpen && (
-        <div className="md:hidden bg-[#4A8BC4] border-t border-white/20">
+        <div className="md:hidden bg-primary dark:bg-[#1A2332] border-t border-white/20 dark:border-white/10">
           <nav className="max-w-5xl mx-auto px-4 py-3 flex flex-col gap-3">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-medium text-white opacity-90 hover:opacity-100 py-1"
+                className="text-sm font-medium text-primary-foreground opacity-90 hover:opacity-100 py-1"
                 onClick={() => setMenuOpen(false)}
               >
                 {item.label}
               </Link>
             ))}
-            <div className="pt-2 border-t border-white/20">
+            <div className="pt-2 border-t border-white/20 dark:border-white/10">
               <button
                 onClick={toggleTheme}
-                className="w-full flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-white/20 transition-colors text-white text-sm mb-2"
+                className="w-full flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-white/20 dark:hover:bg-white/10 transition-colors text-primary-foreground text-sm mb-2"
                 aria-label="テーマ切り替え"
               >
                 {theme === "dark" ? (
@@ -148,19 +148,19 @@ export default function Header() {
                 )}
               </button>
             </div>
-            <div className="pt-2 border-t border-white/20">
+            <div className="pt-2 border-t border-white/20 dark:border-white/10">
               {isAuthenticated ? (
                 <div className="flex flex-col gap-2">
                   <Link
                     href="/account"
-                    className="text-sm text-white opacity-90"
+                    className="text-sm text-primary-foreground opacity-90"
                     onClick={() => setMenuOpen(false)}
                   >
                     マイページ（{user?.name}）
                   </Link>
                   <button
                     onClick={() => { logout(); setMenuOpen(false); }}
-                    className="text-sm text-white opacity-80 text-left"
+                    className="text-sm text-primary-foreground opacity-80 text-left"
                   >
                     ログアウト
                   </button>
@@ -169,10 +169,10 @@ export default function Header() {
                 <a href={getLoginUrl()} className="block">
                   <Button
                     size="sm"
-                    className="w-full bg-[#FF9800] hover:bg-[#E68900] text-white border-0 font-bold"
+                    className="w-full bg-accent hover:bg-accent/90 text-accent-foreground border-0 font-bold dark:bg-[#FFB84D] dark:hover:bg-[#FFA500] dark:text-[#0F1419]"
                     onClick={() => setMenuOpen(false)}
                   >
-                    ログイン / 会員登録
+                    ログイン / 会员登録
                   </Button>
                 </a>
               )}

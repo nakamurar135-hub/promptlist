@@ -32,18 +32,18 @@ const footerCategories = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#333333] text-white mt-16">
+    <footer className="bg-muted text-foreground mt-16 dark:bg-[#0F1419] dark:text-[#E8E8E0]">
       <div className="max-w-5xl mx-auto px-4 py-10">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8">
           {footerCategories.map((cat) => (
             <div key={cat.name}>
-              <h3 className="text-sm font-bold text-[#5B9BD5] mb-3">{cat.name}</h3>
+              <h3 className="text-sm font-bold text-primary dark:text-[#7EBADB] mb-3">{cat.name}</h3>
               <ul className="space-y-2">
                 {cat.links.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-gray-300 hover:text-white transition-colors"
+                      className="text-sm text-muted-foreground hover:text-foreground transition-colors dark:text-[#A8A8A0] dark:hover:text-[#E8E8E0]"
                     >
                       {link.label}
                     </Link>
@@ -54,12 +54,12 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="border-t border-gray-600 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-2 text-[#5B9BD5]">
+        <div className="border-t border-border dark:border-[#3D4A5F] pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-2 text-primary dark:text-[#7EBADB]">
             <Bot className="w-5 h-5" />
             <span className="font-bold text-sm">AIプロンプト活用ガイド</span>
           </div>
-          <p className="text-xs text-gray-400">
+          <p className="text-xs text-muted-foreground dark:text-[#A8A8A0]">
             &copy; 2026 AIプロンプト活用ガイド All Rights Reserved.
           </p>
         </div>
