@@ -22,6 +22,7 @@ import Account from "./pages/account/Account";
 import Privacy from "./pages/legal/Privacy";
 import Terms from "./pages/legal/Terms";
 import PromptGallery from "./pages/PromptGallery";
+import BeginnerPrompts from "./pages/BeginnerPrompts";
 
 function Router() {
   return (
@@ -31,6 +32,7 @@ function Router() {
 
       {/* 初心者向けプロンプト一覧 */}
       <Route path="/prompts" component={PromptGallery} />
+      <Route path="/articles" component={BeginnerPrompts} />
 
       {/* 初心者向け記事 */}
       <Route path="/articles/chatgpt-meeting-minutes" component={ChatgptMeetingMinutes} />

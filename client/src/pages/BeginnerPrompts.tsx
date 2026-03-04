@@ -1,0 +1,139 @@
+import { Link } from "wouter";
+import PageLayout from "@/components/layout/PageLayout";
+import { ChevronRight, BookOpen, Zap } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
+import { useOGP } from "@/hooks/useOGP";
+
+// 初心者向けプロンプト集データ
+const beginnerPrompts = [
+  {
+    href: "/articles/chatgpt-meeting-minutes",
+    category: "ビジネス文書",
+    categoryColor: "#5B9BD5",
+    title: "ChatGPTで議事録を作成するプロンプト4選",
+    description: "会議メモから自動で議事録を生成。要点整理、フォーマル形式、アクションアイテム抽出まで対応。",
+  },
+  {
+    href: "/articles/chatgpt-question-template",
+    category: "基礎・入門",
+    categoryColor: "#4CAF50",
+    title: "AI初心者でも失敗しない！ChatGPTに正しく質問するテンプレ集",
+    description: "ChatGPTを使いこなすための基本的な質問テクニックを解説。初めての方はまずこちらから。",
+  },
+  {
+    href: "/articles/chatgpt-business-email",
+    category: "ビジネス文書",
+    categoryColor: "#5B9BD5",
+    title: "ChatGPTでそのまま使えるビジネスメール例文プロンプト10選",
+    description: "お礼・依頼・謝罪など、ビジネスシーンで使えるメール文面をAIが自動生成。",
+  },
+  {
+    href: "/articles/chatgpt-job-motivation",
+    category: "キャリア",
+    categoryColor: "#9C27B0",
+    title: "ChatGPTで志望動機を書くプロンプト",
+    description: "転職・就職活動で使える志望動機の作成をサポート。あなたの経験を効果的にアピール。",
+  },
+  {
+    href: "/articles/chatgpt-blog-writing",
+    category: "コンテンツ作成",
+    categoryColor: "#FF9800",
+    title: "ブログ記事をAIに書かせる日本語プロンプト",
+    description: "ブログやSNS投稿のための文章作成をAIがサポート。構成から本文まで一貫して作成。",
+  },
+  {
+    href: "/articles/chatgpt-line-reply",
+    category: "日常・カジュアル",
+    categoryColor: "#E91E63",
+    title: "ChatGPTでLINE返信を作るプロンプト",
+    description: "返信に悩むLINEメッセージへの対応をAIがサポート。カジュアルからフォーマルまで対応。",
+  },
+];
+
+export default function BeginnerPrompts() {
+  useSEO({
+    title: "初心者向けプロンプト集｜AIプロンプト活用ガイド",
+    description: "ChatGPTをはじめとするAIツールで、すぐに使える初心者向けプロンプト集。ビジネスメール、議事録、ブログ作成など、実践的なテンプレートを完全無料で提供。",
+    keywords: "ChatGPT,プロンプト,初心者向け,テンプレート,ビジネスメール,議事録,無料",
+  });
+  useOGP({
+    title: "初心者向けプロンプト集｜AIプロンプト活用ガイド",
+    description: "ChatGPTをはじめとするAIツールで、すぐに使える初心者向けプロンプト集。ビジネスメール、議事録、ブログ作成など、実践的なテンプレートを完全無料で提供。",
+    type: "website",
+  });
+
+  return (
+    <PageLayout>
+      {/* ヘッダーセクション */}
+      <section className="bg-gradient-to-r from-[#5B9BD5] to-[#4A8BC4] text-white py-12 md:py-16">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="flex items-center gap-2 mb-4">
+            <BookOpen className="w-6 h-6" />
+            <span className="text-sm font-bold bg-white/20 px-3 py-1 rounded-full">
+              完全無料・コピペで使える
+            </span>
+          </div>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">
+            初心者向けプロンプト集
+          </h1>
+          <p className="text-base md:text-lg opacity-90 mb-2">
+            ChatGPTをはじめとするAIツールで、すぐに実践できるプロンプト
+          </p>
+          <p className="text-sm opacity-80">
+            ビジネスメール、議事録、ブログ作成など、様々なシーンで活用できるテンプレートを厳選。個人・商用問わず、自由にご利用ください。
+          </p>
+        </div>
+      </section>
+
+      <div className="max-w-5xl mx-auto px-4 py-12">
+        {/* プロンプト一覧 */}
+        <div className="grid gap-6">
+          {beginnerPrompts.map((prompt, index) => (
+            <Link key={index} href={prompt.href}>
+              <a className="block bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg hover:border-gray-300 transition-all dark:bg-[#1A2332] dark:border-[#3A4A5C] dark:hover:border-[#5B6A7C]">
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-2">
+                      <span
+                        className="text-xs font-bold px-3 py-1 rounded-full text-white"
+                        style={{ backgroundColor: prompt.categoryColor }}
+                      >
+                        {prompt.category}
+                      </span>
+                    </div>
+                    <h3 className="text-lg font-bold text-[#333333] mb-2 dark:text-white">
+                      {prompt.title}
+                    </h3>
+                    <p className="text-sm text-[#666666] dark:text-[#B0B8C0] leading-relaxed">
+                      {prompt.description}
+                    </p>
+                  </div>
+                  <div className="flex-shrink-0">
+                    <ChevronRight className="w-5 h-5 text-[#5B9BD5] dark:text-[#7BC4FF]" />
+                  </div>
+                </div>
+              </a>
+            </Link>
+          ))}
+        </div>
+
+        {/* フッターメッセージ */}
+        <section className="mt-16 bg-[#F5F9FC] dark:bg-[#1A2332] rounded-lg p-8 text-center">
+          <Zap className="w-8 h-8 text-[#FF9800] mx-auto mb-4" />
+          <h2 className="text-xl font-bold text-[#333333] dark:text-white mb-2">
+            さらに高度なスキルを学びたい方へ
+          </h2>
+          <p className="text-[#666666] dark:text-[#B0B8C0] mb-6">
+            AIエージェントの構築やプロンプトエンジニアリングなど、中級者向けのスキルガイドはプレミアム会員限定です。
+          </p>
+          <Link href="/skills">
+            <a className="inline-flex items-center gap-2 bg-[#5B9BD5] hover:bg-[#4A8BC4] text-white font-bold px-6 py-3 rounded-lg transition-colors dark:bg-[#4A8BC4] dark:hover:bg-[#3A7BC4]">
+              スキルガイドを見る
+              <ChevronRight className="w-4 h-4" />
+            </a>
+          </Link>
+        </section>
+      </div>
+    </PageLayout>
+  );
+}
