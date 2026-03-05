@@ -10,7 +10,7 @@ import { useTheme } from "@/contexts/ThemeContext";
 
 const navItems = [
   { label: "ホーム", href: "/" },
-  { label: "初心者向けプロンプト", href: "/prompts" },
+  { label: "初心者向けプロンプト", href: "/articles" },
   { label: "AIエージェントスキル", href: "/skills" },
 ];
 

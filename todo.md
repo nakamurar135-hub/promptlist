@@ -125,3 +125,8 @@
 - [x] BeginnerPrompts.tsxを作成
 - [x] App.tsxに/articlesルートを追加
 - [x] Home.tsxの「すべて見る＞」リンクを/articlesに設定（既に実装済み）
+
+## ヘッダーリンク修正と不要ページ削除
+- [x] Header.tsxの初心者向けプロンプトリンクを/articlesに変更
+- [x] 元々のリンク先ページ（PromptGallery.tsx）を削除
+- [x] App.tsxから削除したページのルートを削除
