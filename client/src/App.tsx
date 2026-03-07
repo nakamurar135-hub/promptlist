@@ -27,6 +27,7 @@ import Account from "./pages/account/Account";
 import Privacy from "./pages/legal/Privacy";
 import Terms from "./pages/legal/Terms";
 import BeginnerPrompts from "./pages/BeginnerPrompts";
+import SearchResults from "./pages/SearchResults";
 
 function Router() {
   return (
@@ -49,6 +50,9 @@ function Router() {
       <Route path="/articles/chatgpt-sns-post-prompt" component={ChatgptSnsPostPrompt} />
       <Route path="/articles/chatgpt-summarize-prompt" component={ChatgptSummarizePrompt} />
       <Route path="/articles/chatgpt-translation-prompt" component={ChatgptTranslationPrompt} />
+
+      {/* 検索結果 */}
+      <Route path="/search" component={SearchResults} />
 
       {/* 中級者向けスキルガイド */}
       <Route path="/skills" component={SkillsList} />

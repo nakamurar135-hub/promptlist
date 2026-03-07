@@ -136,3 +136,9 @@
 - [x] 新しい記事ページを既存の記事と同じ形式で統一
 - [x] BeginnerPrompts.tsxを新しい記事を含めて更新
 - [x] App.tsxに新しい記事へのルートを追加
+
+## ホームページ記事検索機能実装
+- [x] SearchBar.tsxコンポーネントを作成
+- [x] Home.tsxに検索機能を統合
+- [x] 検索結果ページ（SearchResults.tsx）を作成
+- [x] App.tsxに/searchルートを追加

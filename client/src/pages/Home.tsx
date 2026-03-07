@@ -15,6 +15,7 @@ import { getLoginUrl } from "@/const";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { useSEO } from "@/hooks/useSEO";
 import { useOGP } from "@/hooks/useOGP";
+import SearchBar from "@/components/SearchBar";
 
 // 初心者向け記事データ
 const beginnerArticles = [
@@ -144,6 +145,13 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* 検索セクション */}
+      <div className="max-w-5xl mx-auto px-4 py-8">
+        <div className="mb-12">
+          <SearchBar placeholder="記事やスキルを検索..." />
+        </div>
+      </div>
 
       <div className="max-w-5xl mx-auto px-4 py-10">
 
