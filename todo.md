@@ -130,3 +130,9 @@
 - [x] Header.tsxの初心者向けプロンプトリンクを/articlesに変更
 - [x] 元々のリンク先ページ（PromptGallery.tsx）を削除
 - [x] App.tsxから削除したページのルートを削除
+
+## 初心者用記事5件追加（add-beginner-promptsブランチマージ）
+- [x] add-beginner-promptsブランチをマージ
+- [x] 新しい記事ページを既存の記事と同じ形式で統一
+- [x] BeginnerPrompts.tsxを新しい記事を含めて更新
+- [x] App.tsxに新しい記事へのルートを追加

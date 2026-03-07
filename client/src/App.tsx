@@ -11,6 +11,11 @@ import ChatgptBusinessEmail from "./pages/articles/ChatgptBusinessEmail";
 import ChatgptJobMotivation from "./pages/articles/ChatgptJobMotivation";
 import ChatgptBlogWriting from "./pages/articles/ChatgptBlogWriting";
 import ChatgptLineReply from "./pages/articles/ChatgptLineReply";
+import ChatgptIdeationPrompt from "./pages/articles/ChatgptIdeationPrompt";
+import ChatgptMenuPlanningPrompt from "./pages/articles/ChatgptMenuPlanningPrompt";
+import ChatgptSnsPostPrompt from "./pages/articles/ChatgptSnsPostPrompt";
+import ChatgptSummarizePrompt from "./pages/articles/ChatgptSummarizePrompt";
+import ChatgptTranslationPrompt from "./pages/articles/ChatgptTranslationPrompt";
 import SkillsList from "./pages/skills/SkillsList";
 import AiAgentBasics from "./pages/skills/AiAgentBasics";
 import PromptEngineering from "./pages/skills/PromptEngineering";
@@ -39,6 +44,11 @@ function Router() {
       <Route path="/articles/chatgpt-job-motivation" component={ChatgptJobMotivation} />
       <Route path="/articles/chatgpt-blog-writing" component={ChatgptBlogWriting} />
       <Route path="/articles/chatgpt-line-reply" component={ChatgptLineReply} />
+      <Route path="/articles/chatgpt-ideation-prompt" component={ChatgptIdeationPrompt} />
+      <Route path="/articles/chatgpt-menu-planning-prompt" component={ChatgptMenuPlanningPrompt} />
+      <Route path="/articles/chatgpt-sns-post-prompt" component={ChatgptSnsPostPrompt} />
+      <Route path="/articles/chatgpt-summarize-prompt" component={ChatgptSummarizePrompt} />
+      <Route path="/articles/chatgpt-translation-prompt" component={ChatgptTranslationPrompt} />
 
       {/* 中級者向けスキルガイド */}
       <Route path="/skills" component={SkillsList} />
