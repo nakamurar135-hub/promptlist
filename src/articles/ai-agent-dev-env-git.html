@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gitを使ったAIエージェント開発環境の構築方法を解説。Python仮想環境、主要ライブラリのインストール、GitHubでのバージョン管理、APIキーの安全な管理まで、実践的な手順を学びます。">
+    <meta name="keywords" content="AIエージェント, 開発環境, Git, Python, 仮想環境, GitHub, APIキー">
+
+    <!-- OGP設定 -->
+    <meta property="og:title" content="Gitと始めるAIエージェント開発環境構築：中級者向けプレミアム講座">
+    <meta property="og:description" content="Gitを使ったAIエージェント開発環境の構築方法を解説。Python仮想環境、主要ライブラリのインストール、GitHubでのバージョン管理、APIキーの安全な管理まで、実践的な手順を学びます。">
+    <meta property="og:image" content="/images/ai-agent-dev-env-git-eyecatch.png">
+    <meta property="og:type" content="article">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Gitと始めるAIエージェント開発環境構築：中級者向けプレミアム講座">
+    <meta name="twitter:description" content="Gitを使ったAIエージェント開発環境の構築方法を解説。Python仮想環境、主要ライブラリのインストール、GitHubでのバージョン管理、APIキーの安全な管理まで、実践的な手順を学びます。">
+    <meta name="twitter:image" content="/images/ai-agent-dev-env-git-eyecatch.png">
+
+    <title>Gitと始めるAIエージェント開発環境構築：中級者向けプレミアム講座</title>
+
+    <!-- 構造化データ（JSON-LD） -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Gitと始めるAIエージェント開発環境構築：中級者向けプレミアム講座",
+        "image": "/images/ai-agent-dev-env-git-eyecatch.png",
+        "datePublished": "2026-03-08",
+        "dateModified": "2026-03-08",
+        "author": {
+            "@type": "Person",
+            "name": "Manus AI"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "AIプロンプト活用ガイド"
+        },
+        "description": "Gitを使ったAIエージェント開発環境の構築方法を解説。Python仮想環境、主要ライブラリのインストール、GitHubでのバージョン管理、APIキーの安全な管理まで、実践的な手順を学びます。"
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'MS Gothic', 'MS ゴシック', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
+            color: #333333;
+            background-color: #FFFFFF;
+            line-height: 1.8;
+        }
+
+        /* ヘッダー */
+        header {
+            background-color: #5B9BD5;
+            color: white;
+            padding: 1rem;
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-name {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .site-name:hover {
+            opacity: 0.8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* モバイル対応 */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .article-header h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+            }
+
+            h3 {
+                font-size: 1.125rem;
+            }
+
+            .prompt-content pre,
+            .response-content pre {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* メインコンテンツ */
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        /* 記事ヘッダー */
+        .article-header {
+            margin-bottom: 2rem;
+        }
+
+        .article-header h1 {
+            font-size: 1.75rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .article-meta {
+            color: #666666;
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* 目次 */
+        .toc {
+            background-color: #F5F9FC;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .toc h2 {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .toc li {
+            margin-bottom: 0.5rem;
+        }
+
+        .toc a {
+            color: #5B9BD5;
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            color: #4A8BC4;
+        }
+
+        .toc .toc-h3 {
+            padding-left: 1rem;
+        }
+
+        /* 見出し */
+        h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #5B9BD5;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        h4 {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* 本文 */
+        p {
+            margin-bottom: 1rem;
+        }
+
+        /* プロンプトブロック */
+        .prompt-block {
+            margin: 1.5rem 0;
+        }
+
+        .prompt-block-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .prompt-block-title {
+            font-size: 0.875rem;
+            font-weight: bold;
+        }
+
+        .prompt-content {
+            background-color: #F3F4F6;
+            border-radius: 8px;
+            padding: 1rem;
+            position: relative;
+        }
+
+        .prompt-content pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-family: 'MS Gothic', 'MS ゴシック', monospace;
+            font-size: 0.875rem;
+            padding-right: 4rem;
+        }
+
+        .copy-button {
+            position: absolute;
+            top: 0.75rem;
+            right: 0.75rem;
+            background-color: #5B9BD5;
+            color: white;
+            border: none;
+            padding: 0.375rem 0.75rem;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            cursor: pointer;
+        }
+
+        .copy-button:hover {
+            background-color: #4A8BC4;
+        }
+
+        /* 回答例ブロック */
+        .response-block {
+            margin: 1.5rem 0;
+        }
+
+        .response-block-title {
+            font-size: 0.875rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .response-content {
+            background-color: #F3F4F6;
+            border-radius: 8px;
+            padding: 1rem;
+            border-left: 4px solid #5B9BD5;
+        }
+
+        .response-content pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-family: 'MS Gothic', 'MS ゴシック', monospace;
+            font-size: 0.875rem;
+        }
+
+        /* アフィリエイトボックス */
+        .affiliate-box {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: linear-gradient(to right, rgba(255, 152, 0, 0.1), rgba(255, 152, 0, 0.05));
+            border: 2px solid #FF9800;
+            border-radius: 8px;
+        }
+
+        .affiliate-box h3 {
+            font-size: 1.25rem;
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+        }
+
+        .affiliate-box p {
+            color: #666666;
+            margin-bottom: 1rem;
+        }
+
+        .affiliate-box ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 1rem;
+        }
+
+        .affiliate-box li {
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .affiliate-box li::before {
+            content: "✓";
+            color: #FF9800;
+            margin-right: 0.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #FF9800;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .cta-button:hover {
+            background-color: #E68900;
+        }
+
+        /* 関連記事 */
+        .related-articles {
+            margin-top: 3rem;
+        }
+
+        .related-articles h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .related-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .related-list li {
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        .related-list a {
+            color: #5B9BD5;
+            text-decoration: none;
+        }
+
+        .related-list a:hover {
+            color: #4A8BC4;
+        }
+
+        .related-description {
+            color: #666666;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+
+        /* フッター */
+        footer {
+            background-color: #5B9BD5;
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="/" class="site-name">AIプロンプト活用ガイド</a>
+            <nav>
+                <ul>
+                    <li><a href="/">ホーム</a></li>
+                    <li><a href="/prompts">プロンプト一覧</a></li>
+                    <li><a href="/guide">使い方ガイド</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <div class="article-header">
+                <h1>Gitと始めるAIエージェント開発環境構築：中級者向けプレミアム講座</h1>
+                <div class="article-meta">
+                    作成日: 2026年03月08日 / 更新日: 2026年03月08日
+                </div>
+                <img src="/images/ai-agent-dev-env-git-eyecatch.png" alt="GitとAIエージェント開発環境構築のアイキャッチ画像" class="eyecatch" style="width:100%; height:auto; margin-top:1rem;">
+            </div>
+
+            <nav class="toc">
+                <h2>目次</h2>
+                <ul>
+                    <li><a href="#intro">はじめに</a></li>
+                    <li><a href="#chatgpt-basics">ChatGPTとは？初心者向けにわかりやすく解説</a></li>
+                    <li><a href="#local-env-setup">ローカル開発環境のセットアップ</a>
+                        <ul>
+                            <li><a href="#python-install">Pythonのインストール確認</a></li>
+                            <li><a href="#venv-setup">仮想環境の構築と有効化</a></li>
+                            <li><a href="#install-libs">必要なライブラリのインストール</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#project-init-git">プロジェクトの初期化とGit管理</a>
+                        <ul>
+                            <li><a href="#create-project-dir">プロジェクトディレクトリの作成</a></li>
+                            <li><a href="#git-init">git init でリポジトリを初期化</a></li>
+                            <li><a href="#basic-file-structure">基本的なファイル構成の作成</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#api-key-management">APIキーと環境変数の安全な管理</a>
+                        <ul>
+                            <li><a href="#env-file">.env ファイルの活用</a></li>
+                            <li><a href="#python-dotenv">python-dotenv ライブラリの導入</a></li>
+                            <li><a href="#gitignore">.gitignore の設定と重要性</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#hello-ai-agent">Hello, AI Agent!：最初のプログラム</a>
+                        <ul>
+                            <li><a href="#simple-llm-call">簡単なLLM呼び出しプログラムの作成</a></li>
+                            <li><a href="#first-commit">動作確認と最初のコミット</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#tips-for-env">環境構築をさらに効率化するコツ</a></li>
+                    <li><a href="#caution-env">開発環境利用時の注意点</a></li>
+                    <li><a href="#summary">まとめ</a></li>
+                    <li><a href="#cta">ChatGPTをもっと活用したい方へ</a></li>
+                    <li><a href="#related-articles">関連記事</a></li>
+                </ul>
+            </nav>
+
+            <section id="intro">
+                <h2>はじめに</h2>
+                <p>AIエージェント開発に興味をお持ちの皆さん、こんにちは！本講座は、Gitでのバージョン管理を前提としたAIエージェントのローカル開発環境構築から、プロジェクトの初期設定までを学ぶ中級者向けのプレミアム講座です。</p>
+                <p>AIエージェントは、自律的に思考し、ツールを使いこなして複雑なタスクを遂行する次世代のAIです。その開発には、効率的かつ安全な環境が不可欠となります。特に、チームでの開発や将来的な運用を考えると、Gitによるバージョン管理は避けて通れません。</p>
+                <p>この記事では、Pythonの仮想環境構築から主要ライブラリのインストール、GitHubでのリポジトリ管理、そしてAPIキーの安全な管理方法まで、実践的な手順をステップバイステップで解説します。コピペで使えるコード例も豊富に用意していますので、ぜひ手を動かしながら学習を進めてください。</p>
+            </section>
+
+            <section id="chatgpt-basics">
+                <h2>ChatGPTとは？初心者向けにわかりやすく解説</h2>
+                <p>ChatGPTは、OpenAIが開発した大規模言語モデル（LLM）を基盤としたAIチャットサービスです。人間のような自然な会話を生成し、質問応答、文章作成、翻訳など多岐にわたるタスクをこなすことができます。</p>
+                <p>AIエージェントは、このChatGPTのようなLLMを「頭脳」として活用し、外部ツール（Web検索、ファイル操作など）と連携することで、より複雑で自律的なタスク実行を可能にします。</p>
+                <p>ChatGPTの基本機能は無料で利用できますが、より高度な推論能力や最新の情報を利用したい場合は、有料版のChatGPT Plus（月額20ドル）がおすすめです。AIエージェント開発では、高性能なLLMを利用することで、エージェントの性能を最大限に引き出すことができます。</p>
+            </section>
+
+            <section id="local-env-setup">
+                <h2>ローカル開発環境のセットアップ</h2>
+                <p>AIエージェント開発を始める前に、まずは安定したローカル開発環境を構築しましょう。Pythonの仮想環境を利用することで、プロジェクトごとに依存関係を分離し、環境の衝突を防ぐことができます。</p>
+
+                <h3 id="python-install">Pythonのインストール確認</h3>
+                <p>ほとんどのシステムにはPythonがプリインストールされていますが、最新バージョン（3.9以上推奨）がインストールされているか確認しましょう。</p>
+                <PromptBlock title="Pythonバージョン確認プロンプト">
+```bash
+python3 --version
+```
+                </PromptBlock>
+                <ResponseExample title="回答例">
+```
+Python 3.11.0
+```
+                </ResponseExample>
+                <p>もしPythonがインストールされていない、または古いバージョンの場合は、公式ウェブサイトから最新版をインストールしてください。</p>
+
+                <h3 id="venv-setup">仮想環境の構築と有効化</h3>
+                <p>プロジェクトごとに独立したPython環境を作成するために、<code>venv</code>モジュールを使用します。</p>
+                <PromptBlock title="仮想環境構築プロンプト">
+```bash
+# プロジェクトディレクトリを作成
+mkdir my-ai-agent-project
+cd my-ai-agent-project
+
+# 仮想環境を作成
+python3 -m venv .venv
+
+# 仮想環境を有効化
+source .venv/bin/activate
+```
+                </PromptBlock>
+                <ResponseExample title="回答例">
+```
+(my-ai-agent-project) ubuntu@sandbox:~/my-ai-agent-project $
+```
+                </ResponseExample>
+                <p>コマンドラインの先頭に<code>(.venv)</code>と表示されていれば、仮想環境が正常に有効化されています。</p>
+
+                <h3 id="install-libs">必要なライブラリのインストール</h3>
+                <p>AIエージェント開発に不可欠なライブラリをインストールします。今回は、OpenAIのAPIと、エージェント開発フレームワークであるLangChainを導入します。</p>
+                <PromptBlock title="ライブラリインストールプロンプト">
+```bash
+pip install openai langchain python-dotenv
+```
+                </PromptBlock>
+                <ResponseExample title="回答例">
+```
+Collecting openai
+  ...
+Successfully installed openai-X.X.X langchain-X.X.X python-dotenv-X.X.X
+```
+                </ResponseExample>
+            </section>
+
+            <section id="project-init-git">
+                <h2>プロジェクトの初期化とGit管理</h2>
+                <p>開発したコードを効率的に管理し、チームでの共同作業をスムーズにするために、GitとGitHubを活用します。</p>
+
+                <h3 id="create-project-dir">プロジェクトディレクトリの作成</h3>
+                <p>すでに仮想環境構築時に作成していますが、改めてプロジェクトのルートディレクトリを確認しましょう。</p>
+                <PromptBlock title="プロジェクトディレクトリ確認プロンプト">
+```bash
+pwd
+```
+                </PromptBlock>
+                <ResponseExample title="回答例">
+```
+/home/ubuntu/my-ai-agent-project
+```
+                </ResponseExample>
+
+                <h3 id="git-init">git init でリポジトリを初期化</h3>
+                <p>このディレクトリをGitリポジトリとして初期化します。</p>
+                <PromptBlock title="Gitリポジトリ初期化プロンプト">
+```bash
+git init
+```
+                </PromptBlock>
+                <ResponseExample title="回答例">
+```
+Initialized empty Git repository in /home/ubuntu/my-ai-agent-project/.git/
+```
+                </ResponseExample>
+
+                <h3 id="basic-file-structure">基本的なファイル構成の作成</h3>
+                <p>今後作成するスクリプトや依存関係を管理するためのファイルを準備します。</p>
+                <PromptBlock title="ファイル作成プロンプト">
+```bash
+touch main.py requirements.txt .env .gitignore
+```
+                </PromptBlock>
+                <ResponseExample title="回答例">
+```
+# 何も表示されなければ成功
+```
+                </ResponseExample>
+                <p><code>requirements.txt</code>には、インストールしたライブラリのリストを記録しておきましょう。</p>
+                <PromptBlock title="requirements.txt作成プロンプト">
+```bash
+pip freeze > requirements.txt
+```
+                </PromptBlock>
+            </section>
+
+            <section id="api-key-management">
+                <h2>APIキーと環境変数の安全な管理</h2>
+                <p>AIエージェント開発では、OpenAIなどのAPIキーを使用します。これらの機密情報をコードに直接書き込むのは非常に危険です。<code>.env</code>ファイルと<code>.gitignore</code>を使って安全に管理しましょう。</p>
+
+                <h3 id="env-file">.env ファイルの活用</h3>
+                <p>APIキーなどの機密情報は<code>.env</code>ファイルに記述します。このファイルはGit管理から除外することで、誤って公開リポジトリにアップロードされるのを防ぎます。</p>
+                <PromptBlock title=".envファイル編集プロンプト">
+```python
+# .envファイルに以下の内容を記述
+OPENAI_API_KEY="sk-YOUR_OPENAI_API_KEY"
+```
+                </PromptBlock>
+                <p><code>YOUR_OPENAI_API_KEY</code>の部分は、ご自身のOpenAI APIキーに置き換えてください。</p>
+
+                <h3 id="python-dotenv">python-dotenv ライブラリの導入</h3>
+                <p>Pythonコードから<code>.env</code>ファイルに記述された環境変数を読み込むために、<code>python-dotenv</code>ライブラリを使用します。これはすでにインストール済みです。</p>
+
+                <h3 id="gitignore">.gitignore の設定と重要性</h3>
+                <p><code>.env</code>ファイルや仮想環境ディレクトリ（<code>.venv/</code>）がGitの管理対象とならないように、<code>.gitignore</code>ファイルを設定します。これにより、機密情報の漏洩や不要なファイルのコミットを防ぎます。</p>
+                <PromptBlock title=".gitignoreファイル編集プロンプト">
+```python
+# .gitignoreファイルに以下の内容を記述
+.env
+.venv/
+__pycache__/
+*.pyc
+```
+                </PromptBlock>
+            </section>
+
+            <section id="hello-ai-agent">
+                <h2>Hello, AI Agent!：最初のプログラム</h2>
+                <p>環境構築が完了したら、実際にAIエージェントの「頭脳」となるLLMを呼び出す簡単なプログラムを作成してみましょう。</p>
+
+                <h3 id="simple-llm-call">簡単なLLM呼び出しプログラムの作成</h3>
+                <p><code>main.py</code>ファイルに以下のコードを記述します。</p>
+                <PromptBlock title="main.pyコード">
+```python
+import os
+from dotenv import load_dotenv
+from openai import OpenAI
+
+# .envファイルから環境変数を読み込む
+load_dotenv()
+
+# OpenAIクライアントを初期化
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
+def get_completion(prompt, model="gpt-3.5-turbo"):
+    messages = [{"role": "user", "content": prompt}]
+    response = client.chat.completions.create(
+        model=model,
+        messages=messages,
+        temperature=0.7,
+    )
+    return response.choices[0].message.content
+
+if __name__ == "__main__":
+    print("AIエージェント開発環境へようこそ！")
+    user_prompt = input("何か質問がありますか？: ")
+    response_content = get_completion(user_prompt)
+    print("\nAIからの回答:\n", response_content)
+```
+                </PromptBlock>
+                <p>このプログラムは、ユーザーからの入力を受け取り、OpenAIのGPT-3.5-turboモデルに渡して回答を得るシンプルなものです。</p>
+
+                <h3 id="first-commit">動作確認と最初のコミット</h3>
+                <p>プログラムを実行し、正しく動作することを確認したら、これまでの変更をGitにコミットしましょう。</p>
+                <PromptBlock title="プログラム実行とコミットプロンプト">
+```bash
+# プログラムを実行
+python main.py
+
+# Gitにステージング
+git add .
+
+# コミット
+git commit -m "feat: Initial AI agent development environment setup"
+```
+                </PromptBlock>
+                <ResponseExample title="回答例">
+```
+AIエージェント開発環境へようこそ！
+何か質問がありますか？: AIエージェントとは何ですか？
+
+AIからの回答:
+AIエージェントとは、特定の目標を達成するために自律的に行動する人工知能システムです。環境を認識し、計画を立て、行動を実行し、その結果を評価することで、目標に向かって学習し適応します。
+[main (root-commit) XXXXXXX] feat: Initial AI agent development environment setup
+ 4 files changed, XX insertions(+), XX deletions(-)
+ create mode 100644 .env
+ create mode 100644 .gitignore
+ create mode 100644 main.py
+ create mode 100644 requirements.txt
+```
+                </ResponseExample>
+            </section>
+
+            <section id="tips-for-env">
+                <h2>環境構築をさらに効率化するコツ</h2>
+                <p>AIエージェント開発環境をより快適に、そして効率的に運用するための追加のヒントをいくつかご紹介します。</p>
+                <ul>
+                    <li><strong>IDEの活用</strong>: VS Codeなどの統合開発環境（IDE）を使用すると、コード補完、デバッグ、Git連携などが容易になります。</li>
+                    <li><strong>Dockerの検討</strong>: より複雑なプロジェクトやチーム開発では、Dockerを使って開発環境をコンテナ化することで、環境差異による問題を解消できます。</li>
+                    <li><strong>GitHub Codespaces/Gitpod</strong>: クラウドベースの開発環境を利用すれば、ローカル環境のセットアップなしにすぐに開発を始められます。</li>
+                </ul>
+            </section>
+
+            <section id="caution-env">
+                <h2>開発環境利用時の注意点</h2>
+                <p>安全かつスムーズな開発のために、以下の点に注意しましょう。</p>
+                <ul>
+                    <li><strong>APIキーの厳重な管理</strong>: <code>.env</code>ファイルは絶対にGitリポジトリにコミットしないでください。また、公開された場所には置かないようにしましょう。</li>
+                    <li><strong>仮想環境の活用</strong>: 複数のプロジェクトを扱う際は、必ず仮想環境を使い分け、依存関係の衝突を防ぎましょう。</li>
+                    <li><strong>定期的なコミット</strong>: 小さな変更でもこまめにコミットし、変更履歴を明確に保つことで、問題発生時の原因特定やロールバックが容易になります。</li>
+                </ul>
+            </section>
+
+            <section id="summary">
+                <h2>まとめ</h2>
+                <p>本記事では、AIエージェント開発の第一歩として、Gitを活用したローカル開発環境の構築方法を解説しました。Python仮想環境のセットアップ、主要ライブラリのインストール、Gitでのバージョン管理、そしてAPIキーの安全な管理方法を習得できたことと思います。</p>
+                <p>この強固な基盤があれば、これからのAIエージェント開発を自信を持って進めることができます。ぜひ今日から、あなた自身のAIエージェント開発を始めてみてください。</p>
+            </section>
+
+            <section id="cta">
+                <h2>ChatGPTをもっと活用したい方へ</h2>
+                <p>AIエージェントの「頭脳」となるChatGPTの性能を最大限に引き出すには、有料版のChatGPT Plusが不可欠です。月額20ドルで、より高性能なGPT-4モデルへのアクセス、高速な応答、プラグイン機能の利用など、多くのメリットを享受できます。</p>
+                <p>本講座の今後の記事でも、ChatGPT Plusの機能を前提とした高度なテクニックを多数紹介していきます。AIエージェント開発を本格的に進めたい方は、ぜひアップグレードをご検討ください。</p>
+                <a href="/account/upgrade" class="cta-button">ChatGPT Plusにアップグレードする</a>
+            </section>
+
+            <section id="related-articles">
+                <h2>関連記事</h2>
+                <ul class="related-list">
+                    <li><a href="/skills/ai-agent-basics">AIエージェント入門：自律的に動くAIの仕組みを理解する</a> - AIエージェントの基本的な概念と動作原理を解説します。</li>
+                    <li><a href="/skills/react-framework-implementation">ReActフレームワーク実践：思考し行動するエージェントの作り方</a> - 次回記事で、AIエージェントの思考・行動サイクル「ReAct」の実装方法を深掘りします。</li>
+                    <li><a href="/skills/multi-agent-systems">マルチエージェントシステム：複数のAIを連携させる</a> - 複数のAIエージェントが協調して複雑なタスクを解決する手法を学びます。</li>
+                    <li><a href="/skills/ai-agent-ci-cd">AIエージェントのCI/CDと本番運用</a> - AIエージェントをクラウドにデプロイし、CI/CDパイプラインを構築する方法を解説します。</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <p>&copy; 2026 AIプロンプト活用ガイド. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

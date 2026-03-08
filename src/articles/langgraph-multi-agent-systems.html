@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="複数のAIエージェントが協調して複雑なタスクに取り組む「マルチエージェントシステム」を、LangGraphを用いて構築する方法を解説。設計思想から実装例までを学びます。">
+    <meta name="keywords" content="AIエージェント, マルチエージェント, LangGraph, LangChain, 協調, 役割分担">
+
+    <!-- OGP設定 -->
+    <meta property="og:title" content="LangGraphで組むマルチエージェントシステム：中級者向けプレミアム講座">
+    <meta property="og:description" content="複数のAIエージェントが協調して複雑なタスクに取り組む「マルチエージェントシステム」を、LangGraphを用いて構築する方法を解説。設計思想から実装例までを学びます。">
+    <meta property="og:image" content="/images/langgraph-multi-agent-systems-eyecatch.png">
+    <meta property="og:type" content="article">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="LangGraphで組むマルチエージェントシステム：中級者向けプレミアム講座">
+    <meta name="twitter:description" content="複数のAIエージェントが協調して複雑なタスクに取り組む「マルチエージェントシステム」を、LangGraphを用いて構築する方法を解説。設計思想から実装例までを学びます。">
+    <meta name="twitter:image" content="/images/langgraph-multi-agent-systems-eyecatch.png">
+
+    <title>LangGraphで組むマルチエージェントシステム：中級者向けプレミアム講座</title>
+
+    <!-- 構造化データ（JSON-LD） -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "LangGraphで組むマルチエージェントシステム：中級者向けプレミアム講座",
+        "image": "/images/langgraph-multi-agent-systems-eyecatch.png",
+        "datePublished": "2026-03-08",
+        "dateModified": "2026-03-08",
+        "author": {
+            "@type": "Person",
+            "name": "Manus AI"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "AIプロンプト活用ガイド"
+        },
+        "description": "複数のAIエージェントが協調して複雑なタスクに取り組む「マルチエージェントシステム」を、LangGraphを用いて構築する方法を解説。設計思想から実装例までを学びます。"
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'MS Gothic', 'MS ゴシック', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
+            color: #333333;
+            background-color: #FFFFFF;
+            line-height: 1.8;
+        }
+
+        /* ヘッダー */
+        header {
+            background-color: #5B9BD5;
+            color: white;
+            padding: 1rem;
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-name {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .site-name:hover {
+            opacity: 0.8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* モバイル対応 */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .article-header h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+            }
+
+            h3 {
+                font-size: 1.125rem;
+            }
+
+            .prompt-content pre,
+            .response-content pre {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* メインコンテンツ */
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        /* 記事ヘッダー */
+        .article-header {
+            margin-bottom: 2rem;
+        }
+
+        .article-header h1 {
+            font-size: 1.75rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .article-meta {
+            color: #666666;
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* 目次 */
+        .toc {
+            background-color: #F5F9FC;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .toc h2 {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .toc li {
+            margin-bottom: 0.5rem;
+        }
+
+        .toc a {
+            color: #5B9BD5;
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            color: #4A8BC4;
+        }
+
+        .toc .toc-h3 {
+            padding-left: 1rem;
+        }
+
+        /* 見出し */
+        h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #5B9BD5;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        h4 {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* 本文 */
+        p {
+            margin-bottom: 1rem;
+        }
+
+        /* プロンプトブロック */
+        .prompt-block {
+            margin: 1.5rem 0;
+        }
+
+        .prompt-block-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .prompt-block-title {
+            font-size: 0.875rem;
+            font-weight: bold;
+        }
+
+        .prompt-content {
+            background-color: #F3F4F6;
+            border-radius: 8px;
+            padding: 1rem;
+            position: relative;
+        }
+
+        .prompt-content pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-family: 'MS Gothic', 'MS ゴシック', monospace;
+            font-size: 0.875rem;
+            padding-right: 4rem;
+        }
+
+        .copy-button {
+            position: absolute;
+            top: 0.75rem;
+            right: 0.75rem;
+            background-color: #5B9BD5;
+            color: white;
+            border: none;
+            padding: 0.375rem 0.75rem;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            cursor: pointer;
+        }
+
+        .copy-button:hover {
+            background-color: #4A8BC4;
+        }
+
+        /* 回答例ブロック */
+        .response-block {
+            margin: 1.5rem 0;
+        }
+
+        .response-block-title {
+            font-size: 0.875rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .response-content {
+            background-color: #F3F4F6;
+            border-radius: 8px;
+            padding: 1rem;
+            border-left: 4px solid #5B9BD5;
+        }
+
+        .response-content pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-family: 'MS Gothic', 'MS ゴシック', monospace;
+            font-size: 0.875rem;
+        }
+
+        /* アフィリエイトボックス */
+        .affiliate-box {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: linear-gradient(to right, rgba(255, 152, 0, 0.1), rgba(255, 152, 0, 0.05));
+            border: 2px solid #FF9800;
+            border-radius: 8px;
+        }
+
+        .affiliate-box h3 {
+            font-size: 1.25rem;
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+        }
+
+        .affiliate-box p {
+            color: #666666;
+            margin-bottom: 1rem;
+        }
+
+        .affiliate-box ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 1rem;
+        }
+
+        .affiliate-box li {
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .affiliate-box li::before {
+            content: "✓";
+            color: #FF9800;
+            margin-right: 0.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #FF9800;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .cta-button:hover {
+            background-color: #E68900;
+        }
+
+        /* 関連記事 */
+        .related-articles {
+            margin-top: 3rem;
+        }
+
+        .related-articles h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .related-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .related-list li {
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        .related-list a {
+            color: #5B9BD5;
+            text-decoration: none;
+        }
+
+        .related-list a:hover {
+            color: #4A8BC4;
+        }
+
+        .related-description {
+            color: #666666;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+
+        /* フッター */
+        footer {
+            background-color: #5B9BD5;
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="/" class="site-name">AIプロンプト活用ガイド</a>
+            <nav>
+                <ul>
+                    <li><a href="/">ホーム</a></li>
+                    <li><a href="/prompts">プロンプト一覧</a></li>
+                    <li><a href="/guide">使い方ガイド</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <div class="article-header">
+                <h1>LangGraphで組むマルチエージェントシステム：中級者向けプレミアム講座</h1>
+                <div class="article-meta">
+                    作成日: 2026年03月08日 / 更新日: 2026年03月08日
+                </div>
+                <img src="/images/langgraph-multi-agent-systems-eyecatch.png" alt="LangGraphとマルチエージェントシステムのアイキャッチ画像" class="eyecatch" style="width:100%; height:auto; margin-top:1rem;">
+            </div>
+
+            <nav class="toc">
+                <h2>目次</h2>
+                <ul>
+                    <li><a href="#intro">はじめに</a></li>
+                    <li><a href="#multi-agent-concept">マルチエージェントシステムの設計思想</a>
+                        <ul>
+                            <li><a href="#limitations-of-single-agent">シングルエージェントの限界とマルチエージェントの可能性</a></li>
+                            <li><a href="#role-division">専門家（エージェント）の役割分担</a></li>
+                            <li><a href="#coordination-communication">協調とコミュニケーションのパターン</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#langgraph-intro">LangGraph入門</a>
+                        <ul>
+                            <li><a href="#graph-approach">グラフベースのアプローチとは</a></li>
+                            <li><a href="#nodes-edges">ノード（エージェント）とエッジ（遷移）の定義</a></li>
+                            <li><a href="#statefulgraph">StatefulGraph の概念</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#implementation">実装：リサーチチームの構築</a>
+                        <ul>
+                            <li><a href="#define-roles">役割定義：リサーチャー、アナリスト、ライター</a></li>
+                            <li><a href="#agent-prompts-tools">各エージェントのプロンプトとツールの設定</a></li>
+                            <li><a href="#workflow-definition">LangGraphでのワークフロー定義</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#execution-debug">実行とデバッグ</a>
+                        <ul>
+                            <li><a href="#visualize-graph">グラフの可視化</a></li>
+                            <li><a href="#track-process">実行プロセスの追跡</a></li>
+                            <li><a href="#error-handling-improvement">エラーハンドリングと改善</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#tips-multi-agent">マルチエージェントシステム活用のコツ</a></li>
+                    <li><a href="#caution-multi-agent">マルチエージェントシステム利用時の注意点</a></li>
+                    <li><a href="#summary">まとめ</a></li>
+                    <li><a href="#cta">ChatGPTをもっと活用したい方へ</a></li>
+                    <li><a href="#related-articles">関連記事</a></li>
+                </ul>
+            </nav>
+
+            <section id="intro">
+                <h2>はじめに</h2>
+                <p>前回の記事では、AIエージェントが自律的に思考し行動するためのReActフレームワークについて学びました。単一のエージェントでも多くのタスクをこなせますが、現実世界の複雑な問題には、複数の専門家が協力し合うように、複数のAIエージェントが連携して取り組む「マルチエージェントシステム」が有効です。</p>
+                <p>本記事では、LangChainの強力な拡張機能であるLangGraphを用いて、複数のAIエージェントが協調して複雑なタスクを解決するシステムの構築方法を解説します。リサーチ、分析、執筆といった異なる役割を持つエージェントを連携させ、より高度な自動化を実現する手法を学びましょう。</p>
+                <p>LangGraphは、エージェント間の複雑なやり取りをグラフ構造で定義できるため、システムの設計とデバッグが容易になります。この記事を通じて、皆さんはマルチエージェントシステムの設計思想を理解し、実際に動くリサーチチームを構築できるようになるでしょう。</p>
+            </section>
+
+            <section id="multi-agent-concept">
+                <h2>マルチエージェントシステムの設計思想</h2>
+                <p>マルチエージェントシステムは、単一の強力なAIではなく、それぞれが特定の能力や役割を持つ複数のAIエージェントが協力し合うことで、より大きな目標を達成するアプローチです。</p>
+
+                <h3 id="limitations-of-single-agent">シングルエージェントの限界とマルチエージェントの可能性</h3>
+                <p>シングルエージェントは、与えられたタスクに対して一貫した思考と行動を繰り返しますが、その能力は単一のLLMと利用可能なツールの範囲に限定されます。複雑な問題や多角的な視点が必要なタスクでは、以下のような限界に直面することがあります。</p>
+                <ul>
+                    <li><strong>専門性の欠如</strong>: 一つのエージェントが全ての分野に精通することは難しい。</li>
+                    <li><strong>タスクの複雑性</strong>: 非常に複雑なタスクを単一のエージェントで処理すると、思考が発散したり、効率が低下したりする。</li>
+                    <li><strong>エラー耐性</strong>: 単一のエージェントが失敗すると、システム全体が停止するリスクがある。</li>
+                </ul>
+                <p>これに対し、マルチエージェントシステムでは、各エージェントが特定の専門分野を担当し、互いに情報を共有・協力することで、これらの限界を克服し、より堅牢で高性能なシステムを構築できます。</p>
+
+                <h3 id="role-division">専門家（エージェント）の役割分担</h3>
+                <p>マルチエージェントシステムの鍵は、タスクを細分化し、それぞれのサブタスクに最適なエージェントを割り当てることです。例えば、記事執筆タスクであれば、以下のように役割を分担できます。</p>
+                <ul>
+                    <li><strong>リサーチャーエージェント</strong>: Web検索ツールを駆使して、必要な情報を収集する。</li>
+                    <li><strong>アナリストエージェント</strong>: 収集した情報を分析し、構造化されたデータや洞察を抽出する。</li>
+                    <li><strong>ライターエージェント</strong>: 分析結果を基に、指定された形式で記事を執筆する。</li>
+                    <li><strong>レビューアーエージェント</strong>: 執筆された記事を校正し、品質をチェックする。</li>
+                </ul>
+                <p>このように役割を明確にすることで、各エージェントは自身の専門性を最大限に発揮し、全体として高品質な成果物を生み出すことができます。</p>
+
+                <h3 id="coordination-communication">協調とコミュニケーションのパターン</h3>
+                <p>複数のエージェントが効果的に機能するためには、適切な協調とコミュニケーションのメカニズムが必要です。主なパターンとしては、以下のようなものが挙げられます。</p>
+                <ul>
+                    <li><strong>シーケンシャル（直列）</strong>: あるエージェントの出力が次のエージェントの入力となる、パイプライン型の連携。</li>
+                    <li><strong>パラレル（並列）</strong>: 複数のエージェントが同時に異なるサブタスクを実行し、後で結果を統合する。</li>
+                    <li><strong>階層型</strong>: 上位のエージェントが全体計画を立て、下位のエージェントに具体的なタスクを指示する。</li>
+                    <li><strong>議論型</strong>: 複数のエージェントが互いの意見を交換し、合意形成を図る。</li>
+                </ul>
+                <p>LangGraphは、これらの複雑な協調パターンをグラフ構造として直感的に表現し、実装することを可能にします。</p>
+            </section>
+
+            <section id="langgraph-intro">
+                <h2>LangGraph入門</h2>
+                <p>LangGraphは、LangChainを基盤としたライブラリで、複数のLLMやツール、エージェントを組み合わせて、複雑なステートフルなアプリケーションを構築するためのフレームワークです。特に、エージェント間のやり取りをグラフとして定義できる点が特徴です。</p>
+
+                <h3 id="graph-approach">グラフベースのアプローチとは</h3>
+                <p>従来のプログラミングでは、処理の流れを順次的に記述することが多いですが、LangGraphでは処理の各ステップを「ノード」、ノード間のデータの流れや制御を「エッジ」として表現します。これにより、条件分岐やループ、並列処理といった複雑なワークフローを視覚的かつ柔軟に設計できます。</p>
+                <p>例えば、あるエージェントが特定の条件を満たした場合にのみ次のエージェントに処理を渡す、といった動的なフローも容易に実現できます。</p>
+
+                <h3 id="nodes-edges">ノード（エージェント）とエッジ（遷移）の定義</h3>
+                <p>LangGraphにおける主要な構成要素は以下の通りです。</p>
+                <ul>
+                    <li><strong>ノード (Nodes)</strong>: グラフの各ステップを表します。これはLLMの呼び出し、ツールの実行、カスタムPython関数など、任意のアクションを実行するエージェントや関数になります。</li>
+                    <li><strong>エッジ (Edges)</strong>: ノード間の接続を表し、データの流れや制御の遷移を定義します。条件付きエッジを使用することで、ノードの出力に基づいて次のノードを動的に決定できます。</li>
+                    <li><strong>State (状態)</strong>: グラフ全体で共有される情報です。各ノードは状態を読み書きでき、これによってエージェント間のコミュニケーションや情報の引き継ぎが行われます。</li>
+                </ul>
+
+                <h3 id="statefulgraph">StatefulGraph の概念</h3>
+                <p>LangGraphの核心は、<code>StatefulGraph</code>です。これは、グラフの実行中に状態を保持し、各ノードがその状態を更新できることを意味します。これにより、エージェントは過去の対話履歴やタスクの進行状況を記憶し、それに基づいて次の行動を決定できるようになります。</p>
+                <p>例えば、リサーチエージェントがWeb検索で得た情報を状態に書き込み、アナリストエージェントがその状態から情報を読み取って分析する、といった連携が可能です。</p>
+            </section>
+
+            <section id="implementation">
+                <h2>実装：リサーチチームの構築</h2>
+                <p>それでは、LangGraphを使って、リサーチ、分析、執筆を行うマルチエージェントシステムを構築してみましょう。今回は、特定のトピックについてWebで情報収集し、その情報を分析してレポートを作成するチームを想定します。</p>
+
+                <h3 id="define-roles">役割定義：リサーチャー、アナリスト、ライター</h3>
+                <p>まず、各エージェントの役割と責任を明確にします。</p>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>エージェント名</th>
+                            <th>役割</th>
+                            <th>主なツール</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>リサーチャー</td>
+                            <td>指定されたキーワードでWeb検索を行い、関連情報を収集する。</td>
+                            <td>Web検索ツール（例: WikipediaQueryRun）</td>
+                        </tr>
+                        <tr>
+                            <td>アナリスト</td>
+                            <td>リサーチャーが収集した情報を分析し、要点を抽出し、構造化する。</td>
+                            <td>なし（LLMの推論能力のみ）</td>
+                        </tr>
+                        <tr>
+                            <td>ライター</td>
+                            <td>アナリストの分析結果を基に、指定された形式でレポートを執筆する。</td>
+                            <td>ファイル書き込みツール（例: write_file）</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 id="agent-prompts-tools">各エージェントのプロンプトとツールの設定</h3>
+                <p>各エージェントには、その役割に応じたプロンプトとツールを設定します。ここでは、前回の記事で作成したWeb検索ツールとファイル書き込みツールを再利用します。</p>
+                <PromptBlock title="各エージェントのプロンプトとツールの設定例">
+```python
+from langchain_openai import ChatOpenAI
+from langchain.agents import AgentExecutor, create_react_agent
+from langchain import hub
+from langchain.tools import tool
+from langchain_community.tools import WikipediaQueryRun
+from langchain_community.utilities import WikipediaAPIWrapper
+from langgraph.graph import StateGraph, END
+from typing import TypedDict, Annotated, List
+import operator
+
+# LLMの初期化
+llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
+
+# ツール定義（前回の記事から再利用）
+api_wrapper = WikipediaAPIWrapper(top_k_results=1, doc_content_chars_max=200)
+wikipedia_tool = WikipediaQueryRun(api_wrapper=api_wrapper)
+
+@tool
+def write_file(file_path: str, content: str) -> str:
+    """指定されたパスにファイルを作成し、内容を書き込みます。"""
+    try:
+        with open(file_path, "w", encoding="utf-8") as f:
+            f.write(content)
+        return f"ファイル \'{file_path}\' に内容を書き込みました。"
+    except Exception as e:
+        return f"ファイル書き込み中にエラーが発生しました: {e}"
+
+tools = [wikipedia_tool, write_file]
+
+# 各エージェントのプロンプト
+researcher_prompt = hub.pull("hwchase17/react")
+analyst_prompt = "あなたは優秀なアナリストです。与えられた情報を分析し、要点をまとめてください。"
+writer_prompt = "あなたはプロのライターです。与えられた分析結果を基に、指定された形式でレポートを執筆し、ファイルに保存してください。"
+
+# エージェントの定義
+def create_agent(llm, tools, prompt_template):
+    return create_react_agent(llm, tools, prompt_template)
+
+researcher_agent = create_agent(llm, [wikipedia_tool], researcher_prompt)
+analyst_agent = create_agent(llm, [], analyst_prompt) # アナリストはツール不要
+writer_agent = create_agent(llm, [write_file], writer_prompt)
+
+researcher_executor = AgentExecutor(agent=researcher_agent, tools=[wikipedia_tool], verbose=True, handle_parsing_errors=True)
+analyst_executor = AgentExecutor(agent=analyst_agent, tools=[], verbose=True, handle_parsing_errors=True)
+writer_executor = AgentExecutor(agent=writer_agent, tools=[write_file], verbose=True, handle_parsing_errors=True)
+
+# グラフの状態定義
+class AgentState(TypedDict):
+    input: str
+    research_result: Annotated[List[str], operator.add]
+    analysis_result: str
+    report_path: str
+
+# ノード関数
+def call_researcher(state):
+    print("---CALL RESEARCHER---")
+    task = state["input"]
+    result = researcher_executor.invoke({"input": task})
+    return {"research_result": [result["output"]] }
+
+def call_analyst(state):
+    print("---CALL ANALYST---")
+    research_data = "\n".join(state["research_result"])
+    task = f"以下の情報を分析し、要点をまとめてください:\n\n{research_data}"
+    result = analyst_executor.invoke({"input": task})
+    return {"analysis_result": result["output"]}
+
+def call_writer(state):
+    print("---CALL WRITER---")
+    analysis = state["analysis_result"]
+    report_path = state["report_path"]
+    task = f"以下の分析結果を基に、レポートを執筆し、ファイル \'{report_path}\' に保存してください:\n\n{analysis}"
+    result = writer_executor.invoke({"input": task})
+    return {"output": result["output"]}
+```
+                </PromptBlock>
+
+                <h3 id="workflow-definition">LangGraphでのワークフロー定義</h3>
+                <p>次に、これらのエージェントを組み合わせてワークフローを定義します。今回は、リサーチャーが情報を収集し、アナリストがそれを分析し、最後にライターがレポートを執筆するというシーケンシャルな流れを構築します。</p>
+                <PromptBlock title="LangGraphワークフロー定義">
+```python
+# グラフの構築
+workflow = StateGraph(AgentState)
+
+# ノードの追加
+workflow.add_node("researcher", call_researcher)
+workflow.add_node("analyst", call_analyst)
+workflow.add_node("writer", call_writer)
+
+# エッジの定義
+workflow.set_entry_point("researcher")
+workflow.add_edge("researcher", "analyst")
+workflow.add_edge("analyst", "writer")
+workflow.add_edge("writer", END)
+
+# グラフのコンパイル
+app = workflow.compile()
+
+# グラフの実行
+final_state = app.invoke({
+    "input": "AIエージェントの最新トレンドについて調査してください。",
+    "report_path": "ai_agent_trend_report.txt",
+    "research_result": [],
+    "analysis_result": "",
+})
+
+print("\n---FINAL REPORT---")
+with open(final_state["report_path"], "r", encoding="utf-8") as f:
+    print(f.read())
+```
+                </PromptBlock>
+                <p><code>set_entry_point</code>で開始ノードを、<code>add_edge</code>でノード間の遷移を定義します。<code>END</code>はグラフの終了を示します。</p>
+            </section>
+
+            <section id="execution-debug">
+                <h2>実行とデバッグ</h2>
+                <p>構築したマルチエージェントシステムを実行し、その動作を観察し、必要に応じてデバッグを行います。</p>
+
+                <h3 id="visualize-graph">グラフの可視化</h3>
+                <p>LangGraphは、構築したグラフを可視化する機能を提供しています。これにより、エージェント間の連携フローを一目で確認でき、設計ミスや複雑な部分を特定しやすくなります。</p>
+                <PromptBlock title="グラフ可視化の例">
+```python
+# グラフを画像として出力（graphvizが必要）
+# from IPython.display import Image, display
+# display(Image(app.get_graph().draw_png()))
+```
+                </PromptBlock>
+                <p>この機能を利用するには、Graphvizライブラリのインストールが必要です。</p>
+
+                <h3 id="track-process">実行プロセスの追跡</h3>
+                <p><code>verbose=True</code>を設定することで、各エージェントの思考（Thought）、行動（Action）、観察（Observation）が詳細に出力されます。これにより、エージェントがどのように情報を処理し、次のステップに進んでいるかを追跡できます。</p>
+                <p>特にマルチエージェントシステムでは、エージェント間の情報の受け渡しが正しく行われているか、期待通りの役割分担が機能しているかを確認することが重要です。</p>
+
+                <h3 id="error-handling-improvement">エラーハンドリングと改善</h3>
+                <p>マルチエージェントシステムは、単一エージェントよりも複雑なため、エラーが発生する可能性も高まります。以下のような点に注意して、エラーハンドリングと改善を行いましょう。</p>
+                <ul>
+                    <li><strong>ツールの失敗</strong>: Web検索が失敗したり、APIがエラーを返したりした場合に、エージェントが適切にリカバリできるか。</li>
+                    <li><strong>LLMの出力形式の不一致</strong>: あるエージェントの出力が、次のエージェントの期待する入力形式と異なる場合。</li>
+                    <li><strong>無限ループ</strong>: エージェントが同じ状態を繰り返し、タスクが完了しない場合。</li>
+                </ul>
+                <p>これらの問題に対しては、プロンプトの改善、ツールの堅牢化、条件付きエッジによる遷移ロジックの調整などで対応します。</p>
+            </section>
+
+            <section id="tips-multi-agent">
+                <h2>マルチエージェントシステム活用のコツ</h2>
+                <p>マルチエージェントシステムを最大限に活用するためのヒントをいくつかご紹介します。</p>
+                <ul>
+                    <li><strong>役割の明確化</strong>: 各エージェントの役割と責任を明確にし、重複や漏れがないように設計しましょう。</li>
+                    <li><strong>コミュニケーションの最適化</strong>: エージェント間の情報伝達は、必要最小限かつ明確に行うように設計します。状態（State）の設計が重要です。</li>
+                    <li><strong>段階的な構築</strong>: 最初から複雑なシステムを構築しようとせず、シンプルなシーケンシャルな連携から始め、徐々に複雑なロジックや並列処理を追加していくのが良いでしょう。</li>
+                    <li><strong>Human-in-the-loop</strong>: 重要な判断や、AIが苦手とする創造的なタスクには、人間が介入するステップを設けることで、システムの信頼性と品質を高めることができます。</li>
+                </ul>
+            </section>
+
+            <section id="caution-multi-agent">
+                <h2>マルチエージェントシステム利用時の注意点</h2>
+                <p>マルチエージェントシステムは強力ですが、運用には注意が必要です。</p>
+                <ul>
+                    <li><strong>複雑性の増加</strong>: エージェントが増えるほど、システム全体の複雑性が増し、デバッグやメンテナンスが難しくなります。</li>
+                    <li><strong>コストの増大</strong>: 複数のエージェントがLLMを呼び出すため、API利用料金が単一エージェントよりも高くなる傾向があります。</li>
+                    <li><strong>パフォーマンス</strong>: エージェント間のやり取りが増えることで、タスク完了までの時間が長くなる可能性があります。</li>
+                    <li><strong>協調の失敗</strong>: エージェント間のコミュニケーションがうまくいかないと、タスクが途中で停止したり、期待しない結果になったりすることがあります。</li>
+                </ul>
+            </section>
+
+            <section id="summary">
+                <h2>まとめ</h2>
+                <p>本記事では、LangGraphを用いて複数のAIエージェントが協調して複雑なタスクを解決する「マルチエージェントシステム」の構築方法を解説しました。シングルエージェントの限界を乗り越え、リサーチ、分析、執筆といった異なる役割を持つエージェントを連携させることで、より高度な自動化が可能になることを理解いただけたかと思います。</p>
+                <p>LangGraphのグラフベースのアプローチは、複雑なエージェント間のワークフローを直感的に設計・実装するための強力なツールです。この知識を活かし、皆さんの業務やプロジェクトに合わせたマルチエージェントシステムを構築し、AI活用の幅をさらに広げていきましょう。</p>
+            </section>
+
+            <section id="cta">
+                <h2>ChatGPTをもっと活用したい方へ</h2>
+                <p>マルチエージェントシステムにおいて、各エージェントの性能は、その「頭脳」となるLLMの能力に大きく左右されます。特に、複雑な推論や高度な分析を必要とするタスクでは、ChatGPT Plusで利用できるGPT-4o-miniなどの高性能モデルが不可欠です。</p>
+                <p>月額20ドルで利用できるChatGPT Plusは、マルチエージェントシステムの真価を引き出すための投資として、非常に価値があります。AIエージェント開発の最前線で活躍したい方は、ぜひアップグレードをご検討ください。</p>
+                <a href="/account/upgrade" class="cta-button">ChatGPT Plusにアップグレードする</a>
+            </section>
+
+            <section id="related-articles">
+                <h2>関連記事</h2>
+                <ul class="related-list">
+                    <li><a href="/articles/ai-agent-dev-env-git">Gitと始めるAIエージェント開発環境構築</a> - AIエージェント開発の最初のステップとして、開発環境の構築方法を解説します。</li>
+                    <li><a href="/articles/react-framework-implementation">ReActフレームワーク実践：思考し行動するエージェントの作り方</a> - AIエージェントの思考・行動サイクル「ReAct」の実装方法を深掘りします。</li>
+                    <li><a href="/skills/ai-agent-basics">AIエージェント入門：自律的に動くAIの仕組みを理解する</a> - AIエージェントの基本的な概念と動作原理を解説します。</li>
+                    <li><a href="/skills/ai-agent-ci-cd">AIエージェントのCI/CDと本番運用</a> - 次回記事で、AIエージェントをクラウドにデプロイし、CI/CDパイプラインを構築する方法を解説します。</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <p>&copy; 2026 AIプロンプト活用ガイド. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

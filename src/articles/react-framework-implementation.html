@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AIエージェントの思考・行動サイクル「ReAct」を実装する方法を解説。Web検索やファイル操作などのツールを連携させ、自律的にタスクを遂行するエージェントを構築します。">
+    <meta name="keywords" content="AIエージェント, ReAct, LangChain, ツール, Web検索, ファイル操作, 自律型AI">
+
+    <!-- OGP設定 -->
+    <meta property="og:title" content="ReActフレームワーク実践：思考し行動するエージェントの作り方：中級者向けプレミアム講座">
+    <meta property="og:description" content="AIエージェントの思考・行動サイクル「ReAct」を実装する方法を解説。Web検索やファイル操作などのツールを連携させ、自律的にタスクを遂行するエージェントを構築します。">
+    <meta property="og:image" content="/images/react-framework-implementation-eyecatch.png">
+    <meta property="og:type" content="article">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ReActフレームワーク実践：思考し行動するエージェントの作り方：中級者向けプレミアム講座">
+    <meta name="twitter:description" content="AIエージェントの思考・行動サイクル「ReAct」を実装する方法を解説。Web検索やファイル操作などのツールを連携させ、自律的にタスクを遂行するエージェントを構築します。">
+    <meta name="twitter:image" content="/images/react-framework-implementation-eyecatch.png">
+
+    <title>ReActフレームワーク実践：思考し行動するエージェントの作り方：中級者向けプレミアム講座</title>
+
+    <!-- 構造化データ（JSON-LD） -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "ReActフレームワーク実践：思考し行動するエージェントの作り方：中級者向けプレミアム講座",
+        "image": "/images/react-framework-implementation-eyecatch.png",
+        "datePublished": "2026-03-08",
+        "dateModified": "2026-03-08",
+        "author": {
+            "@type": "Person",
+            "name": "Manus AI"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "AIプロンプト活用ガイド"
+        },
+        "description": "AIエージェントの思考・行動サイクル「ReAct」を実装する方法を解説。Web検索やファイル操作などのツールを連携させ、自律的にタスクを遂行するエージェントを構築します。"
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'MS Gothic', 'MS ゴシック', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
+            color: #333333;
+            background-color: #FFFFFF;
+            line-height: 1.8;
+        }
+
+        /* ヘッダー */
+        header {
+            background-color: #5B9BD5;
+            color: white;
+            padding: 1rem;
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .site-name {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .site-name:hover {
+            opacity: 0.8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* モバイル対応 */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            .article-header h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.25rem;
+            }
+
+            h3 {
+                font-size: 1.125rem;
+            }
+
+            .prompt-content pre,
+            .response-content pre {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* メインコンテンツ */
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        /* 記事ヘッダー */
+        .article-header {
+            margin-bottom: 2rem;
+        }
+
+        .article-header h1 {
+            font-size: 1.75rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .article-meta {
+            color: #666666;
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* 目次 */
+        .toc {
+            background-color: #F5F9FC;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .toc h2 {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .toc ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .toc li {
+            margin-bottom: 0.5rem;
+        }
+
+        .toc a {
+            color: #5B9BD5;
+            text-decoration: none;
+        }
+
+        .toc a:hover {
+            color: #4A8BC4;
+        }
+
+        .toc .toc-h3 {
+            padding-left: 1rem;
+        }
+
+        /* 見出し */
+        h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #5B9BD5;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        h4 {
+            font-size: 1rem;
+            font-weight: bold;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* 本文 */
+        p {
+            margin-bottom: 1rem;
+        }
+
+        /* プロンプトブロック */
+        .prompt-block {
+            margin: 1.5rem 0;
+        }
+
+        .prompt-block-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+
+        .prompt-block-title {
+            font-size: 0.875rem;
+            font-weight: bold;
+        }
+
+        .prompt-content {
+            background-color: #F3F4F6;
+            border-radius: 8px;
+            padding: 1rem;
+            position: relative;
+        }
+
+        .prompt-content pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-family: 'MS Gothic', 'MS ゴシック', monospace;
+            font-size: 0.875rem;
+            padding-right: 4rem;
+        }
+
+        .copy-button {
+            position: absolute;
+            top: 0.75rem;
+            right: 0.75rem;
+            background-color: #5B9BD5;
+            color: white;
+            border: none;
+            padding: 0.375rem 0.75rem;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            cursor: pointer;
+        }
+
+        .copy-button:hover {
+            background-color: #4A8BC4;
+        }
+
+        /* 回答例ブロック */
+        .response-block {
+            margin: 1.5rem 0;
+        }
+
+        .response-block-title {
+            font-size: 0.875rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .response-content {
+            background-color: #F3F4F6;
+            border-radius: 8px;
+            padding: 1rem;
+            border-left: 4px solid #5B9BD5;
+        }
+
+        .response-content pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-family: 'MS Gothic', 'MS ゴシック', monospace;
+            font-size: 0.875rem;
+        }
+
+        /* アフィリエイトボックス */
+        .affiliate-box {
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: linear-gradient(to right, rgba(255, 152, 0, 0.1), rgba(255, 152, 0, 0.05));
+            border: 2px solid #FF9800;
+            border-radius: 8px;
+        }
+
+        .affiliate-box h3 {
+            font-size: 1.25rem;
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+        }
+
+        .affiliate-box p {
+            color: #666666;
+            margin-bottom: 1rem;
+        }
+
+        .affiliate-box ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 1rem;
+        }
+
+        .affiliate-box li {
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .affiliate-box li::before {
+            content: "✓";
+            color: #FF9800;
+            margin-right: 0.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #FF9800;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .cta-button:hover {
+            background-color: #E68900;
+        }
+
+        /* 関連記事 */
+        .related-articles {
+            margin-top: 3rem;
+        }
+
+        .related-articles h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .related-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .related-list li {
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        .related-list a {
+            color: #5B9BD5;
+            text-decoration: none;
+        }
+
+        .related-list a:hover {
+            color: #4A8BC4;
+        }
+
+        .related-description {
+            color: #666666;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+        }
+
+        /* フッター */
+        footer {
+            background-color: #5B9BD5;
+            color: white;
+            padding: 2rem 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="/" class="site-name">AIプロンプト活用ガイド</a>
+            <nav>
+                <ul>
+                    <li><a href="/">ホーム</a></li>
+                    <li><a href="/prompts">プロンプト一覧</a></li>
+                    <li><a href="/guide">使い方ガイド</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <article>
+            <div class="article-header">
+                <h1>ReActフレームワーク実践：思考し行動するエージェントの作り方：中級者向けプレミアム講座</h1>
+                <div class="article-meta">
+                    作成日: 2026年03月08日 / 更新日: 2026年03月08日
+                </div>
+                <img src="/images/react-framework-implementation-eyecatch.png" alt="ReActフレームワークとAIエージェントのアイキャッチ画像" class="eyecatch" style="width:100%; height:auto; margin-top:1rem;">
+            </div>
+
+            <nav class="toc">
+                <h2>目次</h2>
+                <ul>
+                    <li><a href="#intro">はじめに</a></li>
+                    <li><a href="#react-concept">ReActフレームワークの概念</a>
+                        <ul>
+                            <li><a href="#thought-action-observation">Thought, Action, Observationのサイクル</a></li>
+                            <li><a href="#why-react">なぜReActが重要なのか</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#langchain-react">LangChainでのReActエージェント実装</a>
+                        <ul>
+                            <li><a href="#import-libs">必要なライブラリのインポート</a></li>
+                            <li><a href="#define-tools">ツールの定義（Web検索ツール）</a></li>
+                            <li><a href="#init-run-agent">エージェントの初期化と実行</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#custom-tools">カスタムツールの作成</a>
+                        <ul>
+                            <li><a href="#file-io-tool">ファイル読み書きを行うカスタムツールの設計</a></li>
+                            <li><a href="#tool-decorator">@tool デコレータを使った実装</a></li>
+                            <li><a href="#integrate-custom-tool">エージェントへのカスタムツールの組み込み</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#research-automation">実践：リサーチタスクの自動化</a>
+                        <ul>
+                            <li><a href="#task-setting">課題設定</a></li>
+                            <li><a href="#execute-observe">エージェントの実行とプロセスの観察</a></li>
+                            <li><a href="#check-output">出力結果の確認と考察</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#tips-react">ReActエージェント活用のコツ</a></li>
+                    <li><a href="#caution-react">ReActエージェント利用時の注意点</a></li>
+                    <li><a href="#summary">まとめ</a></li>
+                    <li><a href="#cta">ChatGPTをもっと活用したい方へ</a></li>
+                    <li><a href="#related-articles">関連記事</a></li>
+                </ul>
+            </nav>
+
+            <section id="intro">
+                <h2>はじめに</h2>
+                <p>前回の記事では、AIエージェント開発のためのローカル環境構築とGitでのバージョン管理について学びました。今回は、AIエージェントが自律的に思考し、行動するための核となる「ReActフレームワーク」に焦点を当て、その概念からLangChainを用いた実践的な実装方法までを深く掘り下げていきます。</p>
+                <p>ReAct（Reasoning + Acting）は、大規模言語モデル（LLM）が「思考（Thought）」と「行動（Action）」を交互に繰り返すことで、複雑なタスクを効率的に解決する強力なパラダイムです。Web検索やファイル操作といった外部ツールをエージェントに連携させることで、AIはより賢く、より多くのことができるようになります。</p>
+                <p>この記事を通じて、皆さんはAIエージェントがどのようにして情報を収集し、問題を解決していくのかを理解し、実際に自律的なリサーチタスクを遂行するエージェントを構築できるようになるでしょう。コピペで使えるコード例と共に、ReActフレームワークの真髄を体験してください。</p>
+            </section>
+
+            <section id="react-concept">
+                <h2>ReActフレームワークの概念</h2>
+                <p>ReActフレームワークは、LLMが単に質問に答えるだけでなく、より複雑な推論やタスク実行を可能にするためのアプローチです。AIエージェントは、以下の3つの要素をサイクルとして繰り返しながら目標達成を目指します。</p>
+
+                <h3 id="thought-action-observation">Thought, Action, Observationのサイクル</h3>
+                <p>ReActは、以下のサイクルを繰り返します。</p>
+                <ol>
+                    <li><strong>Thought（思考）</strong>: エージェントは現在の状況を分析し、次に何をすべきか、どのツールを使うべきかを推論します。</li>
+                    <li><strong>Action（行動）</strong>: 推論に基づいて、エージェントは特定のツール（Web検索、計算機、APIなど）を呼び出し、実行します。</li>
+                    <li><strong>Observation（観察）</strong>: ツール実行の結果を観察し、その結果を次の「Thought」にフィードバックします。</li>
+                </ol>
+                <p>このサイクルを繰り返すことで、エージェントは試行錯誤しながら目標に近づいていきます。</p>
+
+                <h3 id="why-react">なぜReActが重要なのか</h3>
+                <p>ReActが重要な理由は、LLMの推論能力と外部ツール利用能力を組み合わせることで、以下のようなメリットが得られるためです。</p>
+                <ul>
+                    <li><strong>問題解決能力の向上</strong>: 複雑な問題を小さなステップに分解し、段階的に解決できます。</li>
+                    <li><strong>最新情報の利用</strong>: Web検索ツールなどを用いることで、LLMの学習データにはない最新の情報も利用できます。</li>
+                    <li><strong>幻覚（Hallucination）の抑制</strong>: 外部ツールで得られた客観的な情報に基づいて推論することで、LLMが事実に基づかない情報を生成するリスクを低減できます。</li>
+                    <li><strong>透明性の確保</strong>: エージェントの思考プロセス（Thought）が明確になるため、なぜその行動を取ったのかを理解しやすくなります。</li>
+                </ul>
+            </section>
+
+            <section id="langchain-react">
+                <h2>LangChainでのReActエージェント実装</h2>
+                <p>PythonのLangChainライブラリは、AIエージェントを構築するための強力なフレームワークです。ここでは、LangChainを使ってReActエージェントを実装する基本的な手順を見ていきましょう。</p>
+
+                <h3 id="import-libs">必要なライブラリのインポート</h3>
+                <p>前回の記事でインストールしたライブラリに加えて、LangChainのエージェント関連モジュールをインポートします。</p>
+                <PromptBlock title="必要なライブラリのインポート">
+```python
+import os
+from dotenv import load_dotenv
+from langchain_openai import ChatOpenAI
+from langchain.agents import AgentExecutor, create_react_agent
+from langchain import hub
+from langchain.tools import tool
+from langchain_community.tools import WikipediaQueryRun
+from langchain_community.utilities import WikipediaAPIWrapper
+
+# .envファイルから環境変数を読み込む
+load_dotenv()
+```
+                </PromptBlock>
+
+                <h3 id="define-tools">ツールの定義（Web検索ツール）</h3>
+                <p>エージェントが利用できるツールを定義します。ここでは、Wikipediaを検索するツールを例に挙げます。</p>
+                <PromptBlock title="Wikipedia検索ツールの定義">
+```python
+# Wikipedia検索ツールの設定
+api_wrapper = WikipediaAPIWrapper(top_k_results=1, doc_content_chars_max=200)
+wikipedia_tool = WikipediaQueryRun(api_wrapper=api_wrapper)
+
+tools = [wikipedia_tool]
+```
+                </PromptBlock>
+                <p><code>top_k_results</code>は検索結果の数、<code>doc_content_chars_max</code>は取得するドキュメントの最大文字数を指定します。</p>
+
+                <h3 id="init-run-agent">エージェントの初期化と実行</h3>
+                <p>LLMとツールを組み合わせてエージェントを初期化し、実行します。LangChainでは、ReActプロンプトのテンプレートを<code>langchain.hub</code>から簡単に取得できます。</p>
+                <PromptBlock title="エージェントの初期化と実行">
+```python
+# LLMの初期化
+llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
+
+# ReActプロンプトの取得
+prompt = hub.pull("hwchase17/react")
+
+# エージェントの作成
+agent = create_react_agent(llm, tools, prompt)
+
+# エージェントエグゼキュータの作成
+agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True, handle_parsing_errors=True)
+
+# エージェントの実行
+result = agent_executor.invoke({"input": "AIエージェントのReActフレームワークについて教えてください。"})
+print(result["output"])
+```
+                </PromptBlock>
+                <p><code>verbose=True</code>に設定することで、エージェントの思考プロセス（Thought, Action, Observation）が詳細に表示され、デバッグに役立ちます。</p>
+            </section>
+
+            <section id="custom-tools">
+                <h2>カスタムツールの作成</h2>
+                <p>既存のツールだけでなく、独自の機能を持つカスタムツールをエージェントに組み込むことも可能です。ここでは、ファイル読み書きを行うカスタムツールを作成してみましょう。</p>
+
+                <h3 id="file-io-tool">ファイル読み書きを行うカスタムツールの設計</h3>
+                <p>エージェントがファイルを作成したり、既存のファイルを読み込んだりできるツールを考えます。これにより、エージェントは情報を永続化したり、外部のデータソースを利用したりできるようになります。</p>
+
+                <h3 id="tool-decorator">@tool デコレータを使った実装</h3>
+                <p>LangChainでは、Pythonの関数に<code>@tool</code>デコレータを付与するだけで、簡単にカスタムツールを作成できます。</p>
+                <PromptBlock title="カスタムツールの実装">
+```python
+@tool
+def write_file(file_path: str, content: str) -> str:
+    """指定されたパスにファイルを作成し、内容を書き込みます。"""
+    try:
+        with open(file_path, "w", encoding="utf-8") as f:
+            f.write(content)
+        return f"ファイル '{file_path}' に内容を書き込みました。"
+    except Exception as e:
+        return f"ファイル書き込み中にエラーが発生しました: {e}"
+
+@tool
+def read_file(file_path: str) -> str:
+    """指定されたパスのファイルを読み込み、その内容を返します。"""
+    try:
+        with open(file_path, "r", encoding="utf-8") as f:
+            content = f.read()
+        return f"ファイル '{file_path}' の内容:\n{content}"
+    except FileNotFoundError:
+        return f"エラー: ファイル '{file_path}' が見つかりません。"
+    except Exception as e:
+        return f"ファイル読み込み中にエラーが発生しました: {e}"
+
+tools.extend([write_file, read_file]) # 既存のツールリストに追加
+```
+                </PromptBlock>
+                <p><code>@tool</code>デコレータの引数として、ツールの説明を記述します。この説明は、エージェントがどのツールを使うべきかを判断する際に利用されます。</p>
+
+                <h3 id="integrate-custom-tool">エージェントへのカスタムツールの組み込み</h3>
+                <p>カスタムツールを定義したら、それをエージェントのツールリストに追加し、再度エージェントエグゼキュータを作成します。</p>
+                <PromptBlock title="カスタムツールを組み込んだエージェントの実行">
+```python
+# エージェントの再作成（ツールリストを更新）
+agent = create_react_agent(llm, tools, prompt)
+agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True, handle_parsing_errors=True)
+
+# カスタムツールを使ったエージェントの実行例
+result = agent_executor.invoke({"input": "test.txtというファイルを作成し、その中に'Hello, AI Agent!'と書き込んでください。その後、そのファイルの内容を読み込んでください。"})
+print(result["output"])
+```
+                </PromptBlock>
+            </section>
+
+            <section id="research-automation">
+                <h2>実践：リサーチタスクの自動化</h2>
+                <p>これまでに学んだReActフレームワークとツールの概念を組み合わせ、具体的なリサーチタスクを自動化するエージェントを構築してみましょう。</p>
+
+                <h3 id="task-setting">課題設定</h3>
+                <p>「AIエージェントの最新トレンドについてWebで情報収集し、その結果を要約して<code>research_report.txt</code>というファイルに保存してください。」</p>
+
+                <h3 id="execute-observe">エージェントの実行とプロセスの観察</h3>
+                <p>このタスクをエージェントに与え、その思考と行動のプロセスを観察します。</p>
+                <PromptBlock title="リサーチタスク実行プロンプト">
+```python
+research_task = "AIエージェントの最新トレンドについてWebで情報収集し、その結果を要約してresearch_report.txtというファイルに保存してください。"
+result = agent_executor.invoke({"input": research_task})
+print(result["output"])
+```
+                </PromptBlock>
+                <p><code>verbose=True</code>の設定により、エージェントがWeb検索ツールを呼び出し、その結果を読み込み、要約し、最終的にファイルに書き込む一連のプロセスがコンソールに表示されるはずです。</p>
+
+                <h3 id="check-output">出力結果の確認と考察</h3>
+                <p>エージェントが生成した<code>research_report.txt</code>ファイルの内容を確認し、期待通りの結果が得られているかを評価します。もし期待と異なる点があれば、プロンプトやツールの定義を改善することで、エージェントの性能を向上させることができます。</p>
+            </section>
+
+            <section id="tips-react">
+                <h2>ReActエージェント活用のコツ</h2>
+                <p>ReActエージェントを効果的に活用するためのヒントをいくつかご紹介します。</p>
+                <ul>
+                    <li><strong>明確な指示</strong>: エージェントに与える目標は、具体的かつ明確に記述しましょう。曖昧な指示は、エージェントの迷いや非効率な行動につながります。</li>
+                    <li><strong>適切なツールの選択</strong>: タスクに応じて最適なツールをエージェントに提供しましょう。ツールの数が増えすぎると、エージェントが混乱する可能性もあります。</li>
+                    <li><strong>思考プロセスの可視化</strong>: <code>verbose=True</code>を活用し、エージェントの思考プロセスを常に観察しましょう。これにより、エージェントの行動原理を理解し、問題点を特定しやすくなります。</li>
+                    <li><strong>エラーハンドリングの組み込み</strong>: ツールが失敗した場合や、LLMが予期せぬ出力をした場合に備え、適切なエラーハンドリングのロジックを組み込むことが重要です。</li>
+                </ul>
+            </section>
+
+            <section id="caution-react">
+                <h2>ReActエージェント利用時の注意点</h2>
+                <p>ReActエージェントは強力ですが、利用にはいくつかの注意点があります。</p>
+                <ul>
+                    <li><strong>コスト</strong>: LLMの呼び出し回数が増えるため、API利用料金が増加する可能性があります。特に複雑なタスクでは、コスト効率を考慮した設計が必要です。</li>
+                    <li><strong>レイテンシ</strong>: 複数のThought-Action-Observationサイクルを繰り返すため、応答に時間がかかることがあります。リアルタイム性が求められるアプリケーションには不向きな場合があります。</li>
+                    <li><strong>信頼性</strong>: LLMの推論能力に依存するため、常に完璧な結果が得られるとは限りません。重要なタスクでは、人間による最終確認（Human-in-the-loop）を組み込むことを検討しましょう。</li>
+                </ul>
+            </section>
+
+            <section id="summary">
+                <h2>まとめ</h2>
+                <p>本記事では、AIエージェントが自律的に思考し行動するための「ReActフレームワーク」について、その概念からLangChainを用いた実践的な実装方法までを解説しました。Web検索ツールやカスタムツールをエージェントに組み込むことで、AIがより複雑なタスクを遂行できることを理解いただけたかと思います。</p>
+                <p>ReActフレームワークは、AIエージェント開発の基礎となる重要な技術です。この知識を基盤として、さらに高度なAIエージェントの構築に挑戦していきましょう。</p>
+            </section>
+
+            <section id="cta">
+                <h2>ChatGPTをもっと活用したい方へ</h2>
+                <p>ReActエージェントの性能は、その「頭脳」となるLLMの能力に大きく依存します。より高度な推論能力や最新の情報を利用できるChatGPT Plusは、AIエージェント開発において強力な武器となります。</p>
+                <p>月額20ドルで利用できるChatGPT Plusは、本講座で紹介するような複雑なタスクを効率的に処理するために不可欠です。AIエージェント開発を本格的に進めたい方は、ぜひアップグレードをご検討ください。</p>
+                <a href="/account/upgrade" class="cta-button">ChatGPT Plusにアップグレードする</a>
+            </section>
+
+            <section id="related-articles">
+                <h2>関連記事</h2>
+                <ul class="related-list">
+                    <li><a href="/articles/ai-agent-dev-env-git">Gitと始めるAIエージェント開発環境構築</a> - AIエージェント開発の最初のステップとして、開発環境の構築方法を解説します。</li>
+                    <li><a href="/skills/ai-agent-basics">AIエージェント入門：自律的に動くAIの仕組みを理解する</a> - AIエージェントの基本的な概念と動作原理を解説します。</li>
+                    <li><a href="/skills/multi-agent-systems">LangGraphで組むマルチエージェントシステム</a> - 次回記事で、複数のAIエージェントが協調して複雑なタスクを解決する「マルチエージェントシステム」について解説します。</li>
+                    <li><a href="/skills/ai-agent-ci-cd">AIエージェントのCI/CDと本番運用</a> - AIエージェントをクラウドにデプロイし、CI/CDパイプラインを構築する方法を解説します。</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <p>&copy; 2026 AIプロンプト活用ガイド. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
