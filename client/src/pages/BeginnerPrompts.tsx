@@ -1,4 +1,3 @@
-import { Link } from "wouter";
 import PageLayout from "@/components/layout/PageLayout";
 import { ChevronRight, BookOpen, Zap } from "lucide-react";
 import { useSEO } from "@/hooks/useSEO";
@@ -90,6 +89,27 @@ const beginnerPrompts = [
     title: "Gitと始めるAIエージェント開発環境構築",
     description: "Gitでのバージョン管理を前提とした、AIエージェントのローカル開発環境構築とプロジェクトの初期設定方法を学ぶ。",
   },
+  {
+    href: "/articles/ai-agent-course-module-2",
+    category: "中級者向けコース",
+    categoryColor: "#7C3AED",
+    title: "ReActフレームワークで実践的なAIエージェント構築",
+    description: "思考・行動・観察のループを実装し、複雑なタスクを自動化するAIエージェントの開発方法を学びます。",
+  },
+  {
+    href: "/articles/ai-agent-course-module-3",
+    category: "中級者向けコース",
+    categoryColor: "#7C3AED",
+    title: "マルチエージェントシステムの設計と実装",
+    description: "複数のAIエージェントを連携させるマルチエージェントシステムの設計方法。エージェント間の通信、タスク分配、結果の統合方法を学びます。",
+  },
+  {
+    href: "/articles/ai-agent-course-module-4",
+    category: "中級者向けコース",
+    categoryColor: "#7C3AED",
+    title: "本番環境へのデプロイとCI/CD構築",
+    description: "AIエージェントを本番環境にデプロイする方法とCI/CDパイプラインの構築。Docker、Kubernetes、GitHub Actionsを使用した自動化デプロイメント。",
+  },
 ];
 
 export default function BeginnerPrompts() {
@@ -118,64 +138,68 @@ export default function BeginnerPrompts() {
           <h1 className="text-3xl md:text-4xl font-bold mb-4">
             初心者向けプロンプト集
           </h1>
-          <p className="text-base md:text-lg opacity-90 mb-2">
-            ChatGPTをはじめとするAIツールで、すぐに実践できるプロンプト
+          <p className="text-lg text-white/90 mb-6">
+            ChatGPTやその他のAIツールで、すぐに使える実践的なプロンプトテンプレート。初心者向けから中級者向けコースまで、段階的に学習できます。
           </p>
-          <p className="text-sm opacity-80">
-            ビジネスメール、議事録、ブログ作成など、様々なシーンで活用できるテンプレートを厳選。個人・商用問わず、自由にご利用ください。
-          </p>
+          <div className="flex items-center gap-2 text-white/80">
+            <Zap className="w-4 h-4" />
+            <span className="text-sm">全15記事・完全無料</span>
+          </div>
         </div>
       </section>
 
-      <div className="max-w-5xl mx-auto px-4 py-12">
-        {/* プロンプト一覧 */}
-        <div className="grid gap-6">
+      {/* メインコンテンツ */}
+      <section className="max-w-5xl mx-auto px-4 py-12 md:py-16">
+        {/* 記事グリッド */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {beginnerPrompts.map((prompt, index) => (
-            <Link key={index} href={prompt.href}>
-              <a className="block bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg hover:border-gray-300 transition-all dark:bg-[#1A2332] dark:border-[#3A4A5C] dark:hover:border-[#5B6A7C]">
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-2">
-                      <span
-                        className="text-xs font-bold px-3 py-1 rounded-full text-white"
-                        style={{ backgroundColor: prompt.categoryColor }}
-                      >
-                        {prompt.category}
-                      </span>
-                    </div>
-                    <h3 className="text-lg font-bold text-[#333333] mb-2 dark:text-white">
-                      {prompt.title}
-                    </h3>
-                    <p className="text-sm text-[#666666] dark:text-[#B0B8C0] leading-relaxed">
-                      {prompt.description}
-                    </p>
-                  </div>
-                  <div className="flex-shrink-0">
-                    <ChevronRight className="w-5 h-5 text-[#5B9BD5] dark:text-[#7BC4FF]" />
-                  </div>
-                </div>
-              </a>
-            </Link>
+            <a
+              key={index}
+              href={prompt.href}
+              className="group block p-6 bg-white dark:bg-slate-900 rounded-lg border border-border hover:shadow-lg transition-shadow"
+            >
+              <div className="flex items-start justify-between mb-3">
+                <span
+                  className="text-xs font-bold px-3 py-1 rounded-full text-white"
+                  style={{ backgroundColor: prompt.categoryColor }}
+                >
+                  {prompt.category}
+                </span>
+              </div>
+              <h3 className="text-lg font-bold mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                {prompt.title}
+              </h3>
+              <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
+                {prompt.description}
+              </p>
+              <div className="flex items-center text-blue-600 dark:text-blue-400 text-sm font-semibold">
+                詳しく見る
+                <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </a>
           ))}
         </div>
 
-        {/* フッターメッセージ */}
-        <section className="mt-16 bg-[#F5F9FC] dark:bg-[#1A2332] rounded-lg p-8 text-center">
-          <Zap className="w-8 h-8 text-[#FF9800] mx-auto mb-4" />
-          <h2 className="text-xl font-bold text-[#333333] dark:text-white mb-2">
-            さらに高度なスキルを学びたい方へ
-          </h2>
-          <p className="text-[#666666] dark:text-[#B0B8C0] mb-6">
-            AIエージェントの構築やプロンプトエンジニアリングなど、中級者向けのスキルガイドはプレミアム会員限定です。
-          </p>
-          <Link href="/skills">
-            <a className="inline-flex items-center gap-2 bg-[#5B9BD5] hover:bg-[#4A8BC4] text-white font-bold px-6 py-3 rounded-lg transition-colors dark:bg-[#4A8BC4] dark:hover:bg-[#3A7BC4]">
-              スキルガイドを見る
-              <ChevronRight className="w-4 h-4" />
-            </a>
-          </Link>
-        </section>
-      </div>
+        {/* プレミアムコース案内 */}
+        <div className="bg-gradient-to-r from-purple-50 to-blue-50 dark:from-purple-950 dark:to-blue-950 p-8 rounded-lg border border-purple-200 dark:border-purple-800">
+          <div className="flex items-start gap-4">
+            <div className="flex-shrink-0">
+              <div className="flex items-center justify-center h-12 w-12 rounded-md bg-purple-600 text-white">
+                <span className="text-xl">👑</span>
+              </div>
+            </div>
+            <div className="flex-1">
+              <h3 className="text-lg font-bold mb-2">プレミアム会員向けコース</h3>
+              <p className="text-muted-foreground mb-4">
+                AIエージェント開発の実践的なスキルを習得できる、4つのモジュールから構成された中級者向けコース。環境構築から本番運用まで、実務で必要な知識をすべてカバーしています。
+              </p>
+              <div className="flex items-center gap-2 text-sm text-purple-600 dark:text-purple-400 font-semibold">
+                <span>プレミアム会員のみ閲覧可能</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </PageLayout>
   );
 }

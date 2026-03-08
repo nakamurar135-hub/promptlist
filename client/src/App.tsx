@@ -17,6 +17,9 @@ import ChatgptSnsPostPrompt from "./pages/articles/ChatgptSnsPostPrompt";
 import ChatgptSummarizePrompt from "./pages/articles/ChatgptSummarizePrompt";
 import ChatgptTranslationPrompt from "./pages/articles/ChatgptTranslationPrompt";
 import AiAgentCourseModule1 from "./pages/articles/AiAgentCourseModule1";
+import AiAgentCourseModule2 from "./pages/articles/AiAgentCourseModule2";
+import AiAgentCourseModule3 from "./pages/articles/AiAgentCourseModule3";
+import AiAgentCourseModule4 from "./pages/articles/AiAgentCourseModule4";
 import SkillsList from "./pages/skills/SkillsList";
 import AiAgentBasics from "./pages/skills/AiAgentBasics";
 import PromptEngineering from "./pages/skills/PromptEngineering";
@@ -29,6 +32,7 @@ import Privacy from "./pages/legal/Privacy";
 import Terms from "./pages/legal/Terms";
 import BeginnerPrompts from "./pages/BeginnerPrompts";
 import SearchResults from "./pages/SearchResults";
+import PremiumGuide from "./pages/PremiumGuide";
 
 function Router() {
   return (
@@ -54,9 +58,15 @@ function Router() {
 
       {/* 中級者向けコース */}
       <Route path="/articles/ai-agent-course-module-1" component={AiAgentCourseModule1} />
+      <Route path="/articles/ai-agent-course-module-2" component={AiAgentCourseModule2} />
+      <Route path="/articles/ai-agent-course-module-3" component={AiAgentCourseModule3} />
+      <Route path="/articles/ai-agent-course-module-4" component={AiAgentCourseModule4} />
 
       {/* 検索結果 */}
       <Route path="/search" component={SearchResults} />
+
+      {/* プレミアムガイド */}
+      <Route path="/premium" component={PremiumGuide} />
 
       {/* スキルガイド一覧 */}
 
