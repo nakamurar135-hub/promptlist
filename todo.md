@@ -142,3 +142,9 @@
 - [x] Home.tsxに検索機能を統合
 - [x] 検索結果ページ（SearchResults.tsx）を作成
 - [x] App.tsxに/searchルートを追加
+
+## 中級者向けAIエージェント構築記事マージ（feature/ai-agent-courseブランチ）
+- [x] feature/ai-agent-courseブランチをフェッチして内容を確認
+- [x] 新しい記事ファイル（AiAgentCourseModule1.tsx）を既存の記事と同じ形式で作成
+- [x] App.tsxに新しい記事へのルートを追加
+- [x] BeginnerPrompts.tsxを更新して新しい記事を追加

@@ -83,6 +83,13 @@ const beginnerPrompts = [
     title: "ChatGPTで翻訳をするプロンプト4選",
     description: "言語指定、目的・文脈指定、専門用語・固有名詞対応、複数言語一括翻訳など、ビジネス・学習で役立つ実践的なプロンプト集です。",
   },
+  {
+    href: "/articles/ai-agent-course-module-1",
+    category: "中級者向けコース",
+    categoryColor: "#7C3AED",
+    title: "Gitと始めるAIエージェント開発環境構築",
+    description: "Gitでのバージョン管理を前提とした、AIエージェントのローカル開発環境構築とプロジェクトの初期設定方法を学ぶ。",
+  },
 ];
 
 export default function BeginnerPrompts() {

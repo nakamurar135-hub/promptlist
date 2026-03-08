@@ -16,6 +16,7 @@ import ChatgptMenuPlanningPrompt from "./pages/articles/ChatgptMenuPlanningPromp
 import ChatgptSnsPostPrompt from "./pages/articles/ChatgptSnsPostPrompt";
 import ChatgptSummarizePrompt from "./pages/articles/ChatgptSummarizePrompt";
 import ChatgptTranslationPrompt from "./pages/articles/ChatgptTranslationPrompt";
+import AiAgentCourseModule1 from "./pages/articles/AiAgentCourseModule1";
 import SkillsList from "./pages/skills/SkillsList";
 import AiAgentBasics from "./pages/skills/AiAgentBasics";
 import PromptEngineering from "./pages/skills/PromptEngineering";
@@ -51,8 +52,13 @@ function Router() {
       <Route path="/articles/chatgpt-summarize-prompt" component={ChatgptSummarizePrompt} />
       <Route path="/articles/chatgpt-translation-prompt" component={ChatgptTranslationPrompt} />
 
+      {/* 中級者向けコース */}
+      <Route path="/articles/ai-agent-course-module-1" component={AiAgentCourseModule1} />
+
       {/* 検索結果 */}
       <Route path="/search" component={SearchResults} />
+
+      {/* スキルガイド一覧 */}
 
       {/* 中級者向けスキルガイド */}
       <Route path="/skills" component={SkillsList} />
