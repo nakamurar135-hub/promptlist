@@ -156,3 +156,8 @@
 - [x] App.tsxに3つの新しい記事へのルートを追加
 - [x] BeginnerPrompts.tsxを更新して新しい記事を追加
 - [x] PremiumGuide.tsxを作成してプレミアム記事を追加
+
+## Git関連記事の配置修正
+- [x] Git関連記事（AiAgentCourseModule1〜4）をBeginnerPrompts.tsxから削除
+- [x] Home.tsxに中級者向けスキルガイドセクションを追加
+- [x] Git関連記事へのリンクをホームの中級者向けセクションに配置
