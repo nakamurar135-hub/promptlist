@@ -163,6 +163,15 @@
 - [x] Git関連記事へのリンクをホームの中級者向けセクションに配置
 
 ## プレミアムアクセス制御実装
-- [ ] PremiumRouteガードコンポーネントを作成（未認証→ログイン、非プレミアム→アップグレードページにリダイレクト）
-- [ ] App.tsxの中級者向けコース記事（Module1〜4）のルートをPremiumRouteでラップ
-- [ ] 非プレミアム会員がアクセスした場合のリダイレクト動作を確認
+- [x] PremiumRouteガードコンポーネントを作成（未認証→ログイン、非プレミアム→アップグレードページにリダイレクト）
+- [x] App.tsxの中級者向けコース記事（Module1～4）のルートをPremiumRouteでラップ
+- [x] 非プレミアム会員がアクセスした場合のリダイレクト動作を確認
+
+## TypeScriptエラー修正
+- [x] ResponseExample.tsxのchildren型をstringからReact.ReactNodeに変更
+- [x] ChatgptSummarizePrompt.tsxの空のResponseExampleにchildrenを追加
+- [x] ChatgptTranslationPrompt.tsxの空のResponseExample（3箇所）にchildrenを追加
+- [x] AiAgentCourseModule1～4のuseStructuredData呼び出しを正しい型に修正
+- [x] AiAgentCourseModule4のteンプレートリテラル内OPENAI_API_KEY変数参照をエスケープ
+- [x] ChatgptIdeationPrompt.tsxのAffiliateBoxに必須propsを追加
+- [x] PremiumGuide.tsxのisPremiumをtrpc.subscription.checkPremiumで判定するよう修正
