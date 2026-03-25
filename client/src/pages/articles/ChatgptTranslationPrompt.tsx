@@ -99,6 +99,14 @@ export default function ChatgptTranslationPrompt() {
 `}</ResponseExample>
 
               <ResponseExample title="ChatGPTの回答">
+                {`Dear Sir/Madam,
+
+Thank you for your continued support. I hope this message finds you well and that your company continues to prosper.
+
+Regarding the new product inquiry you made the other day, please find the detailed materials attached. We would appreciate it if you could review them at your convenience. Should you have any questions, please do not hesitate to contact us.
+
+We look forward to your continued patronage.
+`}
               </ResponseExample>
 
               <PromptInfoCard type="tips" title="ポイント解説">
@@ -133,6 +141,8 @@ export default function ChatgptTranslationPrompt() {
 `}</ResponseExample>
 
               <ResponseExample title="ChatGPTの回答">
+                {`Introducing the new "Kirameki Gloss Lip" — get ready to work some magic on your lips! Just one swipe gives you a plump, juicy pout that shines like a gem. No stickiness, just long-lasting glam. Available in 5 gorgeous shades to match your mood. Grab yours now and discover a whole new you!
+`}
               </ResponseExample>
 
               <PromptInfoCard type="tips" title="ポイント解説">
@@ -175,6 +185,8 @@ export default function ChatgptTranslationPrompt() {
 `}</ResponseExample>
 
               <ResponseExample title="ChatGPTの回答">
+                {`As part of our efforts toward achieving the Sustainable Development Goals (SDGs), our company aims to realize Carbon Neutrality (the balance between greenhouse gas emissions and absorption) by 2050. Specifically, we will promote the expansion of renewable energy adoption, the introduction of energy-saving equipment, and the reduction of emissions across our entire supply chain.
+`}
               </ResponseExample>
 
               <PromptInfoCard type="tips" title="ポイント解説">

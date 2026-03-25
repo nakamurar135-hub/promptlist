@@ -99,6 +99,7 @@ export default function ChatgptSummarizePrompt() {
 `}</ResponseExample>
 
               <ResponseExample title="ChatGPTの回答">
+                {`近年のAI技術の進化は目覆ましく、私たちの生活やビジネスに多大な影響を与えています。特に、自然言語処理の分野ではChatGPTのような大規模言語モデルが登場し、人間と遅色ないレベルでの対話や文章生成が可能になりました。これにより、カスタマーサポートの自動化、コンテンツ作成の効率化、教育分野での個別学習支援など、様々な応用が期待されます。`}
               </ResponseExample>
 
               <PromptInfoCard type="tips" title="ポイント解説">
@@ -272,6 +273,7 @@ export default function ChatgptSummarizePrompt() {
 `}</ResponseExample>
 
               <ResponseExample title="ChatGPTの回答">
+                {`本事の要点：フィッシングメールによる認証情報詐取（ソーシャルエンジニアリング）が起因。攻撃者は盗んだ認証情報で不正アクセスし、個人情報を窃取。対策として多要素認証（MFA）導入と従業員教育を強化。`}
               </ResponseExample>
 
               <PromptInfoCard type="tips" title="ポイント解説">

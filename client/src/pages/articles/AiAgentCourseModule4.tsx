@@ -31,15 +31,10 @@ export default function AiAgentCourseModule4() {
   });
 
   useStructuredData({
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: "本番環境へのデプロイとCI/CD構築",
+    title: "本番環境へのデプロイとCI/CD構築",
     description: "AIエージェントを本番環境にデプロイする方法とCI/CDパイプラインの構築。Docker、Kubernetes、GitHub Actionsを使用した自動化デプロイメント。",
     datePublished: "2026-03-08",
-    author: {
-      "@type": "Organization",
-      name: "AIプロンプト活用ガイド",
-    },
+    author: "AIプロンプト活用ガイド",
   });
 
   return (
@@ -86,7 +81,7 @@ COPY . .
 
 # 環境変数の設定
 ENV PYTHONUNBUFFERED=1
-ENV OPENAI_API_KEY=${OPENAI_API_KEY}
+ENV OPENAI_API_KEY=\${OPENAI_API_KEY}
 
 # ヘルスチェック
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \

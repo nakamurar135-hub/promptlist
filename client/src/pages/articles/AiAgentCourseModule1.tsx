@@ -22,17 +22,11 @@ export default function AiAgentCourseModule1() {
   });
 
   useStructuredData({
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline:
-      "Gitと始めるAIエージェント開発環境構築｜AIプロンプト活用ガイド",
+    title: "Gitと始めるAIエージェント開発環境構築｜AIプロンプト活用ガイド",
     description:
       "Gitでのバージョン管理を前提とした、AIエージェントのローカル開発環境構築とプロジェクトの初期設定方法を学ぶ。",
     datePublished: new Date().toISOString(),
-    author: {
-      "@type": "Organization",
-      name: "AIプロンプト活用ガイド",
-    },
+    author: "AIプロンプト活用ガイド",
   });
 
   return (
@@ -42,8 +36,8 @@ export default function AiAgentCourseModule1() {
         category="中級者向けコース"
         categoryColor="#7C3AED"
         description="Gitでのバージョン管理を前提とした、AIエージェントのローカル開発環境構築とプロジェクトの初期設定方法を学ぶ。"
-        level="中級"
-        estimatedTime="15分"
+        publishedAt="2025年1月1日"
+        readingTime="絀15分"
       />
 
       <div className="max-w-4xl mx-auto px-4 py-12">

@@ -31,15 +31,10 @@ export default function AiAgentCourseModule3() {
   });
 
   useStructuredData({
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: "マルチエージェントシステムの設計と実装",
+    title: "マルチエージェントシステムの設計と実装",
     description: "複数のAIエージェントを連携させるマルチエージェントシステムの設計方法。エージェント間の通信、タスク分配、結果の統合方法を学びます。",
     datePublished: "2026-03-08",
-    author: {
-      "@type": "Organization",
-      name: "AIプロンプト活用ガイド",
-    },
+    author: "AIプロンプト活用ガイド",
   });
 
   return (

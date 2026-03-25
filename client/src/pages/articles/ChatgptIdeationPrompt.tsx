@@ -257,7 +257,12 @@ export default function ChatgptIdeationPrompt() {
           </section>
         </ArticleContent>
 
-        <AffiliateBox />
+        <AffiliateBox
+          title="ChatGPT Plusでアイデア出しをもっと強力に"
+          description="ChatGPT Plusにアップグレードすることで、GPT-4oの高度な分析力を活用したアイデア出しが可能になります。ブレインストーミングから市場分析まで、より質の高いアイデアを短時間で生成できます。"
+          buttonText="ChatGPT Plusを試す"
+          buttonHref="https://chat.openai.com"
+        />
         <RelatedArticles articles={relatedArticles} />
       </div>
     </PageLayout>

@@ -33,6 +33,7 @@ import Terms from "./pages/legal/Terms";
 import BeginnerPrompts from "./pages/BeginnerPrompts";
 import SearchResults from "./pages/SearchResults";
 import PremiumGuide from "./pages/PremiumGuide";
+import PremiumRoute from "./components/PremiumRoute";
 
 function Router() {
   return (
@@ -56,11 +57,11 @@ function Router() {
       <Route path="/articles/chatgpt-summarize-prompt" component={ChatgptSummarizePrompt} />
       <Route path="/articles/chatgpt-translation-prompt" component={ChatgptTranslationPrompt} />
 
-      {/* 中級者向けコース */}
-      <Route path="/articles/ai-agent-course-module-1" component={AiAgentCourseModule1} />
-      <Route path="/articles/ai-agent-course-module-2" component={AiAgentCourseModule2} />
-      <Route path="/articles/ai-agent-course-module-3" component={AiAgentCourseModule3} />
-      <Route path="/articles/ai-agent-course-module-4" component={AiAgentCourseModule4} />
+      {/* 中級者向けコース（プレミアム会員専用） */}
+      <Route path="/articles/ai-agent-course-module-1" component={() => <PremiumRoute component={AiAgentCourseModule1} />} />
+      <Route path="/articles/ai-agent-course-module-2" component={() => <PremiumRoute component={AiAgentCourseModule2} />} />
+      <Route path="/articles/ai-agent-course-module-3" component={() => <PremiumRoute component={AiAgentCourseModule3} />} />
+      <Route path="/articles/ai-agent-course-module-4" component={() => <PremiumRoute component={AiAgentCourseModule4} />} />
 
       {/* 検索結果 */}
       <Route path="/search" component={SearchResults} />

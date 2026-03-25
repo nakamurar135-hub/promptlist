@@ -2,6 +2,7 @@ import PageLayout from "@/components/layout/PageLayout";
 import { useSEO } from "@/hooks/useSEO";
 import { useOGP } from "@/hooks/useOGP";
 import { useAuth } from "@/_core/hooks/useAuth";
+import { trpc } from "@/lib/trpc";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -56,7 +57,11 @@ export default function PremiumGuide() {
     type: "website",
   });
 
-  const isPremium = user?.plan === "premium";
+  const { data: subscriptionData } = trpc.subscription.checkPremium.useQuery(undefined, {
+    enabled: !!user,
+    retry: false,
+  });
+  const isPremium = subscriptionData?.isPremium ?? false;
 
   return (
     <PageLayout>

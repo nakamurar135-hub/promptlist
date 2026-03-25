@@ -31,15 +31,10 @@ export default function AiAgentCourseModule2() {
   });
 
   useStructuredData({
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: "ReActフレームワークで実践的なAIエージェント構築",
+    title: "ReActフレームワークで実践的なAIエージェント構築",
     description: "ReActフレームワークを使用した実践的なAIエージェント構築方法。思考・行動・観察のループを実装し、複雑なタスクを自動化するエージェントの開発方法を学びます。",
     datePublished: "2026-03-08",
-    author: {
-      "@type": "Organization",
-      name: "AIプロンプト活用ガイド",
-    },
+    author: "AIプロンプト活用ガイド",
   });
 
   return (
