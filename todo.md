@@ -167,6 +167,17 @@
 - [x] App.tsxの中級者向けコース記事（Module1～4）のルートをPremiumRouteでラップ
 - [x] 非プレミアム会員がアクセスした場合のリダイレクト動作を確認
 
+## Stripe Checkout課金フロー実装
+- [x] Stripeに月額500円のプレミアムプラン（プロダクト・プライス）を作成
+- [x] VITE_STRIPE_PREMIUM_PRICE_IDを新しいprice_idに更新
+- [x] stripe.tsのcreateCheckoutSessionにallow_promotion_codes・client_reference_id・metadataを追加
+- [x] stripe.tsのWebhook処理にcheckout.session.completedイベントを追加
+- [x] stripe.tsのWebhook処理にtestイベント検知処理を追加
+- [x] Upgrade.tsxにStripe Checkoutボタン（新タブで開く）を接続
+- [x] Upgrade.tsxに決済成功時のサブスクリプション自動更新を追加
+- [x] Upgrade.tsxのプレミアム会員表示にStripeポータルリンクを追加
+- [x] stripe.test.tsを作成（10件のテスト）して全件通過確認
+
 ## TypeScriptエラー修正
 - [x] ResponseExample.tsxのchildren型をstringからReact.ReactNodeに変更
 - [x] ChatgptSummarizePrompt.tsxの空のResponseExampleにchildrenを追加

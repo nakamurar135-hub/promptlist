@@ -68,9 +68,15 @@ export async function createCheckoutSession(params: {
       },
     ],
     mode: "subscription",
+    allow_promotion_codes: true,
     success_url: `${origin}/account/upgrade?success=true&session_id={CHECKOUT_SESSION_ID}`,
     cancel_url: `${origin}/account/upgrade?canceled=true`,
     locale: "ja",
+    client_reference_id: String(userId),
+    metadata: {
+      user_id: String(userId),
+      customer_email: userEmail ?? "",
+    },
     subscription_data: {
       metadata: { userId: String(userId) },
     },
@@ -126,7 +132,38 @@ export async function handleStripeWebhook(
     throw new Error(`Webhook 署名検証エラー: ${(err as Error).message}`);
   }
 
+  // テストイベントは検証をスキップして即座に返す
+  if (event.id.startsWith("evt_test_")) {
+    console.log("[Webhook] Test event detected, returning verification response");
+    return;
+  }
+
   switch (event.type) {
+    // ===== Checkout 完了（サブスクリプション開始の確実なトリガー） =====
+    case "checkout.session.completed": {
+      const session = event.data.object as Stripe.Checkout.Session;
+      if (session.mode === "subscription" && session.subscription) {
+        const subscriptionId =
+          typeof session.subscription === "string"
+            ? session.subscription
+            : session.subscription.id;
+        const subscription = await stripe.subscriptions.retrieve(subscriptionId);
+        // client_reference_id からユーザーIDを取得（メタデータより確実）
+        if (session.client_reference_id) {
+          const userId = parseInt(session.client_reference_id, 10);
+          if (!isNaN(userId)) {
+            // subscription.metadata に userId を付与して upsert
+            subscription.metadata = {
+              ...subscription.metadata,
+              userId: String(userId),
+            };
+          }
+        }
+        await handleSubscriptionUpsert(subscription);
+      }
+      break;
+    }
+
     // ===== サブスクリプション作成・更新 =====
     case "customer.subscription.created":
     case "customer.subscription.updated": {

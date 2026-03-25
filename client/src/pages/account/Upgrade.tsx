@@ -1,3 +1,4 @@
+import React from "react";
 import PageLayout from "@/components/layout/PageLayout";
 import { Crown, CheckCircle, ArrowRight, Zap, AlertCircle, PartyPopper } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -34,13 +35,38 @@ export default function Upgrade() {
   });
   const isPremium = !!(subscription?.plan === "premium" && subscription?.isActive);
 
+  // 決済成功時にサブスクリプション情報を更新
+  const utils2 = trpc.useUtils();
+  React.useEffect(() => {
+    if (isSuccess) {
+      // Webhookが処理される前に少し待ってからキャッシュを無効化
+      const timer = setTimeout(() => {
+        utils2.subscription.getMySubscription.invalidate();
+        utils2.subscription.checkPremium.invalidate();
+      }, 2000);
+      return () => clearTimeout(timer);
+    }
+  }, [isSuccess]); // eslint-disable-line react-hooks/exhaustive-deps
+
   // Stripe Checkout Session を作成してリダイレクト
   const checkoutMutation = trpc.subscription.createCheckoutSession.useMutation({
     onSuccess: ({ url }) => {
-      window.location.href = url;
+      toast.info("Stripeの決済ページへ移動します...");
+      window.open(url, "_blank");
     },
     onError: (err) => {
       toast.error(`エラーが発生しました: ${err.message}`);
+    },
+  });
+
+  // Stripe Customer Portal（解約・変更）
+  const portalMutation = trpc.subscription.createPortalSession.useMutation({
+    onSuccess: ({ url }) => {
+      toast.info("Stripeポータルへ移動します...");
+      window.open(url, "_blank");
+    },
+    onError: (err) => {
+      toast.error(`ポータルエラー: ${err.message}`);
     },
   });
 
@@ -214,10 +240,20 @@ export default function Upgrade() {
               </div>
             )}
             {isPremium && (
-              <Button className="w-full bg-[#4CAF50] hover:bg-[#43A047] text-white font-bold" disabled>
-                <CheckCircle className="w-4 h-4 mr-2" />
-                プレミアム会員です
-              </Button>
+              <div className="space-y-2">
+                <Button className="w-full bg-[#4CAF50] hover:bg-[#43A047] text-white font-bold" disabled>
+                  <CheckCircle className="w-4 h-4 mr-2" />
+                  プレミアム会員です
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="w-full text-white/60 hover:text-white hover:bg-white/10 text-xs"
+                  onClick={() => portalMutation.mutate()}
+                  disabled={portalMutation.isPending}
+                >
+                  {portalMutation.isPending ? "移動中..." : "解約・支払い方法の変更（Stripeポータル）"}
+                </Button>
+              </div>
             )}
           </div>
         </div>
@@ -233,6 +269,7 @@ export default function Upgrade() {
               { title: "プロンプトエンジニアリング実践", href: "/skills/prompt-engineering", desc: "Chain-of-Thought、Self-Consistencyなど高度なテクニック" },
               { title: "マルチエージェントシステム", href: "/skills/multi-agent-systems", desc: "複数のAIを連携させる設計パターン" },
               { title: "RAG実装ガイド", href: "/skills/rag-implementation", desc: "自社データをAIに活用させるアーキテクチャ" },
+              { title: "AIエージェント開発マスターコース（全4回）", href: "/premium", desc: "環境構築から本番運用まで、実践的なAIエージェント開発を学ぶ" },
             ].map((item) => (
               <Link
                 key={item.href}
