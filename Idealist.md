@@ -28,6 +28,8 @@
 
 *   [セット1 (001-020)](docs/ideas/set-1.md) - *未作成*
 *   [最新の個別ネタ](docs/ideas/)
+    *   [2026-03-26: OpenClaw導入ガイド](docs/ideas/idea-20260326-openclaw-intro.md)
+    *   [2026-03-26: Claude Code「Auto Mode」活用術](docs/ideas/idea-20260326-claude-auto-mode.md)
 
 ---
-*最終更新日: 2026-03-25*
+*最終更新日: 2026-03-26*
