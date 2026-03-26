@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+
 import PageLayout from "@/components/layout/PageLayout";
 import ArticleHeader from "@/components/article/ArticleHeader";
 import ArticleContent from "@/components/article/ArticleContent";
@@ -6,26 +6,13 @@ import TableOfContents from "@/components/article/TableOfContents";
 import PromptBlock from "@/components/article/PromptBlock";
 import PromptInfoCard from "@/components/article/PromptInfoCard";
 import ResponseExample from "@/components/article/ResponseExample";
-import AffiliateBox from "@/components/cta/AffiliateBox";
-import RelatedArticles from "@/components/cta/RelatedArticles";
+import AffiliateBox from "@/components/article/AffiliateBox";
+import RelatedArticles from "@/components/article/RelatedArticles";
 import { AlertTriangle } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
+import { useOGP } from "@/hooks/useOGP";
+import { useStructuredData } from "@/hooks/useStructuredData";
 
-export const metadata: Metadata = {
-  title: "ChatGPTで翻訳をするプロンプト4選｜ビジネス・学習で役立つ実践例",
-  description: "ChatGPTで翻訳をするプロンプトを4つご紹介。言語指定、目的・文脈指定、専門用語・固有名詞対応、複数言語一括翻訳など、ビジネス・学習で役立つ実践的なプロンプト集です。",
-  openGraph: {
-    title: "ChatGPTで翻訳をするプロンプト4選｜ビジネス・学習で役立つ実践例",
-    description: "ChatGPTで翻訳をするプロンプトを4つご紹介。言語指定、目的・文脈指定、専門用語・固有名詞対応、複数言語一括翻訳など、ビジネス・学習で役立つ実践的なプロンプト集です。",
-    images: ["/images/chatgpt-translation-prompt-eyecatch.png"],
-    type: "article",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "ChatGPTで翻訳をするプロンプト4選｜ビジネス・学習で役立つ実践例",
-    description: "ChatGPTで翻訳をするプロンプトを4つご紹介。言語指定、目的・文脈指定、専門用語・固有名詞対応、複数言語一括翻訳など、ビジネス・学習で役立つ実践的なプロンプト集です。",
-    images: ["/images/chatgpt-translation-prompt-eyecatch.png"],
-  },
-};
 
 const tocItems = [
   { id: "intro", label: "ChatGPTで翻訳、もう困らない！" },
@@ -77,22 +64,16 @@ export default function ChatgptTranslationPrompt() {
           {/* 導入セクション */}
           <section id="intro">
             <h2>ChatGPTで翻訳、もう困らない！</h2>
-            <p>「ビジネスメールを英語で送りたいけど、表現が合っているか不安…」「海外の論文を読みたいけど、専門用語が多くて理解できない…」「多言語でのコミュニケーションをスムーズにしたい…」</p>
-            <p>グローバル化が進む現代において、翻訳はビジネスや学習、日常生活の様々な場面で必要不可欠なスキルとなっています。この記事では、ChatGPTを使ってあらゆるテキストを効率的に翻訳するための実践的なプロンプトを4つご紹介します。</p>
-            <p>コピペするだけで使えるので、初心者の方でも安心です。</p>
           </section>
 
           {/* ChatGPT基礎説明 */}
           <section id="about-chatgpt">
             <h2>ChatGPTとは？初心者向けにわかりやすく解説</h2>
-            <p>ChatGPTは、OpenAIが開発したAIチャットサービスです。質問を入力するだけで、自然な日本語で回答を得ることができます。テキスト生成、翻訳、要約など、様々なタスクをこなすことができます。</p>
-            <p>基本機能は無料で利用できますが、より高度な機能や高速な応答を求める方には、月額20ドルのChatGPT Plus（有料版）がおすすめです。ChatGPT Plusでは、最新のGPT-4モデルが利用でき、より複雑な指示にも対応できます。</p>
           </section>
 
           {/* プロンプト解説セクション */}
           <section id="prompts">
             <h2>翻訳に使えるプロンプト4選</h2>
-            <p>ここからは、実際に翻訳で使えるプロンプトを4つご紹介します。用途に合わせてお使いください。</p>
 
             {/* プロンプト1 */}
             <div id="prompt1">
@@ -118,8 +99,14 @@ export default function ChatgptTranslationPrompt() {
 `}</ResponseExample>
 
               <ResponseExample title="ChatGPTの回答">
-                <p>Dear Sir/Madam,</p>
-                <p>Thank you for your continued support. We are pleased to hear of your company's continued prosperity. Regarding your recent inquiry about our new product, we have attached detailed materials for your review. Please do not hesitate to contact us if you have any questions. We look forward to your continued patronage.</p>
+                {`Dear Sir/Madam,
+
+Thank you for your continued support. I hope this message finds you well and that your company continues to prosper.
+
+Regarding the new product inquiry you made the other day, please find the detailed materials attached. We would appreciate it if you could review them at your convenience. Should you have any questions, please do not hesitate to contact us.
+
+We look forward to your continued patronage.
+`}
               </ResponseExample>
 
               <PromptInfoCard type="tips" title="ポイント解説">
@@ -154,7 +141,8 @@ export default function ChatgptTranslationPrompt() {
 `}</ResponseExample>
 
               <ResponseExample title="ChatGPTの回答">
-                <p>Introducing our new "Sparkle Gloss Lip" – get ready to enchant your lips! Just one swipe gives you plump, moisturized lips with a jewel-like shine. It's non-sticky yet long-lasting. Available in 5 shades, so you can pick one to match your mood today. Grab yours now and discover a new you!</p>
+                {`Introducing the new "Kirameki Gloss Lip" — get ready to work some magic on your lips! Just one swipe gives you a plump, juicy pout that shines like a gem. No stickiness, just long-lasting glam. Available in 5 gorgeous shades to match your mood. Grab yours now and discover a whole new you!
+`}
               </ResponseExample>
 
               <PromptInfoCard type="tips" title="ポイント解説">
@@ -197,7 +185,8 @@ export default function ChatgptTranslationPrompt() {
 `}</ResponseExample>
 
               <ResponseExample title="ChatGPTの回答">
-                <p>Our company aims to achieve Carbon Neutrality (balancing greenhouse gas emissions with absorption) by 2050, as part of our efforts towards achieving the SDGs (Sustainable Development Goals). Specifically, we will promote the expanded introduction of renewable energy, the implementation of energy-saving equipment, and the reduction of emissions throughout our supply chain.</p>
+                {`As part of our efforts toward achieving the Sustainable Development Goals (SDGs), our company aims to realize Carbon Neutrality (the balance between greenhouse gas emissions and absorption) by 2050. Specifically, we will promote the expansion of renewable energy adoption, the introduction of energy-saving equipment, and the reduction of emissions across our entire supply chain.
+`}
               </ResponseExample>
 
               <PromptInfoCard type="tips" title="ポイント解説">
@@ -241,14 +230,14 @@ export default function ChatgptTranslationPrompt() {
 この度、新サービス「AIアシスタント」をリリースいたしました。AIがあなたの日常業務をサポートし、生産性向上に貢献します。ぜひ一度お試しください。
 `}</ResponseExample>
 
-              <ResponseExample title="ChatGPTの回答">
-                <p><strong>英語 (English):</strong></p>
-                <p>We are pleased to announce the launch of our new service, "AI Assistant." Our AI will support your daily tasks and contribute to increased productivity. Please give it a try!</p>
-                <p><strong>中国語（簡体字 - Simplified Chinese）:</strong></p>
-                <p>我们很高兴地宣布，新服务“AI助手”已正式上线。AI将支持您的日常工作，并有助于提高生产力。请务必尝试一下！</p>
-                <p><strong>韓国語 (Korean):</strong></p>
-                <p>새로운 서비스 "AI 어시스턴트"를 출시했습니다. AI가 귀하의 일상 업무를 지원하고 생산성 향상에 기여합니다. 꼭 한번 사용해보세요!</p>
-              </ResponseExample>
+              <ResponseExample title="ChatGPTの回答">{`英語 (English):
+We are pleased to announce the launch of our new service, "AI Assistant." Our AI will support your daily tasks and contribute to increased productivity. Please give it a try!
+
+中国語（粗体字 - Simplified Chinese）:
+我们很高兴地宣布，新服务"AI助手"已正式上线。AI将支持您的日常工作，并有助于提高生产力。请务必尝试一下！
+
+韓国語 (Korean):
+새로운 서비스 "AI 어시스턴트"를 출시했습니다. AI가 귀하의 일상 업무를 지원하고 생산성 향상에 기여합니다. 꼭 한번 사용해보세요!`}</ResponseExample>
 
               <PromptInfoCard type="tips" title="ポイント解説">
                 <ul className="space-y-1 list-disc list-inside">
@@ -262,13 +251,11 @@ export default function ChatgptTranslationPrompt() {
           {/* 活用のコツセクション */}
           <section id="tips">
             <h2>プロンプトをさらに活用するコツ</h2>
-            <p>紹介したプロンプトの効果をさらに高めるためのコツをご紹介します。</p>
             <ul>
               <li><strong>翻訳の精度を確認する</strong>: 特に重要な文書の翻訳では、ChatGPTが生成した翻訳文を必ず人間が確認し、必要に応じて修正してください。専門家によるレビューも検討しましょう。</li>
               <li><strong>フィードバックを繰り返す</strong>: 翻訳結果に不満がある場合は、具体的な改善点を伝えて再度翻訳を依頼することで、より精度の高い翻訳を得られます。</li>
               <li><strong>用語集を活用する</strong>: 頻繁に使う専門用語や固有名詞がある場合は、それらをまとめた用語集をプロンプトに含めることで、翻訳の一貫性を保つことができます。</li>
             </ul>
-            <p>ChatGPT Plus（有料版）を利用すれば、より長い文章の翻訳や、複雑な指示にも対応できます。GPT-4モデルは、より高度な言語理解力と生成能力を持ち合わせているため、質の高い翻訳を効率的に生み出すことができます。</p>
           </section>
 
           {/* CTA */}
@@ -305,14 +292,12 @@ export default function ChatgptTranslationPrompt() {
           {/* まとめ */}
           <section id="summary">
             <h2>まとめ</h2>
-            <p>この記事では、ChatGPTで翻訳を行うための4つのプロンプトをご紹介しました。</p>
             <ul>
               <li><strong>基本翻訳（言語指定）</strong>: 様々なテキストを特定の言語に翻訳したいときに</li>
               <li><strong>目的・文脈指定型翻訳</strong>: 特定の文脈や読者層に合わせた翻訳が必要なときに</li>
               <li><strong>専門用語・固有名詞対応翻訳</strong>: 専門分野の文書や固有名詞を含む文章を正確に翻訳したいときに</li>
               <li><strong>複数言語への一括翻訳</strong>: 複数の言語への翻訳が同時に必要なときに</li>
             </ul>
-            <p>どのプロンプトもコピペするだけですぐに使えます。ビジネスや学習、日常生活で翻訳に行き詰まった際は、ぜひ今日からChatGPTを活用して、スムーズな多言語コミュニケーションを実現しましょう。</p>
           </section>
 
           <RelatedArticles articles={relatedArticles} />

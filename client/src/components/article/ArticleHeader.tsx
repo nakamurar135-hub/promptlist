@@ -31,7 +31,7 @@ export default function ArticleHeader({
       </div>
 
       {/* タイトル */}
-      <h1 className="text-2xl md:text-3xl font-bold text-[#333333] leading-tight mb-4">
+      <h1 id="article-title" className="text-2xl md:text-3xl font-bold text-[#333333] leading-tight mb-4">
         {title}
       </h1>
 

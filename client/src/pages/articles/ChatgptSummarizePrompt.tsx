@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+
 import PageLayout from "@/components/layout/PageLayout";
 import ArticleHeader from "@/components/article/ArticleHeader";
 import ArticleContent from "@/components/article/ArticleContent";
@@ -6,26 +6,13 @@ import TableOfContents from "@/components/article/TableOfContents";
 import PromptBlock from "@/components/article/PromptBlock";
 import PromptInfoCard from "@/components/article/PromptInfoCard";
 import ResponseExample from "@/components/article/ResponseExample";
-import AffiliateBox from "@/components/cta/AffiliateBox";
-import RelatedArticles from "@/components/cta/RelatedArticles";
+import AffiliateBox from "@/components/article/AffiliateBox";
+import RelatedArticles from "@/components/article/RelatedArticles";
 import { AlertTriangle } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
+import { useOGP } from "@/hooks/useOGP";
+import { useStructuredData } from "@/hooks/useStructuredData";
 
-export const metadata: Metadata = {
-  title: "ChatGPTで要約文を作成するプロンプト4選｜長文読解・情報整理を効率化",
-  description: "ChatGPTで要約文を作成するプロンプトを4つご紹介。文字数指定、目的・視点指定、箇条書き・表形式、専門家視点など、長文読解・情報整理を効率化する実践的なプロンプト集です。",
-  openGraph: {
-    title: "ChatGPTで要約文を作成するプロンプト4選｜長文読解・情報整理を効率化",
-    description: "ChatGPTで要約文を作成するプロンプトを4つご紹介。文字数指定、目的・視点指定、箇条書き・表形式、専門家視点など、長文読解・情報整理を効率化する実践的なプロンプト集です。",
-    images: ["/images/chatgpt-summarize-prompt-eyecatch.png"],
-    type: "article",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "ChatGPTで要約文を作成するプロンプト4選｜長文読解・情報整理を効率化",
-    description: "ChatGPTで要約文を作成するプロンプトを4つご紹介。文字数指定、目的・視点指定、箇条書き・表形式、専門家視点など、長文読解・情報整理を効率化する実践的なプロンプト集です。",
-    images: ["/images/chatgpt-summarize-prompt-eyecatch.png"],
-  },
-};
 
 const tocItems = [
   { id: "intro", label: "ChatGPTで長文読解・情報整理を効率化！" },
@@ -77,22 +64,16 @@ export default function ChatgptSummarizePrompt() {
           {/* 導入セクション */}
           <section id="intro">
             <h2>ChatGPTで長文読解・情報整理を効率化！</h2>
-            <p>「長い会議の議事録を短時間で把握したい…」「論文やレポートの要点を素早く掴みたい…」「Web記事の情報を効率的にインプットしたい…」</p>
-            <p>情報過多の現代において、長文読解や情報整理は多くの人にとって大きな課題です。この記事では、ChatGPTを使ってあらゆるテキストを効率的に要約するための実践的なプロンプトを4つご紹介します。</p>
-            <p>コピペするだけで使えるので、初心者の方でも安心です。</p>
           </section>
 
           {/* ChatGPT基礎説明 */}
           <section id="about-chatgpt">
             <h2>ChatGPTとは？初心者向けにわかりやすく解説</h2>
-            <p>ChatGPTは、OpenAIが開発したAIチャットサービスです。質問を入力するだけで、自然な日本語で回答を得ることができます。テキスト生成、翻訳、要約など、様々なタスクをこなすことができます。</p>
-            <p>基本機能は無料で利用できますが、より高度な機能や高速な応答を求める方には、月額20ドルのChatGPT Plus（有料版）がおすすめです。ChatGPT Plusでは、最新のGPT-4モデルが利用でき、より複雑な指示にも対応できます。</p>
           </section>
 
           {/* プロンプト解説セクション */}
           <section id="prompts">
             <h2>要約に使えるプロンプト4選</h2>
-            <p>ここからは、実際に要約で使えるプロンプトを4つご紹介します。用途に合わせてお使いください。</p>
 
             {/* プロンプト1 */}
             <div id="prompt1">
@@ -118,7 +99,7 @@ export default function ChatgptSummarizePrompt() {
 `}</ResponseExample>
 
               <ResponseExample title="ChatGPTの回答">
-                <p>AI技術、特にChatGPTのような大規模言語モデルの進化は、生活やビジネスに多大な影響を与えている。対話や文章生成が可能になり、カスタマーサポートやコンテンツ作成などで応用が期待される。しかし、倫理やセキュリティのリスクも伴うため、適切な利用と規制が重要である。</p>
+                {`近年のAI技術の進化は目覆ましく、私たちの生活やビジネスに多大な影響を与えています。特に、自然言語処理の分野ではChatGPTのような大規模言語モデルが登場し、人間と遅色ないレベルでの対話や文章生成が可能になりました。これにより、カスタマーサポートの自動化、コンテンツ作成の効率化、教育分野での個別学習支援など、様々な応用が期待されます。`}
               </ResponseExample>
 
               <PromptInfoCard type="tips" title="ポイント解説">
@@ -179,17 +160,14 @@ export default function ChatgptSummarizePrompt() {
 `}</ResponseExample>
 
               <ResponseExample title="ChatGPTの回答">
-                <p><strong>課題</strong></p>
                 <ul>
                   <li>外部API連携におけるデータ形式の不整合が発生し、最大3日の開発遅延の可能性。</li>
                 </ul>
-                <p><strong>決定事項</strong></p>
                 <ul>
                   <li>マーケティング戦略案を承認。</li>
                   <li>API連携の技術課題は内部処理でのデータ変換で対応。</li>
                   <li>A/Bテストの実施。</li>
                 </ul>
-                <p><strong>次回会議での議論事項</strong></p>
                 <ul>
                   <li>API連携技術課題の進捗報告。</li>
                   <li>A/Bテスト用広告クリエイティブの共有。</li>
@@ -295,9 +273,7 @@ export default function ChatgptSummarizePrompt() {
 `}</ResponseExample>
 
               <ResponseExample title="ChatGPTの回答">
-                <p>サイバーセキュリティの観点から、今回のデータ漏洩事件は「フィッシング攻撃」が起点となっています。フィッシング攻撃とは、偽のメールやウェブサイトを用いてユーザーから認証情報（IDやパスワードなど）を騙し取る手口です。攻撃者は、詐取した認証情報で企業の「社内ネットワーク」に「不正アクセス」し、顧客の「個人情報」を窃取しました。</p>
-                <p>この種の攻撃は「ソーシャルエンジニアリング」の一種であり、技術的な脆弱性だけでなく、人間の心理的な隙を突く点が特徴です。対策として、企業は「多要素認証（MFA）」の導入を急いでいます。MFAとは、パスワードだけでなく、スマートフォンアプリで生成されるワンタイムパスワードや生体認証など、複数の認証要素を組み合わせてセキュリティを強化する仕組みです。これにより、たとえパスワードが漏洩しても、不正アクセスを防ぐことが可能になります。また、従業員への「セキュリティ教育」の強化も不可欠です。従業員一人ひとりがセキュリティ意識を高め、不審なメールやリンクに注意することが、組織全体のセキュリティレベル向上に繋がります。</p>
-                <p>専門家は、今後も同様の攻撃が増加すると予測しており、企業は技術的対策と人的対策の両面から、より包括的なセキュリティ戦略を構築する必要があることを示唆しています。</p>
+                {`本事の要点：フィッシングメールによる認証情報詐取（ソーシャルエンジニアリング）が起因。攻撃者は盗んだ認証情報で不正アクセスし、個人情報を窃取。対策として多要素認証（MFA）導入と従業員教育を強化。`}
               </ResponseExample>
 
               <PromptInfoCard type="tips" title="ポイント解説">
@@ -312,13 +288,11 @@ export default function ChatgptSummarizePrompt() {
           {/* 活用のコツセクション */}
           <section id="tips">
             <h2>プロンプトをさらに活用するコツ</h2>
-            <p>紹介したプロンプトの効果をさらに高めるためのコツをご紹介します。</p>
             <ul>
               <li><strong>要約の粒度を調整する</strong>: 「〇〇字で」「〇〇の視点から」など、要約の粒度を具体的に指示することで、より目的に合った要約文を得られます。</li>
               <li><strong>複数回要約を試す</strong>: 一度で完璧な要約が得られない場合でも、プロンプトを微調整したり、異なるプロンプトを試したりすることで、より良い結果に繋がります。</li>
               <li><strong>要約後の活用方法を考える</strong>: 要約した情報をどのように活用するかを明確にすることで、要約の質を高めることができます。例えば、「この要約を元にプレゼン資料を作成する」といった具体的な指示が有効です。</li>
             </ul>
-            <p>ChatGPT Plus（有料版）を利用すれば、より長い文章の要約や、複雑な指示にも対応できます。GPT-4モデルは、より高度な文章理解力と生成能力を持ち合わせているため、質の高い要約を効率的に生み出すことができます。</p>
           </section>
 
           {/* CTA */}
@@ -355,14 +329,12 @@ export default function ChatgptSummarizePrompt() {
           {/* まとめ */}
           <section id="summary">
             <h2>まとめ</h2>
-            <p>この記事では、ChatGPTで要約文を作成するための4つのプロンプトをご紹介しました。</p>
             <ul>
               <li><strong>文字数指定型要約</strong>: 特定の文字数制限がある中で簡潔にまとめたいときに</li>
               <li><strong>目的・視点指定型要約</strong>: 特定の目的や視点から必要な情報だけを抽出したいときに</li>
               <li><strong>箇条書き・表形式要約</strong>: 複雑な情報や比較検討が必要な情報を視覚的に整理したいときに</li>
               <li><strong>専門家視点での詳細要約</strong>: 専門性の高い文章の内容を深く理解したいときに</li>
             </ul>
-            <p>どのプロンプトもコピペするだけですぐに使えます。長文読解や情報整理に行き詰まった際は、ぜひ今日からChatGPTを活用して、効率的な情報インプットを実現しましょう。</p>
           </section>
 
           <RelatedArticles articles={relatedArticles} />

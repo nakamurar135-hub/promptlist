@@ -13,6 +13,9 @@ import {
 import { Button } from "@/components/ui/button";
 import { getLoginUrl } from "@/const";
 import { useAuth } from "@/_core/hooks/useAuth";
+import { useSEO } from "@/hooks/useSEO";
+import { useOGP } from "@/hooks/useOGP";
+import SearchBar from "@/components/SearchBar";
 
 // 初心者向け記事データ
 const beginnerArticles = [
@@ -98,36 +101,47 @@ const beginnerArticles = [
 // 中級者向けスキルガイドデータ
 const skillGuides = [
   {
-    href: "/skills/ai-agent-basics",
-    title: "AIエージェント入門：自律的に動くAIの仕組みを理解する",
-    description: "AIエージェントとは何か、どのように動作するのかを基礎から解説します。",
-    isFree: true,
+    href: "/articles/ai-agent-course-module-1",
+    title: "Gitと始めるAIエージェント開発環境構築",
+    description: "Gitでのバージョン管理を前提とした、AIエージェントの開発環境構築とプロジェクト初期設定を学びます。",
+    isFree: false,
     level: "中級",
   },
   {
-    href: "/skills/task-automation",
-    title: "タスク自動化の基礎：AIに複数ステップの作業を任せる",
-    description: "AIエージェントを使って繰り返し作業を自動化する実践的な手法を学びます。",
-    isFree: true,
+    href: "/articles/ai-agent-course-module-2",
+    title: "ReActフレームワークで実践的なAIエージェント構築",
+    description: "思考・行動・観察のループを実装し、複雑なタスクを自動化するAIエージェント開発を学びます。",
+    isFree: false,
     level: "中級",
   },
   {
-    href: "/skills/prompt-engineering",
-    title: "プロンプトエンジニアリング実践：AIの性能を最大化する技術",
-    description: "Chain-of-ThoughtやFew-shotなど、AIの出力品質を劇的に向上させる高度なテクニック。",
+    href: "/articles/ai-agent-course-module-3",
+    title: "マルチエージェントシステムの設計と実装",
+    description: "複数のAIエージェントを連携させるシステムの設計方法とエージェント間通信を学びます。",
     isFree: false,
-    level: "中級〜上級",
+    level: "中級",
   },
   {
-    href: "/skills/multi-agent-systems",
-    title: "マルチエージェントシステム：複数のAIを連携させる",
-    description: "複数のAIエージェントが協調して複雑なタスクを解決するシステムの設計と実装。",
+    href: "/articles/ai-agent-course-module-4",
+    title: "本番環境へのデプロイとCI/CD構築",
+    description: "AIエージェントを本番環境にデプロイし、Docker・Kubernetes・GitHub Actionsを使用した自動化を学びます。",
     isFree: false,
-    level: "上級",
+    level: "中級",
   },
 ];
 
 export default function Home() {
+  useSEO({
+    title: "AIプロンプト活用ガイド｜ChatGPT完全ガイド",
+    description: "ChatGPTをはじめとするAIツールを効果的に活用するためのプロンプト集・スキルガイドサイト。初心者向けから中級者向けまで、実践的なテンプレートと詳細な解説を提供します。",
+    keywords: "ChatGPT,プロンプト,AI,プロンプトエンジニアリング,AIエージェント,初心者向け,スキルガイド,テンプレート,効率化,ビジネス",
+  });
+  useOGP({
+    title: "AIプロンプト活用ガイド｜初心者から上級者まで段階的に学べる",
+    description: "ChatGPTなどのAIツールを効果的に活用するためのプロンプト集・スキルガイド。初心者向けプロンプトから中級者向けスキルガイドまで、段階的に学べます。",
+    type: "website",
+  });
+
   const { isAuthenticated } = useAuth();
 
   return (
@@ -166,6 +180,13 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* 検索セクション */}
+      <div className="max-w-5xl mx-auto px-4 py-8">
+        <div className="mb-12">
+          <SearchBar placeholder="記事やスキルを検索..." />
+        </div>
+      </div>
 
       <div className="max-w-5xl mx-auto px-4 py-10">
 
@@ -226,7 +247,7 @@ export default function Home() {
             {beginnerArticles.map((article) => (
               <Link
                 key={article.href}
-                href={article.href}
+                href={`${article.href}#article-title`}
                 className="block bg-white border border-[#E5E7EB] rounded-xl overflow-hidden hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 group"
               >
                 <div
@@ -258,7 +279,7 @@ export default function Home() {
               </h2>
               <p className="text-sm text-[#666666]">AIを自律的に動かす実践スキルを習得する</p>
             </div>
-            <Link href="/skills" className="text-sm text-[#5B9BD5] hover:text-[#4A8BC4] flex items-center gap-1">
+            <Link href="/premium" className="text-sm text-[#5B9BD5] hover:text-[#4A8BC4] flex items-center gap-1">
               すべて見る <ChevronRight className="w-4 h-4" />
             </Link>
           </div>
@@ -270,7 +291,7 @@ export default function Home() {
               <div>
                 <p className="font-bold mb-1">プレミアム会員限定コンテンツを含みます</p>
                 <p className="text-sm opacity-90 mb-3">
-                  一部のスキルガイドはプレミアム会員のみ閲覧できます。プレミアム会員になると全コンテンツが読み放題になります。
+                  すべてのスキルガイドはプレミアム会員のみ閲覧できます。プレミアム会員になると全コンテンツが読み放題になります。
                 </p>
                 {!isAuthenticated && (
                   <a href={getLoginUrl()}>

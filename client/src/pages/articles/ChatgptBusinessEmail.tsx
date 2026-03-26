@@ -8,6 +8,9 @@ import TableOfContents from "@/components/article/TableOfContents";
 import AffiliateBox from "@/components/article/AffiliateBox";
 import RelatedArticles from "@/components/article/RelatedArticles";
 import { AlertTriangle } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
+import { useOGP } from "@/hooks/useOGP";
+import { useStructuredData } from "@/hooks/useStructuredData";
 
 const tocItems = [
   { id: "intro", label: "ビジネスメール作成、時間がかかっていませんか？" },
@@ -46,6 +49,21 @@ const relatedArticles = [
 ];
 
 export default function ChatgptBusinessEmail() {
+  useSEO({
+    title: "ChatGPTでそのまま使えるビジネスメール例文プロンプト10選",
+    description: "お礼礼・依頼・謝罪・日程調整など、ビジネスシーンで頻繁に使うメール文面をChatGPTで自動生成。コピペで使える実践的なプロンプト集10種類をご紹介します。",
+    keywords: "ChatGPT,メールテンプレート,ビジネスメール,プロンプト,AI,文章作成,会礼メール,依頼メール,謝罪メール,ビジネス文書",
+  });
+  useOGP({
+    title: "ChatGPTでそのまま使えるビジネスメール例文プロンプト10選",
+    description: "お礼・依頼・謝罪など、ビジネスシーンで使えるメール文面をAIが自動生成。",
+    type: "article",
+  });
+  useStructuredData({
+    title: "ChatGPTでそのまま使えるビジネスメール例文プロンプト10選",
+    description: "お礼・依頼・謝罪など、ビジネスシーンで使えるメール文面をAIが自動生成。",
+  });
+
   return (
     <PageLayout>
       <div className="max-w-3xl mx-auto px-4 py-8">

@@ -8,6 +8,9 @@ import TableOfContents from "@/components/article/TableOfContents";
 import AffiliateBox from "@/components/article/AffiliateBox";
 import RelatedArticles from "@/components/article/RelatedArticles";
 import { AlertTriangle } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
+import { useOGP } from "@/hooks/useOGP";
+import { useStructuredData } from "@/hooks/useStructuredData";
 
 const tocItems = [
   { id: "intro", label: "志望動機の作成、どうしていますか？" },
@@ -41,6 +44,21 @@ const relatedArticles = [
 ];
 
 export default function ChatgptJobMotivation() {
+  useSEO({
+    title: "ChatGPTで志望動機を書くプロンプト｜転職・就活で使える例文付き",
+    description: "転職・就職活動で必要な志望動機の作成をChatGPTでサポートします。あなたの経験や強みを入力するだけで、採用担当者に伝わる志望動機が完成します。",
+    keywords: "ChatGPT,志望動機,転職,就活,キャリア,プロンプト,AI,文章作成,採用試験,事会书",
+  });
+  useOGP({
+    title: "ChatGPTで志望動機を書くプロンプト",
+    description: "転職・就職活動で使える志望動機の作成をサポート。あなたの経験を効果的にアピール。",
+    type: "article",
+  });
+  useStructuredData({
+    title: "ChatGPTで志望動機を書くプロンプト",
+    description: "転職・就職活動で使える志望動機の作成をサポート。あなたの経験を効果的にアピール。",
+  });
+
   return (
     <PageLayout>
       <div className="max-w-3xl mx-auto px-4 py-8">

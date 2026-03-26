@@ -10,6 +10,9 @@ import { Link } from "wouter";
 import { ArrowLeft } from "lucide-react";
 import { useAuth } from "@/_core/hooks/useAuth";
 import { trpc } from "@/lib/trpc";
+import { useSEO } from "@/hooks/useSEO";
+import { useOGP } from "@/hooks/useOGP";
+import { useStructuredData } from "@/hooks/useStructuredData";
 
 const tocItems = [
   { id: "what-is-rag", label: "RAGとは" },
@@ -33,6 +36,21 @@ const relatedArticles = [
 ];
 
 export default function RagImplementation() {
+  useSEO({
+    title: "RAG実装ガイド｜AIに最新情報を参照させる",
+    description: "Retrieval-Augmented Generation（RAG）の仕組みと実装方法を解説します。ベクトルDB、チャンキング戦略、ハイブリッド検索など、実践的な手法を学びます。",
+    keywords: "RAG,検索拡張生成,ベクトルDB,チャンキング,実装,上級,AI,LLM,Pinecone",
+  });
+  useOGP({
+    title: "RAG実装ガイド：AIに最新情報を参照させる",
+    description: "Retrieval-Augmented Generation（RAG）の仕組みと実装方法を解説します。",
+    type: "article",
+  });
+  useStructuredData({
+    title: "RAG実装ガイド：AIに最新情報を参照させる",
+    description: "Retrieval-Augmented Generation（RAG）の仕組みと実装方法を解説します。",
+  });
+
   const { isAuthenticated } = useAuth();
   const { data: subscription } = trpc.subscription.getMySubscription.useQuery(undefined, {
     enabled: isAuthenticated,

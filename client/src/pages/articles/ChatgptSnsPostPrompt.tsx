@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+
 import PageLayout from "@/components/layout/PageLayout";
 import ArticleHeader from "@/components/article/ArticleHeader";
 import ArticleContent from "@/components/article/ArticleContent";
@@ -6,26 +6,13 @@ import TableOfContents from "@/components/article/TableOfContents";
 import PromptBlock from "@/components/article/PromptBlock";
 import PromptInfoCard from "@/components/article/PromptInfoCard";
 import ResponseExample from "@/components/article/ResponseExample";
-import AffiliateBox from "@/components/cta/AffiliateBox";
-import RelatedArticles from "@/components/cta/RelatedArticles";
+import AffiliateBox from "@/components/article/AffiliateBox";
+import RelatedArticles from "@/components/article/RelatedArticles";
 import { AlertTriangle } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
+import { useOGP } from "@/hooks/useOGP";
+import { useStructuredData } from "@/hooks/useStructuredData";
 
-export const metadata: Metadata = {
-  title: "ChatGPTでSNS投稿文を作成するプロンプト4選｜コピペで使える実践例",
-  description: "ChatGPTでSNS投稿文を作成するプロンプトを4つご紹介。新商品紹介、イベント告知、顧客の声、Q&A形式まで、コピペで使える実践的なプロンプト集です。",
-  openGraph: {
-    title: "ChatGPTでSNS投稿文を作成するプロンプト4選｜コピペで使える実践例",
-    description: "ChatGPTでSNS投稿文を作成するプロンプトを4つご紹介。新商品紹介、イベント告知、顧客の声、Q&A形式まで、コピペで使える実践的なプロンプト集です。",
-    images: ["/images/chatgpt-sns-post-prompt-eyecatch.png"],
-    type: "article",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "ChatGPTでSNS投稿文を作成するプロンプト4選｜コピペで使える実践例",
-    description: "ChatGPTでSNS投稿文を作成するプロンプトを4つご紹介。新商品紹介、イベント告知、顧客の声、Q&A形式まで、コピペで使える実践的なプロンプト集です。",
-    images: ["/images/chatgpt-sns-post-prompt-eyecatch.png"],
-  },
-};
 
 const tocItems = [
   { id: "intro", label: "ChatGPTでSNS投稿文作成、もう悩まない！" },

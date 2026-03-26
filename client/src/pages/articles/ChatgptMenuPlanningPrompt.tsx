@@ -1,4 +1,4 @@
-import { Metadata } from "next";
+
 import PageLayout from "@/components/layout/PageLayout";
 import ArticleHeader from "@/components/article/ArticleHeader";
 import ArticleContent from "@/components/article/ArticleContent";
@@ -6,26 +6,13 @@ import TableOfContents from "@/components/article/TableOfContents";
 import PromptBlock from "@/components/article/PromptBlock";
 import PromptInfoCard from "@/components/article/PromptInfoCard";
 import ResponseExample from "@/components/article/ResponseExample";
-import AffiliateBox from "@/components/cta/AffiliateBox";
-import RelatedArticles from "@/components/cta/RelatedArticles";
+import AffiliateBox from "@/components/article/AffiliateBox";
+import RelatedArticles from "@/components/article/RelatedArticles";
 import { AlertTriangle } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
+import { useOGP } from "@/hooks/useOGP";
+import { useStructuredData } from "@/hooks/useStructuredData";
 
-export const metadata: Metadata = {
-  title: "ChatGPTで献立を考えるプロンプト4選｜栄養バランス・時短を両立",
-  description: "ChatGPTで献立を考えるプロンプトを4つご紹介。食材指定、栄養バランス重視、イベント・シーン別、冷蔵庫の余り物活用など、栄養バランス・時短を両立する実践的なプロンプト集です。",
-  openGraph: {
-    title: "ChatGPTで献立を考えるプロンプト4選｜栄養バランス・時短を両立",
-    description: "ChatGPTで献立を考えるプロンプトを4つご紹介。食材指定、栄養バランス重視、イベント・シーン別、冷蔵庫の余り物活用など、栄養バランス・時短を両立する実践的なプロンプト集です。",
-    images: ["/images/chatgpt-menu-planning-prompt-eyecatch.png"],
-    type: "article",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "ChatGPTで献立を考えるプロンプト4選｜栄養バランス・時短を両立",
-    description: "ChatGPTで献立を考えるプロンプトを4つご紹介。食材指定、栄養バランス重視、イベント・シーン別、冷蔵庫の余り物活用など、栄養バランス・時短を両立する実践的なプロンプト集です。",
-    images: ["/images/chatgpt-menu-planning-prompt-eyecatch.png"],
-  },
-};
 
 const tocItems = [
   { id: "intro", label: "ChatGPTで献立作成、もう悩まない！" },

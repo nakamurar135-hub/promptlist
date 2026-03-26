@@ -8,6 +8,9 @@ import TableOfContents from "@/components/article/TableOfContents";
 import AffiliateBox from "@/components/article/AffiliateBox";
 import RelatedArticles from "@/components/article/RelatedArticles";
 import { AlertTriangle } from "lucide-react";
+import { useSEO } from "@/hooks/useSEO";
+import { useOGP } from "@/hooks/useOGP";
+import { useStructuredData } from "@/hooks/useStructuredData";
 
 const tocItems = [
   { id: "intro", label: "ブログ記事の執筆、時間がかかっていませんか？" },
@@ -41,6 +44,21 @@ const relatedArticles = [
 ];
 
 export default function ChatgptBlogWriting() {
+  useSEO({
+    title: "ブログ記事をAIに書かせる日本語プロンプト｜構成から本文まで完全対応",
+    description: "ChatGPTを使ってブログ記事を効率的に作成したい方向けのプロンプト4つをご紹介。記事構成から本文執筆、SEOタイトル、SNS投稿文まで、コンテンツ作成に必要なすべてをカバーします。",
+    keywords: "ブログ,ChatGPT,記事作成,プロンプト,コンテンツマーケティング,AI,文章作成,SEO,SNS投稿",
+  });
+  useOGP({
+    title: "ブログ記事をAIに書かせる日本語プロンプト",
+    description: "ブログやSNS投稿のための文章作成をAIがサポート。構成から本文まで一貫して作成。",
+    type: "article",
+  });
+  useStructuredData({
+    title: "ブログ記事をAIに書かせる日本語プロンプト",
+    description: "ブログやSNS投稿のための文章作成をAIがサポート。構成から本文まで一貫して作成。",
+  });
+
   return (
     <PageLayout>
       <div className="max-w-3xl mx-auto px-4 py-8">

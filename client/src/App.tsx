@@ -16,20 +16,33 @@ import ChatgptIdeationPrompt from "./pages/articles/ChatgptIdeationPrompt";
 import ChatgptSummarizePrompt from "./pages/articles/ChatgptSummarizePrompt";
 import ChatgptTranslationPrompt from "./pages/articles/ChatgptTranslationPrompt";
 import ChatgptMenuPlanningPrompt from "./pages/articles/ChatgptMenuPlanningPrompt";
+import AiAgentCourseModule1 from "./pages/articles/AiAgentCourseModule1";
+import AiAgentCourseModule2 from "./pages/articles/AiAgentCourseModule2";
+import AiAgentCourseModule3 from "./pages/articles/AiAgentCourseModule3";
+import AiAgentCourseModule4 from "./pages/articles/AiAgentCourseModule4";
 import SkillsList from "./pages/skills/SkillsList";
 import AiAgentBasics from "./pages/skills/AiAgentBasics";
 import PromptEngineering from "./pages/skills/PromptEngineering";
-import TaskAutomation from "@/pages/skills/TaskAutomation";
-import MultiAgentSystems from "@/pages/skills/MultiAgentSystems";
-import RagImplementation from "@/pages/skills/RagImplementation";
+import TaskAutomation from "./pages/skills/TaskAutomation";
+import MultiAgentSystems from "./pages/skills/MultiAgentSystems";
+import RagImplementation from "./pages/skills/RagImplementation";
 import Upgrade from "./pages/account/Upgrade";
 import Account from "./pages/account/Account";
+import Privacy from "./pages/legal/Privacy";
+import Terms from "./pages/legal/Terms";
+import BeginnerPrompts from "./pages/BeginnerPrompts";
+import SearchResults from "./pages/SearchResults";
+import PremiumGuide from "./pages/PremiumGuide";
+import PremiumRoute from "./components/PremiumRoute";
 
 function Router() {
   return (
     <Switch>
       {/* トップページ */}
       <Route path="/" component={Home} />
+
+      {/* 初心者向けプロンプト一覧 */}
+      <Route path="/articles" component={BeginnerPrompts} />
 
       {/* 初心者向け記事 */}
       <Route path="/articles/chatgpt-meeting-minutes" component={ChatgptMeetingMinutes} />
@@ -44,17 +57,33 @@ function Router() {
       <Route path="/articles/chatgpt-translation-prompt" component={ChatgptTranslationPrompt} />
       <Route path="/articles/chatgpt-menu-planning-prompt" component={ChatgptMenuPlanningPrompt} />
 
+      {/* 中級者向けコース（プレミアム会員専用） */}
+      <Route path="/articles/ai-agent-course-module-1" component={() => <PremiumRoute component={AiAgentCourseModule1} />} />
+      <Route path="/articles/ai-agent-course-module-2" component={() => <PremiumRoute component={AiAgentCourseModule2} />} />
+      <Route path="/articles/ai-agent-course-module-3" component={() => <PremiumRoute component={AiAgentCourseModule3} />} />
+      <Route path="/articles/ai-agent-course-module-4" component={() => <PremiumRoute component={AiAgentCourseModule4} />} />
+
+      {/* 検索結果 */}
+      <Route path="/search" component={SearchResults} />
+
+      {/* プレミアムガイド */}
+      <Route path="/premium" component={PremiumGuide} />
+
       {/* 中級者向けスキルガイド */}
       <Route path="/skills" component={SkillsList} />
       <Route path="/skills/ai-agent-basics" component={AiAgentBasics} />
-      <Route path="/skills/task-automation" component={TaskAutomation} />
       <Route path="/skills/prompt-engineering" component={PromptEngineering} />
+      <Route path="/skills/task-automation" component={TaskAutomation} />
       <Route path="/skills/multi-agent-systems" component={MultiAgentSystems} />
       <Route path="/skills/rag-implementation" component={RagImplementation} />
 
       {/* アカウント */}
       <Route path="/account" component={Account} />
       <Route path="/account/upgrade" component={Upgrade} />
+
+      {/* 法務 */}
+      <Route path="/privacy" component={Privacy} />
+      <Route path="/terms" component={Terms} />
 
       {/* 404 */}
       <Route path="/404" component={NotFound} />
@@ -66,7 +95,7 @@ function Router() {
 function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider defaultTheme="light">
+      <ThemeProvider>
         <TooltipProvider>
           <Toaster />
           <Router />
