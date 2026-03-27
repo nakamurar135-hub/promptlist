@@ -13,6 +13,13 @@ const beginnerPrompts = [
     description: "会議メモから自動で議事録を生成。要点整理、フォーマル形式、アクションアイテム抽出まで対応。",
   },
   {
+    href: "/articles/chatgpt-beginner-guide",
+    category: "基礎・入門",
+    categoryColor: "#4CAF50",
+    title: "ChatGPT初心者向け完全活用ガイド｜「何を聞けばいい？」を解決する黄金テンプレート",
+    description: "2026年最新のChatGPT活用術を解説。コピペで使える「黄金テンプレート」と仕事・日常での具体例を紹介。",
+  },
+  {
     href: "/articles/chatgpt-question-template",
     category: "基礎・入門",
     categoryColor: "#4CAF50",
@@ -115,7 +122,7 @@ export default function BeginnerPrompts() {
           </p>
           <div className="flex items-center gap-2 text-white/80">
             <Zap className="w-4 h-4" />
-            <span className="text-sm">全15記事・完全無料</span>
+            <span className="text-sm">全16記事・完全無料</span>
           </div>
         </div>
       </section>
