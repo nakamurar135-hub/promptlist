@@ -17,6 +17,8 @@ import ChatgptSummarizePrompt from "./pages/articles/ChatgptSummarizePrompt";
 import ChatgptTranslationPrompt from "./pages/articles/ChatgptTranslationPrompt";
 import ChatgptMenuPlanningPrompt from "./pages/articles/ChatgptMenuPlanningPrompt";
 import ChatgptBeginnerGuide from "./pages/articles/ChatgptBeginnerGuide";
+import AgenticAiWorkflowGuide from "./pages/articles/AgenticAiWorkflowGuide";
+import LlmStructuredOutputGuide from "./pages/articles/LlmStructuredOutputGuide";
 import AiAgentCourseModule1 from "./pages/articles/AiAgentCourseModule1";
 import AiAgentCourseModule2 from "./pages/articles/AiAgentCourseModule2";
 import AiAgentCourseModule3 from "./pages/articles/AiAgentCourseModule3";
@@ -58,6 +60,8 @@ function Router() {
       <Route path="/articles/chatgpt-translation-prompt" component={ChatgptTranslationPrompt} />
       <Route path="/articles/chatgpt-menu-planning-prompt" component={ChatgptMenuPlanningPrompt} />
       <Route path="/articles/chatgpt-beginner-guide" component={ChatgptBeginnerGuide} />
+      <Route path="/articles/agentic-ai-workflow-guide" component={AgenticAiWorkflowGuide} />
+      <Route path="/articles/llm-structured-output-guide" component={LlmStructuredOutputGuide} />
 
       {/* 中級者向けコース（プレミアム会員専用） */}
       <Route path="/articles/ai-agent-course-module-1" component={() => <PremiumRoute component={AiAgentCourseModule1} />} />
