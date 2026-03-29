@@ -6,6 +6,14 @@ import { useOGP } from "@/hooks/useOGP";
 // 初心者向けプロンプト集データ
 const beginnerPrompts = [
   {
+    href: "/articles/google-nano-banana-2-image-gen-guide",
+    category: "AI活用",
+    categoryColor: "#FF5722",
+    title: "Google Nano Banana 2 画像生成プロンプトガイド｜無料AIで理想の画像を",
+    description: "Googleの最新無料AI「Nano Banana 2」を使って、高品質な画像を生成するためのプロンプトガイド。初心者でも簡単に使える魔法のテンプレートとコツを解説。",
+  },
+
+  {
     href: "/articles/chatgpt-meeting-minutes",
     category: "ビジネス文書",
     categoryColor: "#5B9BD5",
