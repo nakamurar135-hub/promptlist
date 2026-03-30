@@ -186,3 +186,12 @@
 - [x] AiAgentCourseModule4のteンプレートリテラル内OPENAI_API_KEY変数参照をエスケープ
 - [x] ChatgptIdeationPrompt.tsxのAffiliateBoxに必須propsを追加
 - [x] PremiumGuide.tsxのisPremiumをtrpc.subscription.checkPremiumで判定するよう修正
+
+## GitHub manus/next-migration 記事統合
+- [x] ChatgptBeginnerGuide.tsxを取得・ルート登録（/articles/chatgpt-beginner-guide）
+- [x] AgenticAiWorkflowGuide.tsxを取得・ルート登録（/articles/agentic-ai-workflow-guide）
+- [x] LlmStructuredOutputGuide.tsxを取得・ルート登録（/articles/llm-structured-output-guide）
+- [x] GoogleNanoBanana2ImageGenGuide.tsxを取得・ルート登録（/articles/google-nano-banana-2-image-gen-guide）
+- [x] GoogleNanoBanana2ImageGenGuideのResponseExample・AffiliateBoxのTSエラーを修正
+- [x] BeginnerPrompts.tsxに新記事2件を追加し記事数を更新（15→17件）
+- [x] Home.tsxをリモート版で更新（新記事追加）

@@ -61,6 +61,41 @@ const beginnerArticles = [
     title: "ChatGPTでLINE返信を作るプロンプト",
     description: "返信に悩むLINEメッセージへの対応をAIがサポート。カジュアルからフォーマルまで対応。",
   },
+  {
+    href: "/articles/chatgpt-sns-post-prompt",
+    category: "コンテンツ作成",
+    categoryColor: "#FF9800",
+    title: "ChatGPTでSNS投稿文を作成するプロンプト4選",
+    description: "新商品紹介、イベント告知、顧客の声、Q&A形式まで、コピペで使える実践的なプロンプト集です。",
+  },
+  {
+    href: "/articles/chatgpt-ideation-prompt",
+    category: "企画・発想",
+    categoryColor: "#4CAF50",
+    title: "ChatGPTでアイデア出しをするプロンプト4選",
+    description: "ブレインストーミング、SWOT分析、SCAMPER法、6W2Hなど、企画・発想を加速する実践的なプロンプト集です。",
+  },
+  {
+    href: "/articles/chatgpt-summarize-prompt",
+    category: "情報整理",
+    categoryColor: "#00BCD4",
+    title: "ChatGPTで要約文を作成するプロンプト4選",
+    description: "文字数指定、目的・視点指定、箇条書き・表形式、専門家視点など、長文読解・情報整理を効率化する実践的なプロンプト集です。",
+  },
+  {
+    href: "/articles/chatgpt-translation-prompt",
+    category: "翻訳",
+    categoryColor: "#9C27B0",
+    title: "ChatGPTで翻訳をするプロンプト4選",
+    description: "言語指定、目的・文脈指定、専門用語・固有名詞対応、複数言語一括翻訳など、ビジネス・学習で役立つ実践的なプロンプト集です。",
+  },
+  {
+    href: "/articles/chatgpt-menu-planning-prompt",
+    category: "献立作成",
+    categoryColor: "#FFC107",
+    title: "ChatGPTで献立を考えるプロンプト4選",
+    description: "食材指定、栄養バランス重視、イベント・シーン別、冷蔵庫の余り物活用など、栄養バランス・時短を両立する実践的なプロンプト集です。",
+  },
 ];
 
 // 中級者向けスキルガイドデータ
