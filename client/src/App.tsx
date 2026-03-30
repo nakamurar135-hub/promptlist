@@ -20,6 +20,7 @@ import ChatgptBeginnerGuide from "./pages/articles/ChatgptBeginnerGuide";
 import AgenticAiWorkflowGuide from "./pages/articles/AgenticAiWorkflowGuide";
 import LlmStructuredOutputGuide from "./pages/articles/LlmStructuredOutputGuide";
 import GoogleNanoBanana2ImageGenGuide from "./pages/articles/GoogleNanoBanana2ImageGenGuide";
+import Gpt54AgentModeGuide from "./pages/articles/Gpt54AgentModeGuide";
 import AiAgentCourseModule1 from "./pages/articles/AiAgentCourseModule1";
 import AiAgentCourseModule2 from "./pages/articles/AiAgentCourseModule2";
 import AiAgentCourseModule3 from "./pages/articles/AiAgentCourseModule3";
@@ -64,6 +65,7 @@ function Router() {
       <Route path="/articles/agentic-ai-workflow-guide" component={AgenticAiWorkflowGuide} />
       <Route path="/articles/llm-structured-output-guide" component={LlmStructuredOutputGuide} />
       <Route path="/articles/google-nano-banana-2-image-gen-guide" component={GoogleNanoBanana2ImageGenGuide} />
+      <Route path="/articles/gpt54-agent-mode-guide" component={Gpt54AgentModeGuide} />
 
       {/* 中級者向けコース（プレミアム会員専用） */}
       <Route path="/articles/ai-agent-course-module-1" component={() => <PremiumRoute component={AiAgentCourseModule1} />} />
