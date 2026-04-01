@@ -22,6 +22,7 @@ import LlmStructuredOutputGuide from "./pages/articles/LlmStructuredOutputGuide"
 import GoogleNanoBanana2ImageGenGuide from "./pages/articles/GoogleNanoBanana2ImageGenGuide";
 import Gpt54AgentModeGuide from "./pages/articles/Gpt54AgentModeGuide";
 import AiMasterKeyPromptGuide from "./pages/articles/AiMasterKeyPromptGuide";
+import CopilotThinkDeeperGuide from "./pages/articles/CopilotThinkDeeperGuide";
 import AiAgentCourseModule1 from "./pages/articles/AiAgentCourseModule1";
 import AiAgentCourseModule2 from "./pages/articles/AiAgentCourseModule2";
 import AiAgentCourseModule3 from "./pages/articles/AiAgentCourseModule3";
@@ -68,6 +69,7 @@ function Router() {
       <Route path="/articles/google-nano-banana-2-image-gen-guide" component={GoogleNanoBanana2ImageGenGuide} />
       <Route path="/articles/gpt54-agent-mode-guide" component={Gpt54AgentModeGuide} />
         <Route path="/articles/ai-master-key-prompt-guide" component={AiMasterKeyPromptGuide} />
+      <Route path="/articles/copilot-think-deeper-guide" component={CopilotThinkDeeperGuide} />
 
       {/* 中級者向けコース（プレミアム会員専用） */}
       <Route path="/articles/ai-agent-course-module-1" component={() => <PremiumRoute component={AiAgentCourseModule1} />} />
