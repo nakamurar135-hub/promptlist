@@ -29,6 +29,7 @@ const footerProps = {
       name: "基礎・入門",
       articles: [
         { title: "質問テンプレート集", href: "/articles/beginner-template" },
+        { title: "高度な音声モード活用術", href: "/articles/chatgpt-voice-beginner" },
       ],
     },
     {
@@ -90,6 +91,13 @@ const categoryArticles = [
     title: "ChatGPTでLINE返信を作るプロンプト",
     description: "返信に悩むLINEメッセージへの対応をAIがサポート。カジュアルからフォーマルまで対応。",
     href: "/articles/line-reply",
+  },
+  {
+    category: "基礎・入門",
+    categoryColor: "bg-[#4CAF50]",
+    title: "プロンプトは「話す」から「話す」へ！ChatGPT「高度な音声モード」活用術",
+    description: "キーボード入力が苦手な初心者でも大丈夫！ChatGPTの「高度な音声モード」を使い、AIと自然に会話しながら理想の回答を引き出す方法を解説。",
+    href: "/articles/chatgpt-voice-beginner",
   },
 ]
 
