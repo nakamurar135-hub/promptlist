@@ -15,7 +15,7 @@
     *   セットファイル名は `docs/ideas/set-N.md` (Nは連番) とします。
 
 3.  **シンボリックリンクによる接続**:
-    *   この `Idealist.md` からは、最新のセットファイルや重要なネタファイルに対してシンボリックリンク（またはMarkdownのリンク）を用いて接続します。
+    *   この `Idealist.md` からは、最新のセットファイルや重要なネタファイルに対してシンボリックリンク（またはMarkdown의 リンク）を用いて接続します。
     *   リポジトリ内での実体管理を `docs/ideas/` に集約し、`Idealist.md` はインデックスとしての役割を担います。
 
 4.  **シンボリックリンクの作成方法 (例)**:
@@ -28,6 +28,8 @@
 
 *   [セット1 (001-020)](docs/ideas/set-1.md) - *未作成*
 *   [最新の個別ネタ](docs/ideas/)
+    *   [2026-04-05: 「プロンプトを書く」はもう古い？2026年の新常識「コンテキスト・エンジニアリング」入門](docs/ideas/idea-20260405-ai-context-engineering.md) - *新規追加*
+    *   [2026-04-05: AIに「逆質問」させれば失敗しない！初心者のための「逆プロンプト」活用術](docs/ideas/idea-20260405-reverse-prompting-beginner.md) - *新規追加*
     *   [2026-04-04: プロンプトは「書く」から「話す」へ！ChatGPT「高度な音声モード」活用術](docs/ideas/idea-20260404-chatgpt-voice-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/chatgpt-voice-beginner/page.tsx)
     *   [2026-04-04: ググるより速い！ChatGPTの「検索機能（Search）」で最新情報を引き出すプロンプト術](docs/ideas/idea-20260404-chatgpt-search-beginner.md) - *新規追加*
     *   [2026-04-02: プロンプト不要？感覚でAIを操る「Vibe Working（バイブ・ワーキング）」入門](docs/ideas/idea-20260402-vibe-working-beginner.md) - *新規追加*
@@ -48,4 +50,4 @@
     *   [2026-03-26: Claude Code「Auto Mode」活用術](docs/ideas/idea-20260326-claude-auto-mode.md) - [記事作成済み](articles/claude-auto-mode-guide.md)
 
 ---
-*最終更新日: 2026-04-04*
+*最終更新日: 2026-04-05*
