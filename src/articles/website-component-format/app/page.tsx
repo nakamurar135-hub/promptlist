@@ -30,6 +30,7 @@ const footerProps = {
       articles: [
         { title: "質問テンプレート集", href: "/articles/beginner-template" },
         { title: "高度な音声モード活用術", href: "/articles/chatgpt-voice-beginner" },
+        { title: "ChatGPT検索機能活用術", href: "/articles/chatgpt-search-beginner" },
       ],
     },
     {
@@ -98,6 +99,13 @@ const categoryArticles = [
     title: "プロンプトは「話す」から「話す」へ！ChatGPT「高度な音声モード」活用術",
     description: "キーボード入力が苦手な初心者でも大丈夫！ChatGPTの「高度な音声モード」を使い、AIと自然に会話しながら理想の回答を引き出す方法を解説。",
     href: "/articles/chatgpt-voice-beginner",
+  },
+  {
+    category: "基礎・入門",
+    categoryColor: "bg-[#4CAF50]",
+    title: "ググるより速い！ChatGPTの「検索機能（Search）」で最新情報を引き出すプロンプト術",
+    description: "「AIは古い情報しか持っていない」という初心者の思い込みを覆す、ChatGPTの最新「検索機能（Search）」の活用ガイド。検索エンジンで複数のサイトを見比べる手間を省き、AIに「今、この瞬間」の情報を正しく調べさせるためのコツを、PC標準のChatGPT利用シーンに合わせて解説します。",
+    href: "/articles/chatgpt-search-beginner",
   },
 ]
 
