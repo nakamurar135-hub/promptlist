@@ -6,7 +6,7 @@
 ## 運用ルール
 
 1.  **ファイル分割**:
-    *   ネタは1件ごとに独立したMarkdownファイルとして作成します。
+    *   ネタは1件ごとに独立した Markdown ファイルとして作成します。
     *   ネタファイルは `docs/ideas/` ディレクトリ内に格納します。
     *   ファイル名は `idea-YYYYMMDD-topic.md` の形式とします。
 
@@ -28,6 +28,8 @@
 
 *   [セット1 (001-020)](docs/ideas/set-1.md) - *未作成*
 *   [最新の個別ネタ](docs/ideas/)
+    *   [2026-04-07: AIと「一緒に働く」新体験！Copilot Coworkで面倒な事務作業を丸投げするコツ](docs/ideas/idea-20260407-copilot-cowork-beginner.md) - *新規追加*
+    *   [2026-04-07: GoogleアプリをAIで一括操作！Gemini拡張機能で「探し物」をなくすプロンプト術](docs/ideas/idea-20260407-gemini-workspace-extensions.md) - *新規追加*
     *   [2026-04-04: プロンプトは「書く」から「話す」へ！ChatGPT「高度な音声モード」活用術](docs/ideas/idea-20260404-chatgpt-voice-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/chatgpt-voice-beginner/page.tsx)
     *   [2026-04-04: ググるより速い！ChatGPTの「検索機能（Search）」で最新情報を引き出すプロンプト術](docs/ideas/idea-20260404-chatgpt-search-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/chatgpt-search-beginner/page.tsx)
     *   [2026-04-02: プロンプト不要？感覚でAIを操る「Vibe Working（バイブ・ワーキング）」入門](docs/ideas/idea-20260402-vibe-working-beginner.md) - *新規追加*
@@ -48,4 +50,4 @@
     *   [2026-03-26: Claude Code「Auto Mode」活用術](docs/ideas/idea-20260326-claude-auto-mode.md) - [記事作成済み](articles/claude-auto-mode-guide.md)
 
 ---
-*最終更新日: 2026-04-04*
+*最終更新日: 2026-04-07*
