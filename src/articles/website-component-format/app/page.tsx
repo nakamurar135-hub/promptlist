@@ -31,6 +31,7 @@ const footerProps = {
         { title: "質問テンプレート集", href: "/articles/beginner-template" },
         { title: "高度な音声モード活用術", href: "/articles/chatgpt-voice-beginner" },
         { title: "ChatGPT検索機能活用術", href: "/articles/chatgpt-search-beginner" },
+        { title: "Vibe Working入門", href: "/articles/vibe-working-beginner" },
       ],
     },
     {
@@ -106,6 +107,13 @@ const categoryArticles = [
     title: "ググるより速い！ChatGPTの「検索機能（Search）」で最新情報を引き出すプロンプト術",
     description: "「AIは古い情報しか持っていない」という初心者の思い込みを覆す、ChatGPTの最新「検索機能（Search）」の活用ガイド。検索エンジンで複数のサイトを見比べる手間を省き、AIに「今、この瞬間」の情報を正しく調べさせるためのコツを、PC標準のChatGPT利用シーンに合わせて解説します。",
     href: "/articles/chatgpt-search-beginner",
+  },
+  {
+    category: "基礎・入門",
+    categoryColor: "bg-[#4CAF50]",
+    title: "プロンプト不要？感覚でAIを操る「Vibe Working（バイブ・ワーキング）」入門",
+    description: "「完璧なプロンプトを書かなければ」というプレッシャーから解放されましょう。隣の同僚に話しかけるような「適当な指示（バイブス）」でAIを動かす2026年の新常識「Vibe Working」を解説します。",
+    href: "/articles/vibe-working-beginner",
   },
 ]
 
