@@ -32,6 +32,7 @@ const footerProps = {
         { title: "高度な音声モード活用術", href: "/articles/chatgpt-voice-beginner" },
         { title: "ChatGPT検索機能活用術", href: "/articles/chatgpt-search-beginner" },
         { title: "Vibe Working入門", href: "/articles/vibe-working-beginner" },
+        { title: "Chrome AI履歴検索活用術", href: "/articles/chrome-ai-history-search" },
       ],
     },
     {
@@ -60,6 +61,13 @@ const footerProps = {
 // カテゴリ別記事データ
 const categoryArticles = [
   {
+    category: "基礎・入門",
+    categoryColor: "bg-[#4CAF50]",
+    title: "【初心者向け】「あのサイト、何だっけ？」をAIが解決！Chromeの『AI履歴検索』活用術",
+    description: "2026年のChrome新機能「AI履歴検索」を徹底解説。正確なサイト名を忘れても「赤い靴のサイト」といった曖昧な記憶（プロンプト）で目的のページを即座に見つける方法を紹介します。",
+    href: "/articles/chrome-ai-history-search",
+  },
+  {
     category: "ビジネス文書",
     categoryColor: "bg-[#5B9BD5]",
     title: "ChatGPTで議事録を作成するプロンプト4選",
@@ -72,27 +80,6 @@ const categoryArticles = [
     title: "AI初心者でも失敗しない！ChatGPTに正しく質問するテンプレ集",
     description: "ChatGPTを使いこなすための基本的な質問テクニックを解説。初めての方はまずこちらから。",
     href: "/articles/beginner-template",
-  },
-  {
-    category: "キャリア",
-    categoryColor: "bg-[#9C27B0]",
-    title: "ChatGPTで志望動機を書くプロンプト",
-    description: "転職・就職活動で使える志望動機の作成をサポート。あなたの経験を効果的にアピールする文章を生成。",
-    href: "/articles/motivation-letter",
-  },
-  {
-    category: "コンテンツ作成",
-    categoryColor: "bg-[#FF9800]",
-    title: "ブログ記事をAIに書かせる日本語プロンプト",
-    description: "ブログやSNS投稿のための文章作成をAIがサポート。構成から本文まで一貫して作成できます。",
-    href: "/articles/blog-writing",
-  },
-  {
-    category: "日常・カジュアル",
-    categoryColor: "bg-[#E91E63]",
-    title: "ChatGPTでLINE返信を作るプロンプト",
-    description: "返信に悩むLINEメッセージへの対応をAIがサポート。カジュアルからフォーマルまで対応。",
-    href: "/articles/line-reply",
   },
   {
     category: "基礎・入門",
