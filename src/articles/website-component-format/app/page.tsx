@@ -33,6 +33,7 @@ const footerProps = {
         { title: "ChatGPT検索機能活用術", href: "/articles/chatgpt-search-beginner" },
         { title: "Vibe Working入門", href: "/articles/vibe-working-beginner" },
         { title: "Chrome AI履歴検索活用術", href: "/articles/chrome-ai-history-search" },
+        { title: "Siri Gemini活用術", href: "/articles/siri-gemini-beginner" },
       ],
     },
     {
@@ -101,6 +102,13 @@ const categoryArticles = [
     title: "プロンプト不要？感覚でAIを操る「Vibe Working（バイブ・ワーキング）」入門",
     description: "「完璧なプロンプトを書かなければ」というプレッシャーから解放されましょう。隣の同僚に話しかけるような「適当な指示（バイブス）」でAIを動かす2026年の新常識「Vibe Working」を解説します。",
     href: "/articles/vibe-working-beginner",
+  },
+  {
+    category: "基礎・入門",
+    categoryColor: "bg-[#4CAF50]",
+    title: "【初心者向け】iPhoneのSiriが賢くなった！Google Gemini搭載で「頼み事」が通じるプロンプト術",
+    description: "2026年、AppleとGoogleの提携により進化したSiriの初心者向け活用ガイド。Geminiの搭載で、複雑な意図を汲み取った「頼み事」ができるようになった新しいSiriの使いこなし術を解説します。",
+    href: "/articles/siri-gemini-beginner",
   },
 ]
 
