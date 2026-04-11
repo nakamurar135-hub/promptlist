@@ -103,13 +103,20 @@ const categoryArticles = [
     description: "「完璧なプロンプトを書かなければ」というプレッシャーから解放されましょう。隣の同僚に話しかけるような「適当な指示（バイブス）」でAIを動かす2026年の新常識「Vibe Working」を解説します。",
     href: "/articles/vibe-working-beginner",
   },
-  {
-    category: "基礎・入門",
-    categoryColor: "bg-[#4CAF50]",
-    title: "【初心者向け】iPhoneのSiriが賢くなった！Google Gemini搭載で「頼み事」が通じるプロンプト術",
-    description: "2026年、AppleとGoogleの提携により進化したSiriの初心者向け活用ガイド。Geminiの搭載で、複雑な意図を汲み取った「頼み事」ができるようになった新しいSiriの使いこなし術を解説します。",
-    href: "/articles/siri-gemini-beginner",
-  },
+        {
+          category: "基礎・入門",
+          categoryColor: "bg-[#4CAF50]",
+          title: "【初心者向け】iPhoneのSiriが賢くなった！Google Gemini搭載で「頼み事」が通じるプロンプト術",
+          description: "2026年、AppleとGoogleの提携により進化したSiriの初心者向け活用ガイド。Geminiの搭載で、複雑な意図を汲み取った「頼み事」ができるようになった新しいSiriの使いこなし術を解説します。",
+          href: "/articles/siri-gemini-beginner",
+        },
+        {
+          category: "基礎・入門",
+          categoryColor: "bg-[#4CAF50]",
+          title: "【初心者向け】メールもSNSも「右クリック」で完成！Edgeの『AI書き換え』プロンプト術",
+          description: "Microsoft Edgeの「AI書き換え（Rewrite with Copilot）」機能を初心者向けに解説。右クリックだけで文章を「丁寧にする」「短くする」「熱意を込める」など、AIが自動で調整してくれる便利さを紹介します。",
+          href: "/articles/edge-ai-rewrite",
+        },
 ]
 
 export default function HomePage() {
