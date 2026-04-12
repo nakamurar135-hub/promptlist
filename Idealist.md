@@ -50,6 +50,8 @@
 *   [2026-04-08: 【初心者向け】メールもSNSも「右クリック」で完成！Edgeの『AI書き換え』プロンプト術](docs/ideas/idea-20260408-edge-ai-rewrite.md) - [記事作成済み](src/articles/website-component-format/app/articles/edge-ai-rewrite/page.tsx)
 *   [2026-04-09: 【初心者向け】検索は「ググる」から「聞く」へ！Yahooの新機能『Yahoo Scout』活用プロンプト術](docs/ideas/idea-20260409-yahoo-scout-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/yahoo-scout-beginner/page.tsx)
 *   [2026-04-09: 【初心者向け】iPhoneのSiriが賢くなった！Google Gemini搭載で「頼み事」が通じるプロンプト術](docs/ideas/idea-20260409-siri-gemini-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/siri-gemini-beginner/page.tsx)
+*   [2026-04-12: 【初心者向け】Copilotが専属の先生に！「勉強と学習」モードで挫折しない学び方ガイド](docs/ideas/idea-20260412-copilot-study-mode.md) - *新規追加*
+*   [2026-04-12: 【初心者向け】頭の中の「やりたいこと」をAIが形に！ChatGPTでラクに作る「ビジョンボード」活用術](docs/ideas/idea-20260412-chatgpt-vision-board.md) - *新規追加*
 
 ---
-*最終更新日: 2026-04-10*
+*最終更新日: 2026-04-12*
