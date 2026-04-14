@@ -53,6 +53,8 @@
 *   [2026-04-12: 【中級者向け】AIエージェントで業務を自動化！「自律型ワークフロー」構築プロンプト術](docs/ideas/idea-20260412-ai-agent-workflow.md) - [記事作成済み](src/articles/website-component-format/app/articles/ai-agent-workflow/page.tsx)
 *   [2026-04-13: 【初心者向け】言葉が「動く図解」に！Geminiの『シミュレーター生成』プロンプト術](docs/ideas/idea-20260413-gemini-dynamic-visualizer.md) - *新規追加*
 *   [2026-04-13: 【初心者向け】スマートスピーカーが「話の通じる家族」に！Gemini for Homeの『意図を汲み取る』プロンプト術](docs/ideas/idea-20260413-gemini-for-home-beginner.md) - *新規追加*
+*   [2026-04-14: 【中級者向け】チーム全員をAI使いに！Claude Code「/team-onboarding」活用ガイド](docs/ideas/idea-20260414-claude-code-team-onboarding.md) - *新規追加*
+*   [2026-04-14: 【中級者向け】「使い分け」が正解！複数AIエージェントを組み合わせた最強業務自動化術](docs/ideas/idea-20260414-multi-ai-agent-workflow.md) - *新規追加*
 
 ---
-*最終更新日: 2026-04-13*
+*最終更新日: 2026-04-14*
