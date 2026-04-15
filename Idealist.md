@@ -52,7 +52,7 @@
 *   [2026-04-09: 【初心者向け】iPhoneのSiriが賢くなった！Google Gemini搭載で「頼み事」が通じるプロンプト術](docs/ideas/idea-20260409-siri-gemini-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/siri-gemini-beginner/page.tsx)
 *   [2026-04-12: 【中級者向け】AIエージェントで業務を自動化！「自律型ワークフロー」構築プロンプト術](docs/ideas/idea-20260412-ai-agent-workflow.md) - [記事作成済み](src/articles/website-component-format/app/articles/ai-agent-workflow/page.tsx)
 *   [2026-04-13: 【初心者向け】言葉が「動く図解」に！Geminiの『シミュレーター生成』プロンプト術](docs/ideas/idea-20260413-gemini-dynamic-visualizer.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-dynamic-visualizer/page.tsx)
-*   [2026-04-13: 【初心者向け】スマートスピーカーが「話の通じる家族」に！Gemini for Homeの『意図を汲み取る』プロンプト術](docs/ideas/idea-20260413-gemini-for-home-beginner.md) - *新規追加*
+*   [2026-04-13: 【初心者向け】スマートスピーカーが「話の通じる家族」に！Gemini for Homeの『意図を汲み取る』プロンプト術](docs/ideas/idea-20260413-gemini-for-home-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-for-home-beginner/page.tsx)
 
 ---
-*最終更新日: 2026-04-14*
+*最終更新日: 2026-04-15*
