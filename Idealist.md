@@ -53,6 +53,8 @@
 *   [2026-04-12: 【中級者向け】AIエージェントで業務を自動化！「自律型ワークフロー」構築プロンプト術](docs/ideas/idea-20260412-ai-agent-workflow.md) - [記事作成済み](src/articles/website-component-format/app/articles/ai-agent-workflow/page.tsx)
 *   [2026-04-13: 【初心者向け】言葉が「動く図解」に！Geminiの『シミュレーター生成』プロンプト術](docs/ideas/idea-20260413-gemini-dynamic-visualizer.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-dynamic-visualizer/page.tsx)
 *   [2026-04-13: 【初心者向け】スマートスピーカーが「話の通じる家族」に！Gemini for Homeの『意図を汲み取る』プロンプト術](docs/ideas/idea-20260413-gemini-for-home-beginner.md) - *新規追加*
+*   [2026-04-15: 【初心者向け】iPhoneがあなたの「専属編集者」に！Apple Intelligence『作文ツール』活用プロンプト術](docs/ideas/idea-20260415-apple-intelligence-writing-tools.md) - *新規追加*
+*   [2026-04-15: 【初心者向け】PDFも動画も「聴いて」理解！Google NotebookLM『音声ポッドキャスト生成』活用術](docs/ideas/idea-20260415-notebooklm-audio-overview.md) - *新規追加*
 
 ---
-*最終更新日: 2026-04-14*
+*最終更新日: 2026-04-15*
