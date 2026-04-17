@@ -117,6 +117,20 @@ const categoryArticles = [
           description: "Microsoft Edgeの「AI書き換え（Rewrite with Copilot）」機能を初心者向けに解説。右クリックだけで文章を「丁寧にする」「短くする」「熱意を込める」など、AIが自動で調整してくれる便利さを紹介します。",
           href: "/articles/edge-ai-rewrite",
         },
+        {
+          category: "基礎・入門",
+          categoryColor: "bg-[#4CAF50]",
+          title: "【初心者向け】画面上の「これ」をAIが即解決！Windows 11の新機能『Click to Do』活用プロンプト術",
+          description: "Windows 11に新しく搭載された「Click to Do」機能を、ITに疎い初心者でも使いこなせるように解説。画面に表示されているものを右クリックするだけで、AIが「要約」「書き換え」「画像編集」などを提案してくれる、まさに「プロンプト不要」のAI活用術を紹介します。",
+          href: "/articles/windows-click-to-do-beginner",
+        },
+        {
+          category: "基礎・入門",
+          categoryColor: "bg-[#4CAF50]",
+          title: "【初心者向け】AIが「じっくり考えて」から答えてくれる！Copilotの『Think Deeper』で失敗しない相談術",
+          description: "AIに相談しても「なんだか表面的な回答しか返ってこない」と悩む初心者に向けた、Copilotの新機能「Think Deeper（深く考える）」モードの活用ガイド。AIが回答を出す前に「論理的に考えるステップ」を挟むことで、初心者でも驚くほど質の高いアドバイスを引き出せるプロンプトのコツを解説します。",
+          href: "/articles/copilot-think-deeper-beginner",
+        },
 ]
 
 export default function HomePage() {
