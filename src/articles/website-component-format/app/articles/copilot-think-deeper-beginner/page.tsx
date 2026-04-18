@@ -1,3 +1,5 @@
+"use client";
+
 import PageLayout from "@/components/layout/PageLayout"
 import ArticleHeader from "@/components/article/ArticleHeader"
 import TableOfContents from "@/components/article/TableOfContents"
@@ -26,7 +28,6 @@ const footerProps = {
       articles: [
         { title: "AI初心者でも失敗しない！ChatGPTに正しく質問するテンプレ集", href: "/articles/beginner-template" },
         { title: "プロンプトは「書く」から「話す」へ！ChatGPT「高度な音声モード」活用術", href: "/articles/chatgpt-voice-beginner" },
-        { title: "【初心者向け】「あのサイト、何だっけ？」をAIが解決！Chromeの『AI履歴検索』活用術", href: "/articles/chrome-ai-history-search" },
       ],
     },
     {
@@ -42,33 +43,34 @@ const footerProps = {
 
 // 目次データ
 const headings = [
-  { id: "overview", text: "『Think Deeper』とは？", level: 2 as const },
-  { id: "how-it-works", text: "「急がせない」のが最大のコツ", level: 2 as const },
-  { id: "examples", text: "初心者が「深い回答」をもらうための相談例", level: 2 as const },
-  { id: "process", text: "「思考のプロセス」を覗いてみよう", level: 2 as const },
+  { id: "introduction", text: "「AIの回答が薄い」と感じたら試すべき新機能", level: 2 as const },
+  { id: "what-is-think-deeper", text: "「Think Deeper（深く考える）」モードとは？", level: 2 as const },
+  { id: "why-it-works", text: "なぜ「急がせない」だけで回答が良くなるのか", level: 2 as const },
+  { id: "use-cases", text: "初心者が「深い回答」をもらうための相談例", level: 2 as const },
+  { id: "peek-into-process", text: "AIの「思考のプロセス」を覗いてみよう", level: 2 as const },
   { id: "summary", text: "まとめ", level: 2 as const },
   { id: "news-sources", text: "ニュースソース", level: 2 as const },
   { id: "related", text: "関連記事", level: 2 as const },
 ]
 
-// 関連記事データ (既存の記事から関連性の高いものを選択)
+// 関連記事データ
 const relatedArticles = [
   {
-    title: "【初心者向け】画面上の「これ」をAIが即解決！Windows 11の新機能『Click to Do』活用プロンプト術",
-    description: "Windows 11に新しく搭載された「Click to Do」機能を、ITに疎い初心者でも使いこなせるように解説。画面に表示されているものを右クリックするだけで、AIが「要約」「書き換え」「画像編集」などを提案してくれる、まさに「プロンプト不要」のAI活用術を紹介します。",
-    href: "/articles/windows-click-to-do-beginner",
+    title: "AI初心者でも失敗しない！ChatGPTに正しく質問するテンプレ集",
+    description: "効果的なプロンプトの書き方を基礎から解説",
+    href: "/articles/beginner-template",
   },
   {
-    title: "AI初心者でも失敗しない！ChatGPTに正しく質問するテンプレ集",
-    description: "ChatGPTを使いこなすための基本的な質問テクニックを解説。初めての方はまずこちらから。",
-    href: "/articles/beginner-template",
+    title: "プロンプトは「書く」から「話す」へ！ChatGPT「高度な音声モード」活用術",
+    description: "AIと自然に会話しながら理想の回答を引き出す方法",
+    href: "/articles/chatgpt-voice-beginner",
   },
 ]
 
 export default function CopilotThinkDeeperBeginnerPage() {
-  const title = "【初心者向け】AIが「じっくり考えて」から答えてくれる！Copilotの『Think Deeper』で失敗しない相談術";
-  const description = "AIに相談しても「なんだか表面的な回答しか返ってこない」と悩む初心者に向けた、Copilotの新機能「Think Deeper（深く考える）」モードの活用ガイド。AIが回答を出す前に「論理的に考えるステップ」を挟むことで、初心者でも驚くほど質の高いアドバイスを引き出せるプロンプトのコツを解説します。";
-  const keywords = "Copilot, Think Deeper, AI, 初心者, 相談術, プロンプト, 論理的思考, アドバイス";
+  const title = "AIが「じっくり考えて」から答えてくれる！Copilotの『Think Deeper』活用術";
+  const description = "AIに相談しても表面的な回答しか返ってこない...。そんな悩みを解決するCopilotの新機能「Think Deeper」モードを徹底解説。AIが回答前に「論理的に考える」ことで、驚くほど質の高いアドバイスを引き出すコツを紹介します。";
+  const keywords = "Copilot, Think Deeper, 深く考える, AI活用, 初心者, プロンプト, 悩み相談, Microsoft AI";
   const url = typeof window !== 'undefined' ? window.location.href : "";
 
   useSEO({
@@ -81,7 +83,7 @@ export default function CopilotThinkDeeperBeginnerPage() {
     title,
     description,
     type: "article",
-    image: "/images/placeholder.jpg", // 適切なアイキャッチ画像があれば差し替え
+    image: "/images/og-image-think-deeper.png",
     url,
   });
 
@@ -105,57 +107,83 @@ export default function CopilotThinkDeeperBeginnerPage() {
         <TableOfContents headings={headings} />
 
         <div className="prose prose-lg max-w-none">
-          <section id="overview" className="mb-12">
+          <section id="introduction" className="mb-12">
             <h2 className="text-xl md:text-2xl font-bold text-[#333333] mb-4 pb-2 border-b-2 border-[#5B9BD5]">
-              『Think Deeper』とは？
+              「AIの回答が薄い」と感じたら試すべき新機能
             </h2>
             <p className="text-[#333333] leading-relaxed mb-4">
-              Copilotの新機能「Think Deeper（深く考える）」モードは、AIが回答を生成する前に、与えられた問いに対して「論理的に考えるステップ」を挟むことで、より質の高い、深みのある回答を引き出すことを可能にします。
+              「AIに悩み事を相談してみたけれど、なんだか当たり障りのない答えしか返ってこない...」
+              「もっと具体的に考えてほしいのに、表面的なアドバイスで終わってしまう」
+            </p>
+            <p className="text-[#333333] leading-relaxed mb-4">
+              そんな経験はありませんか？実は、これまでのAIは「速く答えること」を優先するように設計されていました。しかし、複雑な悩みや難しい計画には、AIにも「じっくり考える時間」が必要です。
             </p>
             <p className="text-[#333333] leading-relaxed">
-              これにより、AIに相談しても表面的な回答しか得られないと感じていた初心者でも、驚くほど的確なアドバイスや洞察を得られるようになります。
+              そこで登場したのが、Microsoft Copilotの新機能**「Think Deeper（深く考える）」**モードです。この記事では、初心者でも一言でAIから深い回答を引き出せる、この新機能の使い方とコツを解説します。
             </p>
           </section>
 
-          <section id="how-it-works" className="mb-12">
+          <section id="what-is-think-deeper" className="mb-12">
             <h2 className="text-xl md:text-2xl font-bold text-[#333333] mb-4 pb-2 border-b-2 border-[#5B9BD5]">
-              「急がせない」のが最大のコツ
+              「Think Deeper（深く考える）」モードとは？
             </h2>
             <p className="text-[#333333] leading-relaxed mb-4">
-              これまでのAIは「即答」が強みでしたが、「Think Deeper」モードでは、AIに「時間をかけて考える」ことを促します。この「急がせない」アプローチが、人間の思考に近い、多角的で深い回答を引き出す最大のコツです。
+              「Think Deeper」は、AIが回答を出す前に「自問自答」を行い、論理的な思考ステップを挟むための特別なモードです。
             </p>
-            <PromptInfoCard type="tips" title="AIの思考プロセスを尊重する">
-              AIに複雑な問題を投げかける際、すぐに回答を求めず、AIが内部で情報を整理し、論理を構築する時間を与えることで、より洗練された結果を期待できます。これは、人間が難しい問題に取り組む際に熟考するのと似ています。
-            </PromptInfoCard>
-          </section>
-
-          <section id="examples" className="mb-12">
-            <h2 className="text-xl md:text-2xl font-bold text-[#333333] mb-4 pb-2 border-b-2 border-[#5B9BD5]">
-              初心者が「深い回答」をもらうための相談例
-            </h2>
-            <ul className="list-disc list-inside mb-4 text-[#333333] space-y-2">
-              <li>
-                <strong>「人生の相談」</strong>: 「最近やる気が出ないんだけど、どうしたらいい？」といった抽象的な問いに対しても、AIが多角的に分析し、具体的な行動提案や心の持ち方をアドバイスしてくれます。
-              </li>
-              <li>
-                <strong>「買い物のアドバイス」</strong>: 「5万円以内で、初心者に最適なカメラを選んで。理由は3つ教えて」のように、条件を明確にすることで、根拠に基づいた具体的な製品提案と、その理由を詳しく説明してくれます。
-              </li>
-              <li>
-                <strong>「難しい説明の解釈」</strong>: 「このニュースの意味が分からないから、中学生でも分かるように深く掘り下げて解説して」と依頼することで、専門的な内容を分かりやすく、かつ本質を捉えた形で解説してくれます。
-              </li>
+            <ul className="list-disc list-inside mb-4 text-[#333333]">
+              <li>**論理的思考の強化**: 複雑な問題に対して、矛盾がないか、もっと良い案がないかをAI自身が検証します。</li>
+              <li>**多角的な視点**: 一つの答えに飛びつかず、複数の可能性を検討してから回答をまとめます。</li>
+              <li>**正確性の向上**: 難しい問いに対しても、思考を深めることで誤情報の少ない、根拠のある回答を導き出します。</li>
             </ul>
           </section>
 
-          <section id="process" className="mb-12">
+          <section id="why-it-works" className="mb-12">
             <h2 className="text-xl md:text-2xl font-bold text-[#333333] mb-4 pb-2 border-b-2 border-[#5B9BD5]">
-              「思考のプロセス」を覗いてみよう
+              なぜ「急がせない」だけで回答が良くなるのか
             </h2>
             <p className="text-[#333333] leading-relaxed mb-4">
-              「Think Deeper」モードのもう一つの大きな特徴は、AIが回答に至るまでの「思考のプロセス」を可視化してくれる点です。AIがどのように情報を整理し、論理を組み立てたのかをステップバイステップで確認できます。
+              これまでのAIは、私たちが質問を投げた瞬間に、次に続く「もっともらしい言葉」を予測して出力していました。これは非常に高速ですが、時には「考えなし」の回答になってしまう原因でもありました。
             </p>
-            <PromptInfoCard type="tips" title="自分の思考整理にも役立つ">
-              AIの思考プロセスを追体験することで、ユーザー自身の問題解決能力や論理的思考力を養うことにも繋がります。AIがどのように情報を分解し、関連付け、結論を導き出すのかを学ぶことで、複雑な課題に対するアプローチ方法のヒントを得られるでしょう。
+            <PromptInfoCard type="tips" title="「急がば回れ」のAI活用">
+              Think Deeperをオンにすると、AIは回答を書き始める前に、内部で「思考の連鎖」を組み立てます。人間に例えるなら、「思いついたことをすぐ口にする」のではなく、「一度頭の中で整理してから話す」状態になるのです。この「ため」があるからこそ、初心者でも短いプロンプトで質の高い回答が得られます。
             </PromptInfoCard>
+          </section>
+
+          <section id="use-cases" className="mb-12">
+            <h2 className="text-xl md:text-2xl font-bold text-[#333333] mb-4 pb-2 border-b-2 border-[#5B9BD5]">
+              初心者が「深い回答」をもらうための相談例
+            </h2>
+            <p className="mb-4">Think Deeperモードをオンにして、こんな風に相談してみてください。プロンプトを細かく作り込まなくても、AIが勝手に深掘りしてくれます。</p>
+            
+            <PromptBlock
+              title="人生やキャリアの相談"
+              prompt="「最近仕事でやる気が出ないんだけど、どうしたらいいかな？私の性格（真面目だけど疲れやすい）を考慮して、深く洞察してみて」"
+            />
+            
+            <PromptBlock
+              title="根拠のある買い物アドバイス"
+              prompt="「5万円以内で、初心者に最適なカメラを選んで。将来的に動画も撮りたい場合、どの選択肢が一番後悔しないか、理由を3つ深掘りして教えて」"
+            />
+            
+            <PromptBlock
+              title="難しいニュースの解釈"
+              prompt="「このニュースの意味が難しくて分からない。単なる要約じゃなくて、なぜこれが社会にとって重要なのか、中学生でも分かるように背景から深く解説して」"
+            />
+          </section>
+
+          <section id="peek-into-process" className="mb-12">
+            <h2 className="text-xl md:text-2xl font-bold text-[#333333] mb-4 pb-2 border-b-2 border-[#5B9BD5]">
+              AIの「思考のプロセス」を覗いてみよう
+            </h2>
+            <p className="text-[#333333] leading-relaxed mb-4">
+              Think Deeperモードの面白い点は、AIが回答を作成する際に「今、何を考えているか」が表示されることです。
+            </p>
+            <p className="text-[#333333] leading-relaxed mb-4">
+              「〇〇の視点から検討中...」「××の矛盾をチェックしています...」といった思考の断片を見ることで、私たち人間側も「あ、そういう考え方があるのか！」と気づかされることが多々あります。
+            </p>
+            <p className="text-[#333333] leading-relaxed">
+              単に答えをもらうだけでなく、**「AIと一緒に考えるプロセス」**を体験できるのが、この機能の真の魅力と言えるでしょう。
+            </p>
           </section>
 
           <section id="summary" className="mb-12">
@@ -163,10 +191,11 @@ export default function CopilotThinkDeeperBeginnerPage() {
               まとめ
             </h2>
             <p className="text-[#333333] leading-relaxed mb-4">
-              Copilotの「Think Deeper」モードは、AIとの対話をより深く、有意義なものに変える強力な機能です。
+              Copilotの「Think Deeper」は、プロンプトを完璧に書く自信がない初心者にこそ使ってほしい機能です。
+              AIを「即答マシン」としてではなく、「思慮深いパートナー」として扱うことで、あなたの悩みや疑問はより鮮やかに解決へと向かいます。
             </p>
             <p className="text-[#333333] leading-relaxed">
-              「AIの回答が物足りない」と感じていた方は、ぜひこのモードを活用し、AIが「じっくり考えて」導き出す、質の高いアドバイスを体験してみてください。あなたの悩みや課題解決の強力なパートナーとなるはずです。
+              「AIに任せても大した答えが返ってこない」と諦めていた方は、ぜひ今日から「深く考えさせる」習慣を始めてみてください。
             </p>
           </section>
 
