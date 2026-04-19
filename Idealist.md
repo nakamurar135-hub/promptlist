@@ -59,7 +59,7 @@
 *   [2026-04-17: 【初心者向け】AIが「じっくり考えて」から答えてくれる！Copilotの『Think Deeper』で失敗しない相談術](docs/ideas/idea-20260417-copilot-think-deeper-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/copilot-think-deeper-beginner/page.tsx)
 *   [2026-04-16: 【中級者向け】自分専用のAIツールをノーコードで！Claude Opus 4.7 & Claude Builder 活用ガイド](docs/ideas/idea-20260416-claude-opus-47-builder.md) - *新規追加*
 *   [2026-04-18: 【中級者向け】アプリ間移動をゼロに！Geminiの『@メンション』でGoogle Workspaceを1つの画面で操る術](docs/ideas/idea-20260418-gemini-mention-google-workspace.md) - *新規追加*
-*   [2026-04-19: 【初心者向け】回答の一部を「選んで質問」！Copilotの新機能でピンポイントに解決するプロンプト術](docs/ideas/idea-20260419-copilot-select-ask.md) - *新規追加*
+*   [2026-04-19: 【初心者向け】回答の一部を「選んで質問」！Copilotの新機能でピンポイントに解決するプロンプト術](docs/ideas/idea-20260419-copilot-select-ask.md) - [記事作成済み](src/articles/website-component-format/app/articles/copilot-select-ask/page.tsx)
 *   [2026-04-19: 【初心者向け】もう「ググる」で迷わない！ChatGPT Searchの『聞き直し』で最新情報を絞り込むプロンプト術](docs/ideas/idea-20260419-chatgpt-multi-turn-search.md) - *新規追加*
 
 ---
