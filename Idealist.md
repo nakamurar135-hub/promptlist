@@ -64,7 +64,9 @@
 *   [2026-04-20: 【初心者向け】Excelの「面倒な作業」をAIが自動完結！Copilot의 『エンドツーエンド業務自動化』プロンプト術](docs/ideas/idea-20260420-copilot-excel-automation.md) - [記事作成済み](src/articles/website-component-format/app/articles/copilot-excel-automation/page.tsx)
 *   [2026-04-20: 【初心者向け】AIが「考えてから動く」！Gemma 4の『エージェント機能』で頼み事が1回で通じるプロンプト術](docs/ideas/idea-20260420-gemma-agent-beginner.md) - *新規追加*
 *   [2026-04-21: 【初心者向け】Gemini「パーソナル インテリジェンス」で自分専用のAIアシスタントを作る](docs/ideas/idea-20260421-gemini-personal-intelligence.md) - *新規追加*
-*   [2026-04-21: 【初心者向け】Copilotで「会議の動画」を自動で短縮！要点だけを見る「動画要約」術](docs/ideas/idea-20260421-copilot-meeting-video-summary.md) - *新規追加*
-
----
-*最終更新日: 2026-04-21* (by Manus)
+67	*   [2026-04-21: 【初心者向け】Copilotで「会議の動画」を自動で短縮！要点だけを見る「動画要約」術](docs/ideas/idea-20260421-copilot-meeting-video-summary.md) - *新規追加*
+68	*   [2026-04-22: 【初心者向け】もう「何て言えばいい？」で迷わない！OpenAI公式『GPT-5.2プロンプトガイド』に学ぶ、AIへの「正しい頼み方」](docs/ideas/idea-20260422-openai-gpt52-prompt-guide.md) - *新規追加*
+69	*   [2026-04-22: 【初心者向け】AIが「勝手にやってくれる」時代へ！LINEヤフーの新機能『Agent i』で面倒な調べ物・予約を丸投げするプロンプト術](docs/ideas/idea-20260422-line-yahoo-agent-i-beginner.md) - *新規追加*
+70	
+71	---
+72	*最終更新日: 2026-04-22* (by Manus)
