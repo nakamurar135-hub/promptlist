@@ -84,10 +84,17 @@ const beginnerArticles = [
   },
   {
     href: "/articles/chatgpt-translation-prompt",
-    category: "翻訳",
-    categoryColor: "#9C27B0",
+    category: "ビジネス文書",
+    categoryColor: "#5B9BD5",
     title: "ChatGPTで翻訳をするプロンプト4選",
     description: "言語指定、目的・文脈指定、専門用語・固有名詞対応、複数言語一括翻訳など、ビジネス・学習で役立つ実践的なプロンプト集です。",
+  },
+  {
+    href: "/articles/chatgpt-canvas-beginner",
+    category: "AI活用",
+    categoryColor: "#4CAF50",
+    title: "AIと「一緒に作る」新体験！ChatGPTの『Canvas』活用術",
+    description: "AIと直接編集しながら資料を完成させる、ChatGPTの新機能「Canvas」の初心者向け活用ガイド。",
   },
   {
     href: "/articles/chatgpt-menu-planning-prompt",

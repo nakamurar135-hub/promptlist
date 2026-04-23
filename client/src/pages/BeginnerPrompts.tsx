@@ -97,6 +97,13 @@ const beginnerPrompts = [
     title: "ChatGPTで翻訳をするプロンプト4選",
     description: "言語指定、目的・文脈指定、専門用語・固有名詞対応、複数言語一括翻訳など、ビジネス・学習で役立つ実践的なプロンプト集です。",
   },
+  {
+    href: "/articles/chatgpt-canvas-beginner",
+    category: "AI活用",
+    categoryColor: "#4CAF50",
+    title: "AIと「一緒に作る」新体験！ChatGPTの『Canvas』活用術",
+    description: "ChatGPTの新機能「Canvas」を初心者向けに解説。AIと直接編集しながら資料を完成させる、新しい共同作業の形を紹介します。",
+  },
 ];
 
 export default function BeginnerPrompts() {
@@ -130,7 +137,7 @@ export default function BeginnerPrompts() {
           </p>
           <div className="flex items-center gap-2 text-white/80">
             <Zap className="w-4 h-4" />
-            <span className="text-sm">全16記事・完全無料</span>
+            <span className="text-sm">全17記事・完全無料</span>
           </div>
         </div>
       </section>

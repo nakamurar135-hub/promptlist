@@ -28,6 +28,7 @@ import AiAgentCourseModule2 from "./pages/articles/AiAgentCourseModule2";
 import AiAgentCourseModule3 from "./pages/articles/AiAgentCourseModule3";
 import AiAgentCourseModule4 from "./pages/articles/AiAgentCourseModule4";
 import AiAgentBeginnerGuide from "./pages/articles/AiAgentBeginnerGuide";
+import ChatgptCanvasBeginner from "./pages/articles/ChatgptCanvasBeginner";
 import SkillsList from "./pages/skills/SkillsList";
 import AiAgentBasics from "./pages/skills/AiAgentBasics";
 import PromptEngineering from "./pages/skills/PromptEngineering";
@@ -72,6 +73,7 @@ function Router() {
         <Route path="/articles/ai-master-key-prompt-guide" component={AiMasterKeyPromptGuide} />
       <Route path="/articles/copilot-think-deeper-guide" component={CopilotThinkDeeperGuide} />
       <Route path="/articles/ai-agent-beginner-guide" component={AiAgentBeginnerGuide} />
+      <Route path="/articles/chatgpt-canvas-beginner" component={ChatgptCanvasBeginner} />
 
       {/* 中級者向けコース（プレミアム会員専用） */}
       <Route path="/articles/ai-agent-course-module-1" component={() => <PremiumRoute component={AiAgentCourseModule1} />} />
