@@ -69,6 +69,8 @@
 ---
 *   [2026-04-23: 【初心者向け】AIと「一緒に作る」新体験！ChatGPTの『Canvas』で文章・資料作成を10倍楽にするプロンプト術](docs/ideas/idea-20260423-chatgpt-canvas-beginner.md) - [記事作成済み](client/src/pages/articles/ChatgptCanvasBeginner.tsx)
 *   [2026-04-23: 【初心者向け】調べ物から資料作成まで1画面で完結！Microsoft Copilotの『Pages』活用プロンプト術](docs/ideas/idea-20260423-copilot-pages-beginner.md) - *新規追加*
+*   [2026-04-24: 【中級者向け】GPT-5.5「Thinking」で実現する「自律型多段階ワークフロー」構築術](docs/ideas/idea-20260424-gpt5-5-thinking-workflow.md) - *新規追加*
+*   [2026-04-24: 【中級者向け】ChatGPT Images 2.0で実現する「一貫性のあるキャラクター・ブランド」画像生成術](docs/ideas/idea-20260424-chatgpt-images-2-0-consistency.md) - *新規追加*
 
 ---
-*最終更新日: 2026-04-23* (by Manus)
+*最終更新日: 2026-04-24* (by Manus)
