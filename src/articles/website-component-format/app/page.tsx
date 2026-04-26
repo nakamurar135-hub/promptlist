@@ -34,6 +34,7 @@ const footerProps = {
         { title: "Vibe Working入門", href: "/articles/vibe-working-beginner" },
         { title: "Chrome AI履歴検索活用術", href: "/articles/chrome-ai-history-search" },
         { title: "Siri Gemini活用術", href: "/articles/siri-gemini-beginner" },
+        { title: "PowerPoint Explainer活用術", href: "/articles/powerpoint-explainer" },
       ],
     },
     {
@@ -130,6 +131,13 @@ const categoryArticles = [
           title: "【初心者向け】AIが「じっくり考えて」から答えてくれる！Copilotの『Think Deeper』で失敗しない相談術",
           description: "AIに相談しても「なんだか表面的な回答しか返ってこない」と悩む初心者に向けた、Copilotの新機能「Think Deeper（深く考える）」モードの活用ガイド。AIが回答を出す前に「論理的に考えるステップ」を挟むことで、初心者でも驚くほど質の高いアドバイスを引き出せるプロンプトのコツを解説します。",
           href: "/articles/copilot-think-deeper-beginner",
+        },
+        {
+          category: "基礎・入門",
+          categoryColor: "bg-[#4CAF50]",
+          title: "【初心者向け】プレゼン資料の「わからない」を即解決！PowerPointの新機能『Explainer』活用プロンプト術",
+          description: "2026年4月の新機能「Explainer」を解説。スライド内の専門用語や複雑な図表をAIにわかりやすく解説してもらうためのプロンプトガイド。IT初心者でも会議資料の理解度を劇的に高める方法を紹介します。",
+          href: "/articles/powerpoint-explainer",
         },
 ]
 

@@ -66,7 +66,7 @@
 *   [2026-04-21: 【初心者向け】Gemini「パーソナル インテリジェンス」で自分専用のAIアシスタントを作る](docs/ideas/idea-20260421-gemini-personal-intelligence.md) - *新規追加*
 *   [2026-04-21: 【初心者向け】Copilotで「会議の動画」を自動で短縮！要点だけを見る「動画要約」術](docs/ideas/idea-20260421-copilot-meeting-video-summary.md) - *新規追加*
 *   [2026-04-25: 【中級者向け】AIが勝手に仕事を終わらせる？GPT-5.5の『自律実行モード』活用プロンプト術](docs/ideas/idea-20260425-gpt5-5-autonomous-tasks.md) - *新規追加*
-*   [2026-04-26: 【初心者向け】プレゼン資料の「わからない」を即解決！PowerPointの新機能『Explainer』活用プロンプト術](docs/ideas/idea-20260426-powerpoint-explainer.md) - *新規追加*
+*   [2026-04-26: 【初心者向け】プレゼン資料の「わからない」を即解決！PowerPointの新機能『Explainer』活用プロンプト術](docs/ideas/idea-20260426-powerpoint-explainer.md) - [記事作成済み](src/articles/website-component-format/app/articles/powerpoint-explainer/page.tsx)
 *   [2026-04-26: 【初心者向け】登録不要・プロンプト不要？ソフトバンクの『だれでもAI』で始める「頑張らない」AI活用術](docs/ideas/idea-20260426-softbank-darede-ai.md) - *新規追加*
 
 ---
