@@ -4,7 +4,8 @@ import ArticleContent from "@/components/article/ArticleContent";
 import TableOfContents from "@/components/article/TableOfContents";
 import ResponseExample from "@/components/article/ResponseExample";
 import RelatedArticles from "@/components/article/RelatedArticles";
-import { Lightbulb, CheckCircle, ArrowRight } from "lucide-react";
+import { Lightbulb, CheckCircle, ArrowRight , AlertTriangle} from "lucide-react";
+import AffiliateBox from "@/components/article/AffiliateBox";
 import { useSEO } from "@/hooks/useSEO";
 import { useOGP } from "@/hooks/useOGP";
 import { useStructuredData } from "@/hooks/useStructuredData";
@@ -171,7 +172,12 @@ export default function Gpt54AgentModeGuide() {
         <RelatedArticles articles={relatedArticles} />
         
         <div className="mt-12">
-          <AffiliateBox />
+          <AffiliateBox
+            title="ChatGPT Plusでおまかせモードを体験"
+            description="GPT-5.4のおまかせモードはChatGPT Plusで利用できます。月額20ドルで最新のAIエージェント機能を使い放題にできます。"
+            buttonText="ChatGPT Plusを試してみる"
+            buttonHref="https://chat.openai.com/"
+          />
         </div>
       </div>
     </PageLayout>

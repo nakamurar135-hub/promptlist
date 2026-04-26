@@ -223,7 +223,12 @@ export default function CopilotThinkDeeperGuide() {
             <p>「Think Deeper」は強力ですが、すべての場面で必要なわけではありません。簡単な質問や、すぐに答えが必要な場合は、従来のモードを使う方が効率的です。タスクの性質に応じて、適切なモードを選ぶことが重要です。</p>
           </section>
 
-          <AffiliateBox />
+          <AffiliateBox
+            title="Microsoft Copilot Proで「Think Deeper」を活用"
+            description="Copilot Proなら、Think Deeperモードをより多く利用できます。長文資料の作成や深い分析が必要な方におすすめです。"
+            buttonText="Copilot Proを試してみる"
+            buttonHref="https://copilot.microsoft.com/"
+          />
           <RelatedArticles articles={relatedArticles} />
         </ArticleContent>
       </div>

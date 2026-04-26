@@ -120,11 +120,9 @@ export default function GoogleNanoBanana2ImageGenGuide() {
               </ul>
             </PromptInfoCard>
             <PromptBlock title="プロンプト例">{`笑顔の女性が、賑やかなカフェでコーヒーを飲んでいる、写真のようにリアルな画像`}</PromptBlock>
-            <ResponseExample
-              title="生成画像例"
-              description="上記のプロンプトで生成された画像"
-              imageSrc="/images/placeholder.jpg"
-            />
+            <ResponseExample title="生成画像例">
+              <p>上記のプロンプトで生成された画像</p>
+            </ResponseExample>
           </section>
 
           {/* 文字を正しく入れるコツ */}
@@ -139,11 +137,9 @@ export default function GoogleNanoBanana2ImageGenGuide() {
                 <li>フォントやスタイルを指定すると、よりイメージに近づけられます（例: 「手書き風の文字」「ネオンサイン風の文字」）</li>
               </ul>
             </PromptInfoCard>
-            <ResponseExample
-              title="生成画像例"
-              description="上記のプロンプトで生成された、文字が正確に描画された画像"
-              imageSrc="/images/placeholder.jpg"
-            />
+            <ResponseExample title="生成画像例">
+              <p>上記のプロンプトで生成された、文字が正確に描画された画像</p>
+            </ResponseExample>
           </section>
 
           {/* Google検索連携の活用 */}
@@ -158,11 +154,9 @@ export default function GoogleNanoBanana2ImageGenGuide() {
                 <li>マーケティング資料やプレゼンテーションで、リアルな製品イメージが必要な時</li>
               </ul>
             </PromptInfoCard>
-            <ResponseExample
-              title="生成画像例"
-              description="最新のスマートフォンを反映した画像"
-              imageSrc="/images/placeholder.jpg"
-            />
+            <ResponseExample title="生成画像例">
+              <p>最新のスマートフォンを反映した画像</p>
+            </ResponseExample>
           </section>
 
           {/* 期待される効果 */}
@@ -185,7 +179,12 @@ export default function GoogleNanoBanana2ImageGenGuide() {
             </div>
           </section>
 
-          <AffiliateBox />
+          <AffiliateBox
+            title="Google AI Studioで画像生成を試そう"
+            description="Google AI Studioを使えば、Nano Banana 2を含む最新のGoogle AIモデルを無料で試すことができます。"
+            buttonText="Google AI Studioを開く"
+            buttonHref="https://aistudio.google.com/"
+          />
           <RelatedArticles articles={relatedArticles} />
         </ArticleContent>
       </div>

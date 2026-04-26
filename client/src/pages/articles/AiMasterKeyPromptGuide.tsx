@@ -111,11 +111,9 @@ export default function AiMasterKeyPromptGuide() {
             <h3>1. メールの代筆・添削</h3>
             <p>「丁寧なビジネスメールの書き方が分からない」「返信に時間がかかる」といった悩みをAIが解決します。AIに目的と要点を伝えるだけで、適切なトーンと構成のメールを作成してくれます。</p>
             <PromptBlock title="メール代筆プロンプト例">{`私はAI初心者です。取引先への感謝のメールを書きたいのですが、どのような構成で書けば良いですか？また、件名や結びの言葉の候補もいくつか教えてください。`}</PromptBlock>
-            <ResponseExample
-              title="AIの回答例"
-              description="AIが提案するメールの構成と例文"
-              imageSrc="/images/placeholder.jpg" // 適切な画像に差し替える
-            />
+            <ResponseExample title="AIの回答例">
+              <p>AIに目的と要点を伝えるだけで、適切なトーンと構成のメールを作成してくれます。</p>
+            </ResponseExample>
 
             <h3>2. タスクの優先順位付け</h3>
             <p>日々のタスクに追われ、何から手をつければ良いか迷うことはありませんか？AIにタスクリストを渡せば、重要度や緊急度に基づいて優先順位をつけ、効率的な進め方を提案してくれます。</p>
@@ -149,7 +147,12 @@ export default function AiMasterKeyPromptGuide() {
             </div>
           </section>
 
-          <AffiliateBox />
+          <AffiliateBox
+            title="ChatGPT Plusで最新のAI体験を"
+            description="月額20ドルの有料プランなら、より賢いGPT-5モデルや、画像生成、データ分析機能が使い放題になります。仕事の効率をさらに上げたい方におすすめです。"
+            buttonText="公式サイトで詳細を見る"
+            buttonHref="https://chat.openai.com/"
+          />
           <RelatedArticles articles={relatedArticles} />
         </ArticleContent>
       </div>

@@ -6,6 +6,48 @@ import { useOGP } from "@/hooks/useOGP";
 // 初心者向けプロンプト集データ
 const beginnerPrompts = [
   {
+    href: "/articles/gpt54-agent-mode-guide",
+    category: "ChatGPT活用",
+    categoryColor: "#10a37f",
+    title: "GPT-5.4「おまかせモード」活用術｜プロンプト不要のAIエージェント体験",
+    description: "2026年3月公開のChatGPT最新版「GPT-5.4」に搭載された「おまかせモード」を解説。プロンプト作成が苦手な初心者でも、一言で複雑なタスクを完了させる方法を紹介します。",
+  },
+  {
+    href: "/articles/ai-agent-beginner-guide",
+    category: "AI活用",
+    categoryColor: "#4CAF50",
+    title: "「AIに任せる」の第一歩！AIエージェント超入門 - 2026年のAIは「自分で考えて動く」",
+    description: "2026年、AIは「答える」から「実行する」フェーズへ。初心者が面倒な作業をAIに丸投げするためのコツを分かりやすく解説します。",
+  },
+  {
+    href: "/articles/copilot-think-deeper-guide",
+    category: "AI活用",
+    categoryColor: "#00A4EF",
+    title: "Copilot「Think Deeper」モード初心者ガイド｜無料で高品質な長文生成",
+    description: "2026年3月登場のCopilot新機能「Think Deeper」の使い方を完全解説。15～20分かけて深く考えるモードで、A4 30ページ超の資料も作成可能。初心者向けの実践的なプロンプト例も紹介します。",
+  },
+  {
+    href: "/articles/ai-master-key-prompt-guide",
+    category: "AI活用",
+    categoryColor: "#FF5722",
+    title: "【初心者必見】AIに「使い方」を教わる最強のマスターキー・プロンプト",
+    description: "AIを使い始めたばかりの初心者が直面する「何を聞けばいいかわからない」という壁を打破するためのガイド。AI自身に初心者が陥りやすいミスと、日常生活での具体的な活用例を教わる「マスターキー・プロンプト」を紹介します。",
+  },
+  {
+    href: "/articles/agentic-ai-workflow-guide",
+    category: "AI活用",
+    categoryColor: "#2196F3",
+    title: "エージェント型AI（Agentic AI）構築ガイド｜マルチステップ・ワークフロー実装",
+    description: "2026年最新トレンド「Agentic AI」を活用し、AIが自ら計画・判断・実行するワークフロー構築方法を解説。業務自動化から複雑なタスク実行まで。",
+  },
+  {
+    href: "/articles/llm-structured-output-guide",
+    category: "AI開発",
+    categoryColor: "#FF6F00",
+    title: "LLM構造化出力（Structured Output）実践ガイド｜JSONで確実に受け取る技術",
+    description: "2026年最新LLM（GPT-5.4、Gemini 3.1 Pro）の構造化出力機能を使いこなし、AIの回答をプログラマブルに制御する実践手法を解説。",
+  },
+  {
     href: "/articles/google-nano-banana-2-image-gen-guide",
     category: "AI活用",
     categoryColor: "#FF5722",
@@ -137,7 +179,7 @@ export default function BeginnerPrompts() {
           </p>
           <div className="flex items-center gap-2 text-white/80">
             <Zap className="w-4 h-4" />
-            <span className="text-sm">全17記事・完全無料</span>
+            <span className="text-sm">全20記事・完全無料</span>
           </div>
         </div>
       </section>
