@@ -68,6 +68,8 @@
 *   [2026-04-25: 【中級者向け】AIが勝手に仕事を終わらせる？GPT-5.5の『自律実行モード』活用プロンプト術](docs/ideas/idea-20260425-gpt5-5-autonomous-tasks.md) - *新規追加*
 *   [2026-04-26: 【初心者向け】プレゼン資料の「わからない」を即解決！PowerPointの新機能『Explainer』活用プロンプト術](docs/ideas/idea-20260426-powerpoint-explainer.md) - [記事作成済み](src/articles/website-component-format/app/articles/powerpoint-explainer/page.tsx)
 *   [2026-04-26: 【初心者向け】登録不要・プロンプト不要？ソフトバンクの『だれでもAI』で始める「頑張らない」AI活用術](docs/ideas/idea-20260426-softbank-darede-ai.md) - *新規追加*
+*   [2026-04-27: 【中級者向け】エンジニアの「手」を解放する！Claude Codeによる開発ワークフロー自動化ガイド](docs/ideas/idea-20260427-claude-code-automation.md) - *新規追加*
+*   [2026-04-27: 【中級者向け】データ分析はAIと対話する時代へ！Power BI Copilotによる「ノーコード・データ分析」実践ガイド](docs/ideas/idea-20260427-powerbi-copilot-analytics.md) - *新規追加*
 
 ---
 *   [2026-04-23: 【初心者向け】AIと「一緒に作る」新体験！ChatGPTの『Canvas』で文章・資料作成を10倍楽にするプロンプト術](docs/ideas/idea-20260423-chatgpt-canvas-beginner.md) - [記事作成済み](client/src/pages/articles/ChatgptCanvasBeginner.tsx)
@@ -78,4 +80,4 @@
 *   [2026-04-24: 【初心者向け】調べ物から資料作成まで1画面で完結！Microsoft Copilotの『Pages』活用プロンプト術](docs/ideas/idea-20260424-copilot-pages-beginner.md) - *新規追加*
 
 ---
-*最終更新日: 2026-04-26* (by Manus)
+*最終更新日: 2026-04-27* (by Manus)
