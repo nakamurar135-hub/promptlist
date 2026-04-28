@@ -78,4 +78,8 @@
 *   [2026-04-24: 【初心者向け】調べ物から資料作成まで1画面で完結！Microsoft Copilotの『Pages』活用プロンプト術](docs/ideas/idea-20260424-copilot-pages-beginner.md) - *新規追加*
 
 ---
-*最終更新日: 2026-04-26* (by Manus)
+*   [2026-04-27: 【中級者向け】社内のバラバラなデータがAIでつながる！Google「Agentic Data Cloud」導入ガイド](docs/ideas/idea-20260427-google-agentic-data-cloud.md) - *新規追加*
+*   [2026-04-28: 【中級者向け】自然言語で社内アプリを爆速開発！「ELYZA Works」で実現する非エンジニアの業務自動化](docs/ideas/idea-20260428-elyza-works-automation.md) - *新規追加*
+
+---
+*最終更新日: 2026-04-28* (by Manus)
