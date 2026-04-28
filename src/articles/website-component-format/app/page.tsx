@@ -35,6 +35,7 @@ const footerProps = {
         { title: "Chrome AI履歴検索活用術", href: "/articles/chrome-ai-history-search" },
         { title: "Siri Gemini活用術", href: "/articles/siri-gemini-beginner" },
         { title: "PowerPoint Explainer活用術", href: "/articles/powerpoint-explainer" },
+        { title: "Copilot GPT-5.5活用術", href: "/articles/copilot-gpt55-images2" },
       ],
     },
     {
@@ -136,10 +137,17 @@ const categoryArticles = [
           category: "基礎・入門",
           categoryColor: "bg-[#4CAF50]",
           title: "【初心者向け】プレゼン資料の「わからない」を即解決！PowerPointの新機能『Explainer』活用プロンプト術",
-          description: "2026年4月の新機能「Explainer」を解説。スライド内の専門用語や複雑な図表をAIにわかりやすく解説してもらうためのプロンプトガイド。IT初心者でも会議資料の理解度を劇的に高める方法を紹介します。",
+          description: "2026年4月の新機能「Explainer」を解説。スライド内の専門用語や複雑な図表をAIにわかりやすく解説してもらうためのプロンプトガイド. IT初心者でも会議資料の理解度を劇的に高める方法を紹介します。",
           href: "/articles/powerpoint-explainer",
         },
-]
+        {
+          category: "基礎・入門",
+          categoryColor: "bg-[#4CAF50]",
+          title: "【初心者向け】Copilotがさらに進化！最新AI「GPT-5.5 Thinking」と「ChatGPT Images 2.0」活用術",
+          description: "2026年4月末に導入された最新AIモデル「GPT-5.5 Thinking」と「ChatGPT Images 2.0」を初心者向けに解説。AIが『考えてから答える』新時代の相談術と、高品質な画像生成プロンプトを紹介します。",
+          href: "/articles/copilot-gpt55-images2",
+        },
+  ]
 
 export default function HomePage() {
   return (
