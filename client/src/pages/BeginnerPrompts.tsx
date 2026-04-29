@@ -6,11 +6,61 @@ import { useOGP } from "@/hooks/useOGP";
 // 初心者向けプロンプト集データ
 const beginnerPrompts = [
   {
+    href: "/articles/gpt54-agent-mode-guide",
+    category: "ChatGPT活用",
+    categoryColor: "#10a37f",
+    title: "GPT-5.4「おまかせモード」活用術｜プロンプト不要のAIエージェント体験",
+    description: "2026年3月公開のChatGPT最新版「GPT-5.4」に搭載された「おまかせモード」を解説。プロンプト作成が苦手な初心者でも、一言で複雑なタスクを完了させる方法を紹介します。",
+  },
+  {
+    href: "/articles/ai-agent-beginner-guide",
+    category: "AI活用",
+    categoryColor: "#4CAF50",
+    title: "「AIに任せる」の第一歩！AIエージェント超入門 - 2026年のAIは「自分で考えて動く」",
+    description: "2026年、AIは「答える」から「実行する」フェーズへ。初心者が面倒な作業をAIに丸投げするためのコツを分かりやすく解説します。",
+  },
+  {
+    href: "/articles/copilot-think-deeper-guide",
+    category: "AI活用",
+    categoryColor: "#00A4EF",
+    title: "Copilot「Think Deeper」モード初心者ガイド｜無料で高品質な長文生成",
+    description: "2026年3月登場のCopilot新機能「Think Deeper」の使い方を完全解説。15～20分かけて深く考えるモードで、A4 30ページ超の資料も作成可能。初心者向けの実践的なプロンプト例も紹介します。",
+  },
+  {
+    href: "/articles/ai-master-key-prompt-guide",
+    category: "AI活用",
+    categoryColor: "#FF5722",
+    title: "【初心者必見】AIに「使い方」を教わる最強のマスターキー・プロンプト",
+    description: "AIを使い始めたばかりの初心者が直面する「何を聞けばいいかわからない」という壁を打破するためのガイド。AI自身に初心者が陥りやすいミスと、日常生活での具体的な活用例を教わる「マスターキー・プロンプト」を紹介します。",
+  },
+  {
+    href: "/articles/agentic-ai-workflow-guide",
+    category: "AI活用",
+    categoryColor: "#2196F3",
+    title: "エージェント型AI（Agentic AI）構築ガイド｜マルチステップ・ワークフロー実装",
+    description: "2026年最新トレンド「Agentic AI」を活用し、AIが自ら計画・判断・実行するワークフロー構築方法を解説。業務自動化から複雑なタスク実行まで。",
+  },
+  {
+    href: "/articles/llm-structured-output-guide",
+    category: "AI開発",
+    categoryColor: "#FF6F00",
+    title: "LLM構造化出力（Structured Output）実践ガイド｜JSONで確実に受け取る技術",
+    description: "2026年最新LLM（GPT-5.4、Gemini 3.1 Pro）の構造化出力機能を使いこなし、AIの回答をプログラマブルに制御する実践手法を解説。",
+  },
+  {
     href: "/articles/google-nano-banana-2-image-gen-guide",
     category: "AI活用",
     categoryColor: "#FF5722",
     title: "Google Nano Banana 2 画像生成プロンプトガイド｜無料AIで理想の画像を",
     description: "Googleの最新無料AI「Nano Banana 2」を使って、高品質な画像を生成するためのプロンプトガイド。初心者でも簡単に使える魔法のテンプレートとコツを解説。",
+  },
+
+  {
+    href: "/articles/chatgpt-meeting-minutes",
+    category: "ビジネス文書",
+    categoryColor: "#5B9BD5",
+    title: "ChatGPTで議事録を作成するプロンプト4選",
+    description: "会議メモから自動で議事録を生成。要点整理、フォーマル形式、アクションアイテム抽出まで対応。",
   },
   {
     href: "/articles/chatgpt-beginner-guide",
@@ -18,13 +68,6 @@ const beginnerPrompts = [
     categoryColor: "#4CAF50",
     title: "ChatGPT初心者向け完全活用ガイド｜「何を聞けばいい？」を解決する黄金テンプレート",
     description: "2026年最新のChatGPT活用術を解説。コピペで使える「黄金テンプレート」と仕事・日常での具体例を紹介。",
-  },
-  {
-    href: "/articles/chatgpt-meeting-minutes",
-    category: "ビジネス文書",
-    categoryColor: "#5B9BD5",
-    title: "ChatGPTで議事録を作成するプロンプト4選",
-    description: "会議メモから自動で議事録を生成。要点整理、フォーマル形式、アクションアイテム抽出まで対応。",
   },
   {
     href: "/articles/chatgpt-question-template",
@@ -96,6 +139,13 @@ const beginnerPrompts = [
     title: "ChatGPTで翻訳をするプロンプト4選",
     description: "言語指定、目的・文脈指定、専門用語・固有名詞対応、複数言語一括翻訳など、ビジネス・学習で役立つ実践的なプロンプト集です。",
   },
+  {
+    href: "/articles/chatgpt-canvas-beginner",
+    category: "AI活用",
+    categoryColor: "#4CAF50",
+    title: "AIと「一緒に作る」新体験！ChatGPTの『Canvas』活用術",
+    description: "ChatGPTの新機能「Canvas」を初心者向けに解説。AIと直接編集しながら資料を完成させる、新しい共同作業の形を紹介します。",
+  },
 ];
 
 export default function BeginnerPrompts() {
@@ -129,7 +179,7 @@ export default function BeginnerPrompts() {
           </p>
           <div className="flex items-center gap-2 text-white/80">
             <Zap className="w-4 h-4" />
-            <span className="text-sm">全17記事・完全無料</span>
+            <span className="text-sm">全20記事・完全無料</span>
           </div>
         </div>
       </section>

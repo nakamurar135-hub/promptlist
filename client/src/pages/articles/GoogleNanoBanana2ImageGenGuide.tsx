@@ -121,7 +121,7 @@ export default function GoogleNanoBanana2ImageGenGuide() {
             </PromptInfoCard>
             <PromptBlock title="プロンプト例">{`笑顔の女性が、賑やかなカフェでコーヒーを飲んでいる、写真のようにリアルな画像`}</PromptBlock>
             <ResponseExample title="生成画像例">
-              上記のプロンプトで生成された画像（笑顔の女性がカフェでコーヒーを飲んでいる、リアルな写真風）
+              <p>上記のプロンプトで生成された画像</p>
             </ResponseExample>
           </section>
 
@@ -138,7 +138,7 @@ export default function GoogleNanoBanana2ImageGenGuide() {
               </ul>
             </PromptInfoCard>
             <ResponseExample title="生成画像例">
-              上記のプロンプトで生成された、文字が正確に描画された画像（カフェの窓に「OPEN」と書かれた看板）
+              <p>上記のプロンプトで生成された、文字が正確に描画された画像</p>
             </ResponseExample>
           </section>
 
@@ -155,7 +155,7 @@ export default function GoogleNanoBanana2ImageGenGuide() {
               </ul>
             </PromptInfoCard>
             <ResponseExample title="生成画像例">
-              最新のスマートフォンを反映した画像（ビジネスマンが未来的なオフィスでスマートフォンを持っている）
+              <p>最新のスマートフォンを反映した画像</p>
             </ResponseExample>
           </section>
 
@@ -180,11 +180,10 @@ export default function GoogleNanoBanana2ImageGenGuide() {
           </section>
 
           <AffiliateBox
-            title="Google Nano Banana 2で画像生成を始めよう"
-            description="GoogleのGeminiを使って、プロ品質の画像を無料で作成できます。"
-            buttonText="Google Geminiを無料で試す"
-            buttonHref="https://gemini.google.com"
-            features={["無料で使える画像生成", "日本語プロンプト対応", "高解像度な画像出力"]}
+            title="Google AI Studioで画像生成を試そう"
+            description="Google AI Studioを使えば、Nano Banana 2を含む最新のGoogle AIモデルを無料で試すことができます。"
+            buttonText="Google AI Studioを開く"
+            buttonHref="https://aistudio.google.com/"
           />
           <RelatedArticles articles={relatedArticles} />
         </ArticleContent>
