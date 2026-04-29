@@ -36,6 +36,7 @@ const footerProps = {
         { title: "Siri Gemini活用術", href: "/articles/siri-gemini-beginner" },
         { title: "PowerPoint Explainer活用術", href: "/articles/powerpoint-explainer" },
         { title: "Copilot GPT-5.5活用術", href: "/articles/copilot-gpt55-images2" },
+        { title: "Copelfブラウザ自動化術", href: "/articles/copelf-browser-automation" },
       ],
     },
     {
@@ -146,6 +147,13 @@ const categoryArticles = [
           title: "【初心者向け】Copilotがさらに進化！最新AI「GPT-5.5 Thinking」と「ChatGPT Images 2.0」活用術",
           description: "2026年4月末に導入された最新AIモデル「GPT-5.5 Thinking」と「ChatGPT Images 2.0」を初心者向けに解説。AIが『考えてから答える』新時代の相談術と、高品質な画像生成プロンプトを紹介します。",
           href: "/articles/copilot-gpt55-images2",
+        },
+        {
+          category: "基礎・入門",
+          categoryColor: "bg-[#4CAF50]",
+          title: "【初心者向け】もう「クリック」すら不要？ブラウザ操作AI『Copelf』でルーチンワークを自動化するプロンプト術",
+          description: "2026年4月に登場した、プロンプト不要でブラウザ操作を自動化できるAI「Copelf（コペルフ）」を徹底解説。IT初心者でも「録画」するだけでAIが作業を代行してくれる、驚きの活用術を紹介します。",
+          href: "/articles/copelf-browser-automation",
         },
   ]
 
