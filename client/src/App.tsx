@@ -29,6 +29,11 @@ import AiAgentCourseModule3 from "./pages/articles/AiAgentCourseModule3";
 import AiAgentCourseModule4 from "./pages/articles/AiAgentCourseModule4";
 import AiAgentBeginnerGuide from "./pages/articles/AiAgentBeginnerGuide";
 import ChatgptCanvasBeginner from "./pages/articles/ChatgptCanvasBeginner";
+import CopilotGpt55Images2Guide from "./pages/articles/CopilotGpt55Images2Guide";
+import CopelfBrowserAutomationGuide from "./pages/articles/CopelfBrowserAutomationGuide";
+import GeminiFileGenerationGuide from "./pages/articles/GeminiFileGenerationGuide";
+import OutlookCopilotAgentGuide from "./pages/articles/OutlookCopilotAgentGuide";
+import GensparkOfficeIntegrationGuide from "./pages/articles/GensparkOfficeIntegrationGuide";
 import SkillsList from "./pages/skills/SkillsList";
 import AiAgentBasics from "./pages/skills/AiAgentBasics";
 import PromptEngineering from "./pages/skills/PromptEngineering";
@@ -74,6 +79,11 @@ function Router() {
       <Route path="/articles/copilot-think-deeper-guide" component={CopilotThinkDeeperGuide} />
       <Route path="/articles/ai-agent-beginner-guide" component={AiAgentBeginnerGuide} />
       <Route path="/articles/chatgpt-canvas-beginner" component={ChatgptCanvasBeginner} />
+      <Route path="/articles/copilot-gpt55-images2" component={CopilotGpt55Images2Guide} />
+      <Route path="/articles/copelf-browser-automation" component={CopelfBrowserAutomationGuide} />
+      <Route path="/articles/gemini-file-generation" component={GeminiFileGenerationGuide} />
+      <Route path="/articles/outlook-copilot-agent" component={OutlookCopilotAgentGuide} />
+      <Route path="/articles/genspark-office-integration" component={GensparkOfficeIntegrationGuide} />
 
       {/* 中級者向けコース（プレミアム会員専用） */}
       <Route path="/articles/ai-agent-course-module-1" component={() => <PremiumRoute component={AiAgentCourseModule1} />} />

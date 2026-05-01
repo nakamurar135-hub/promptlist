@@ -103,6 +103,41 @@ const beginnerArticles = [
     title: "ChatGPTで献立を考えるプロンプト4選",
     description: "食材指定、栄養バランス重視、イベント・シーン別、冷蔵庫の余り物活用など、栄養バランス・時短を両立する実践的なプロンプト集です。",
   },
+  {
+    href: "/articles/copilot-gpt55-images2",
+    category: "AI活用",
+    categoryColor: "#00A4EF",
+    title: "【初心者向け】Copilot進化！GPT-5.5 ThinkingとChatGPT Images 2.0活用術",
+    description: "Microsoft 365 Copilotに導入された最新AIモデルを活用して、より正確な回答と高品質な画像生成を実現するプロンプト術。",
+  },
+  {
+    href: "/articles/copelf-browser-automation",
+    category: "AI活用",
+    categoryColor: "#4CAF50",
+    title: "【初心者向け】もう「クリック」すら不要？ブラウザ操作AI『Copelf』でルーチンワークを自動化するプロンプト術",
+    description: "2026年4月に登場したブラウザ操作AI「Copelf」を使って、繰り返しのウェブ作業を自動化する方法を解説。",
+  },
+  {
+    href: "/articles/gemini-file-generation",
+    category: "AI活用",
+    categoryColor: "#4285F4",
+    title: "【初心者向け】もう「コピペ」で悩まない！Geminiの『ファイル直接生成』で資料を即ダウンロードするプロンプト術",
+    description: "Geminiの新機能「ファイル直接生成」でプロンプト一つでWordやPDFファイルを直接生成・ダウンロードする時短術。",
+  },
+  {
+    href: "/articles/outlook-copilot-agent",
+    category: "ビジネス効率化",
+    categoryColor: "#00A4EF",
+    title: "【初心者向け】メールの山にさようなら！Outlookの『Copilotエージェント』でAIに秘書を任せるプロンプト術",
+    description: "Outlook内のCopilotエージェントでメールの整理・返信下書き・予定調整をAIに任せる方法を解説。",
+  },
+  {
+    href: "/articles/genspark-office-integration",
+    category: "ビジネス効率化",
+    categoryColor: "#FF9800",
+    title: "【初心者向け】パワポやExcelにAIが常駐！『Genspark Workspace 4.0』で資料作成を「AI社員」に任せるプロンプト術",
+    description: "Genspark Workspace 4.0でOfficeソフトの画面内でAIと対話しながら資料を完成させる「AI共作」術。",
+  },
 ];
 
 // 中級者向けスキルガイドデータ

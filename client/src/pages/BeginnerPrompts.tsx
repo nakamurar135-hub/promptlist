@@ -146,6 +146,41 @@ const beginnerPrompts = [
     title: "AIと「一緒に作る」新体験！ChatGPTの『Canvas』活用術",
     description: "ChatGPTの新機能「Canvas」を初心者向けに解説。AIと直接編集しながら資料を完成させる、新しい共同作業の形を紹介します。",
   },
+  {
+    href: "/articles/copilot-gpt55-images2",
+    category: "AI活用",
+    categoryColor: "#00A4EF",
+    title: "【初心者向け】Copilot進化！GPT-5.5 ThinkingとChatGPT Images 2.0活用術",
+    description: "Microsoft 365 Copilotに導入された最新AIモデル「GPT-5.5 Thinking」と「ChatGPT Images 2.0」を徹底解説。より正確な回答と高品質な画像生成のプロンプト例を紹介します。",
+  },
+  {
+    href: "/articles/copelf-browser-automation",
+    category: "AI活用",
+    categoryColor: "#4CAF50",
+    title: "【初心者向け】もう「クリック」すら不要？ブラウザ操作AI『Copelf』でルーチンワークを自動化するプロンプト術",
+    description: "2026年4月に登場したブラウザ操作AI「Copelf」を使って、繰り返しのウェブ作業を自動化する方法を初心者向けに解説します。",
+  },
+  {
+    href: "/articles/gemini-file-generation",
+    category: "AI活用",
+    categoryColor: "#4285F4",
+    title: "【初心者向け】もう「コピペ」で悩まない！Geminiの『ファイル直接生成』で資料を即ダウンロードするプロンプト術",
+    description: "Geminiの新機能「ファイル直接生成」を活用し、プロンプト一つでWordやPDFファイルを直接生成・ダウンロードする時短術を解説します。",
+  },
+  {
+    href: "/articles/outlook-copilot-agent",
+    category: "ビジネス効率化",
+    categoryColor: "#00A4EF",
+    title: "【初心者向け】メールの山にさようなら！Outlookの『Copilotエージェント』でAIに秘書を任せるプロンプト術",
+    description: "Outlook内のCopilotエージェントを使って、メールの整理・返信下書き・予定調整をAIに任せる方法を初心者向けに解説します。",
+  },
+  {
+    href: "/articles/genspark-office-integration",
+    category: "ビジネス効率化",
+    categoryColor: "#FF9800",
+    title: "【初心者向け】パワポやExcelにAIが常駐！『Genspark Workspace 4.0』で資料作成を「AI社員」に任せるプロンプト術",
+    description: "Genspark Workspace 4.0でOfficeソフトの画面内でAIと対話しながら資料を完成させる、初心者向けの「AI共作」術を解説します。",
+  },
 ];
 
 export default function BeginnerPrompts() {
@@ -179,7 +214,7 @@ export default function BeginnerPrompts() {
           </p>
           <div className="flex items-center gap-2 text-white/80">
             <Zap className="w-4 h-4" />
-            <span className="text-sm">全20記事・完全無料</span>
+            <span className="text-sm">全25記事・完全無料</span>
           </div>
         </div>
       </section>
