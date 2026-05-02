@@ -74,6 +74,8 @@
 *   [2026-04-29: 【初心者向け】パワポやExcelにAIが常駐！『Genspark Workspace 4.0』で資料作成を「AI社員」に任せるプロンプト術](docs/ideas/idea-20260429-genspark-office-integration.md) - [記事作成済み](src/articles/website-component-format/app/articles/genspark-office-integration/page.tsx)
 *   [2026-04-30: 【初心者向け】もう「コピペ」で悩まない！Geminiの『ファイル直接生成』で資料を即ダウンロードするプロンプト術](docs/ideas/idea-20260430-gemini-file-generation.md) - *新規追加*
 *   [2026-04-30: 【初心者向け】メールの山にさようなら！Outlookの『Copilotエージェント』でAIに秘書を任せるプロンプト術](docs/ideas/idea-20260430-outlook-copilot-agent.md) - *新規追加*
+*   [2026-05-02: 【初心者向け】AIとの「仲の良さ」が目に見える？ChatGPTに『これまでの私の扱い』を画像化してもらうプロンプト術](docs/ideas/idea-20260502-chatgpt-treatment-image.md) - *新規追加*
+*   [2026-05-02: 【初心者向け】もう「指示」すら考えなくていい？ChatGPT最新機能『おまかせモード』で面倒な作業を丸投げするプロンプト術](docs/ideas/idea-20260502-chatgpt-auto-mode.md) - *新規追加*
 
 ---
 *   [2026-04-23: 【初心者向け】AIと「一緒に作る」新体験！ChatGPTの『Canvas』で文章・資料作成を10倍楽にするプロンプト術](docs/ideas/idea-20260423-chatgpt-canvas-beginner.md) - [記事作成済み](client/src/pages/articles/ChatgptCanvasBeginner.tsx)
@@ -84,4 +86,4 @@
 *   [2026-04-24: 【初心者向け】調べ物から資料作成まで1画面で完結！Microsoft Copilotの『Pages』活用プロンプト術](docs/ideas/idea-20260424-copilot-pages-beginner.md) - *新規追加*
 
 ---
-*最終更新日: 2026-05-01* (by Manus)
+*最終更新日: 2026-05-02* (by Manus)
