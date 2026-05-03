@@ -76,6 +76,8 @@
 *   [2026-04-30: 【初心者向け】メールの山にさようなら！Outlookの『Copilotエージェント』でAIに秘書を任せるプロンプト術](docs/ideas/idea-20260430-outlook-copilot-agent.md) - *新規追加*
 *   [2026-05-02: 【中級者向け】クリエイティブ作業を「指示」で自動化！Adobe Firefly AI Assistant活用ガイド](docs/ideas/idea-20260502-adobe-firefly-assistant.md) - *新規追加*
 *   [2026-05-02: 【中級者向け】ビジネスの意思決定をAIが支援！SAS Viya「統治型AIエージェント」導入ガイド](docs/ideas/idea-20260502-sas-viya-governed-agent.md) - *新規追加*
+*   [2026-05-03: 【初心者向け】Word・Excelもそのまま出力！Claudeの『コピペ不要』な書類作成プロンプト術](docs/ideas/idea-20260503-claude-file-export.md) - *新規追加*
+*   [2026-05-03: 【初心者向け】AIがあなたの代わりに「予約」まで完了！最新AIエージェント『Agent i』のおでかけプロンプト術](docs/ideas/idea-20260503-agent-i-travel.md) - *新規追加*
 
 ---
 *   [2026-04-23: 【初心者向け】AIと「一緒に作る」新体験！ChatGPTの『Canvas』で文章・資料作成を10倍楽にするプロンプト術](docs/ideas/idea-20260423-chatgpt-canvas-beginner.md) - [記事作成済み](client/src/pages/articles/ChatgptCanvasBeginner.tsx)
