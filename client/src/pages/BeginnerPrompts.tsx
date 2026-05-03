@@ -6,6 +6,20 @@ import { useOGP } from "@/hooks/useOGP";
 // 初心者向けプロンプト集データ
 const beginnerPrompts = [
   {
+    href: "/articles/claude-file-export",
+    category: "AI活用",
+    categoryColor: "#5B9BD5",
+    title: "【初心者向け】もう「コピペ」で悩まない！Claudeの『ファイル直接生成』で書類を即ダウンロードするプロンプト術",
+    description: "2026年5月の最新アップデートにより、ClaudeがWordやExcel、PowerPoint形式のファイルを直接作成・出力できるようになりました。コピペ不要で完成品ファイルを手に入れる究極の時短術を初心者向けに解説します。",
+  },
+  {
+    href: "/articles/chatgpt-auto-mode",
+    category: "ChatGPT活用",
+    categoryColor: "#10a37f",
+    title: "もう「指示」すら考えなくていい？ChatGPT最新機能『おまかせモード』で面倒な作業を丸投げするプロンプト術",
+    description: "ChatGPT最新版GPT-5.5の「おまかせモード」を活用し、複雑なプロンプトを考えることなく、目的を伝えるだけでAIに一連の作業を自走させる方法を初心者向けに解説します。",
+  },
+  {
     href: "/articles/gpt54-agent-mode-guide",
     category: "ChatGPT活用",
     categoryColor: "#10a37f",
@@ -214,7 +228,7 @@ export default function BeginnerPrompts() {
           </p>
           <div className="flex items-center gap-2 text-white/80">
             <Zap className="w-4 h-4" />
-            <span className="text-sm">全25記事・完全無料</span>
+            <span className="text-sm">全27記事・完全無料</span>
           </div>
         </div>
       </section>

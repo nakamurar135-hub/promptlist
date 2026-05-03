@@ -138,6 +138,20 @@ const beginnerArticles = [
     title: "【初心者向け】パワポやExcelにAIが常駐！『Genspark Workspace 4.0』で資料作成を「AI社員」に任せるプロンプト術",
     description: "Genspark Workspace 4.0でOfficeソフトの画面内でAIと対話しながら資料を完成させる「AI共作」術。",
   },
+  {
+    href: "/articles/chatgpt-auto-mode",
+    category: "ChatGPT活用",
+    categoryColor: "#10a37f",
+    title: "もう「指示」すら考えなくていい？ChatGPT最新機能『おまかせモード』で面倒な作業を丸投げするプロンプト術",
+    description: "ChatGPT最新版GPT-5.5の「おまかせモード」を活用し、目的を伝えるだけでAIに一連の作業を自走させる方法を初心者向けに解説。",
+  },
+  {
+    href: "/articles/claude-file-export",
+    category: "AI活用",
+    categoryColor: "#5B9BD5",
+    title: "【初心者向け】もう「コピペ」で悩まない！Claudeの『ファイル直接生成』で書類を即ダウンロードするプロンプト術",
+    description: "2026年5月の最新アップデートにより、ClaudeがWordやExcel、PowerPoint形式のファイルを直接作成・出力できるようになりました。コピペ不要で完成品ファイルを手に入れる究極の時短術。",
+  },
 ];
 
 // 中級者向けスキルガイドデータ
