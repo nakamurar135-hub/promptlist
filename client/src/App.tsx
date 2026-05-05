@@ -34,6 +34,7 @@ import CopelfBrowserAutomationGuide from "./pages/articles/CopelfBrowserAutomati
 import GeminiFileGenerationGuide from "./pages/articles/GeminiFileGenerationGuide";
 import OutlookCopilotAgentGuide from "./pages/articles/OutlookCopilotAgentGuide";
 import GensparkOfficeIntegrationGuide from "./pages/articles/GensparkOfficeIntegrationGuide";
+import ChatgptCanvasAdvanced from "./pages/articles/ChatgptCanvasAdvanced";
 import ChatGPTAutoModeGuide from "./pages/articles/ChatGPTAutoModeGuide";
 import ClaudeFileExportGuide from "./pages/articles/ClaudeFileExportGuide";
 import SkillsList from "./pages/skills/SkillsList";
@@ -86,6 +87,7 @@ function Router() {
       <Route path="/articles/gemini-file-generation" component={GeminiFileGenerationGuide} />
       <Route path="/articles/outlook-copilot-agent" component={OutlookCopilotAgentGuide} />
       <Route path="/articles/genspark-office-integration" component={GensparkOfficeIntegrationGuide} />
+      <Route path="/articles/chatgpt-canvas-advanced" component={ChatgptCanvasAdvanced} />
       <Route path="/articles/chatgpt-auto-mode" component={ChatGPTAutoModeGuide} />
       <Route path="/articles/claude-file-export" component={ClaudeFileExportGuide} />
 

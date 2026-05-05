@@ -80,6 +80,7 @@
     *   [2026-05-03: 【初心者向け】AIがあなたの代わりに「予約」まで完了！最新AIエージェント『Agent i』のおでかけプロンプト術](docs/ideas/idea-20260503-agent-i-travel.md) - *新規追加*
     *   [2026-05-04: 【初心者向け】AIがあなたの「作業員」に！ChatGPTの新アプリ『Codex』で面倒なファイル整理を丸投げするプロンプト術](docs/ideas/idea-20260504-chatgpt-codex-beginner.md) - *新規追加*
     *   [2026-05-04: 【初心者向け】AI特有の「不自然な文章」を卒業！『ペルソナ抽出』であなたの言葉を再現する魔法のプロンプト術](docs/ideas/idea-20260504-ai-persona-writing.md) - *新規追加*
+    *   [2026-05-05: 【中級者向け】ChatGPT Canvasで実現する「自律型ドキュメント作成」ワークフロー](docs/ideas/idea-20260505-chatgpt-canvas-advanced.md) - *新規追加*
 
 ---
 *   [2026-04-23: 【初心者向け】AIと「一緒に作る」新体験！ChatGPTの『Canvas』で文章・資料作成を10倍楽にするプロンプト術](docs/ideas/idea-20260423-chatgpt-canvas-beginner.md) - [記事作成済み](client/src/pages/articles/ChatgptCanvasBeginner.tsx)
