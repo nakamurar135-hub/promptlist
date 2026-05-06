@@ -81,6 +81,8 @@
     *   [2026-05-04: 【初心者向け】AIがあなたの「作業員」に！ChatGPTの新アプリ『Codex』で面倒なファイル整理を丸投げするプロンプト術](docs/ideas/idea-20260504-chatgpt-codex-beginner.md) - *新規追加*
     *   [2026-05-04: 【初心者向け】AI特有の「不自然な文章」を卒業！『ペルソナ抽出』であなたの言葉を再現する魔法のプロンプト術](docs/ideas/idea-20260504-ai-persona-writing.md) - *新規追加*
     *   [2026-05-05: 【中級者向け】ChatGPT Canvasで実現する「自律型ドキュメント作成」ワークフロー](docs/ideas/idea-20260505-chatgpt-canvas-advanced.md) - *新規追加*
+    *   [2026-05-06: 【初心者向け】もう「長文」に悩まされない！GPT-5.5 Instantの『短文・正確』引き出しプロンプト術](docs/ideas/idea-20260506-gpt5-5-instant-concise.md) - *新規追加*
+    *   [2026-05-06: 【初心者向け】言葉が「映画」に変わる！Googleの最新AI『Flow』で動画制作デビューするプロンプト術](docs/ideas/idea-20260506-google-flow-video-beginner.md) - *新規追加*
 
 ---
 *   [2026-04-23: 【初心者向け】AIと「一緒に作る」新体験！ChatGPTの『Canvas』で文章・資料作成を10倍楽にするプロンプト術](docs/ideas/idea-20260423-chatgpt-canvas-beginner.md) - [記事作成済み](client/src/pages/articles/ChatgptCanvasBeginner.tsx)
@@ -89,4 +91,4 @@
 *   [2026-04-24: 【中級者向け】ChatGPT Images 2.0で実現する「一貫性のあるキャラクター・ブランド」画像生成術](docs/ideas/idea-20260424-chatgpt-images-2-0-consistency.md) - *新規追加*
 
 ---
-*最終更新日: 2026-05-04* (by Manus)
+*最終更新日: 2026-05-06* (by Manus)
