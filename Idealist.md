@@ -6,7 +6,7 @@
 ## 運用ルール
 
 1.  **ファイル分割**:
-    *   ネタは1件ごとに独立したMarkdownファイルとして作成します。
+    *   ネタは1件ごとに独立したMarkdown fileとして作成します。
     *   ネタファイルは `docs/ideas/` ディレクトリ内に格納します。
     *   ファイル名は `idea-YYYYMMDD-topic.md` の形式とします。
 
@@ -81,6 +81,8 @@
     *   [2026-05-04: 【初心者向け】AIがあなたの「作業員」に！ChatGPTの新アプリ『Codex』で面倒なファイル整理を丸投げするプロンプト術](docs/ideas/idea-20260504-chatgpt-codex-beginner.md) - *新規追加*
     *   [2026-05-04: 【初心者向け】AI特有の「不自然な文章」を卒業！『ペルソナ抽出』であなたの言葉を再現する魔法のプロンプト術](docs/ideas/idea-20260504-ai-persona-writing.md) - *新規追加*
     *   [2026-05-05: 【中級者向け】ChatGPT Canvasで実現する「自律型ドキュメント作成」ワークフロー](docs/ideas/idea-20260505-chatgpt-canvas-advanced.md) - *新規追加*
+    *   [2026-05-07: 【初心者向け】「あなたは専門家です」は逆効果？AIに正しく実力を出させる「具体的お願い」プロンプト術](docs/ideas/idea-20260507-ai-expert-trap.md) - *新規追加*
+    *   [2026-05-07: 【初心者向け】PCがなくても仕事が終わる！スマホ版「Copilot Cowork」で外出先からAIに仕事を丸投げする術](docs/ideas/idea-20260507-copilot-cowork-mobile.md) - *新規追加*
 
 ---
 *   [2026-04-23: 【初心者向け】AIと「一緒に作る」新体験！ChatGPTの『Canvas』で文章・資料作成を10倍楽にするプロンプト術](docs/ideas/idea-20260423-chatgpt-canvas-beginner.md) - [記事作成済み](client/src/pages/articles/ChatgptCanvasBeginner.tsx)
@@ -89,4 +91,4 @@
 *   [2026-04-24: 【中級者向け】ChatGPT Images 2.0で実現する「一貫性のあるキャラクター・ブランド」画像生成術](docs/ideas/idea-20260424-chatgpt-images-2-0-consistency.md) - *新規追加*
 
 ---
-*最終更新日: 2026-05-04* (by Manus)
+*最終更新日: 2026-05-07* (by Manus)
