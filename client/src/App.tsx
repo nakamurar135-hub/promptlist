@@ -37,6 +37,7 @@ import GensparkOfficeIntegrationGuide from "./pages/articles/GensparkOfficeInteg
 import ChatgptCanvasAdvanced from "./pages/articles/ChatgptCanvasAdvanced";
 import ChatGPTAutoModeGuide from "./pages/articles/ChatGPTAutoModeGuide";
 import ClaudeFileExportGuide from "./pages/articles/ClaudeFileExportGuide";
+import AiAgentProductivityPage from "./pages/articles/AiAgentProductivityPage";
 import SkillsList from "./pages/skills/SkillsList";
 import AiAgentBasics from "./pages/skills/AiAgentBasics";
 import PromptEngineering from "./pages/skills/PromptEngineering";
@@ -90,6 +91,7 @@ function Router() {
       <Route path="/articles/chatgpt-canvas-advanced" component={ChatgptCanvasAdvanced} />
       <Route path="/articles/chatgpt-auto-mode" component={ChatGPTAutoModeGuide} />
       <Route path="/articles/claude-file-export" component={ClaudeFileExportGuide} />
+      <Route path="/articles/ai-agent-productivity" component={AiAgentProductivityPage} />
 
       {/* 中級者向けコース（プレミアム会員専用） */}
       <Route path="/articles/ai-agent-course-module-1" component={() => <PremiumRoute component={AiAgentCourseModule1} />} />
