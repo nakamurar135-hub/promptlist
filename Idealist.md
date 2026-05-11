@@ -84,6 +84,8 @@
     *   [2026-05-07: 【中級者向け】AI動画制作の極意！Google Flow & Veo 3.1で「一貫性のあるストーリー」を作るプロンプト術](docs/ideas/idea-20260507-google-flow-veo-advanced.md) - [記事作成済み](src/articles/website-component-format/app/articles/google-flow-veo-advanced/page.tsx)
     *   [2026-05-08: 【中級者向け】金融実務をAIが代行！Anthropicの最新『金融特化型エージェント』活用プロンプト術](docs/ideas/idea-20260508-anthropic-financial-agents.md) - *新規追加*
     *   [2026-05-09: 【初心者向け】Metaの最新AI『Muse Spark』で実現！「指示ひとつ」でマルチメディアを自在に操るプロンプト術](docs/ideas/idea-20260509-meta-muse-spark.md) - [記事作成済み](src/articles/website-component-format/app/articles/meta-muse-spark-beginner/page.tsx)
+    *   [2026-05-11: 【初心者向け】自分のメモや資料が「喋る教科書」に！NotebookLM × Gemini 連携活用プロンプト術](docs/ideas/idea-20260511-notebooklm-gemini-beginner.md) - *新規追加*
+    *   [2026-05-11: 【初心者向け】AIの「時間切れ」にさようなら！Claudeの制限緩和で実現する「24時間いつでも相談」プロンプト術](docs/ideas/idea-20260511-claude-limit-relief-beginner.md) - *新規追加*
 
 ---
 *   [2026-04-23: 【初心者向け】AIと「一緒に作る」新体験！ChatGPTの『Canvas』で文章・資料作成を10倍楽にするプロンプト術](docs/ideas/idea-20260423-chatgpt-canvas-beginner.md) - [記事作成済み](client/src/pages/articles/ChatgptCanvasBeginner.tsx)
@@ -92,4 +94,4 @@
 *   [2026-04-24: 【中級者向け】ChatGPT Images 2.0で実現する「一貫性のあるキャラクター・ブランド」画像生成術](docs/ideas/idea-20260424-chatgpt-images-2-0-consistency.md) - *新規追加*
 
 ---
-*最終更新日: 2026-05-09 (by Manus)
+*最終更新日: 2026-05-11 (by Manus)
