@@ -95,6 +95,6 @@
 *最終更新日: 2026-05-13 (by Manus)
 
 *   [2026-05-12: 【初心者向け】Meta Muse Spark活用ガイド：マルチメディアを自在に操るプロンプト術](docs/ideas/idea-20260509-meta-muse-spark.md) - [記事作成済み](src/articles/website-component-format/app/articles/meta-muse-spark-guide/page.tsx)
-    *   [2026-05-13: 【初心者向け】AIに「仕事を丸投げ」！Microsoft Copilot Coworkで『おまかせ業務委任』プロンプト術](docs/ideas/idea-20260513-copilot-cowork-beginner.md) - *新規追加*
+    *   [2026-05-13: 【初心者向け】AIに「仕事を丸投げ」！Microsoft Copilot Coworkで『おまかせ業務委任』プロンプト術](docs/ideas/idea-20260513-copilot-cowork-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/copilot-cowork-beginner/page.tsx)
     *   [2026-05-13: 【初心者向け】スマホの「通知疲れ」をAIが解決！Apple Intelligence『優先度自動仕分け』活用ガイド](docs/ideas/idea-20260513-apple-intelligence-priority-notifications.md) - *新規追加*
 
