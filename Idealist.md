@@ -98,3 +98,4 @@
     *   [2026-05-13: 【初心者向け】AIに「仕事を丸投げ」！Microsoft Copilot Coworkで『おまかせ業務委任』プロンプト術](docs/ideas/idea-20260513-copilot-cowork-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/copilot-cowork-beginner/page.tsx)
     *   [2026-05-13: 【初心者向け】スマホの「通知疲れ」をAIが解決！Apple Intelligence『優先度自動仕分け』活用ガイド](docs/ideas/idea-20260513-apple-intelligence-priority-notifications.md) - *新規追加*
 
+    *   [2026-05-14: 【初心者向け】Androidスマホがもっと賢く！新機能『Gemini Intelligence』活用プロンプト術](docs/ideas/idea-20260514-android-gemini-intelligence.md) - *新規追加*
