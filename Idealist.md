@@ -99,3 +99,4 @@
     *   [2026-05-13: 【初心者向け】スマホの「通知疲れ」をAIが解決！Apple Intelligence『優先度自動仕分け』活用ガイド](docs/ideas/idea-20260513-apple-intelligence-priority-notifications.md) - *新規追加*
 
     *   [2026-05-14: 【初心者向け】Androidスマホがもっと賢く！新機能『Gemini Intelligence』活用プロンプト術](docs/ideas/idea-20260514-android-gemini-intelligence.md) - *新規追加*
+    *   [2026-05-15: 【中級者向け】場所を選ばずAI開発！OpenAI『Codex Mobile』でスマホからコード生成・デバッグするプロンプト術](docs/ideas/idea-20260515-openai-codex-mobile.md) - *新規追加*
