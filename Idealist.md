@@ -99,3 +99,6 @@
     *   [2026-05-13: 【初心者向け】スマホの「通知疲れ」をAIが解決！Apple Intelligence『優先度自動仕分け』活用ガイド](docs/ideas/idea-20260513-apple-intelligence-priority-notifications.md) - *新規追加*
 
     *   [2026-05-14: 【初心者向け】Androidスマホがもっと賢く！新機能『Gemini Intelligence』活用プロンプト術](docs/ideas/idea-20260514-android-gemini-intelligence.md) - *新規追加*
+
+    *   [2026-05-15: 【初心者向け】Copilot Notebooksで思考を整理！AIが自動でマインドマップを作成するプロンプト術](docs/ideas/idea-20260515-copilot-notebooks-mindmap.md) - *新規追加*
+    *   [2026-05-15: 【初心者向け】Microsoft FormsとCopilot Chat連携！AIがアンケート作成から分析までサポートするプロンプト術](docs/ideas/idea-20260515-forms-copilot-survey.md) - *新規追加*
