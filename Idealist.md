@@ -102,3 +102,5 @@
     *   [2026-05-15: 【中級者向け】場所を選ばずAI開発！OpenAI『Codex Mobile』でスマホからコード生成・デバッグするプロンプト術](docs/ideas/idea-20260515-openai-codex-mobile.md) - *新規追加*
     *   [2026-05-16: 【中級者向け】リサーチ時間を9割削減！Perplexity Proの『Research Agent』で深掘り調査を自動化するプロンプト術](docs/ideas/idea-20260516-perplexity-pro-advanced.md) - *新規追加*
     *   [2026-05-17: 【中級者向け】動画・音声・コードを同時解析！Google Gemini 2.0 Proの『マルチモーダル推論』活用プロンプト術](docs/ideas/idea-20260517-gemini-2-pro-multimodal.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-2-pro-multimodal/page.tsx)
+    *   [2026-05-18: 【初心者向け】LINEがあなたの秘書になる！新AI『Agent i』で失礼のない返信・誤字脱字をゼロにするプロンプト術](docs/ideas/idea-20260518-line-agent-i-beginner.md) - *新規追加*
+    *   [2026-05-18: 【初心者向け】AI特有の「不自然さ」を卒業！最新モデル『ChatGPT 5.5 Instant』で人間らしい文章を10秒で作るプロンプト術](docs/ideas/idea-20260518-chatgpt-5-5-natural-writing.md) - *新規追加*
