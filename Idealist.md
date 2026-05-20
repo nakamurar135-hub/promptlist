@@ -92,7 +92,7 @@
 *   [2026-04-24: 【中級者向け】ChatGPT Images 2.0で実現する「一貫性のあるキャラクター・ブランド」画像生成術](docs/ideas/idea-20260424-chatgpt-images-2-0-consistency.md) - *新規追加*
 
 ---
-*最終更新日: 2026-05-13 (by Manus)
+*最終更新日: 2026-05-20 (by Manus)
 
 *   [2026-05-12: 【初心者向け】Meta Muse Spark活用ガイド：マルチメディアを自在に操るプロンプト術](docs/ideas/idea-20260509-meta-muse-spark.md) - [記事作成済み](src/articles/website-component-format/app/articles/meta-muse-spark-guide/page.tsx)
     *   [2026-05-13: 【初心者向け】AIに「仕事を丸投げ」！Microsoft Copilot Coworkで『おまかせ業務委任』プロンプト術](docs/ideas/idea-20260513-copilot-cowork-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/copilot-cowork-beginner/page.tsx)
@@ -103,3 +103,5 @@
     *   [2026-05-16: 【中級者向け】リサーチ時間を9割削減！Perplexity Proの『Research Agent』で深掘り調査を自動化するプロンプト術](docs/ideas/idea-20260516-perplexity-pro-advanced.md) - *新規追加*
     *   [2026-05-17: 【中級者向け】動画・音声・コードを同時解析！Google Gemini 2.0 Proの『マルチモーダル推論』活用プロンプト術](docs/ideas/idea-20260517-gemini-2-pro-multimodal.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-2-pro-multimodal/page.tsx)
     * [2026-05-19: 【中級者向け】AIが自律的にタスクを完遂！OpenAIの最新エージェント『Operator』による業務自動化プロンプト術](docs/ideas/idea-20260519-openai-operator.md) - *新規追加*
+    * [2026-05-20: 【初心者向け】検索の常識が変わる！Googleの最新「インテリジェント検索ボックス」活用プロンプト術](docs/ideas/idea-20260520-google-search-intelligent-box.md) - *新規追加*
+    * [2026-05-20: 【初心者向け】言葉だけで「プロ級の画像」が完成！ChatGPT Images 2.0で日本語も自由自在に描くプロンプト術](docs/ideas/idea-20260520-chatgpt-images-2-0-beginner.md) - *新規追加*
