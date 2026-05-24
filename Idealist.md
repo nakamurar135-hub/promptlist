@@ -26,6 +26,8 @@
 
 ## ネタ一覧（インデックス）
 *   [2026-05-22: 【中級者向け】AIが自律的にタスクを完遂！次世代AIエージェント『Manus』活用ガイド](docs/ideas/idea-20260522-manus-autonomous-agent.md) - [記事作成済み](src/articles/website-component-format/app/articles/manus-autonomous-agent/page.tsx)
+*   [2026-05-20: 【中級者向け】24時間365日AIがバックグラウンドで働く！Google『Gemini Spark』導入ガイド](docs/ideas/idea-20260520-google-gemini-spark.md) - *新規追加*
+*   [2026-05-20: 【中級者向け】WebサイトをAIの道具箱に変える！Chrome『WebMCP』で実現するエージェント・ウェブ活用ガイド](docs/ideas/idea-20260520-chrome-webmcp-agent-web.md) - *新規追加*
 
 *   [セット1 (001-020)](docs/ideas/set-1.md) - *未作成*
 *   [最新の個別ネタ](docs/ideas/)
@@ -105,6 +107,6 @@
     *   [2026-05-17: 【中級者向け】動画・音声・コードを同時解析！Google Gemini 2.0 Proの『マルチモーダル推論』活用プロンプト術](docs/ideas/idea-20260517-gemini-2-pro-multimodal.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-2-pro-multimodal/page.tsx)
     * [2026-05-19: 【中級者向け】AIが自律的にタスクを完遂！OpenAIの最新エージェント『Operator』による業務自動化プロンプト術](docs/ideas/idea-20260519-openai-operator.md) - [記事作成済み](src/articles/website-component-format/app/articles/openai-operator-automation/page.tsx)
 
-*最終更新日: 2026-05-23 (by Manus)
+*最終更新日: 2026-05-24 (by Manus)
 
 *   [2026-05-23: 【初心者向け】スマホの「通知疲れ」をAIが解決！Apple Intelligence『優先度自動仕分け』活用ガイド](docs/ideas/idea-20260513-apple-intelligence-priority-notifications.md) - [記事作成済み](src/articles/website-component-format/app/articles/apple-intelligence-priority-notifications/page.tsx)
