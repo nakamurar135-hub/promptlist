@@ -85,6 +85,7 @@
     *   [2026-05-08: 【中級者向け】金融実務をAIが代行！Anthropicの最新『金融特化型エージェント』活用プロンプト術](docs/ideas/idea-20260508-anthropic-financial-agents.md) - *新規追加*
     *   [2026-05-09: 【初心者向け】Metaの最新AI『Muse Spark』で実現！「指示ひとつ」でマルチメディアを自在に操るプロンプト術](docs/ideas/idea-20260509-meta-muse-spark.md) - [記事作成済み](src/articles/website-component-format/app/articles/meta-muse-spark-beginner/page.tsx)
     *   [2026-05-10: 【中級者向け】AIエージェントで「仕事の自動化」を加速！自律型ワークフロー構築プロンプト術](docs/ideas/idea-20260510-ai-agent-productivity.md) - [記事作成済み](src/articles/website-component-format/app/articles/ai-agent-productivity/page.tsx)
+    *   [2026-05-24: 【中級者向け】AI企業の評価額が爆増！Anthropicの評価額9000億ドル突破と「AI経済圏」の歩き方](docs/ideas/idea-20260524-anthropic-valuation-900b.md) - [記事作成済み](src/articles/website-component-format/app/articles/anthropic-valuation-900b/page.tsx)
 
 ---
 *   [2026-04-23: 【初心者向け】AIと「一緒に作る」新体験！ChatGPTの『Canvas』で文章・資料作成を10倍楽にするプロンプト術](docs/ideas/idea-20260423-chatgpt-canvas-beginner.md) - [記事作成済み](client/src/pages/articles/ChatgptCanvasBeginner.tsx)
