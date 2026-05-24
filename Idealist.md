@@ -108,3 +108,5 @@
 *最終更新日: 2026-05-23 (by Manus)
 
 *   [2026-05-23: 【初心者向け】スマホの「通知疲れ」をAIが解決！Apple Intelligence『優先度自動仕分け』活用ガイド](docs/ideas/idea-20260513-apple-intelligence-priority-notifications.md) - [記事作成済み](src/articles/website-component-format/app/articles/apple-intelligence-priority-notifications/page.tsx)
+    *   [2026-05-11: 【初心者向け】Excelの「やり直し」がなくなる！Copilotの新機能『Planモード』で失敗しない自動集計プロンプト術](docs/ideas/idea-20260511-copilot-excel-plan-mode.md) - *新規追加*
+    *   [2026-05-20: 【初心者向け】言葉で「ここだけ直して」が通じる！ChatGPT Images 2.0の『対話型画像編集』プロンプト術](docs/ideas/idea-20260520-chatgpt-images-2-0-edit.md) - *新規追加*
