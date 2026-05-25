@@ -105,6 +105,8 @@
     *   [2026-05-17: 【中級者向け】動画・音声・コードを同時解析！Google Gemini 2.0 Proの『マルチモーダル推論』活用プロンプト術](docs/ideas/idea-20260517-gemini-2-pro-multimodal.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-2-pro-multimodal/page.tsx)
     * [2026-05-19: 【中級者向け】AIが自律的にタスクを完遂！OpenAIの最新エージェント『Operator』による業務自動化プロンプト術](docs/ideas/idea-20260519-openai-operator.md) - [記事作成済み](src/articles/website-component-format/app/articles/openai-operator-automation/page.tsx)
 
-*最終更新日: 2026-05-23 (by Manus)
+*最終更新日: 2026-05-25 (by Manus)
 
 *   [2026-05-23: 【初心者向け】スマホの「通知疲れ」をAIが解決！Apple Intelligence『優先度自動仕分け』活用ガイド](docs/ideas/idea-20260513-apple-intelligence-priority-notifications.md) - [記事作成済み](src/articles/website-component-format/app/articles/apple-intelligence-priority-notifications/page.tsx)
+*   [2026-05-25: 【初心者向け】「読む」から「聴く」へ！NotebookLMの新機能『音声解説カスタマイズ』で自分専用のラジオを作るプロンプト術](docs/ideas/idea-20260525-notebooklm-audio-customize.md) - *新規追加*
+*   [2026-05-25: 【初心者向け】AIの回答に「もう一回！」が言いやすく。Copilotの最新UIと『聞き直し』で正解にたどり着くプロンプト術](docs/ideas/idea-20260525-copilot-ui-retry.md) - *新規追加*
