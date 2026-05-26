@@ -104,7 +104,9 @@
     *   [2026-05-16: 【中級者向け】リサーチ時間を9割削減！Perplexity Proの『Research Agent』で深掘り調査を自動化するプロンプト術](docs/ideas/idea-20260516-perplexity-pro-advanced.md) - *新規追加*
     *   [2026-05-17: 【中級者向け】動画・音声・コードを同時解析！Google Gemini 2.0 Proの『マルチモーダル推論』活用プロンプト術](docs/ideas/idea-20260517-gemini-2-pro-multimodal.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-2-pro-multimodal/page.tsx)
     * [2026-05-19: 【中級者向け】AIが自律的にタスクを完遂！OpenAIの最新エージェント『Operator』による業務自動化プロンプト術](docs/ideas/idea-20260519-openai-operator.md) - [記事作成済み](src/articles/website-component-format/app/articles/openai-operator-automation/page.tsx)
+    * [2026-05-26: 【初心者向け】検索窓に「置くだけ」で解決！Googleの『インテリジェント検索ボックス』活用プロンプト術](docs/ideas/idea-20260526-google-intelligent-search-box.md) - *新規追加*
+    * [2026-05-26: 【初心者向け】言葉が「その場でアプリ」に変わる！Google検索の『ジェネレーティブUI』活用プロンプト術](docs/ideas/idea-20260526-google-generative-ui-search.md) - *新規追加*
 
-*最終更新日: 2026-05-23 (by Manus)
+*最終更新日: 2026-05-26 (by Manus)
 
 *   [2026-05-23: 【初心者向け】スマホの「通知疲れ」をAIが解決！Apple Intelligence『優先度自動仕分け』活用ガイド](docs/ideas/idea-20260513-apple-intelligence-priority-notifications.md) - [記事作成済み](src/articles/website-component-format/app/articles/apple-intelligence-priority-notifications/page.tsx)
