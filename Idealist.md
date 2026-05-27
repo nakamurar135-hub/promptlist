@@ -29,6 +29,8 @@
 
 *   [セット1 (001-020)](docs/ideas/set-1.md) - *未作成*
 *   [最新の個別ネタ](docs/ideas/)
+    *   [2026-05-27: 【初心者向け】ChatGPT「個人財務・家計管理」機能活用ガイド - 銀行連携で変わるAI家計簿術](docs/ideas/idea-20260527-chatgpt-finance-beginner.md) - *新規追加*
+    *   [2026-05-27: 【初心者向け】政府公式AI『源内（げんない）』超入門 - お役所仕事もAIで「爆速・正確」に変えるプロンプト術](docs/ideas/idea-20260527-gennai-gov-ai-beginner.md) - *新規追加*
     *   [2026-04-04: プロンプトは「書く」から「話す」へ！ChatGPT「高度な音声モード」活用術](docs/ideas/idea-20260404-chatgpt-voice-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/chatgpt-voice-beginner/page.tsx)
     *   [2026-04-04: ググるより速い！ChatGPTの「検索機能（Search）」で最新情報を引き出すプロンプト術](docs/ideas/idea-20260404-chatgpt-search-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/chatgpt-search-beginner/page.tsx)
     *   [2026-04-02: プロンプト不要？感覚でAIを操る「Vibe Working（バイブ・ワーキング）」入門](docs/ideas/idea-20260402-vibe-working-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/vibe-working-beginner/page.tsx)
