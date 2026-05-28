@@ -155,6 +155,13 @@ const categoryArticles = [
           description: "2026年4月に登場した、プロンプト不要でブラウザ操作を自動化できるAI「Copelf（コペルフ）」を徹底解説。IT初心者でも「録画」するだけでAIが作業を代行してくれる、驚きの活用術を紹介します。",
           href: "/articles/copelf-browser-automation",
         },
+        {
+          category: "ビジネス活用",
+          categoryColor: "bg-[#FF9800]",
+          title: "【中級者向け】目に見えるものすべてが検索対象に！Google『マルチモーダル検索エージェント』活用ガイド",
+          description: "2026年5月28日、Googleが発表したマルチモーダル検索エージェント。テキストだけでなく動画やリアルの視覚情報をリアルタイムで解析し、実行まで繋げる最新機能の活用術を解説します。",
+          href: "/articles/google-multimodal-search-agent",
+        },
   ]
 
 export default function HomePage() {
