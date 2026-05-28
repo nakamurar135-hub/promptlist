@@ -29,6 +29,8 @@
 
 *   [セット1 (001-020)](docs/ideas/set-1.md) - *未作成*
 *   [最新の個別ネタ](docs/ideas/)
+    *   [2026-05-28: 【初心者向け】アンケート作成はAIに「おまかせ」！Microsoft Formsの『AIアシスタント』活用プロンプト術](docs/ideas/idea-20260528-microsoft-forms-ai-surveys.md) - *新規追加*
+    *   [2026-05-28: 【初心者向け】友達には言えない悩みもAIなら安心？ChatGPTやCopilotを「心の相談相手」にするプロンプト術](docs/ideas/idea-20260528-ai-counseling-beginner.md) - *新規追加*
     *   [2026-04-04: プロンプトは「書く」から「話す」へ！ChatGPT「高度な音声モード」活用術](docs/ideas/idea-20260404-chatgpt-voice-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/chatgpt-voice-beginner/page.tsx)
     *   [2026-04-04: ググるより速い！ChatGPTの「検索機能（Search）」で最新情報を引き出すプロンプト術](docs/ideas/idea-20260404-chatgpt-search-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/chatgpt-search-beginner/page.tsx)
     *   [2026-04-02: プロンプト不要？感覚でAIを操る「Vibe Working（バイブ・ワーキング）」入門](docs/ideas/idea-20260402-vibe-working-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/vibe-working-beginner/page.tsx)
