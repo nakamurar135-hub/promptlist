@@ -25,6 +25,8 @@
     ```
 
 ## ネタ一覧（インデックス）
+*   [2026-05-29: 【初心者向け】Google検索が変わる！「AI Search」で実現する、言葉にできない疑問を解決するプロンプト術](docs/ideas/idea-20260529-google-ai-search-beginner.md) - *新規追加*
+*   [2026-05-29: 【初心者向け】Chromeの新機能「スキル」で解決！よく使うプロンプトを「自分専用ボタン」にする方法](docs/ideas/idea-20260529-chrome-skills-beginner.md) - *新規追加*
 *   [2026-05-22: 【中級者向け】AIが自律的にタスクを完遂！次世代AIエージェント『Manus』活用ガイド](docs/ideas/idea-20260522-manus-autonomous-agent.md) - [記事作成済み](src/articles/website-component-format/app/articles/manus-autonomous-agent/page.tsx)
 
 *   [セット1 (001-020)](docs/ideas/set-1.md) - *未作成*
