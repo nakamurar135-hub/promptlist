@@ -110,3 +110,5 @@
 *   [2026-05-23: 【初心者向け】スマホの「通知疲れ」をAIが解決！Apple Intelligence『優先度自動仕分け』活用ガイド](docs/ideas/idea-20260513-apple-intelligence-priority-notifications.md) - [記事作成済み](src/articles/website-component-format/app/articles/apple-intelligence-priority-notifications/page.tsx)
     *   [2026-05-26: 【中級者向け】検索は「調べる」から「任せる」へ！Googleの新機能『検索エージェント』活用プロンプト術](docs/ideas/idea-20260526-google-search-agent.md) - *新規追加*
 *   [2026-05-28: 【中級者向け】目に見えるものすべてが検索対象に！Google『マルチモーダル検索エージェント』活用ガイド](docs/ideas/idea-20260528-multimodal-search-agent.md) - [記事作成済み](src/articles/website-component-format/app/articles/multimodal-search-agent/page.tsx)
+*   [2026-05-21: 【初心者向け】パワポの中にAIが住み着いた！ChatGPTの『スライド自動生成』プロンプト術](docs/ideas/idea-20260521-chatgpt-powerpoint-beginner.md) - *新規追加*
+*   [2026-05-27: 【初心者向け】ネットがなくてもAIが使える？Google Chromeの新機能『組み込みAI』活用プロンプト術](docs/ideas/idea-20260527-chrome-prompt-api-beginner.md) - *新規追加*
