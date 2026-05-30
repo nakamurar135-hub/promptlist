@@ -110,3 +110,5 @@
 *   [2026-05-23: 【初心者向け】スマホの「通知疲れ」をAIが解決！Apple Intelligence『優先度自動仕分け』活用ガイド](docs/ideas/idea-20260513-apple-intelligence-priority-notifications.md) - [記事作成済み](src/articles/website-component-format/app/articles/apple-intelligence-priority-notifications/page.tsx)
     *   [2026-05-26: 【中級者向け】検索は「調べる」から「任せる」へ！Googleの新機能『検索エージェント』活用プロンプト術](docs/ideas/idea-20260526-google-search-agent.md) - *新規追加*
 *   [2026-05-28: 【中級者向け】目に見えるものすべてが検索対象に！Google『マルチモーダル検索エージェント』活用ガイド](docs/ideas/idea-20260528-multimodal-search-agent.md) - [記事作成済み](src/articles/website-component-format/app/articles/multimodal-search-agent/page.tsx)
+
+*   [2026-05-30: 【中級者向け】ついに登場！Anthropicの次世代モデル『Claude 4 Preview』活用プロンプト術](docs/ideas/idea-20260530-claude-4-preview-guide.md) - *新規追加*
