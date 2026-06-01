@@ -113,3 +113,6 @@
 
 *   [2026-05-30: 【中級者向け】ついに登場！Anthropicの次世代モデル『Claude 4 Preview』活用プロンプト術](docs/ideas/idea-20260530-claude-4-preview-guide.md) - *新規追加*
 *   [2026-05-31: 【中級者向け】最先端AIの光と影！Anthropicの最新モデル『Claude Mythos』セキュリティ活用ガイド](docs/ideas/idea-20260531-claude-mythos-security.md) - *新規追加*
+
+*   [2026-06-01: 【中級者向け】WindowsをAIエージェントが操作する！Build 2026発表の『Agentic AI for Windows』とMCP活用ガイド](docs/ideas/idea-20260601-agentic-ai-windows.md) - [記事作成済み](src/articles/website-component-format/app/articles/agentic-ai-windows/page.tsx)
+*   [2026-06-01: 【中級者向け】AIエージェントの「暴走」を防ぐ！Anthropicが公開した『エージェント封じ込め（Containment）』技術の活用術](docs/ideas/idea-20260601-anthropic-containment.md) - [記事作成済み](src/articles/website-component-format/app/articles/anthropic-containment/page.tsx)
