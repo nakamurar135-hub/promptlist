@@ -105,7 +105,7 @@
     *   [2026-05-17: 【中級者向け】動画・音声・コードを同時解析！Google Gemini 2.0 Proの『マルチモーダル推論』活用プロンプト術](docs/ideas/idea-20260517-gemini-2-pro-multimodal.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-2-pro-multimodal/page.tsx)
     * [2026-05-19: 【中級者向け】AIが自律的にタスクを完遂！OpenAIの最新エージェント『Operator』による業務自動化プロンプト術](docs/ideas/idea-20260519-openai-operator.md) - [記事作成済み](src/articles/website-component-format/app/articles/openai-operator-automation/page.tsx)
 
-*最終更新日: 2026-06-02 (by Manus)
+*最終更新日: 2026-06-03 (by Manus)
 
 *   [2026-05-23: 【初心者向け】スマホの「通知疲れ」をAIが解決！Apple Intelligence『優先度自動仕分け』活用ガイド](docs/ideas/idea-20260513-apple-intelligence-priority-notifications.md) - [記事作成済み](src/articles/website-component-format/app/articles/apple-intelligence-priority-notifications/page.tsx)
     *   [2026-05-26: 【中級者向け】検索は「調べる」から「任せる」へ！Googleの新機能『検索エージェント』活用プロンプト術](docs/ideas/idea-20260526-google-search-agent.md) - *新規追加*
@@ -116,3 +116,4 @@
 
 *   [2026-06-01: 【中級者向け】WindowsをAIエージェントが操作する！Build 2026発表の『Agentic AI for Windows』とMCP活用ガイド](docs/ideas/idea-20260601-agentic-ai-windows.md) - [記事作成済み](src/articles/website-component-format/app/articles/agentic-ai-windows/page.tsx)
 *   [2026-06-01: 【中級者向け】AIエージェントの「暴走」を防ぐ！Anthropicが公開した『エージェント封じ込め（Containment）』技術の活用術](docs/ideas/idea-20260601-anthropic-containment.md) - [記事作成済み](src/articles/website-component-format/app/articles/anthropic-containment/page.tsx)
+*   [2026-06-03: 【中級者向け】AI開発に激震！トランプ大統領の新AI大統領令と「事前審査」への対応プロンプト術](docs/ideas/idea-20260603-trump-ai-executive-order.md) - *新規追加*

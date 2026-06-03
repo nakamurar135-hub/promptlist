@@ -51,6 +51,7 @@ import BeginnerPrompts from "./pages/BeginnerPrompts";
 import SearchResults from "./pages/SearchResults";
 import PremiumGuide from "./pages/PremiumGuide";
 import PremiumRoute from "./components/PremiumRoute";
+import TrumpAiExecutiveOrderPage from "./pages/articles/TrumpAiExecutiveOrderPage";
 
 function Router() {
   return (
@@ -90,6 +91,7 @@ function Router() {
       <Route path="/articles/chatgpt-canvas-advanced" component={ChatgptCanvasAdvanced} />
       <Route path="/articles/chatgpt-auto-mode" component={ChatGPTAutoModeGuide} />
       <Route path="/articles/claude-file-export" component={ClaudeFileExportGuide} />
+      <Route path="/articles/trump-ai-executive-order" component={TrumpAiExecutiveOrderPage} />
 
       {/* 中級者向けコース（プレミアム会員専用） */}
       <Route path="/articles/ai-agent-course-module-1" component={() => <PremiumRoute component={AiAgentCourseModule1} />} />
