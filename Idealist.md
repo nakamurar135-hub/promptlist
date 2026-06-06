@@ -85,7 +85,7 @@
     *   [2026-05-07: 【中級者向け】AI動画制作の極意！Google Flow & Veo 3.1で「一貫性のあるストーリー」を作るプロンプト術](docs/ideas/idea-20260507-google-flow-veo-advanced.md) - [記事作成済み](src/articles/website-component-format/app/articles/google-flow-veo-advanced/page.tsx)
     *   [2026-05-08: 【中級者向け】金融実務をAIが代行！Anthropicの最新『金融特化型エージェント』活用プロンプト術](docs/ideas/idea-20260508-anthropic-financial-agents.md) - *新規追加*
     *   [2026-05-09: 【初心者向け】Metaの最新AI『Muse Spark』で実現！「指示ひとつ」でマルチメディアを自在に操るプロンプト術](docs/ideas/idea-20260509-meta-muse-spark.md) - [記事作成済み](src/articles/website-component-format/app/articles/meta-muse-spark-beginner/page.tsx)
-    *   [2026-06-05: 【初心者向け】AIがあなたの健康相談パートナーに！『ChatGPT Health』活用プロンプト術](docs/ideas/idea-20260605-chatgpt-health-beginner.md) - *新規追加*
+    *   [2026-06-05: 【初心者向け】AIがあなたの健康相談パートナーに！『ChatGPT Health』活用プロンプト術](docs/ideas/idea-20260605-chatgpt-health-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/chatgpt-health-beginner/page.tsx)
     *   [2026-06-05: 【初心者向け】Excelの空欄をAIが勝手に埋めてくる！？Googleスプレッドシートの『Fill with Gemini』活用術](docs/ideas/idea-20260605-gemini-fill-beginner.md) - *新規追加*
 
 ---
