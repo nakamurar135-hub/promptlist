@@ -120,3 +120,4 @@
 *   [2026-06-01: 【中級者向け】AIエージェントの「暴走」を防ぐ！Anthropicが公開した『エージェント封じ込め（Containment）』技術の活用術](docs/ideas/idea-20260601-anthropic-containment.md) - [記事作成済み](src/articles/website-component-format/app/articles/anthropic-containment/page.tsx)
 *   [2026-06-03: 【中級者向け】AI開発に激震！トランプ大統領の新AI大統領令と「事前審査」への対応プロンプト術](docs/ideas/idea-20260603-trump-ai-executive-order.md) - [記事作成済み](src/articles/website-component-format/app/articles/trump-ai-executive-order/page.tsx)
 *   [2026-06-04: 【中級者向け】ノートPCで爆速動作！Googleの最新オープンモデル『Gemma 4』活用ガイド](docs/ideas/idea-20260604-gemma-4-laptop-guide.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemma-4-laptop-guide/page.tsx)
+*   [2026-06-08: 【初心者向け】AIがあなたのことを覚えてくれる！ChatGPTの『Dreaming V3』で賢い相棒を育てるプロンプト術](docs/ideas/idea-20260608-chatgpt-dreaming-v3-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/chatgpt-dreaming-v3-beginner/page.tsx)
