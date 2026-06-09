@@ -121,3 +121,5 @@
 *   [2026-06-03: 【中級者向け】AI開発に激震！トランプ大統領の新AI大統領令と「事前審査」への対応プロンプト術](docs/ideas/idea-20260603-trump-ai-executive-order.md) - [記事作成済み](src/articles/website-component-format/app/articles/trump-ai-executive-order/page.tsx)
 *   [2026-06-04: 【中級者向け】ノートPCで爆速動作！Googleの最新オープンモデル『Gemma 4』活用ガイド](docs/ideas/idea-20260604-gemma-4-laptop-guide.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemma-4-laptop-guide/page.tsx)
 *   [2026-06-08: 【初心者向け】AIがあなたのことを覚えてくれる！ChatGPTの『Dreaming V3』で賢い相棒を育てるプロンプト術](docs/ideas/idea-20260608-chatgpt-dreaming-v3-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/chatgpt-dreaming-v3-beginner/page.tsx)
+    *   [2026-06-09: 【初心者向け】1枚の写真が立体に！Copilot 3Dで「触れる思い出」を作るプロンプト術](docs/ideas/idea-20260609-copilot-3d-beginner.md) - *新規追加*
+    *   [2026-06-09: 【初心者向け】もう「空いてる日」を聞かなくていい！M365 Copilotで会議調整を丸投げするプロンプト術](docs/ideas/idea-20260609-m365-copilot-meeting-schedule.md) - *新規追加*
