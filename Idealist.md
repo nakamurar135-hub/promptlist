@@ -123,3 +123,5 @@
     *   [2026-06-08: 【初心者向け】AIがあなたのことを覚えてくれる！ChatGPTの『Dreaming V3』で賢い相棒を育てるプロンプト術](docs/ideas/idea-20260608-chatgpt-dreaming-v3-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/chatgpt-dreaming-v3-beginner/page.tsx)
     *   [2026-06-10: 【初心者向け】AIがあなたの「秘書」になる！Microsoft Scoutで会議準備・スケジュール調整を自動化するプロンプト術](docs/ideas/idea-20260610-microsoft-scout-beginner.md) - *新規追加*
     *   [2026-06-10: 【初心者向け】センス不要！Google Vidsで「指示ひとつ」でプロ級の紹介動画を作るプロンプト術](docs/ideas/idea-20260610-google-vids-free-beginner.md) - *新規追加*
+    *   [2026-06-11: 【初心者向け】もう「パスワード忘れ」で困らない！Apple Intelligenceで安全に自動管理するプロンプト術](docs/ideas/idea-20260611-apple-intelligence-passwords.md) - *新規追加*
+    *   [2026-06-11: 【初心者向け】Siriが「聞き分け」のプロに！ClaudeやGeminiを自由に使い分ける『AI指名』プロンプト術](docs/ideas/idea-20260611-apple-intelligence-extensions.md) - *新規追加*
