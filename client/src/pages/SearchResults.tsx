@@ -96,6 +96,14 @@ const allArticles = [
     description: "言語指定、目的・文脈指定、専門用語・固有名詞対応、複数言語一括翻訳など、ビジネス・学習で役立つ実践的なプロンプト集です。",
     keywords: ["翻訳", "言語", "ビジネス", "ChatGPT"],
   },
+  {
+    href: "/articles/claude-mythos-advanced-guide",
+    category: "AI活用",
+    categoryColor: "#9C27B0",
+    title: "異次元の推論能力！Claude Mythos思考プロセス活用ガイド",
+    description: "2026年6月発表のClaude Mythosは、従来のLLMを凌駕する推論能力を持つAIです。複雑な論理パズル、大規模コード分析、戦略策定を実現するプロンプト術を解説します。",
+    keywords: ["Claude Mythos", "推論", "思考プロセス", "AI", "中級者"],
+  },
 ];
 
 export default function SearchResults() {

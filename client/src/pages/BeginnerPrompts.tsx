@@ -6,20 +6,6 @@ import { useOGP } from "@/hooks/useOGP";
 // 初心者向けプロンプト集データ
 const beginnerPrompts = [
   {
-    href: "/articles/claude-file-export",
-    category: "AI活用",
-    categoryColor: "#5B9BD5",
-    title: "【初心者向け】もう「コピペ」で悩まない！Claudeの『ファイル直接生成』で書類を即ダウンロードするプロンプト術",
-    description: "2026年5月の最新アップデートにより、ClaudeがWordやExcel、PowerPoint形式のファイルを直接作成・出力できるようになりました。コピペ不要で完成品ファイルを手に入れる究極の時短術を初心者向けに解説します。",
-  },
-  {
-    href: "/articles/chatgpt-auto-mode",
-    category: "ChatGPT活用",
-    categoryColor: "#10a37f",
-    title: "もう「指示」すら考えなくていい？ChatGPT最新機能『おまかせモード』で面倒な作業を丸投げするプロンプト術",
-    description: "ChatGPT最新版GPT-5.5の「おまかせモード」を活用し、複雑なプロンプトを考えることなく、目的を伝えるだけでAIに一連の作業を自走させる方法を初心者向けに解説します。",
-  },
-  {
     href: "/articles/gpt54-agent-mode-guide",
     category: "ChatGPT活用",
     categoryColor: "#10a37f",
@@ -39,6 +25,13 @@ const beginnerPrompts = [
     categoryColor: "#00A4EF",
     title: "Copilot「Think Deeper」モード初心者ガイド｜無料で高品質な長文生成",
     description: "2026年3月登場のCopilot新機能「Think Deeper」の使い方を完全解説。15～20分かけて深く考えるモードで、A4 30ページ超の資料も作成可能。初心者向けの実践的なプロンプト例も紹介します。",
+  },
+  {
+    href: "/articles/claude-mythos-advanced-guide",
+    category: "AI活用",
+    categoryColor: "#9C27B0",
+    title: "異次元の推論能力！Claude Mythos「思考プロセス」活用ガイド｜中級者向け",
+    description: "2026年6月発表のClaude Mythosは、従来のLLMを凌駕する推論能力を持つAIです。複雑な論理パズル、大規模コード分析、戦略策定を実現するプロンプト術を解説します。",
   },
   {
     href: "/articles/ai-master-key-prompt-guide",
@@ -160,41 +153,6 @@ const beginnerPrompts = [
     title: "AIと「一緒に作る」新体験！ChatGPTの『Canvas』活用術",
     description: "ChatGPTの新機能「Canvas」を初心者向けに解説。AIと直接編集しながら資料を完成させる、新しい共同作業の形を紹介します。",
   },
-  {
-    href: "/articles/copilot-gpt55-images2",
-    category: "AI活用",
-    categoryColor: "#00A4EF",
-    title: "【初心者向け】Copilot進化！GPT-5.5 ThinkingとChatGPT Images 2.0活用術",
-    description: "Microsoft 365 Copilotに導入された最新AIモデル「GPT-5.5 Thinking」と「ChatGPT Images 2.0」を徹底解説。より正確な回答と高品質な画像生成のプロンプト例を紹介します。",
-  },
-  {
-    href: "/articles/copelf-browser-automation",
-    category: "AI活用",
-    categoryColor: "#4CAF50",
-    title: "【初心者向け】もう「クリック」すら不要？ブラウザ操作AI『Copelf』でルーチンワークを自動化するプロンプト術",
-    description: "2026年4月に登場したブラウザ操作AI「Copelf」を使って、繰り返しのウェブ作業を自動化する方法を初心者向けに解説します。",
-  },
-  {
-    href: "/articles/gemini-file-generation",
-    category: "AI活用",
-    categoryColor: "#4285F4",
-    title: "【初心者向け】もう「コピペ」で悩まない！Geminiの『ファイル直接生成』で資料を即ダウンロードするプロンプト術",
-    description: "Geminiの新機能「ファイル直接生成」を活用し、プロンプト一つでWordやPDFファイルを直接生成・ダウンロードする時短術を解説します。",
-  },
-  {
-    href: "/articles/outlook-copilot-agent",
-    category: "ビジネス効率化",
-    categoryColor: "#00A4EF",
-    title: "【初心者向け】メールの山にさようなら！Outlookの『Copilotエージェント』でAIに秘書を任せるプロンプト術",
-    description: "Outlook内のCopilotエージェントを使って、メールの整理・返信下書き・予定調整をAIに任せる方法を初心者向けに解説します。",
-  },
-  {
-    href: "/articles/genspark-office-integration",
-    category: "ビジネス効率化",
-    categoryColor: "#FF9800",
-    title: "【初心者向け】パワポやExcelにAIが常駐！『Genspark Workspace 4.0』で資料作成を「AI社員」に任せるプロンプト術",
-    description: "Genspark Workspace 4.0でOfficeソフトの画面内でAIと対話しながら資料を完成させる、初心者向けの「AI共作」術を解説します。",
-  },
 ];
 
 export default function BeginnerPrompts() {
@@ -228,7 +186,7 @@ export default function BeginnerPrompts() {
           </p>
           <div className="flex items-center gap-2 text-white/80">
             <Zap className="w-4 h-4" />
-            <span className="text-sm">全27記事・完全無料</span>
+            <span className="text-sm">全21記事・完全無料</span>
           </div>
         </div>
       </section>

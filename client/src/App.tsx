@@ -23,20 +23,13 @@ import GoogleNanoBanana2ImageGenGuide from "./pages/articles/GoogleNanoBanana2Im
 import Gpt54AgentModeGuide from "./pages/articles/Gpt54AgentModeGuide";
 import AiMasterKeyPromptGuide from "./pages/articles/AiMasterKeyPromptGuide";
 import CopilotThinkDeeperGuide from "./pages/articles/CopilotThinkDeeperGuide";
+import ClaudeMythosAdvancedGuide from "./pages/articles/ClaudeMythosAdvancedGuide";
 import AiAgentCourseModule1 from "./pages/articles/AiAgentCourseModule1";
 import AiAgentCourseModule2 from "./pages/articles/AiAgentCourseModule2";
 import AiAgentCourseModule3 from "./pages/articles/AiAgentCourseModule3";
 import AiAgentCourseModule4 from "./pages/articles/AiAgentCourseModule4";
 import AiAgentBeginnerGuide from "./pages/articles/AiAgentBeginnerGuide";
 import ChatgptCanvasBeginner from "./pages/articles/ChatgptCanvasBeginner";
-import CopilotGpt55Images2Guide from "./pages/articles/CopilotGpt55Images2Guide";
-import CopelfBrowserAutomationGuide from "./pages/articles/CopelfBrowserAutomationGuide";
-import GeminiFileGenerationGuide from "./pages/articles/GeminiFileGenerationGuide";
-import OutlookCopilotAgentGuide from "./pages/articles/OutlookCopilotAgentGuide";
-import GensparkOfficeIntegrationGuide from "./pages/articles/GensparkOfficeIntegrationGuide";
-import ChatgptCanvasAdvanced from "./pages/articles/ChatgptCanvasAdvanced";
-import ChatGPTAutoModeGuide from "./pages/articles/ChatGPTAutoModeGuide";
-import ClaudeFileExportGuide from "./pages/articles/ClaudeFileExportGuide";
 import SkillsList from "./pages/skills/SkillsList";
 import AiAgentBasics from "./pages/skills/AiAgentBasics";
 import PromptEngineering from "./pages/skills/PromptEngineering";
@@ -51,7 +44,6 @@ import BeginnerPrompts from "./pages/BeginnerPrompts";
 import SearchResults from "./pages/SearchResults";
 import PremiumGuide from "./pages/PremiumGuide";
 import PremiumRoute from "./components/PremiumRoute";
-import TrumpAiExecutiveOrderPage from "./pages/articles/TrumpAiExecutiveOrderPage";
 
 function Router() {
   return (
@@ -81,17 +73,9 @@ function Router() {
       <Route path="/articles/gpt54-agent-mode-guide" component={Gpt54AgentModeGuide} />
         <Route path="/articles/ai-master-key-prompt-guide" component={AiMasterKeyPromptGuide} />
       <Route path="/articles/copilot-think-deeper-guide" component={CopilotThinkDeeperGuide} />
+      <Route path="/articles/claude-mythos-advanced-guide" component={ClaudeMythosAdvancedGuide} />
       <Route path="/articles/ai-agent-beginner-guide" component={AiAgentBeginnerGuide} />
       <Route path="/articles/chatgpt-canvas-beginner" component={ChatgptCanvasBeginner} />
-      <Route path="/articles/copilot-gpt55-images2" component={CopilotGpt55Images2Guide} />
-      <Route path="/articles/copelf-browser-automation" component={CopelfBrowserAutomationGuide} />
-      <Route path="/articles/gemini-file-generation" component={GeminiFileGenerationGuide} />
-      <Route path="/articles/outlook-copilot-agent" component={OutlookCopilotAgentGuide} />
-      <Route path="/articles/genspark-office-integration" component={GensparkOfficeIntegrationGuide} />
-      <Route path="/articles/chatgpt-canvas-advanced" component={ChatgptCanvasAdvanced} />
-      <Route path="/articles/chatgpt-auto-mode" component={ChatGPTAutoModeGuide} />
-      <Route path="/articles/claude-file-export" component={ClaudeFileExportGuide} />
-      <Route path="/articles/trump-ai-executive-order" component={TrumpAiExecutiveOrderPage} />
 
       {/* 中級者向けコース（プレミアム会員専用） */}
       <Route path="/articles/ai-agent-course-module-1" component={() => <PremiumRoute component={AiAgentCourseModule1} />} />
