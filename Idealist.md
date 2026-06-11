@@ -25,6 +25,8 @@
     ```
 
 ## ネタ一覧（インデックス）
+*   [2026-06-11: 【中級者向け】異次元の推論能力！新型AI『Claude Mythos』を使いこなす「思考プロセス」活用ガイド](docs/ideas/idea-20260611-claude-mythos-advanced.md) - *新規追加*
+*   [2026-06-11: 【中級者向け】AIを「最強の論客」に変える！企画の精度を極限まで高める『批判型プロンプト』実践ガイド](docs/ideas/idea-20260611-adversarial-prompting-advanced.md) - *新規追加*
 *   [2026-05-22: 【中級者向け】AIが自律的にタスクを完遂！次世代AIエージェント『Manus』活用ガイド](docs/ideas/idea-20260522-manus-autonomous-agent.md) - [記事作成済み](src/articles/website-component-format/app/articles/manus-autonomous-agent/page.tsx)
 
 *   [セット1 (001-020)](docs/ideas/set-1.md) - *未作成*
