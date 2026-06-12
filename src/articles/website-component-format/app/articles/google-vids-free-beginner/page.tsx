@@ -70,10 +70,10 @@ export default function GoogleVidsFreeBeginnerPage() {
   const title = "【初心者向け】センス不要！Google Vidsで「指示ひとつ」でプロ級の紹介動画を作るプロンプト術"
   const description = "Googleが2026年4月に発表した、誰でも無料で使えるAI動画制作ツール「Google Vids」の活用ガイドです。動画編集の経験が全くない初心者でも、ChatGPTに相談するように「こんな動画を作って」と伝えるだけで、BGM付きの動画を完成させる方法を解説します。"
   const keywords = "Google Vids, AI動画制作, 無料, 初心者, プロンプト術, 動画編集, BGM, Googleアカウント"
-  const url = typeof window !== 'undefined' ? window.location.href : ""
+    const url = "https://promptlist.jp/articles/google-vids-free-beginner"
 
   useSEO({
-    title: `${title} | AIプロンプト活用ガイド`,
+    title: title,
     description,
     keywords,
   })
@@ -82,7 +82,7 @@ export default function GoogleVidsFreeBeginnerPage() {
     title,
     description,
     type: "article",
-    image: "/images/placeholder.jpg",
+    image: "https://promptlist.jp/images/google-vids-eyecatch.jpg",
     url,
   })
 
@@ -91,7 +91,7 @@ export default function GoogleVidsFreeBeginnerPage() {
     description,
     author: "AIプロンプト活用ガイド",
     datePublished: "2026-06-10T00:00:00Z",
-    dateModified: "2026-06-10T00:00:00Z",
+    dateModified: "2026-06-12T00:00:00Z",
   })
 
   return (
@@ -99,9 +99,9 @@ export default function GoogleVidsFreeBeginnerPage() {
       <article className="max-w-4xl mx-auto">
         <ArticleHeader
           title={title}
-          eyecatchSrc="/images/placeholder.jpg"
+          eyecatchSrc="https://promptlist.jp/images/google-vids-eyecatch.jpg"
           createdAt="2026年6月10日"
-          updatedAt="2026年6月10日"
+          updatedAt="2026年6月12日"
         />
         <TableOfContents headings={headings} />
 
