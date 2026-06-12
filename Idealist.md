@@ -25,6 +25,8 @@
     ```
 
 ## ネタ一覧（インデックス）
+*   [2026-06-10: 【中級者向け】AIが「自己監査」して精度を高める！Claude Fable 5の『Agentic Judgment』活用ガイド](docs/ideas/idea-20260610-claude-fable-5-agentic.md) - *新規追加*
+*   [2026-06-08: 【中級者向け】画面を「見る」AIへ！Apple Intelligence & Siri AIによる高度なアプリ自動操作ガイド](docs/ideas/idea-20260608-apple-intelligence-siri-agent.md) - *新規追加*
 *   [2026-05-22: 【中級者向け】AIが自律的にタスクを完遂！次世代AIエージェント『Manus』活用ガイド](docs/ideas/idea-20260522-manus-autonomous-agent.md) - [記事作成済み](src/articles/website-component-format/app/articles/manus-autonomous-agent/page.tsx)
 
 *   [セット1 (001-020)](docs/ideas/set-1.md) - *未作成*
