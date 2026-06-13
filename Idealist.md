@@ -123,3 +123,5 @@
     *   [2026-06-08: 【初心者向け】AIがあなたのことを覚えてくれる！ChatGPTの『Dreaming V3』で賢い相棒を育てるプロンプト術](docs/ideas/idea-20260608-chatgpt-dreaming-v3-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/chatgpt-dreaming-v3-beginner/page.tsx)
     *   [2026-06-10: 【初心者向け】AIがあなたの「秘書」になる！Microsoft Scoutで会議準備・スケジュール調整を自動化するプロンプト術](docs/ideas/idea-20260610-microsoft-scout-beginner.md) - *新規追加*
     *   [2026-06-10: 【初心者向け】センス不要！Google Vidsで「指示ひとつ」でプロ級の紹介動画を作るプロンプト術](docs/ideas/idea-20260610-google-vids-free-beginner.md) - *新規追加*
+    * [2026-06-09: 【中級者向け】iOS/macOSの操作をAIが完全代行！WWDC 2026発表『Siri AI』とApp Intents活用ガイド](docs/ideas/idea-20260609-apple-siri-ai-automation.md) - *新規追加*
+    * [2026-06-07: 【中級者向け】80 TOPS의 NPUで実現！ASUS Ascent QN10とOpenClawによる「ハイブリッドAIエージェント」構築術](docs/ideas/idea-20260607-asus-ascent-qn10-hybrid-agent.md) - *新規追加*
