@@ -107,7 +107,7 @@
     *   [2026-05-17: 【中級者向け】動画・音声・コードを同時解析！Google Gemini 2.0 Proの『マルチモーダル推論』活用プロンプト術](docs/ideas/idea-20260517-gemini-2-pro-multimodal.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-2-pro-multimodal/page.tsx)
     * [2026-05-19: 【中級者向け】AIが自律的にタスクを完遂！OpenAIの最新エージェント『Operator』による業務自動化プロンプト術](docs/ideas/idea-20260519-openai-operator.md) - [記事作成済み](src/articles/website-component-format/app/articles/openai-operator-automation/page.tsx)
 
-*最終更新日: 2026-06-13 (by Manus)
+*最終更新日: 2026-06-14 (by Manus)
 
 *   [2026-05-23: 【初心者向け】スマホの「通知疲れ」をAIが解決！Apple Intelligence『優先度自動仕分け』活用ガイド](docs/ideas/idea-20260513-apple-intelligence-priority-notifications.md) - [記事作成済み](src/articles/website-component-format/app/articles/apple-intelligence-priority-notifications/page.tsx)
     *   [2026-05-26: 【中級者向け】検索は「調べる」から「任せる」へ！Googleの新機能『検索エージェント』活用プロンプト術](docs/ideas/idea-20260526-google-search-agent.md) - *新規追加*
@@ -124,3 +124,5 @@
     *   [2026-06-10: 【初心者向け】センス不要！Google Vidsで「指示ひとつ」でプロ級の紹介動画を作るプロンプト術](docs/ideas/idea-20260610-google-vids-free-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/google-vids-free-beginner/page.tsx)
     *   [2026-06-10: 【初心者向け】AIがあなたの「秘書」になる！Microsoft Scoutで会議準備・スケジュール調整を自動化するプロンプト術](docs/ideas/idea-20260610-microsoft-scout-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/microsoft-scout-beginner/page.tsx)
     *   [2026-06-13: 【中級者向け】開発がさらに加速！Claude Fable 5とClaude Codeで実現する「自律型開発」プロンプト術](docs/ideas/idea-20260613-claude-fable-5-build.md) - *新規追加*
+    *   [2026-06-14: 【初心者向け】AIがあなたの「専属秘書」に！ChatGPTの新記憶システム『Dreaming V3』活用プロンプト術](docs/ideas/idea-20260614-chatgpt-dreaming-v3.md) - *新規追加*
+    *   [2026-06-14: 【初心者向け】タブの切り替えはもう不要！Geminiの『Google Workspace拡張機能』でメールも予定も一括操作術](docs/ideas/idea-20260614-gemini-workspace-extensions.md) - *新規追加*
