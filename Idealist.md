@@ -126,5 +126,5 @@
     *   [2026-06-13: 【中級者向け】開発がさらに加速！Claude Fable 5とClaude Codeで実現する「自律型開発」プロンプト術](docs/ideas/idea-20260613-claude-fable-5-build.md) - *新規追加*
     *   [2026-06-14: 【初心者向け】AIがあなたの「専属秘書」に！ChatGPTの新記憶システム『Dreaming V3』活用プロンプト術](docs/ideas/idea-20260614-chatgpt-dreaming-v3.md) - *新規追加*
     *   [2026-06-14: 【初心者向け】タブの切り替えはもう不要！Geminiの『Google Workspace拡張機能』でメールも予定も一括操作術](docs/ideas/idea-20260614-gemini-workspace-extensions.md) - *新規追加*
-    *   [2026-06-15: 【初心者向け】検索ボックスが「相談窓口」に！Googleの新しい『AI検索窓』でやりたいことを伝えるプロンプト術](docs/ideas/idea-20260615-google-search-box-beginner.md) - *新規追加*
+    *   [2026-06-15: 【初心者向け】検索ボックスが「相談窓口」に！Googleの新しい『AI検索窓』でやりたいことを伝えるプロンプト術](docs/ideas/idea-20260615-google-search-box-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/google-search-box-beginner/page.tsx)
     *   [2026-06-15: 【初心者向け】「失敗しても自分で直す」AIが登場！Claude Fable 5に『仕事を丸投げ』する魔法のプロンプト術](docs/ideas/idea-20260615-claude-fable-5-beginner.md) - *新規追加*
