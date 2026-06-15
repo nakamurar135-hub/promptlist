@@ -27,6 +27,13 @@ const beginnerPrompts = [
     description: "2026年3月登場のCopilot新機能「Think Deeper」の使い方を完全解説。15～20分かけて深く考えるモードで、A4 30ページ超の資料も作成可能。初心者向けの実践的なプロンプト例も紹介します。",
   },
   {
+    href: "/articles/claude-mythos-advanced-guide",
+    category: "AI活用",
+    categoryColor: "#9C27B0",
+    title: "異次元の推論能力！Claude Mythos「思考プロセス」活用ガイド｜中級者向け",
+    description: "2026年6月発表のClaude Mythosは、従来のLLMを凌駕する推論能力を持つAIです。複雑な論理パズル、大規模コード分析、戦略策定を実現するプロンプト術を解説します。",
+  },
+  {
     href: "/articles/ai-master-key-prompt-guide",
     category: "AI活用",
     categoryColor: "#FF5722",
@@ -146,6 +153,62 @@ const beginnerPrompts = [
     title: "AIと「一緒に作る」新体験！ChatGPTの『Canvas』活用術",
     description: "ChatGPTの新機能「Canvas」を初心者向けに解説。AIと直接編集しながら資料を完成させる、新しい共同作業の形を紹介します。",
   },
+  {
+    href: "/articles/chatgpt-auto-mode",
+    category: "ChatGPT活用",
+    categoryColor: "#10a37f",
+    title: "もう「指示」すら考えなくていい？ChatGPT最新機能『おまかせモード』で面倒な作業を丸投げするプロンプト術",
+    description: "ChatGPT最新版GPT-5.5の「おまかせモード」を活用し、複雑なプロンプトを考えることなく、目的を伝えるだけでAIに一連の作業を自走させる方法を初心者向けに解説します。",
+  },
+  {
+    href: "/articles/chatgpt-canvas-advanced",
+    category: "AI活用",
+    categoryColor: "#FF9800",
+    title: "【中級者向け】ChatGPT Canvasで実現する「自律型ドキュメント作成」ワークフロー",
+    description: "ChatGPTのCanvas機能を活用し、構造的なドキュメント作成と推敲をAIと共同で行うための高度なプロンプト術を紹介します。",
+  },
+  {
+    href: "/articles/claude-file-export",
+    category: "AI活用",
+    categoryColor: "#5B9BD5",
+    title: "【初心者向け】もう「コピペ」で悩まない！Claudeの『ファイル直接生成』で書類を即ダウンロードするプロンプト術",
+    description: "Claudeの最新機能でWordやExcel、PowerPoint形式のファイルを直接作成・出力する方法を解説。AIが作った文章をコピーして別のソフトに貼り付ける手間をゼロにする初心者向けの時短術を紹介します。",
+  },
+  {
+    href: "/articles/copelf-browser-automation",
+    category: "AI活用",
+    categoryColor: "#4CAF50",
+    title: "【初心者向け】もう「クリック」すら不要？ブラウザ操作AI『Copelf』でルーチンワークを自動化するプロンプト術",
+    description: "プロンプト不要でブラウザ操作を自動化できるAI「Copelf」を活用し、事務作業やデータ収集などの繰り返し作業をAIに丸投げするための具体的なプロンプトと活用術を初心者向けに解説します。",
+  },
+  {
+    href: "/articles/copilot-gpt55-images2",
+    category: "AI活用",
+    categoryColor: "#00A4EF",
+    title: "【初心者向け】Copilot進化！GPT-5.5 ThinkingとChatGPT Images 2.0活用術",
+    description: "Microsoft 365 Copilotに導入された最新AIモデル「GPT-5.5 Thinking」と「ChatGPT Images 2.0」を徹底解説。初心者がより正確な回答を得たり、高品質な画像を生成したりするための具体的なプロンプト例を紹介します。",
+  },
+  {
+    href: "/articles/gemini-file-generation",
+    category: "AI活用",
+    categoryColor: "#4285F4",
+    title: "【初心者向け】もう「コピペ」で悩まない！Geminiの『ファイル直接生成』で資料を即ダウンロードするプロンプト術",
+    description: "Geminiの新機能「チャットからの直接ファイル生成・ダウンロード」を活用したガイド。AIが作った文章をWordやメモ帳に貼り付ける手間を省き、プロンプト一つで「完成品」のファイルを手に入れる初心者向けの時短術を紹介します。",
+  },
+  {
+    href: "/articles/genspark-office-integration",
+    category: "ビジネス効率化",
+    categoryColor: "#FF9800",
+    title: "【初心者向け】パワポやExcelにAIが常駐！『Genspark Workspace 4.0』で資料作成を「AI社員」に任せるプロンプト術",
+    description: "PowerPointやExcelの画面内でAIと対話しながら資料を完成させる「Genspark Workspace 4.0」の初心者向け活用術を解説。ブラウザとの行き来をゼロにする最新の仕事術を紹介します。",
+  },
+  {
+    href: "/articles/outlook-copilot-agent",
+    category: "ビジネス効率化",
+    categoryColor: "#00A4EF",
+    title: "【初心者向け】メールの山にさようなら！Outlookの『Copilotエージェント』でAIに秘書を任せるプロンプト術",
+    description: "Outlook内のCopilotによる「新しいエージェント体験」を活用したガイド。メールの内容を読み取って予定を整理したり、返信が必要なものを自動で仕分けたりする、ITに詳しくない人でも使える「AI秘書」への頼み方を解説します。",
+  },
 ];
 
 export default function BeginnerPrompts() {
@@ -179,7 +242,7 @@ export default function BeginnerPrompts() {
           </p>
           <div className="flex items-center gap-2 text-white/80">
             <Zap className="w-4 h-4" />
-            <span className="text-sm">全20記事・完全無料</span>
+            <span className="text-sm">全29記事・完全無料</span>
           </div>
         </div>
       </section>

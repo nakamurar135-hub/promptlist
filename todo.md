@@ -163,35 +163,13 @@
 - [x] Git関連記事へのリンクをホームの中級者向けセクションに配置
 
 ## プレミアムアクセス制御実装
-- [x] PremiumRouteガードコンポーネントを作成（未認証→ログイン、非プレミアム→アップグレードページにリダイレクト）
-- [x] App.tsxの中級者向けコース記事（Module1～4）のルートをPremiumRouteでラップ
-- [x] 非プレミアム会員がアクセスした場合のリダイレクト動作を確認
+- [ ] PremiumRouteガードコンポーネントを作成（未認証→ログイン、非プレミアム→アップグレードページにリダイレクト）
+- [ ] App.tsxの中級者向けコース記事（Module1〜4）のルートをPremiumRouteでラップ
+- [ ] 非プレミアム会員がアクセスした場合のリダイレクト動作を確認
 
-## Stripe Checkout課金フロー実装
-- [x] Stripeに月額500円のプレミアムプラン（プロダクト・プライス）を作成
-- [x] VITE_STRIPE_PREMIUM_PRICE_IDを新しいprice_idに更新
-- [x] stripe.tsのcreateCheckoutSessionにallow_promotion_codes・client_reference_id・metadataを追加
-- [x] stripe.tsのWebhook処理にcheckout.session.completedイベントを追加
-- [x] stripe.tsのWebhook処理にtestイベント検知処理を追加
-- [x] Upgrade.tsxにStripe Checkoutボタン（新タブで開く）を接続
-- [x] Upgrade.tsxに決済成功時のサブスクリプション自動更新を追加
-- [x] Upgrade.tsxのプレミアム会員表示にStripeポータルリンクを追加
-- [x] stripe.test.tsを作成（10件のテスト）して全件通過確認
-
-## TypeScriptエラー修正
-- [x] ResponseExample.tsxのchildren型をstringからReact.ReactNodeに変更
-- [x] ChatgptSummarizePrompt.tsxの空のResponseExampleにchildrenを追加
-- [x] ChatgptTranslationPrompt.tsxの空のResponseExample（3箇所）にchildrenを追加
-- [x] AiAgentCourseModule1～4のuseStructuredData呼び出しを正しい型に修正
-- [x] AiAgentCourseModule4のteンプレートリテラル内OPENAI_API_KEY変数参照をエスケープ
-- [x] ChatgptIdeationPrompt.tsxのAffiliateBoxに必須propsを追加
-- [x] PremiumGuide.tsxのisPremiumをtrpc.subscription.checkPremiumで判定するよう修正
-
-## GitHub manus/next-migration 記事統合
-- [x] ChatgptBeginnerGuide.tsxを取得・ルート登録（/articles/chatgpt-beginner-guide）
-- [x] AgenticAiWorkflowGuide.tsxを取得・ルート登録（/articles/agentic-ai-workflow-guide）
-- [x] LlmStructuredOutputGuide.tsxを取得・ルート登録（/articles/llm-structured-output-guide）
-- [x] GoogleNanoBanana2ImageGenGuide.tsxを取得・ルート登録（/articles/google-nano-banana-2-image-gen-guide）
-- [x] GoogleNanoBanana2ImageGenGuideのResponseExample・AffiliateBoxのTSエラーを修正
-- [x] BeginnerPrompts.tsxに新記事2件を追加し記事数を更新（15→17件）
-- [x] Home.tsxをリモート版で更新（新記事追加）
+## GitHub自動同期ワークフロー実装
+- [x] sync-articles.mjs スクリプトを作成（GitHub manus/next-migrationブランチから新規記事を検出・統合）
+- [x] App.tsx・BeginnerPrompts.tsx・Home.tsxの自動更新ロジックを実装
+- [x] TypeScriptエラーチェック・Vitestテスト実行を自動化
+- [x] スクリプトの動作確認（ClaudeMythosAdvancedGuideの差分検出・自動追加テスト通過）
+- [x] チェックポイント保存

@@ -29,6 +29,14 @@ const footerProps = {
       name: "基礎・入門",
       articles: [
         { title: "質問テンプレート集", href: "/articles/beginner-template" },
+        { title: "高度な音声モード活用術", href: "/articles/chatgpt-voice-beginner" },
+        { title: "ChatGPT検索機能活用術", href: "/articles/chatgpt-search-beginner" },
+        { title: "Vibe Working入門", href: "/articles/vibe-working-beginner" },
+        { title: "Chrome AI履歴検索活用術", href: "/articles/chrome-ai-history-search" },
+        { title: "Siri Gemini活用術", href: "/articles/siri-gemini-beginner" },
+        { title: "PowerPoint Explainer活用術", href: "/articles/powerpoint-explainer" },
+        { title: "Copilot GPT-5.5活用術", href: "/articles/copilot-gpt55-images2" },
+        { title: "Copelfブラウザ自動化術", href: "/articles/copelf-browser-automation" },
       ],
     },
     {
@@ -57,6 +65,13 @@ const footerProps = {
 // カテゴリ別記事データ
 const categoryArticles = [
   {
+    category: "基礎・入門",
+    categoryColor: "bg-[#4CAF50]",
+    title: "【初心者向け】「あのサイト、何だっけ？」をAIが解決！Chromeの『AI履歴検索』活用術",
+    description: "2026年のChrome新機能「AI履歴検索」を徹底解説。正確なサイト名を忘れても「赤い靴のサイト」といった曖昧な記憶（プロンプト）で目的のページを即座に見つける方法を紹介します。",
+    href: "/articles/chrome-ai-history-search",
+  },
+  {
     category: "ビジネス文書",
     categoryColor: "bg-[#5B9BD5]",
     title: "ChatGPTで議事録を作成するプロンプト4選",
@@ -71,27 +86,83 @@ const categoryArticles = [
     href: "/articles/beginner-template",
   },
   {
-    category: "キャリア",
-    categoryColor: "bg-[#9C27B0]",
-    title: "ChatGPTで志望動機を書くプロンプト",
-    description: "転職・就職活動で使える志望動機の作成をサポート。あなたの経験を効果的にアピールする文章を生成。",
-    href: "/articles/motivation-letter",
+    category: "基礎・入門",
+    categoryColor: "bg-[#4CAF50]",
+    title: "プロンプトは「話す」から「話す」へ！ChatGPT「高度な音声モード」活用術",
+    description: "キーボード入力が苦手な初心者でも大丈夫！ChatGPTの「高度な音声モード」を使い、AIと自然に会話しながら理想の回答を引き出す方法を解説。",
+    href: "/articles/chatgpt-voice-beginner",
   },
   {
-    category: "コンテンツ作成",
-    categoryColor: "bg-[#FF9800]",
-    title: "ブログ記事をAIに書かせる日本語プロンプト",
-    description: "ブログやSNS投稿のための文章作成をAIがサポート。構成から本文まで一貫して作成できます。",
-    href: "/articles/blog-writing",
+    category: "基礎・入門",
+    categoryColor: "bg-[#4CAF50]",
+    title: "ググるより速い！ChatGPTの「検索機能（Search）」で最新情報を引き出すプロンプト術",
+    description: "「AIは古い情報しか持っていない」という初心者の思い込みを覆す、ChatGPTの最新「検索機能（Search）」の活用ガイド。検索エンジンで複数のサイトを見比べる手間を省き、AIに「今、この瞬間」の情報を正しく調べさせるためのコツを、PC標準のChatGPT利用シーンに合わせて解説します。",
+    href: "/articles/chatgpt-search-beginner",
   },
   {
-    category: "日常・カジュアル",
-    categoryColor: "bg-[#E91E63]",
-    title: "ChatGPTでLINE返信を作るプロンプト",
-    description: "返信に悩むLINEメッセージへの対応をAIがサポート。カジュアルからフォーマルまで対応。",
-    href: "/articles/line-reply",
+    category: "基礎・入門",
+    categoryColor: "bg-[#4CAF50]",
+    title: "プロンプト不要？感覚でAIを操る「Vibe Working（バイブ・ワーキング）」入門",
+    description: "「完璧なプロンプトを書かなければ」というプレッシャーから解放されましょう。隣の同僚に話しかけるような「適当な指示（バイブス）」でAIを動かす2026年の新常識「Vibe Working」を解説します。",
+    href: "/articles/vibe-working-beginner",
   },
-]
+        {
+          category: "基礎・入門",
+          categoryColor: "bg-[#4CAF50]",
+          title: "【初心者向け】iPhoneのSiriが賢くなった！Google Gemini搭載で「頼み事」が通じるプロンプト術",
+          description: "2026年、AppleとGoogleの提携により進化したSiriの初心者向け活用ガイド。Geminiの搭載で、複雑な意図を汲み取った「頼み事」ができるようになった新しいSiriの使いこなし術を解説します。",
+          href: "/articles/siri-gemini-beginner",
+        },
+        {
+          category: "基礎・入門",
+          categoryColor: "bg-[#4CAF50]",
+          title: "【初心者向け】メールもSNSも「右クリック」で完成！Edgeの『AI書き換え』プロンプト術",
+          description: "Microsoft Edgeの「AI書き換え（Rewrite with Copilot）」機能を初心者向けに解説。右クリックだけで文章を「丁寧にする」「短くする」「熱意を込める」など、AIが自動で調整してくれる便利さを紹介します。",
+          href: "/articles/edge-ai-rewrite",
+        },
+        {
+          category: "基礎・入門",
+          categoryColor: "bg-[#4CAF50]",
+          title: "【初心者向け】画面上の「これ」をAIが即解決！Windows 11の新機能『Click to Do』活用プロンプト術",
+          description: "Windows 11に新しく搭載された「Click to Do」機能を、ITに疎い初心者でも使いこなせるように解説。画面に表示されているものを右クリックするだけで、AIが「要約」「書き換え」「画像編集」などを提案してくれる、まさに「プロンプト不要」のAI活用術を紹介します。",
+          href: "/articles/windows-click-to-do-beginner",
+        },
+        {
+          category: "基礎・入門",
+          categoryColor: "bg-[#4CAF50]",
+          title: "【初心者向け】AIが「じっくり考えて」から答えてくれる！Copilotの『Think Deeper』で失敗しない相談術",
+          description: "AIに相談しても「なんだか表面的な回答しか返ってこない」と悩む初心者に向けた、Copilotの新機能「Think Deeper（深く考える）」モードの活用ガイド。AIが回答を出す前に「論理的に考えるステップ」を挟むことで、初心者でも驚くほど質の高いアドバイスを引き出せるプロンプトのコツを解説します。",
+          href: "/articles/copilot-think-deeper-beginner",
+        },
+        {
+          category: "基礎・入門",
+          categoryColor: "bg-[#4CAF50]",
+          title: "【初心者向け】プレゼン資料の「わからない」を即解決！PowerPointの新機能『Explainer』活用プロンプト術",
+          description: "2026年4月の新機能「Explainer」を解説。スライド内の専門用語や複雑な図表をAIにわかりやすく解説してもらうためのプロンプトガイド. IT初心者でも会議資料の理解度を劇的に高める方法を紹介します。",
+          href: "/articles/powerpoint-explainer",
+        },
+        {
+          category: "基礎・入門",
+          categoryColor: "bg-[#4CAF50]",
+          title: "【初心者向け】Copilotがさらに進化！最新AI「GPT-5.5 Thinking」と「ChatGPT Images 2.0」活用術",
+          description: "2026年4月末に導入された最新AIモデル「GPT-5.5 Thinking」と「ChatGPT Images 2.0」を初心者向けに解説。AIが『考えてから答える』新時代の相談術と、高品質な画像生成プロンプトを紹介します。",
+          href: "/articles/copilot-gpt55-images2",
+        },
+        {
+          category: "基礎・入門",
+          categoryColor: "bg-[#4CAF50]",
+          title: "【初心者向け】もう「クリック」すら不要？ブラウザ操作AI『Copelf』でルーチンワークを自動化するプロンプト術",
+          description: "2026年4月に登場した、プロンプト不要でブラウザ操作を自動化できるAI「Copelf（コペルフ）」を徹底解説。IT初心者でも「録画」するだけでAIが作業を代行してくれる、驚きの活用術を紹介します。",
+          href: "/articles/copelf-browser-automation",
+        },
+        {
+          category: "ビジネス活用",
+          categoryColor: "bg-[#FF9800]",
+          title: "【中級者向け】目に見えるものすべてが検索対象に！Google『マルチモーダル検索エージェント』活用ガイド",
+          description: "2026年5月28日、Googleが発表したマルチモーダル検索エージェント。テキストだけでなく動画やリアルの視覚情報をリアルタイムで解析し、実行まで繋げる最新機能の活用術を解説します。",
+          href: "/articles/google-multimodal-search-agent",
+        },
+  ]
 
 export default function HomePage() {
   return (

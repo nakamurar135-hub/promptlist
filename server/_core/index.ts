@@ -4,10 +4,10 @@ import { createServer } from "http";
 import net from "net";
 import { createExpressMiddleware } from "@trpc/server/adapters/express";
 import { registerOAuthRoutes } from "./oauth";
+import { registerStorageProxy } from "./storageProxy";
 import { appRouter } from "../routers";
 import { createContext } from "./context";
 import { serveStatic, setupVite } from "./vite";
-import { handleStripeWebhook } from "../stripe";
 
 function isPortAvailable(port: number): Promise<boolean> {
   return new Promise(resolve => {
@@ -31,31 +31,10 @@ async function findAvailablePort(startPort: number = 3000): Promise<number> {
 async function startServer() {
   const app = express();
   const server = createServer(app);
-
-  // Stripe Webhook は raw body が必要なので JSON ミドルウェアより前に登録する
-  app.post(
-    "/api/stripe/webhook",
-    express.raw({ type: "application/json" }),
-    async (req, res) => {
-      const signature = req.headers["stripe-signature"];
-      if (!signature || typeof signature !== "string") {
-        res.status(400).json({ error: "Missing stripe-signature header" });
-        return;
-      }
-      try {
-        await handleStripeWebhook(req.body as Buffer, signature);
-        res.json({ received: true });
-      } catch (err) {
-        console.error("[Stripe Webhook] Error:", err);
-        res.status(400).json({ error: (err as Error).message });
-      }
-    }
-  );
-
   // Configure body parser with larger size limit for file uploads
   app.use(express.json({ limit: "50mb" }));
   app.use(express.urlencoded({ limit: "50mb", extended: true }));
-  // OAuth callback under /api/oauth/callback
+  registerStorageProxy(app);
   registerOAuthRoutes(app);
   // tRPC API
   app.use(

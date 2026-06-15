@@ -1,10 +1,11 @@
 import { eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
-import { InsertUser, users, subscriptions, InsertSubscription } from "../drizzle/schema";
+import { InsertUser, users } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
 
+// Lazily create the drizzle instance so local tooling can run without a DB.
 export async function getDb() {
   if (!_db && process.env.DATABASE_URL) {
     try {
@@ -84,137 +85,8 @@ export async function getUserByOpenId(openId: string) {
   }
 
   const result = await db.select().from(users).where(eq(users.openId, openId)).limit(1);
+
   return result.length > 0 ? result[0] : undefined;
 }
 
-// ===== サブスクリプション関連 =====
-
-/**
- * ユーザーのサブスクリプション情報を取得する
- */
-export async function getSubscriptionByUserId(userId: number) {
-  const db = await getDb();
-  if (!db) return undefined;
-
-  const result = await db
-    .select()
-    .from(subscriptions)
-    .where(eq(subscriptions.userId, userId))
-    .limit(1);
-
-  if (result.length > 0) {
-    return result[0];
-  }
-
-  // Create default free subscription if not exists
-  try {
-    await db.insert(subscriptions).values({
-      userId,
-      plan: "free",
-      isActive: true,
-      startedAt: new Date(),
-      expiresAt: null,
-    });
-    
-    const newResult = await db
-      .select()
-      .from(subscriptions)
-      .where(eq(subscriptions.userId, userId))
-      .limit(1);
-    return newResult.length > 0 ? newResult[0] : undefined;
-  } catch (error) {
-    console.warn(`[Database] Failed to create subscription for userId ${userId}:`, error);
-    return undefined;
-  }
-}
-
-/**
- * Stripe Customer ID からサブスクリプション情報を取得する
- */
-export async function getUserByStripeCustomerId(stripeCustomerId: string) {
-  const db = await getDb();
-  if (!db) return undefined;
-  const result = await db
-    .select()
-    .from(subscriptions)
-    .where(eq(subscriptions.stripeCustomerId, stripeCustomerId))
-    .limit(1);
-  return result.length > 0 ? result[0] : undefined;
-}
-
-/**
- * サブスクリプションを作成または更新する（userId をキーに upsert）
- */
-export async function upsertSubscription(data: InsertSubscription): Promise<void> {
-  const db = await getDb();
-  if (!db) {
-    console.warn("[Database] Cannot upsert subscription: database not available");
-    return;
-  }
-
-  await db.insert(subscriptions).values(data).onDuplicateKeyUpdate({
-    set: {
-      plan: data.plan,
-      isActive: data.isActive,
-      expiresAt: data.expiresAt,
-      stripeCustomerId: data.stripeCustomerId,
-      stripeSubscriptionId: data.stripeSubscriptionId,
-      updatedAt: new Date(),
-    },
-  });
-}
-
-/**
- * Stripe Subscription ID でサブスクリプションを更新する
- */
-export async function updateSubscriptionByStripeId(
-  stripeSubscriptionId: string,
-  data: Partial<InsertSubscription>
-): Promise<void> {
-  const db = await getDb();
-  if (!db) return;
-  await db
-    .update(subscriptions)
-    .set({ ...data, updatedAt: new Date() })
-    .where(eq(subscriptions.stripeSubscriptionId, stripeSubscriptionId));
-}
-
-/**
- * ユーザーの stripeCustomerId をサブスクリプションレコードに保存する
- */
-export async function updateUserStripeCustomerId(
-  userId: number,
-  stripeCustomerId: string
-): Promise<void> {
-  const db = await getDb();
-  if (!db) return;
-  await db
-    .insert(subscriptions)
-    .values({
-      userId,
-      plan: "free",
-      isActive: true,
-      startedAt: new Date(),
-      expiresAt: null,
-      stripeCustomerId,
-      stripeSubscriptionId: null,
-    })
-    .onDuplicateKeyUpdate({
-      set: {
-        stripeCustomerId,
-        updatedAt: new Date(),
-      },
-    });
-}
-
-/**
- * ユーザーがプレミアム会員かどうかを確認する
- */
-export async function isUserPremium(userId: number): Promise<boolean> {
-  const sub = await getSubscriptionByUserId(userId);
-  if (!sub) return false;
-  if (sub.plan !== "premium") return false;
-  if (!sub.isActive) return false;
-  if (sub.expiresAt && sub.expiresAt < new Date()) return false;
-  return true;
-}
+// TODO: add feature queries here as your schema grows.

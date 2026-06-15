@@ -13,15 +13,7 @@ export default defineConfig({
     },
   },
   test: {
-    include: [
-      "server/**/*.test.ts",
-      "server/**/*.spec.ts",
-      "client/src/**/*.test.ts",
-      "client/src/**/*.test.tsx",
-    ],
-    environmentMatchGlobs: [
-      ["client/src/**", "jsdom"],
-      ["server/**", "node"],
-    ],
+    environment: "node",
+    include: ["server/**/*.test.ts", "server/**/*.spec.ts"],
   },
 });

@@ -23,6 +23,7 @@ import GoogleNanoBanana2ImageGenGuide from "./pages/articles/GoogleNanoBanana2Im
 import Gpt54AgentModeGuide from "./pages/articles/Gpt54AgentModeGuide";
 import AiMasterKeyPromptGuide from "./pages/articles/AiMasterKeyPromptGuide";
 import CopilotThinkDeeperGuide from "./pages/articles/CopilotThinkDeeperGuide";
+import ClaudeMythosAdvancedGuide from "./pages/articles/ClaudeMythosAdvancedGuide";
 import AiAgentCourseModule1 from "./pages/articles/AiAgentCourseModule1";
 import AiAgentCourseModule2 from "./pages/articles/AiAgentCourseModule2";
 import AiAgentCourseModule3 from "./pages/articles/AiAgentCourseModule3";
@@ -72,6 +73,7 @@ function Router() {
       <Route path="/articles/gpt54-agent-mode-guide" component={Gpt54AgentModeGuide} />
         <Route path="/articles/ai-master-key-prompt-guide" component={AiMasterKeyPromptGuide} />
       <Route path="/articles/copilot-think-deeper-guide" component={CopilotThinkDeeperGuide} />
+      <Route path="/articles/claude-mythos-advanced-guide" component={ClaudeMythosAdvancedGuide} />
       <Route path="/articles/ai-agent-beginner-guide" component={AiAgentBeginnerGuide} />
       <Route path="/articles/chatgpt-canvas-beginner" component={ChatgptCanvasBeginner} />
 
