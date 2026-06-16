@@ -25,6 +25,8 @@
     ```
 
 ## ネタ一覧（インデックス）
+*   [2026-06-16: 【中級者向け】AIが「聞く場所」から「作業する場所」へ！ChatGPT『スーパーアプリ化』＆『Codex』活用ガイド](docs/ideas/idea-20260616-openai-super-app-codex.md) - *新規追加*
+*   [2026-06-16: 【中級者向け】言語の壁を「リアルタイム」で突破！Gemini 3.5『Live Translate』によるグローバル会議・交渉術](docs/ideas/idea-20260616-gemini-live-translate-global.md) - *新規追加*
 *   [2026-05-22: 【中級者向け】AIが自律的にタスクを完遂！次世代AIエージェント『Manus』活用ガイド](docs/ideas/idea-20260522-manus-autonomous-agent.md) - [記事作成済み](src/articles/website-component-format/app/articles/manus-autonomous-agent/page.tsx)
 
 *   [セット1 (001-020)](docs/ideas/set-1.md) - *未作成*
