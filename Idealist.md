@@ -128,3 +128,5 @@
     *   [2026-06-14: 【初心者向け】タブの切り替えはもう不要！Geminiの『Google Workspace拡張機能』でメールも予定も一括操作術](docs/ideas/idea-20260614-gemini-workspace-extensions.md) - *新規追加*
     *   [2026-06-15: 【初心者向け】検索ボックスが「相談窓口」に！Googleの新しい『AI検索窓』でやりたいことを伝えるプロンプト術](docs/ideas/idea-20260615-google-search-box-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/google-search-box-beginner/page.tsx)
     *   [2026-06-15: 【初心者向け】「失敗しても自分で直す」AIが登場！Claude Fable 5に『仕事を丸投げ』する魔法のプロンプト術](docs/ideas/idea-20260615-claude-fable-5-beginner.md) - *新規追加*
+    *   [2026-06-16: 【中級者向け】AIが「聞く場所」から「作業する場所」へ！ChatGPT『スーパーアプリ化』＆『Codex』活用ガイド](docs/ideas/idea-20260616-openai-super-app-codex.md) - [記事作成済み](src/articles/website-component-format/app/articles/openai-super-app-codex/page.tsx)
+    *   [2026-06-16: 【中級者向け】言語の壁を「リアルタイム」で突破！Gemini 3.5『Live Translate』によるグローバル会議・交渉術](docs/ideas/idea-20260616-gemini-live-translate-global.md) - *新規追加*

@@ -52,6 +52,13 @@ const footerProps = {
       ],
     },
     {
+      name: "ビジネス活用",
+      articles: [
+        { title: "ChatGPTスーパーアプリ活用術", href: "/articles/openai-super-app-codex" },
+        { title: "Googleマルチモーダル検索活用術", href: "/articles/google-multimodal-search-agent" },
+      ],
+    },
+    {
       name: "日常・カジュアル",
       articles: [
         { title: "LINE返信", href: "/articles/line-reply" },
@@ -71,13 +78,20 @@ const categoryArticles = [
     description: "2026年のChrome新機能「AI履歴検索」を徹底解説。正確なサイト名を忘れても「赤い靴のサイト」といった曖昧な記憶（プロンプト）で目的のページを即座に見つける方法を紹介します。",
     href: "/articles/chrome-ai-history-search",
   },
-  {
-    category: "ビジネス文書",
-    categoryColor: "bg-[#5B9BD5]",
-    title: "ChatGPTで議事録を作成するプロンプト4選",
-    description: "会議メモから自動で議事録を生成。要点整理、フォーマル形式、アクションアイテム抽出まで対応。",
-    href: "/articles/chatgpt-meeting-minutes",
-  },
+    {
+      category: "ビジネス活用",
+      categoryColor: "bg-[#FF9800]",
+      title: "【中級者向け】AIが「聞く場所」から「作業する場所」へ！ChatGPT『スーパーアプリ化』＆『Codex』活用ガイド",
+      description: "2026年6月、OpenAIはChatGPTを大幅に刷新。単なるチャットツールから、コーディング、画像生成、AIエージェント、外部サービス連携を統合した「スーパーアプリ」へと進化しました。その活用術を解説します。",
+      href: "/articles/openai-super-app-codex",
+    },
+    {
+      category: "ビジネス文書",
+      categoryColor: "bg-[#5B9BD5]",
+      title: "ChatGPTで議事録を作成するプロンプト4選",
+      description: "会議メモから自動で議事録を生成。要点整理、フォーマル形式、アクションアイテム抽出まで対応。",
+      href: "/articles/chatgpt-meeting-minutes",
+    },
   {
     category: "基礎・入門",
     categoryColor: "bg-[#4CAF50]",
