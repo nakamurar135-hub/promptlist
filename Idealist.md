@@ -130,3 +130,5 @@
     *   [2026-06-15: 【初心者向け】「失敗しても自分で直す」AIが登場！Claude Fable 5に『仕事を丸投げ』する魔法のプロンプト術](docs/ideas/idea-20260615-claude-fable-5-beginner.md) - *新規追加*
     *   [2026-06-16: 【中級者向け】AIが「聞く場所」から「作業する場所」へ！ChatGPT『スーパーアプリ化』＆『Codex』活用ガイド](docs/ideas/idea-20260616-openai-super-app-codex.md) - [記事作成済み](src/articles/website-component-format/app/articles/openai-super-app-codex/page.tsx)
     *   [2026-06-16: 【中級者向け】言語の壁を「リアルタイム」で突破！Gemini 3.5『Live Translate』によるグローバル会議・交渉術](docs/ideas/idea-20260616-gemini-live-translate-global.md) - *新規追加*
+    *   [2026-06-16: 【中級者向け】特定のAIに縛られない開発環境へ！JetBrains AIの『Coding Agent Agnostic』活用ガイド](docs/ideas/idea-20260616-jetbrains-ai-agnostic.md) - *新規追加*
+    *   [2026-06-17: 【中級者向け】ブラウザが「勝手に操作」する時代へ！Chromeの新機能『Agentic Auto-browse』導入ガイド](docs/ideas/idea-20260617-chrome-agentic-auto-browse.md) - *新規追加*
