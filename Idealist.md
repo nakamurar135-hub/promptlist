@@ -107,7 +107,7 @@
     *   [2026-05-17: 【中級者向け】動画・音声・コードを同時解析！Google Gemini 2.0 Proの『マルチモーダル推論』活用プロンプト術](docs/ideas/idea-20260517-gemini-2-pro-multimodal.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-2-pro-multimodal/page.tsx)
     * [2026-05-19: 【中級者向け】AIが自律的にタスクを完遂！OpenAIの最新エージェント『Operator』による業務自動化プロンプト術](docs/ideas/idea-20260519-openai-operator.md) - [記事作成済み](src/articles/website-component-format/app/articles/openai-operator-automation/page.tsx)
 
-*最終更新日: 2026-06-15 (by Manus)
+*最終更新日: 2026-06-19 (by Manus)
 
 *   [2026-05-23: 【初心者向け】スマホの「通知疲れ」をAIが解決！Apple Intelligence『優先度自動仕分け』活用ガイド](docs/ideas/idea-20260513-apple-intelligence-priority-notifications.md) - [記事作成済み](src/articles/website-component-format/app/articles/apple-intelligence-priority-notifications/page.tsx)
     *   [2026-05-26: 【中級者向け】検索は「調べる」から「任せる」へ！Googleの新機能『検索エージェント』活用プロンプト術](docs/ideas/idea-20260526-google-search-agent.md) - *新規追加*
@@ -132,3 +132,5 @@
     *   [2026-06-16: 【中級者向け】言語の壁を「リアルタイム」で突破！Gemini 3.5『Live Translate』によるグローバル会議・交渉術](docs/ideas/idea-20260616-gemini-live-translate-global.md) - *新規追加*
     *   [2026-06-18: 【初心者向け】iPhoneが「画面の中」を理解する！Siri AIの『これ、何？』活用プロンプト術](docs/ideas/idea-20260618-siri-ai-onscreen-awareness.md) - [記事作成済み](src/articles/website-component-format/app/articles/siri-ai-onscreen-awareness/page.tsx)
     *   [2026-06-18: 【初心者向け】子供のスマホ利用をAIが見守る！Apple Intelligenceの『安心ペアレンタルコントロール』活用術](docs/ideas/idea-20260618-apple-intelligence-parental-control.md) - [記事作成済み](src/articles/website-component-format/app/articles/apple-intelligence-parental-control/page.tsx)
+    *   [2026-06-19: 【初心者向け】AIが「予約」した時間に仕事する！ChatGPTの新機能『Scheduled tasks』活用プロンプト術](docs/ideas/idea-20260619-chatgpt-scheduled-tasks.md) - *新規追加*
+    *   [2026-06-19: 【初心者向け】言葉がそのまま「自分専用の掲示板」に！ChatGPTの新機能『Sites』活用プロンプト術](docs/ideas/idea-20260619-chatgpt-sites-beginner.md) - *新規追加*
