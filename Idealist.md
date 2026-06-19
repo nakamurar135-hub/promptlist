@@ -132,3 +132,5 @@
     *   [2026-06-16: 【中級者向け】言語の壁を「リアルタイム」で突破！Gemini 3.5『Live Translate』によるグローバル会議・交渉術](docs/ideas/idea-20260616-gemini-live-translate-global.md) - *新規追加*
     *   [2026-06-18: 【初心者向け】iPhoneが「画面の中」を理解する！Siri AIの『これ、何？』活用プロンプト術](docs/ideas/idea-20260618-siri-ai-onscreen-awareness.md) - [記事作成済み](src/articles/website-component-format/app/articles/siri-ai-onscreen-awareness/page.tsx)
     *   [2026-06-18: 【初心者向け】子供のスマホ利用をAIが見守る！Apple Intelligenceの『安心ペアレンタルコントロール』活用術](docs/ideas/idea-20260618-apple-intelligence-parental-control.md) - [記事作成済み](src/articles/website-component-format/app/articles/apple-intelligence-parental-control/page.tsx)
+    *   [2026-06-19: 【中級者向け】AIがクラウドコストを自動最適化！AWS FinOps Agentによる異常検知とJira自動連携ガイド](docs/ideas/idea-20260619-aws-finops-agent.md) - *新規追加*
+    *   [2026-06-19: 【中級者向け】脱・単一AI依存！JetBrains AIでClaude・Codex・Geminiを使い分ける「エージェント・アグノスティック」開発術](docs/ideas/idea-20260619-jetbrains-ai-agnostic.md) - *新規追加*
