@@ -107,7 +107,7 @@
     *   [2026-05-17: 【中級者向け】動画・音声・コードを同時解析！Google Gemini 2.0 Proの『マルチモーダル推論』活用プロンプト術](docs/ideas/idea-20260517-gemini-2-pro-multimodal.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-2-pro-multimodal/page.tsx)
     * [2026-05-19: 【中級者向け】AIが自律的にタスクを完遂！OpenAIの最新エージェント『Operator』による業務自動化プロンプト術](docs/ideas/idea-20260519-openai-operator.md) - [記事作成済み](src/articles/website-component-format/app/articles/openai-operator-automation/page.tsx)
 
-*最終更新日: 2026-06-15 (by Manus)
+*最終更新日: 2026-06-21 (by Manus)
 
 *   [2026-05-23: 【初心者向け】スマホの「通知疲れ」をAIが解決！Apple Intelligence『優先度自動仕分け』活用ガイド](docs/ideas/idea-20260513-apple-intelligence-priority-notifications.md) - [記事作成済み](src/articles/website-component-format/app/articles/apple-intelligence-priority-notifications/page.tsx)
     *   [2026-05-26: 【中級者向け】検索は「調べる」から「任せる」へ！Googleの新機能『検索エージェント』活用プロンプト術](docs/ideas/idea-20260526-google-search-agent.md) - *新規追加*
@@ -134,3 +134,5 @@
     *   [2026-06-18: 【初心者向け】子供のスマホ利用をAIが見守る！Apple Intelligenceの『安心ペアレンタルコントロール』活用術](docs/ideas/idea-20260618-apple-intelligence-parental-control.md) - [記事作成済み](src/articles/website-component-format/app/articles/apple-intelligence-parental-control/page.tsx)
     *   [2026-06-20: 【初心者向け】もうお店を探さない！ChatGPT・Geminiで「欲しいもの」を直接買うAIショッピング術](docs/ideas/idea-20260620-ai-shopping-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/ai-shopping-beginner-guide/page.tsx)
     *   [2026-06-20: 【初心者向け】AIとの会話を「自分だけの教科書」に！『AI Exporter』で大事な回答を保存する整理術](docs/ideas/idea-20260620-ai-exporter-beginner.md) - *新規追加*
+    *   [2026-06-21: 【中級者向け】AIモデル停止に備える！『Claude Mythos』の衝撃から学ぶAIリスクマネジメント・プロンプト術](docs/ideas/idea-20260621-claude-mythos-risk-management.md) - *新規追加*
+    *   [2026-06-21: 【中級者向け】Apple Intelligence × Gemini 連携！OSレベルでAIを使い分ける『ハイブリッド・オーケストレーション』術](docs/ideas/idea-20260621-siri-gemini-orchestration.md) - *新規追加*
