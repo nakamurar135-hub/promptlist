@@ -136,3 +136,5 @@
     *   [2026-06-20: 【初心者向け】AIとの会話を「自分だけの教科書」に！『AI Exporter』で大事な回答を保存する整理術](docs/ideas/idea-20260620-ai-exporter-beginner.md) - *新規追加*
     *   [2026-06-21: 【中級者向け】AIモデル停止に備える！『Claude Mythos』の衝撃から学ぶAIリスクマネジメント・プロンプト術](docs/ideas/idea-20260621-claude-mythos-risk-management.md) - *新規追加*
     *   [2026-06-21: 【中級者向け】Apple Intelligence × Gemini 連携！OSレベルでAIを使い分ける『ハイブリッド・オーケストレーション』術](docs/ideas/idea-20260621-siri-gemini-orchestration.md) - *新規追加*
+    *   [2026-06-21: 【初心者向け】パワポの画面から離れず資料完成！OpenAI公式『ChatGPT PowerPointアドイン』活用プロンプト術](docs/ideas/idea-20260621-chatgpt-powerpoint-addin.md) - *新規追加*
+    *   [2026-06-21: 【初心者向け】AIと「チーム」で仕事をする時代へ！新機能『Copilot Cowork』で面倒な作業を丸投げするプロンプト術](docs/ideas/idea-20260621-copilot-cowork-beginner.md) - *新規追加*
