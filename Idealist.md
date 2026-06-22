@@ -136,3 +136,4 @@
     *   [2026-06-20: 【初心者向け】AIとの会話を「自分だけの教科書」に！『AI Exporter』で大事な回答を保存する整理術](docs/ideas/idea-20260620-ai-exporter-beginner.md) - *新規追加*
     *   [2026-06-21: 【中級者向け】AIモデル停止に備える！『Claude Mythos』の衝撃から学ぶAIリスクマネジメント・プロンプト術](docs/ideas/idea-20260621-claude-mythos-risk-management.md) - *新規追加*
     *   [2026-06-21: 【中級者向け】Apple Intelligence × Gemini 連携！OSレベルでAIを使い分ける『ハイブリッド・オーケストレーション』術](docs/ideas/idea-20260621-siri-gemini-orchestration.md) - *新規追加*
+    *   [2026-06-22: 【初心者向け】もう「何度もググる」必要なし！Googleの新機能『Search Agents』で欲しい情報を自動で見張る術](docs/ideas/idea-20260622-google-search-agents.md) - [記事作成済み](src/articles/website-component-format/app/articles/google-search-agents-beginner/page.tsx)
