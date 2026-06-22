@@ -29,6 +29,8 @@
 
 *   [セット1 (001-020)](docs/ideas/set-1.md) - *未作成*
 *   [最新の個別ネタ](docs/ideas/)
+    *   [2026-06-22: 【初心者向け】iPhoneの画面をAIが見てくれる！新機能『Siri AI』の画面認識（Onscreen Awareness）活用術](docs/ideas/idea-20260622-siri-ai-onscreen-awareness.md) - *新規追加*
+    *   [2026-06-22: 【初心者向け】もう「何度もググる」必要なし！Googleの新機能『Search Agents』で欲しい情報を自動で見張る術](docs/ideas/idea-20260622-google-search-agents.md) - *新規追加*
     *   [2026-04-04: プロンプトは「書く」から「話す」へ！ChatGPT「高度な音声モード」活用術](docs/ideas/idea-20260404-chatgpt-voice-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/chatgpt-voice-beginner/page.tsx)
     *   [2026-04-04: ググるより速い！ChatGPTの「検索機能（Search）」で最新情報を引き出すプロンプト術](docs/ideas/idea-20260404-chatgpt-search-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/chatgpt-search-beginner/page.tsx)
     *   [2026-04-02: プロンプト不要？感覚でAIを操る「Vibe Working（バイブ・ワーキング）」入門](docs/ideas/idea-20260402-vibe-working-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/vibe-working-beginner/page.tsx)
