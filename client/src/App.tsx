@@ -30,6 +30,8 @@ import AiAgentCourseModule3 from "./pages/articles/AiAgentCourseModule3";
 import AiAgentCourseModule4 from "./pages/articles/AiAgentCourseModule4";
 import AiAgentBeginnerGuide from "./pages/articles/AiAgentBeginnerGuide";
 import ChatgptCanvasBeginner from "./pages/articles/ChatgptCanvasBeginner";
+import AppleShortcutsNaturalLanguage from "./pages/articles/AppleShortcutsNaturalLanguage";
+import GoogleUniversalCartShopping from "./pages/articles/GoogleUniversalCartShopping";
 import SkillsList from "./pages/skills/SkillsList";
 import AiAgentBasics from "./pages/skills/AiAgentBasics";
 import PromptEngineering from "./pages/skills/PromptEngineering";
@@ -76,6 +78,8 @@ function Router() {
       <Route path="/articles/claude-mythos-advanced-guide" component={ClaudeMythosAdvancedGuide} />
       <Route path="/articles/ai-agent-beginner-guide" component={AiAgentBeginnerGuide} />
       <Route path="/articles/chatgpt-canvas-beginner" component={ChatgptCanvasBeginner} />
+      <Route path="/articles/apple-shortcuts-natural-language" component={AppleShortcutsNaturalLanguage} />
+      <Route path="/articles/google-universal-cart-shopping" component={GoogleUniversalCartShopping} />
 
       {/* 中級者向けコース（プレミアム会員専用） */}
       <Route path="/articles/ai-agent-course-module-1" component={() => <PremiumRoute component={AiAgentCourseModule1} />} />
