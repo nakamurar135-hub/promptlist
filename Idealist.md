@@ -107,7 +107,7 @@
     *   [2026-05-17: 【中級者向け】動画・音声・コードを同時解析！Google Gemini 2.0 Proの『マルチモーダル推論』活用プロンプト術](docs/ideas/idea-20260517-gemini-2-pro-multimodal.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-2-pro-multimodal/page.tsx)
     * [2026-05-19: 【中級者向け】AIが自律的にタスクを完遂！OpenAIの最新エージェント『Operator』による業務自動化プロンプト術](docs/ideas/idea-20260519-openai-operator.md) - [記事作成済み](src/articles/website-component-format/app/articles/openai-operator-automation/page.tsx)
 
-*最終更新日: 2026-06-21 (by Manus)
+*最終更新日: 2026-06-23 (by Manus)
 
 *   [2026-05-23: 【初心者向け】スマホの「通知疲れ」をAIが解決！Apple Intelligence『優先度自動仕分け』活用ガイド](docs/ideas/idea-20260513-apple-intelligence-priority-notifications.md) - [記事作成済み](src/articles/website-component-format/app/articles/apple-intelligence-priority-notifications/page.tsx)
     *   [2026-05-26: 【中級者向け】検索は「調べる」から「任せる」へ！Googleの新機能『検索エージェント』活用プロンプト術](docs/ideas/idea-20260526-google-search-agent.md) - *新規追加*
@@ -137,3 +137,5 @@
     *   [2026-06-21: 【中級者向け】AIモデル停止に備える！『Claude Mythos』の衝撃から学ぶAIリスクマネジメント・プロンプト術](docs/ideas/idea-20260621-claude-mythos-risk-management.md) - *新規追加*
     *   [2026-06-21: 【中級者向け】Apple Intelligence × Gemini 連携！OSレベルでAIを使い分ける『ハイブリッド・オーケストレーション』術](docs/ideas/idea-20260621-siri-gemini-orchestration.md) - *新規追加*
     *   [2026-06-22: 【初心者向け】もう「何度もググる」必要なし！Googleの新機能『Search Agents』で欲しい情報を自動で見張る術](docs/ideas/idea-20260622-google-search-agents.md) - [記事作成済み](src/articles/website-component-format/app/articles/google-search-agents-beginner/page.tsx)
+    *   [2026-06-23: 【中級者向け】AIが「データの意味」を自ら学習！Databricks『Genie Ontology』導入ガイド](docs/ideas/idea-20260623-databricks-genie-ontology.md) - *新規追加*
+    *   [2026-06-23: 【中級者向け】開発環境をAIが最適化！GitHub Copilot for JetBrains『Copilot CLI基盤移行』活用ガイド](docs/ideas/idea-20260623-github-copilot-cli-migration.md) - *新規追加*
