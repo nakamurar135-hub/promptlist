@@ -142,4 +142,4 @@
     *   [2026-06-23: 【中級者向け】AIが「データの意味」を自ら学習！Databricks『Genie Ontology』導入ガイド](docs/ideas/idea-20260623-databricks-genie-ontology.md) - *新規追加*
     *   [2026-06-23: 【中級者向け】開発環境をAIが最適化！GitHub Copilot for JetBrains『Copilot CLI基盤移行』活用ガイド](docs/ideas/idea-20260623-github-copilot-cli-migration.md) - *新規追加*
     *   [2026-06-24: 【初心者向け】iPhoneが「今見ているもの」を理解する！Siri AIの『画面認識』活用プロンプト術](docs/ideas/idea-20260624-siri-ai-onscreen-awareness-guide.md) - *新規追加*
-    *   [2026-06-24: 【初心者向け】もうプロンプトで迷わない！Microsoft 365 Copilotの『進化する入力ボックス』活用術](docs/ideas/idea-20260624-copilot-workspace-input-guide.md) - *新規追加*
+    *   [2026-06-24: 【初心者向け】もうプロンプトで迷わない！Microsoft 365 Copilotの『進化する入力ボックス』活用術](docs/ideas/idea-20260624-copilot-workspace-input-guide.md) - [記事作成済み](src/articles/website-component-format/app/articles/copilot-workspace-input-guide/page.tsx)
