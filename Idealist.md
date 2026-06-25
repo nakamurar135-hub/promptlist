@@ -143,3 +143,5 @@
     *   [2026-06-23: 【中級者向け】開発環境をAIが最適化！GitHub Copilot for JetBrains『Copilot CLI基盤移行』活用ガイド](docs/ideas/idea-20260623-github-copilot-cli-migration.md) - *新規追加*
     *   [2026-06-24: 【初心者向け】iPhoneが「今見ているもの」を理解する！Siri AIの『画面認識』活用プロンプト術](docs/ideas/idea-20260624-siri-ai-onscreen-awareness-guide.md) - *新規追加*
     *   [2026-06-24: 【初心者向け】もうプロンプトで迷わない！Microsoft 365 Copilotの『進化する入力ボックス』活用術](docs/ideas/idea-20260624-copilot-workspace-input-guide.md) - [記事作成済み](src/articles/website-component-format/app/articles/copilot-workspace-input-guide/page.tsx)
+    *   [2026-06-25: 【中級者向け】現実の物理法則を再現！Google Gemini Omni（Nanobanana 3.0）による「動画・マルチメディア生成」実践ガイド](docs/ideas/idea-20260625-gemini-omni-multimedia.md) - *新規追加*
+    *   [2026-06-25: 【中級者向け】AI導入を「コスト」から「投資」へ！ChatGPT Enterprise『Spend Controls』と『分析ダッシュボード』活用ガイド](docs/ideas/idea-20260625-openai-enterprise-spend-controls.md) - *新規追加*
