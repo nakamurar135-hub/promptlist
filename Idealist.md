@@ -28,6 +28,8 @@
 *   [2026-05-22: 【中級者向け】AIが自律的にタスクを完遂！次世代AIエージェント『Manus』活用ガイド](docs/ideas/idea-20260522-manus-autonomous-agent.md) - [記事作成済み](src/articles/website-component-format/app/articles/manus-autonomous-agent/page.tsx)
 
 *   [セット1 (001-020)](docs/ideas/set-1.md) - *未作成*
+*   [2026-06-26: 【中級者向け】AIが自律的にタスクを完遂！次世代AIエージェント『Manus』活用ガイド](docs/ideas/idea-20260626-manus-ai-agent-guide.md) - [記事作成済み](src/articles/website-component-format/app/articles/manus-ai-agent-guide/page.tsx)
+
 *   [最新の個別ネタ](docs/ideas/)
     *   [2026-06-23: 【初心者向け】iPhoneの「ショートカット」が魔法の杖に！自然言語で自動化プロンプト術](docs/ideas/idea-20260623-apple-shortcuts-natural-language.md) - *新規追加*
     *   [2026-06-23: 【初心者向け】「ググる」が「買い物代行」に！Google新検索ボックスと『Universal Cart』活用プロンプト術](docs/ideas/idea-20260623-google-universal-cart-shopping.md) - *新規追加*
