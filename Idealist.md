@@ -147,3 +147,5 @@
     *   [2026-06-24: 【初心者向け】もうプロンプトで迷わない！Microsoft 365 Copilotの『進化する入力ボックス』活用術](docs/ideas/idea-20260624-copilot-workspace-input-guide.md) - [記事作成済み](src/articles/website-component-format/app/articles/copilot-workspace-input-guide/page.tsx)
     *   [2026-06-25: 【中級者向け】現実の物理法則を再現！Google Gemini Omni（Nanobanana 3.0）による「動画・マルチメディア生成」実践ガイド](docs/ideas/idea-20260625-gemini-omni-multimedia.md) - *新規追加*
     *   [2026-06-25: 【中級者向け】AI導入を「コスト」から「投資」へ！ChatGPT Enterprise『Spend Controls』と『分析ダッシュボード』活用ガイド](docs/ideas/idea-20260625-openai-enterprise-spend-controls.md) - *新規追加*
+    *   [2026-06-26: 【初心者向け】スマホの「裏方作業」をAIにお任せ！Android 17の新機能『Android Halo』活用プロンプト術](docs/ideas/idea-20260626-android-halo-beginner.md) - *新規追加*
+    *   [2026-06-26: 【初心者向け】「いつものCopilot」がもっと賢くなる！Microsoft 365の『Claude』切り替えプロンプト術](docs/ideas/idea-20260626-copilot-claude-beginner.md) - *新規追加*
