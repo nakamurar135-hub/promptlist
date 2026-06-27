@@ -151,3 +151,5 @@
     *   [2026-06-25: 【中級者向け】AI導入を「コスト」から「投資」へ！ChatGPT Enterprise『Spend Controls』と『分析ダッシュボード』活用ガイド](docs/ideas/idea-20260625-openai-enterprise-spend-controls.md) - *新規追加*
     *   [2026-06-27: 【中級者向け】タイピングを捨てて「話す」だけで完結！GMO流・AI音声入力による業務10倍速ガイド](docs/ideas/idea-20260627-gmo-whisper-voice-ai.md) - *新規追加*
     *   [2026-06-27: 【中級者向け】AIと1000以上のアプリを直結！最新「MCP（Model Context Protocol）」連携による自律型ワークフロー構築ガイド](docs/ideas/idea-20260627-mcp-integration-guide.md) - *新規追加*
+    *   [2026-06-27: 【初心者向け】最新AI「GPT-5.6 ソル」があなたの代わりに「考える」！新機能『自律思考モード』を使いこなすプロンプト術](docs/ideas/idea-20260627-gpt5-6-sol-beginner.md) - *新規追加*
+    *   [2026-06-27: 【初心者向け】Google検索が「聞くだけ」で完結！新機能『AIモード』で迷子にならない検索プロンプト術](docs/ideas/idea-20260627-google-ai-mode-beginner.md) - *新規追加*
