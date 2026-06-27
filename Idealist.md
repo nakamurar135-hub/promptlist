@@ -113,7 +113,7 @@
     *   [2026-05-17: 【中級者向け】動画・音声・コードを同時解析！Google Gemini 2.0 Proの『マルチモーダル推論』活用プロンプト術](docs/ideas/idea-20260517-gemini-2-pro-multimodal.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-2-pro-multimodal/page.tsx)
     * [2026-05-19: 【中級者向け】AIが自律的にタスクを完遂！OpenAIの最新エージェント『Operator』による業務自動化プロンプト術](docs/ideas/idea-20260519-openai-operator.md) - [記事作成済み](src/articles/website-component-format/app/articles/openai-operator-automation/page.tsx)
 
-*最終更新日: 2026-06-23 (by Manus)
+*最終更新日: 2026-06-27 (by Manus)
 
 *   [2026-05-23: 【初心者向け】スマホの「通知疲れ」をAIが解決！Apple Intelligence『優先度自動仕分け』活用ガイド](docs/ideas/idea-20260513-apple-intelligence-priority-notifications.md) - [記事作成済み](src/articles/website-component-format/app/articles/apple-intelligence-priority-notifications/page.tsx)
     *   [2026-05-26: 【中級者向け】検索は「調べる」から「任せる」へ！Googleの新機能『検索エージェント』活用プロンプト術](docs/ideas/idea-20260526-google-search-agent.md) - *新規追加*
@@ -149,3 +149,5 @@
     *   [2026-06-24: 【初心者向け】もうプロンプトで迷わない！Microsoft 365 Copilotの『進化する入力ボックス』活用術](docs/ideas/idea-20260624-copilot-workspace-input-guide.md) - [記事作成済み](src/articles/website-component-format/app/articles/copilot-workspace-input-guide/page.tsx)
     *   [2026-06-25: 【中級者向け】現実の物理法則を再現！Google Gemini Omni（Nanobanana 3.0）による「動画・マルチメディア生成」実践ガイド](docs/ideas/idea-20260625-gemini-omni-multimedia.md) - *新規追加*
     *   [2026-06-25: 【中級者向け】AI導入を「コスト」から「投資」へ！ChatGPT Enterprise『Spend Controls』と『分析ダッシュボード』活用ガイド](docs/ideas/idea-20260625-openai-enterprise-spend-controls.md) - *新規追加*
+    *   [2026-06-27: 【中級者向け】タイピングを捨てて「話す」だけで完結！GMO流・AI音声入力による業務10倍速ガイド](docs/ideas/idea-20260627-gmo-whisper-voice-ai.md) - *新規追加*
+    *   [2026-06-27: 【中級者向け】AIと1000以上のアプリを直結！最新「MCP（Model Context Protocol）」連携による自律型ワークフロー構築ガイド](docs/ideas/idea-20260627-mcp-integration-guide.md) - *新規追加*
