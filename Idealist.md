@@ -113,7 +113,7 @@
     *   [2026-05-17: 【中級者向け】動画・音声・コードを同時解析！Google Gemini 2.0 Proの『マルチモーダル推論』活用プロンプト術](docs/ideas/idea-20260517-gemini-2-pro-multimodal.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-2-pro-multimodal/page.tsx)
     * [2026-05-19: 【中級者向け】AIが自律的にタスクを完遂！OpenAIの最新エージェント『Operator』による業務自動化プロンプト術](docs/ideas/idea-20260519-openai-operator.md) - [記事作成済み](src/articles/website-component-format/app/articles/openai-operator-automation/page.tsx)
 
-*最終更新日: 2026-06-27 (by Manus)
+*最終更新日: 2026-06-28 (by Manus)
 
 *   [2026-05-23: 【初心者向け】スマホの「通知疲れ」をAIが解決！Apple Intelligence『優先度自動仕分け』活用ガイド](docs/ideas/idea-20260513-apple-intelligence-priority-notifications.md) - [記事作成済み](src/articles/website-component-format/app/articles/apple-intelligence-priority-notifications/page.tsx)
     *   [2026-05-26: 【中級者向け】検索は「調べる」から「任せる」へ！Googleの新機能『検索エージェント』活用プロンプト術](docs/ideas/idea-20260526-google-search-agent.md) - *新規追加*
@@ -153,3 +153,5 @@
     *   [2026-06-27: 【中級者向け】AIと1000以上のアプリを直結！最新「MCP（Model Context Protocol）」連携による自律型ワークフロー構築ガイド](docs/ideas/idea-20260627-mcp-integration-guide.md) - [記事作成済み](src/articles/website-component-format/app/articles/mcp-integration-guide/page.tsx)
     *   [2026-06-27: 【初心者向け】最新AI「GPT-5.6 ソル」があなたの代わりに「考える」！新機能『自律思考モード』を使いこなすプロンプト術](docs/ideas/idea-20260627-gpt5-6-sol-beginner.md) - *新規追加*
     *   [2026-06-27: 【初心者向け】Google検索が「聞くだけ」で完結！新機能『AIモード』で迷子にならない検索プロンプト術](docs/ideas/idea-20260627-google-ai-mode-beginner.md) - *新規追加*
+    *   [2026-06-28: 【初心者向け】AIに「仕事を丸投げ」！Microsoft Copilotの『Cowork』で完成品を受け取るプロンプト術](docs/ideas/idea-20260628-copilot-cowork-beginner.md) - *新規追加*
+    *   [2026-06-28: 【初心者向け】マウス操作もAIにお任せ？Google Geminiの『パソコンの使用』で面倒な作業を自動化するプロンプト術](docs/ideas/idea-20260628-gemini-pc-use-beginner.md) - *新規追加*
