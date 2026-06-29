@@ -155,3 +155,5 @@
     *   [2026-06-27: 【初心者向け】Google検索が「聞くだけ」で完結！新機能『AIモード』で迷子にならない検索プロンプト術](docs/ideas/idea-20260627-google-ai-mode-beginner.md) - *新規追加*
     *   [2026-06-28: 【初心者向け】AIに「仕事を丸投げ」！Microsoft Copilotの『Cowork』で完成品を受け取るプロンプト術](docs/ideas/idea-20260628-copilot-cowork-beginner.md) - *新規追加*
     *   [2026-06-28: 【初心者向け】マウス操作もAIにお任せ？Google Geminiの『パソコンの使用』で面倒な作業を自動化するプロンプト術](docs/ideas/idea-20260628-gemini-pc-use-beginner.md) - *新規追加*
+    *   [2026-06-29: 【初心者向け】音楽センス不要！Deezer『Remix Lab』で自分好みの曲をAIと作るプロンプト術](docs/ideas/idea-20260629-deezer-remix-lab-beginner.md) - *新規追加*
+    *   [2026-06-29: 【初心者向け】もう「クリック」すら不要？Chromeの新機能『Auto-Browse』で調べ物をAIに丸投げする術](docs/ideas/idea-20260629-chrome-auto-browse-beginner.md) - *新規追加*
