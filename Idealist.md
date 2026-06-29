@@ -87,6 +87,8 @@
     *   [2026-05-03: 【初心者向け】AIがあなたの代わりに「予約」まで完了！最新AIエージェント『Agent i』のおでかけプロンプト術](docs/ideas/idea-20260503-agent-i-travel.md) - *新規追加*
     *   [2026-05-04: 【初心者向け】AIがあなたの「作業員」に！ChatGPTの新アプリ『Codex』で面倒なファイル整理を丸投げするプロンプト術](docs/ideas/idea-20260504-chatgpt-codex-beginner.md) - *新規追加*
     *   [2026-05-04: 【初心者向け】AI特有の「不自然な文章」を卒業！『ペルソナ抽出』であなたの言葉を再現する魔法のプロンプト術](docs/ideas/idea-20260504-ai-persona-writing.md) - *新規追加*
+    *   [2026-06-25: 【中級者向け】AI画像編集をワークフロー化！Figma新機能『Weave』活用ガイド](docs/ideas/idea-20260625-figma-weave-workflow.md) - *新規追加*
+    *   [2026-06-24: 【中級者向け】95%の失敗を回避する！『Enterprise AI Playbook』に学ぶエージェント導入術](docs/ideas/idea-20260624-enterprise-ai-playbook.md) - *新規追加*
     *   [2026-05-05: 【中級者向け】ChatGPT Canvasで実現する「自律型ドキュメント作成」ワークフロー](docs/ideas/idea-20260505-chatgpt-canvas-advanced.md) - *新規追加*
     *   [2026-05-07: 【中級者向け】AI動画制作の極意！Google Flow & Veo 3.1で「一貫性のあるストーリー」を作るプロンプト術](docs/ideas/idea-20260507-google-flow-veo-advanced.md) - [記事作成済み](src/articles/website-component-format/app/articles/google-flow-veo-advanced/page.tsx)
     *   [2026-05-08: 【中級者向け】金融実務をAIが代行！Anthropicの最新『金融特化型エージェント』活用プロンプト術](docs/ideas/idea-20260508-anthropic-financial-agents.md) - *新規追加*
