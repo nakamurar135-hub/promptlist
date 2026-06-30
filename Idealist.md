@@ -156,3 +156,4 @@
     *   [2026-06-28: 【初心者向け】AIに「仕事を丸投げ」！Microsoft Copilotの『Cowork』で完成品を受け取るプロンプト術](docs/ideas/idea-20260628-copilot-cowork-beginner.md) - *新規追加*
     *   [2026-06-28: 【初心者向け】マウス操作もAIにお任せ？Google Geminiの『パソコンの使用』で面倒な作業を自動化するプロンプト術](docs/ideas/idea-20260628-gemini-pc-use-beginner.md) - *新規追加*
     *   [2026-06-29: 【中級者向け】AIエージェントと作る！Manusを活用した「爆速Webサイト構築」実践ガイド](docs/ideas/idea-20260629-manus-web-dev-guide.md) - *新規追加*
+    *   [2026-06-30: 【中級者向け】2026年の新常識！AIエージェントによる「自律型タスク完遂」の極意](docs/ideas/idea-20260630-ai-autonomous-agents-future.md) - *新規追加*
