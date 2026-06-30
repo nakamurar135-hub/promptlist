@@ -31,6 +31,8 @@
 *   [2026-06-26: 【中級者向け】AIが自律的にタスクを完遂！次世代AIエージェント『Manus』活用ガイド](docs/ideas/idea-20260626-manus-ai-agent-guide.md) - [記事作成済み](src/articles/website-component-format/app/articles/manus-ai-agent-guide/page.tsx)
 
 *   [最新の個別ネタ](docs/ideas/)
+    *   [2026-06-30: 【初心者向け】「資料が多すぎて読めない」をAIが解決！Googleの無料ツール『NotebookLM』活用プロンプト術](docs/ideas/idea-20260630-notebooklm-beginner.md) - *新規追加*
+    *   [2026-06-30: 【初心者向け】AIが勝手に動いてくれる！Google Gemini 3.5の『エージェント機能』超入門プロンプト術](docs/ideas/idea-20260630-gemini-agent-beginner.md) - *新規追加*
     *   [2026-06-23: 【初心者向け】iPhoneの「ショートカット」が魔法の杖に！自然言語で自動化プロンプト術](docs/ideas/idea-20260623-apple-shortcuts-natural-language.md) - *新規追加*
     *   [2026-06-23: 【初心者向け】「ググる」が「買い物代行」に！Google新検索ボックスと『Universal Cart』活用プロンプト術](docs/ideas/idea-20260623-google-universal-cart-shopping.md) - *新規追加*
     *   [2026-06-25: 【初心者向け】言葉が「動くマニュアル」に変身！Google検索の新機能『ジェネレーティブUI』活用プロンプト術](docs/ideas/idea-20260625-google-generative-ui-simulations.md) - [記事作成済み](src/articles/website-component-format/app/articles/google-generative-ui-simulations/page.tsx)
