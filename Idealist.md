@@ -113,7 +113,7 @@
     *   [2026-05-17: 【中級者向け】動画・音声・コードを同時解析！Google Gemini 2.0 Proの『マルチモーダル推論』活用プロンプト術](docs/ideas/idea-20260517-gemini-2-pro-multimodal.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-2-pro-multimodal/page.tsx)
     * [2026-05-19: 【中級者向け】AIが自律的にタスクを完遂！OpenAIの最新エージェント『Operator』による業務自動化プロンプト術](docs/ideas/idea-20260519-openai-operator.md) - [記事作成済み](src/articles/website-component-format/app/articles/openai-operator-automation/page.tsx)
 
-*最終更新日: 2026-06-28 (by Manus)
+*最終更新日: 2026-07-01 (by Manus)
 
 *   [2026-05-23: 【初心者向け】スマホの「通知疲れ」をAIが解決！Apple Intelligence『優先度自動仕分け』活用ガイド](docs/ideas/idea-20260513-apple-intelligence-priority-notifications.md) - [記事作成済み](src/articles/website-component-format/app/articles/apple-intelligence-priority-notifications/page.tsx)
     *   [2026-05-26: 【中級者向け】検索は「調べる」から「任せる」へ！Googleの新機能『検索エージェント』活用プロンプト術](docs/ideas/idea-20260526-google-search-agent.md) - *新規追加*
@@ -157,3 +157,4 @@
     *   [2026-06-28: 【初心者向け】マウス操作もAIにお任せ？Google Geminiの『パソコンの使用』で面倒な作業を自動化するプロンプト術](docs/ideas/idea-20260628-gemini-pc-use-beginner.md) - *新規追加*
     *   [2026-06-29: 【中級者向け】AIエージェントと作る！Manusを活用した「爆速Webサイト構築」実践ガイド](docs/ideas/idea-20260629-manus-web-dev-guide.md) - *新規追加*
     *   [2026-06-30: 【中級者向け】2026年の新常識！AIエージェントによる「自律型タスク完遂」の極意](docs/ideas/idea-20260630-ai-autonomous-agents-future.md) - *新規追加*
+*   [2026-07-01: 【中級者向け】OpenAI最新モデル「GPT-5.6 Sol」企業導入・活用完全ガイド](docs/ideas/idea-20260701-gpt5-6-sol-enterprise-guide.md) - *新規追加*
