@@ -158,5 +158,5 @@
     *   [2026-06-29: 【中級者向け】AIエージェントと作る！Manusを活用した「爆速Webサイト構築」実践ガイド](docs/ideas/idea-20260629-manus-web-dev-guide.md) - *新規追加*
     *   [2026-06-30: 【中級者向け】2026年の新常識！AIエージェントによる「自律型タスク完遂」の極意](docs/ideas/idea-20260630-ai-autonomous-agents-future.md) - *新規追加*
 *   [2026-07-01: 【中級者向け】OpenAI最新モデル「GPT-5.6 Sol」企業導入・活用完全ガイド](docs/ideas/idea-20260701-gpt5-6-sol-enterprise-guide.md) - *新規追加*
-    *   [2026-07-02: 【初心者向け】文字を読むのはもう終わり？Microsoft Copilotの『ビジュアルカード』で情報を一瞬で理解するプロンプト術](docs/ideas/idea-20260702-copilot-visual-cards.md) - *新規追加*
+    *   [2026-07-02: 【初心者向け】文字を読むのはもう終わり？Microsoft Copilot의 『ビジュアルカード』で情報を一瞬で理解するプロンプト術](docs/ideas/idea-20260702-copilot-visual-cards.md) - [記事作成済み](src/articles/website-component-format/app/articles/copilot-visual-cards/page.tsx)
     *   [2026-07-02: 【初心者向け】AIが「専属の先生」に！Google Geminiの『ガイド付き学習モード』で挫折しないプロンプト術](docs/ideas/idea-20260702-gemini-guided-learning.md) - *新規追加*
