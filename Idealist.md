@@ -33,6 +33,8 @@
 *   [最新の個別ネタ](docs/ideas/)
     *   [2026-06-23: 【初心者向け】iPhoneの「ショートカット」が魔法の杖に！自然言語で自動化プロンプト術](docs/ideas/idea-20260623-apple-shortcuts-natural-language.md) - *新規追加*
     *   [2026-06-23: 【初心者向け】「ググる」が「買い物代行」に！Google新検索ボックスと『Universal Cart』活用プロンプト術](docs/ideas/idea-20260623-google-universal-cart-shopping.md) - *新規追加*
+    *   [2026-07-04: 【初心者向け】寝ている間にAIが仕事を終わらせる？Googleの新機能『Gemini Spark』活用プロンプト術](docs/ideas/idea-20260704-gemini-spark-beginner.md) - *新規追加*
+    *   [2026-07-04: 【初心者向け】「あの資料どこ？」をAIが秒で解決！Microsoft 365 Copilotの『自分専用検索』プロンプト術](docs/ideas/idea-20260704-copilot-365-personal-assistant.md) - *新規追加*
     *   [2026-07-03: 【中級者向け】チームのAI活用を加速！Anthropicの新機能『Claude Tag』による共同作業プロンプト術](docs/ideas/idea-20260703-claude-tag-workflow.md) - *新規追加*
     *   [2026-07-03: 【中級者向け】Googleが放つ究極の自動化！『Gemini Enterprise Agent Platform』導入・活用ガイド](docs/ideas/idea-20260703-gemini-enterprise-agent.md) - *新規追加*
     *   [2026-06-25: 【初心者向け】言葉が「動くマニュアル」に変身！Google検索の新機能『ジェネレーティブUI』活用プロンプト術](docs/ideas/idea-20260625-google-generative-ui-simulations.md) - [記事作成済み](src/articles/website-component-format/app/articles/google-generative-ui-simulations/page.tsx)
