@@ -164,3 +164,5 @@
     *   [2026-07-02: 【初心者向け】AIが「専属の先生」に！Google Geminiの『ガイド付き学習モード』で挫折しないプロンプト術](docs/ideas/idea-20260702-gemini-guided-learning.md) - *新規追加*
     *   [2026-07-03: 【初心者向け】センス不要！PowerPointに内蔵された最新AI『MAI-Image 2.5』で「伝わるスライド画像」を作るプロンプト術](docs/ideas/idea-20260703-microsoft-mai-image-beginner.md) - *新規追加*
     *   [2026-07-03: 【初心者向け】SlackにAIが「同僚」としてやってきた！新機能『Claude Tag』で仕事の「聞き忘れ」をゼロにするプロンプト術](docs/ideas/idea-20260703-claude-tag-slack-beginner.md) - *新規追加*
+    *   [2026-07-05: 【中級者向け】AIを「外部脳」から「リサーチ・ラボ」へ！NotebookLMの新機能による構造化リサーチ・自動アウトプット術](docs/ideas/idea-20260705-notebooklm-advanced-research.md) - *新規追加*
+    *   [2026-07-05: 【中級者向け】投資判断をAIが加速！新生『Google Finance』のAIリサーチツール活用ガイド](docs/ideas/idea-20260705-google-finance-ai-investing.md) - *新規追加*
