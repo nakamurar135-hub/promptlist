@@ -115,7 +115,7 @@
     *   [2026-05-17: 【中級者向け】動画・音声・コードを同時解析！Google Gemini 2.0 Proの『マルチモーダル推論』活用プロンプト術](docs/ideas/idea-20260517-gemini-2-pro-multimodal.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-2-pro-multimodal/page.tsx)
     * [2026-05-19: 【中級者向け】AIが自律的にタスクを完遂！OpenAIの最新エージェント『Operator』による業務自動化プロンプト術](docs/ideas/idea-20260519-openai-operator.md) - [記事作成済み](src/articles/website-component-format/app/articles/openai-operator-automation/page.tsx)
 
-*最終更新日: 2026-07-01 (by Manus)
+*最終更新日: 2026-07-06 (by Manus)
 
 *   [2026-05-23: 【初心者向け】スマホの「通知疲れ」をAIが解決！Apple Intelligence『優先度自動仕分け』活用ガイド](docs/ideas/idea-20260513-apple-intelligence-priority-notifications.md) - [記事作成済み](src/articles/website-component-format/app/articles/apple-intelligence-priority-notifications/page.tsx)
     *   [2026-05-26: 【中級者向け】検索は「調べる」から「任せる」へ！Googleの新機能『検索エージェント』活用プロンプト術](docs/ideas/idea-20260526-google-search-agent.md) - *新規追加*
@@ -164,3 +164,5 @@
     *   [2026-07-02: 【初心者向け】AIが「専属の先生」に！Google Geminiの『ガイド付き学習モード』で挫折しないプロンプト術](docs/ideas/idea-20260702-gemini-guided-learning.md) - *新規追加*
     *   [2026-07-05: 【初心者向け】センス不要！PowerPointに内蔵された最新AI『MAI-Image 2.5』で「伝わるスライド画像」を作るプロンプト術](docs/ideas/idea-20260703-microsoft-mai-image-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/mai-image-2-5-beginner/page.tsx)
     *   [2026-07-03: 【初心者向け】SlackにAIが「同僚」としてやってきた！新機能『Claude Tag』で仕事の「聞き忘れ」をゼロにするプロンプト術](docs/ideas/idea-20260703-claude-tag-slack-beginner.md) - *新規追加*
+    *   [2026-07-06: 【初心者向け】Wordが魔法のキャンバスに！AI画像生成と「賢さ」を選べる新機能活用プロンプト術](docs/ideas/idea-20260706-word-copilot-image-model.md) - *新規追加*
+    *   [2026-07-06: 【初心者向け】AIに「やり方」を教えるのはもう終わり？ChatGPT『エージェント機能』で仕事を丸投げするプロンプト術](docs/ideas/idea-20260706-chatgpt-agent-beginner.md) - *新規追加*
