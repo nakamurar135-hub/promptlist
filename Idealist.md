@@ -164,3 +164,5 @@
     *   [2026-07-02: 【初心者向け】AIが「専属の先生」に！Google Geminiの『ガイド付き学習モード』で挫折しないプロンプト術](docs/ideas/idea-20260702-gemini-guided-learning.md) - *新規追加*
     *   [2026-07-05: 【初心者向け】センス不要！PowerPointに内蔵された最新AI『MAI-Image 2.5』で「伝わるスライド画像」を作るプロンプト術](docs/ideas/idea-20260703-microsoft-mai-image-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/mai-image-2-5-beginner/page.tsx)
     *   [2026-07-03: 【初心者向け】SlackにAIが「同僚」としてやってきた！新機能『Claude Tag』で仕事の「聞き忘れ」をゼロにするプロンプト術](docs/ideas/idea-20260703-claude-tag-slack-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/claude-tag-slack-beginner/page.tsx)
+    *   [2026-07-07: 【中級者向け】OpenAI o3に対抗！Google Gemini 2.5 Proの『Deep Think Mode』導入・活用ガイド](docs/ideas/idea-20260707-gemini-deep-think.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-deep-think-guide/page.tsx)
+    *   [2026-07-07: 【中級者向け】AIを「研究室」に変える！Anthropicの科学特化型AIワークベンチ『Claude Science』導入ガイド](docs/ideas/idea-20260707-claude-science.md) - [記事作成済み](src/articles/website-component-format/app/articles/claude-science-guide/page.tsx)
