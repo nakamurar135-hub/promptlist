@@ -167,4 +167,4 @@
     *   [2026-07-07: 【中級者向け】OpenAI o3に対抗！Google Gemini 2.5 Proの『Deep Think Mode』導入・活用ガイド](docs/ideas/idea-20260707-gemini-deep-think.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-deep-think-guide/page.tsx)
     *   [2026-07-07: 【中級者向け】AIを「研究室」に変える！Anthropicの科学特化型AIワークベンチ『Claude Science』導入ガイド](docs/ideas/idea-20260707-claude-science.md) - [記事作成済み](src/articles/website-component-format/app/articles/claude-science-guide/page.tsx)
     *   [2026-07-08: 【初心者向け】「説明」はもう不要！Copilotの新機能『Vision』で画面や現実をAIに「見せる」プロンプト術](docs/ideas/idea-20260708-copilot-vision-beginner.md) - *新規追加*
-    *   [2026-07-08: 【初心者向け】AIとの会話が「一瞬」で終わる！最新モデル『GPT-5.6 Luna』でストレスゼロの即レス・プロンプト術](docs/ideas/idea-20260708-gpt-5-6-luna-beginner.md) - *新規追加*
+    *   [2026-07-08: 【初心者向け】AIとの会話가「一瞬」で終わる！最新モデル『GPT-5.6 Luna』でストレスゼロの即レス・プロンプト術](docs/ideas/idea-20260708-gpt-5-6-luna-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/gpt-5-6-luna-beginner/page.tsx)
