@@ -115,7 +115,7 @@
     *   [2026-05-17: 【中級者向け】動画・音声・コードを同時解析！Google Gemini 2.0 Proの『マルチモーダル推論』活用プロンプト術](docs/ideas/idea-20260517-gemini-2-pro-multimodal.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-2-pro-multimodal/page.tsx)
     * [2026-05-19: 【中級者向け】AIが自律的にタスクを完遂！OpenAIの最新エージェント『Operator』による業務自動化プロンプト術](docs/ideas/idea-20260519-openai-operator.md) - [記事作成済み](src/articles/website-component-format/app/articles/openai-operator-automation/page.tsx)
 
-*最終更新日: 2026-07-01 (by Manus)
+*最終更新日: 2026-07-09 (by Manus)
 
 *   [2026-05-23: 【初心者向け】スマホの「通知疲れ」をAIが解決！Apple Intelligence『優先度自動仕分け』活用ガイド](docs/ideas/idea-20260513-apple-intelligence-priority-notifications.md) - [記事作成済み](src/articles/website-component-format/app/articles/apple-intelligence-priority-notifications/page.tsx)
     *   [2026-05-26: 【中級者向け】検索は「調べる」から「任せる」へ！Googleの新機能『検索エージェント』活用プロンプト術](docs/ideas/idea-20260526-google-search-agent.md) - *新規追加*
@@ -168,3 +168,5 @@
     *   [2026-07-07: 【中級者向け】AIを「研究室」に変える！Anthropicの科学特化型AIワークベンチ『Claude Science』導入ガイド](docs/ideas/idea-20260707-claude-science.md) - [記事作成済み](src/articles/website-component-format/app/articles/claude-science-guide/page.tsx)
     *   [2026-07-08: 【初心者向け】「説明」はもう不要！Copilotの新機能『Vision』で画面や現実をAIに「見せる」プロンプト術](docs/ideas/idea-20260708-copilot-vision-beginner.md) - *新規追加*
     *   [2026-07-08: 【初心者向け】AIとの会話가「一瞬」で終わる！最新モデル『GPT-5.6 Luna』でストレスゼロの即レス・プロンプト術](docs/ideas/idea-20260708-gpt-5-6-luna-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/gpt-5-6-luna-beginner/page.tsx)
+    *   [2026-07-09: 【初心者向け】19個のAIがチームで解決！Perplexityの新機能『Computer』で「丸投げ」を成功させるプロンプト術](docs/ideas/idea-20260709-perplexity-computer-beginner.md) - *新規追加*
+    *   [2026-07-09: 【初心者向け】検索結果が「自分専用アプリ」に！Google検索の新機能『カスタムダッシュボード』活用プロンプト術](docs/ideas/idea-20260709-google-search-dashboard-beginner.md) - *新規追加*
