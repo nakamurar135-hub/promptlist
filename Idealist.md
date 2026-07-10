@@ -170,3 +170,5 @@
     *   [2026-07-08: 【初心者向け】AIとの会話가「一瞬」で終わる！最新モデル『GPT-5.6 Luna』でストレスゼロの即レス・プロンプト術](docs/ideas/idea-20260708-gpt-5-6-luna-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/gpt-5-6-luna-beginner/page.tsx)
     *   [2026-07-09: 【初心者向け】19個のAIがチームで解決！Perplexityの新機能『Computer』で「丸投げ」を成功させるプロンプト術](docs/ideas/idea-20260709-perplexity-computer-beginner.md) - *新規追加*
     *   [2026-07-09: 【初心者向け】検索結果が「自分専用アプリ」に！Google検索の新機能『カスタムダッシュボード』活用プロンプト術](docs/ideas/idea-20260709-google-search-dashboard-beginner.md) - *新規追加*
+    *   [2026-07-10: 【中級者向け】AIに「見つかる」サイトへ！Alli AIのWordPressプラグインによる『AIクローラー最適化』導入ガイド](docs/ideas/idea-20260710-alli-ai-wordpress-crawler.md) - *新規追加*
+    *   [2026-07-10: 【中級者向け】脱・外部依存！Microsoftの「自社製AI」移行から学ぶ、コストと精度の最適化ガイド](docs/ideas/idea-20260710-microsoft-inhouse-ai-migration.md) - *新規追加*
