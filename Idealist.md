@@ -35,6 +35,8 @@
     *   [2026-06-23: 【初心者向け】「ググる」が「買い物代行」に！Google新検索ボックスと『Universal Cart』活用プロンプト術](docs/ideas/idea-20260623-google-universal-cart-shopping.md) - *新規追加*
     *   [2026-07-03: 【中級者向け】チームのAI活用を加速！Anthropicの新機能『Claude Tag』による共同作業プロンプト術](docs/ideas/idea-20260703-claude-tag-workflow.md) - [記事作成済み](src/articles/website-component-format/app/articles/claude-tag-workflow/page.tsx)
     *   [2026-07-03: 【中級者向け】Googleが放つ究極の自動化！『Gemini Enterprise Agent Platform』導入・活用ガイド](docs/ideas/idea-20260703-gemini-enterprise-agent.md) - *新規追加*
+    *   [2026-07-10: 【初心者向け】「ググる」の終焉？Geminiの新機能『Deep Research』でプロ級の調査レポートを自動生成するプロンプト術](docs/ideas/idea-20260710-gemini-deep-research-beginner.md) - *新規追加*
+    *   [2026-07-10: 【初心者向け】AIが「じっくり考えて」から答えてくれる！Copilotの『Think Deeper』で失敗しない相談術](docs/ideas/idea-20260710-copilot-think-deeper-beginner.md) - *新規追加*
     *   [2026-06-25: 【初心者向け】言葉が「動くマニュアル」に変身！Google検索の新機能『ジェネレーティブUI』活用プロンプト術](docs/ideas/idea-20260625-google-generative-ui-simulations.md) - [記事作成済み](src/articles/website-component-format/app/articles/google-generative-ui-simulations/page.tsx)
     *   [2026-06-25: 【初心者向け】「あの時の写真」も「あのメール」もAIが即発見！Siri AIの『自分専用検索』プロンプト術](docs/ideas/idea-20260625-siri-ai-personal-context-search.md) - *新規追加*
     *   [2026-04-04: プロンプトは「書く」から「話す」へ！ChatGPT「高度な音声モード」活用術](docs/ideas/idea-20260404-chatgpt-voice-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/chatgpt-voice-beginner/page.tsx)
