@@ -25,6 +25,8 @@
     ```
 
 ## ネタ一覧（インデックス）
+*   [2026-07-11: 【中級者向け】1枚の写真から販促セットを自動生成！最新AI「GPT-5.6 Sol」によるマルチステップ・クリエイティブ活用ガイド](docs/ideas/idea-20260711-gpt56-sol-multistep-creative.md) - *新規追加*
+*   [2026-07-11: 【中級者向け】Instagramの新AI「Muse Image」で実現する超パーソナライズ広告制作と、企業が守るべきプライバシーガバナンス](docs/ideas/idea-20260711-instagram-muse-image-governance.md) - *新規追加*
 *   [2026-05-22: 【中級者向け】AIが自律的にタスクを完遂！次世代AIエージェント『Manus』活用ガイド](docs/ideas/idea-20260522-manus-autonomous-agent.md) - [記事作成済み](src/articles/website-component-format/app/articles/manus-autonomous-agent/page.tsx)
 
 *   [セット1 (001-020)](docs/ideas/set-1.md) - *未作成*
