@@ -172,3 +172,5 @@
     *   [2026-07-08: 【初心者向け】AIとの会話가「一瞬」で終わる！最新モデル『GPT-5.6 Luna』でストレスゼロの即レス・プロンプト術](docs/ideas/idea-20260708-gpt-5-6-luna-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/gpt-5-6-luna-beginner/page.tsx)
     *   [2026-07-09: 【初心者向け】19個のAIがチームで解決！Perplexityの新機能『Computer』で「丸投げ」を成功させるプロンプト術](docs/ideas/idea-20260709-perplexity-computer-beginner.md) - *新規追加*
     *   [2026-07-09: 【初心者向け】検索結果が「自分専用アプリ」に！Google検索の新機能『カスタムダッシュボード』活用プロンプト術](docs/ideas/idea-20260709-google-search-dashboard-beginner.md) - *新規追加*
+    *   [2026-07-11: 【初心者向け】もう「プロンプト」で迷わない！会社のルールに合わせた回答が届く『組織プロンプト』活用術](docs/ideas/idea-20260711-copilot-org-prompt-beginner.md) - *新規追加*
+    *   [2026-07-11: 【初心者向け】動画を見るのはAIにお任せ！Geminiの『YouTube連携』で長い動画から答えを秒速で見つけるプロンプト術](docs/ideas/idea-20260711-gemini-youtube-integration-beginner.md) - *新規追加*
