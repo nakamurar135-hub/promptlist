@@ -88,3 +88,5 @@
     *   [2026-04-30: 【初心者向け】もう「コピペ」で悩まない！Geminiの『ファイル直接生成』で資料を即ダウンロードするプロンプト術](docs/ideas/idea-20260430-gemini-file-generation.md) - *新規追加*
     *   [2026-04-30: 【初心者向け】メールの山にさようなら！Outlookの『Copilotエージェント』でAIに秘書を任せるプロンプト術](docs/ideas/idea-20260430-outlook-copilot-agent.md) - *新規追加*
     *   [2026-05-02: 【中級者向け】クリエイティブ作業を「指示」で自動化！Adobe Firefly AI Assistant活用ガイド](docs/ideas/idea-20260502-adobe-firefly-assistant.md) - *新規追加*
+    *   [2026-07-12: 【初心者向け】最新AI「GPT-5.6 Luna」で生活が変わる！「爆速・相談術」プロンプトガイド](docs/ideas/idea-20260712-gpt56-luna-daily-use.md) - *新規追加*
+    *   [2026-07-12: 【初心者向け】もう「段取り」で悩まない！ChatGPT Workの『マルチステップ・プランニング』で面倒な用事を丸投げする術](docs/ideas/idea-20260712-chatgpt-work-multistep-planning.md) - *新規追加*
