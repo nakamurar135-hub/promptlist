@@ -38,6 +38,8 @@
     *   [2026-06-23: 【初心者向け】「ググる」が「買い物代行」に！Google新検索ボックスと『Universal Cart』活用プロンプト術](docs/ideas/idea-20260623-google-universal-cart-shopping.md) - *新規追加*
     *   [2026-07-03: 【中級者向け】チームのAI活用を加速！Anthropicの新機能『Claude Tag』による共同作業プロンプト術](docs/ideas/idea-20260703-claude-tag-workflow.md) - [記事作成済み](src/articles/website-component-format/app/articles/claude-tag-workflow/page.tsx)
     *   [2026-07-03: 【中級者向け】Googleが放つ究極の自動化！『Gemini Enterprise Agent Platform』導入・活用ガイド](docs/ideas/idea-20260703-gemini-enterprise-agent.md) - *新規追加*
+    *   [2026-07-13: 【初心者向け】PC操作もAIにお任せ！新しくなった『ChatGPT Work』で「AI社員」に仕事を丸投げするプロンプト術](docs/ideas/idea-20260713-chatgpt-work-codex-beginner.md) - *新規追加*
+    *   [2026-07-13: 【初心者向け】大量のファイルを「一気に」読み解く！Claudeの『批量処理モード』で資料の山を攻略するプロンプト術](docs/ideas/idea-20260713-claude-batch-processing-beginner.md) - *新規追加*
     *   [2026-07-10: 【初心者向け】「ググる」の終焉？Geminiの新機能『Deep Research』でプロ級 of 調査レポートを自動生成するプロンプト術](docs/ideas/idea-20260710-gemini-deep-research-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-deep-research-beginner/page.tsx)
     *   [2026-07-10: 【初心者向け】AIが「じっくり考えて」から答えてくれる！Copilotの『Think Deeper』で失敗しない相談術](docs/ideas/idea-20260710-copilot-think-deeper-beginner.md) - *新規追加*
     *   [2026-06-25: 【初心者向け】言葉が「動くマニュアル」に変身！Google検索の新機能『ジェネレーティブUI』活用プロンプト術](docs/ideas/idea-20260625-google-generative-ui-simulations.md) - [記事作成済み](src/articles/website-component-format/app/articles/google-generative-ui-simulations/page.tsx)
