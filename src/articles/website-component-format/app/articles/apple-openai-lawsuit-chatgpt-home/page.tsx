@@ -1,12 +1,12 @@
 
 'use client'
 
-import { PageLayout } from "@/components/layout/PageLayout"
-import { ArticleHeader } from "@/components/article/ArticleHeader"
-import { ArticleContent } from "@/components/article/ArticleContent"
-import { TableOfContents } from "@/components/article/TableOfContents"
-import { PromptBlock } from "@/components/article/PromptBlock"
-import { RelatedArticles } from "@/components/cta/RelatedArticles"
+import PageLayout from "@/components/layout/PageLayout"
+import ArticleHeader from "@/components/article/ArticleHeader"
+import ArticleContent from "@/components/article/ArticleContent"
+import TableOfContents from "@/components/article/TableOfContents"
+import PromptBlock from "@/components/article/PromptBlock"
+import RelatedArticles from "@/components/cta/RelatedArticles"
 import { useSEO } from "@/hooks/useSEO"
 import { useOGP } from "@/hooks/useOGP"
 import { useStructuredData } from "@/hooks/useStructuredData"
@@ -43,10 +43,12 @@ export default function AppleOpenAILawsuitChatGPTHomePage() {
   const relatedArticles = [
     {
       title: "【中級者向け】AIが自律的にタスクを完遂！次世代AIエージェント『Manus』活用ガイド",
+      description: "AIエージェント『Manus』の活用ガイド。自律的なタスク完遂の仕組みと実践的なプロンプト術を解説。",
       href: "/articles/manus-autonomous-agent",
     },
     {
       title: "【初心者向け】AIが「じっくり考えて」から答えてくれる！Copilotの『Think Deeper』で失敗しない相談術",
+      description: "Copilotの『Think Deeper』機能で、AIがより深く思考し、質の高い回答を生成する方法を解説。",
       href: "/articles/copilot-think-deeper-beginner",
     },
   ]
@@ -71,10 +73,9 @@ export default function AppleOpenAILawsuitChatGPTHomePage() {
     >
       <ArticleHeader
         title={title}
-        description={description}
-        publishedDate={publishedDate}
-        modifiedDate={modifiedDate}
-        image={image}
+        eyecatchSrc={image}
+        createdAt={publishedDate}
+        updatedAt={modifiedDate}
       />
       <article className="container mx-auto px-4 py-8">
         <div className="flex flex-col lg:flex-row gap-8">
@@ -175,7 +176,7 @@ export default function AppleOpenAILawsuitChatGPTHomePage() {
           </div>
           <aside className="hidden lg:block">
             <div className="sticky top-24">
-              <TableOfContents items={tocItems} />
+              <TableOfContents headings={tocItems.map(item => ({ id: item.id, text: item.title, level: item.title.startsWith('ステップ') ? 3 : 2 }))} />
             </div>
           </aside>
         </div>
