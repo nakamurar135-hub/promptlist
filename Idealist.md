@@ -25,7 +25,9 @@
     ```
 
 ## ネタ一覧（インデックス）
-* [2026-07-12: 【中級者向け】AI業界に激震！Apple対OpenAIの提訴と、家庭へ浸透するChatGPT最新活用ガイド](docs/ideas/idea-20260712-apple-openai-lawsuit-chatgpt-home.md) - *新規追加*
+* [2026-07-14: 【初心者向け】AIが「あなたのデスク」で仕事する！ChatGPT Workで事務作業を完結させるプロンプト術](docs/ideas/idea-20260714-chatgpt-work-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/chatgpt-work-beginner/page.tsx)
+* [2026-07-14: 【初心者向け】スマホが「同時通訳者」に！Gemini 3.5 Live Translateで言葉の壁をなくすプロンプト術](docs/ideas/idea-20260714-gemini-live-translate-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-live-translate-beginner/page.tsx)
+* [2026-07-12: 【中級者向け】AI業界に激震！Apple対OpenAIの提訴と、家庭へ浸震するChatGPT最新活用ガイド](docs/ideas/idea-20260712-apple-openai-lawsuit-chatgpt-home.md) - *新規追加*
 *   [2026-07-11: 【中級者向け】1枚の写真から販促セットを自動生成！最新AI「GPT-5.6 Sol」によるマルチステップ・クリエイティブ活用ガイド](docs/ideas/idea-20260711-gpt56-sol-multistep-creative.md) - [記事作成済み](src/articles/website-component-format/app/articles/gpt56-sol-multistep-creative/page.tsx)
 *   [2026-07-11: 【中級者向け】Instagramの新AI「Muse Image」で実現する超パーソナライズ広告制作と、企業が守るべきプライバシーガバナンス](docs/ideas/idea-20260711-instagram-muse-image-governance.md) - *新規追加*
 *   [2026-05-22: 【中級者向け】AIが自律的にタスクを完遂！次世代AIエージェント『Manus』活用ガイド](docs/ideas/idea-20260522-manus-autonomous-agent.md) - [記事作成済み](src/articles/website-component-format/app/articles/manus-autonomous-agent/page.tsx)
