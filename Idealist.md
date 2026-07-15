@@ -93,3 +93,5 @@
     *   [2026-05-02: 【中級者向け】クリエイティブ作業を「指示」で自動化！Adobe Firefly AI Assistant活用ガイド](docs/ideas/idea-20260502-adobe-firefly-assistant.md) - *新規追加*
     *   [2026-07-14: 【初心者向け】AIが「あなたのデスク」で仕事する！ChatGPT Workで事務作業を完結させるプロンプト術](docs/ideas/idea-20260714-chatgpt-work-beginner.md) - *新規追加*
     *   [2026-07-14: 【初心者向け】スマホが「同時通訳者」に！Gemini 3.5 Live Translateで言葉の壁をなくすプロンプト術](docs/ideas/idea-20260714-gemini-live-translate-beginner.md) - *新規追加*
+*   [2026-07-15: 【初心者向け】もう「プロンプト」で悩まない！最新AIの『プロンプト自動生成』で100点の回答を引き出す術](docs/ideas/idea-20260715-ai-prompt-generator-beginner.md) - *新規追加*
+*   [2026-07-15: 【初心者向け】スマホで「写真を選ぶだけ」！ソフトバンクの『だれでもAI』で始める魔法の画像・音楽生成術](docs/ideas/idea-20260715-softbank-daredemo-ai-smartphone.md) - *新規追加*
