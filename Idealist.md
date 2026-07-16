@@ -25,6 +25,8 @@
     ```
 
 ## ネタ一覧（インデックス）
+* [2026-07-16: 【初心者向け】AIと「普通の会話」ができる！新機能『GPT-Live』で自然に相談するプロンプト術](docs/ideas/idea-20260716-gpt-live-beginner.md) - *新規追加*
+* [2026-07-16: 【初心者向け】ボタン一つで「次の作業」をAIが予知！Microsoft 365の新機能『Dynamic Action Button』活用術](docs/ideas/idea-20260716-copilot-dynamic-action-beginner.md) - *新規追加*
 * [2026-07-14: 【初心者向け】AIが「あなたのデスク」で仕事する！ChatGPT Workで事務作業を完結させるプロンプト術](docs/ideas/idea-20260714-chatgpt-work-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/chatgpt-work-beginner/page.tsx)
 * [2026-07-14: 【初心者向け】スマホが「同時通訳者」に！Gemini 3.5 Live Translateで言葉の壁をなくすプロンプト術](docs/ideas/idea-20260714-gemini-live-translate-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-live-translate-beginner/page.tsx)
 * [2026-07-12: 【中級者向け】AI業界に激震！Apple対OpenAIの提訴と、家庭へ浸震するChatGPT最新活用ガイド](docs/ideas/idea-20260712-apple-openai-lawsuit-chatgpt-home.md) - *新規追加*
