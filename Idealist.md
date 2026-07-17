@@ -95,4 +95,6 @@
 *   [2026-04-24: 【中級者向け】ChatGPT Images 2.0で実現する「一貫性のあるキャラクター・ブランド」画像生成術](docs/ideas/idea-20260424-chatgpt-images-2-0-consistency.md) - *新規追加*
 
 ---
-*最終更新日: 2026-07-09 (by Manus)
+    *   [2026-07-17: 【中級者向け】AIエージェントManusで実現する「自律型多段階ワークフロー」構築ガイド](docs/ideas/idea-20260717-manus-advanced-workflow.md) - *新規追加*
+
+*最終更新日: 2026-07-17 (by Manus)
