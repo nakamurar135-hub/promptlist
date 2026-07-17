@@ -95,3 +95,5 @@
     *   [2026-07-14: 【初心者向け】スマホが「同時通訳者」に！Gemini 3.5 Live Translateで言葉の壁をなくすプロンプト術](docs/ideas/idea-20260714-gemini-live-translate-beginner.md) - *新規追加*
 *   [2026-07-15: 【初心者向け】もう「プロンプト」で悩まない！最新AIの『プロンプト自動生成』で100点の回答を引き出す術](docs/ideas/idea-20260715-ai-prompt-generator-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/ai-prompt-generator-beginner-new/page.tsx)
 *   [2026-07-15: 【初心者向け】スマホで「写真を選ぶだけ」！ソフトバンクの『だれでもAI』で始める魔法の画像・音楽生成術](docs/ideas/idea-20260715-softbank-daredemo-ai-smartphone.md) - *新規追加*
+    *   [2026-07-17: 【初心者向け】話しかけるだけで「アプリの壁」を突破！エージェント型スマホ『StepX Neo』に学ぶ自動化プロンプト術](docs/ideas/idea-20260717-stepx-neo-beginner.md) - *新規追加*
+    *   [2026-07-17: 【初心者向け】AIの「勝手な行動」を防ぐ！『承認プロンプト』で失敗しないアシスタント活用術](docs/ideas/idea-20260717-approve-first-ai-beginner.md) - *新規追加*
