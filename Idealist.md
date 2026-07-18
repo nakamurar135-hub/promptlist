@@ -25,6 +25,8 @@
     ```
 
 ## ネタ一覧（インデックス）
+*   [2026-07-18: 【初心者向け】ChatGPT Workで事務作業を自動化！AIに仕事を任せるプロンプト術](docs/ideas/idea-20260718-chatgpt-work-automation.md) - *新規追加*
+*   [2026-07-18: 【初心者向け】Copilotで画像を簡単生成！ChatGPT Images 2.0で広がるAI活用術](docs/ideas/idea-20260718-copilot-image-generation.md) - *新規追加*
 * [2026-07-14: 【初心者向け】AIが「あなたのデスク」で仕事する！ChatGPT Workで事務作業を完結させるプロンプト術](docs/ideas/idea-20260714-chatgpt-work-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/chatgpt-work-beginner/page.tsx)
 * [2026-07-14: 【初心者向け】スマホが「同時通訳者」に！Gemini 3.5 Live Translateで言葉の壁をなくすプロンプト術](docs/ideas/idea-20260714-gemini-live-translate-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-live-translate-beginner/page.tsx)
 *   [2026-07-18: 【中級者向け】AI「価格戦争」勃発！Meta vs OpenAIの最新モデルを使い分け、エージェント実行コストを最小化する導入ガイド](docs/ideas/idea-20260718-ai-price-war-agent-optimization.md) - *新規追加*
