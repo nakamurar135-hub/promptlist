@@ -27,8 +27,8 @@
 ## ネタ一覧（インデックス）
 *   [2026-07-18: 【初心者向け】ChatGPT Workで事務作業を自動化！AIに仕事を任せるプロンプト術](docs/ideas/idea-20260718-chatgpt-work-automation.md) - *新規追加*
 *   [2026-07-18: 【初心者向け】Copilotで画像を簡単生成！ChatGPT Images 2.0で広がるAI活用術](docs/ideas/idea-20260718-copilot-image-generation.md) - *新規追加*
-* [2026-07-14: 【初心者向け】AIが「あなたのデスク」で仕事する！ChatGPT Workで事務作業を完結させるプロンプト術](docs/ideas/idea-20260714-chatgpt-work-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/chatgpt-work-beginner/page.tsx)
-* [2026-07-14: 【初心者向け】スマホが「同時通訳者」に！Gemini 3.5 Live Translateで言葉の壁をなくすプロンプト術](docs/ideas/idea-20260714-gemini-live-translate-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-live-translate-beginner/page.tsx)
+*   [2026-07-14: 【初心者向け】AIが「あなたのデスク」で仕事する！ChatGPT Workで事務作業を完結させるプロンプト術](docs/ideas/idea-20260714-chatgpt-work-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/chatgpt-work-beginner/page.tsx)
+*   [2026-07-14: 【初心者向け】スマホが「同時通訳者」に！Gemini 3.5 Live Translateで言葉の壁をなくすプロンプト術](docs/ideas/idea-20260714-gemini-live-translate-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-live-translate-beginner/page.tsx)
 *   [2026-07-18: 【中級者向け】AI「価格戦争」勃発！Meta vs OpenAIの最新モデルを使い分け、エージェント実行コストを最小化する導入ガイド](docs/ideas/idea-20260718-ai-price-war-agent-optimization.md) - *新規追加*
 *   [2026-07-18: 【中級者向け】NotebookLMが『Gemini Notebook』へ進化！大量の資料を「脳内同期」させる次世代AIノート術・導入ガイド](docs/ideas/idea-20260718-gemini-notebook-advanced-usage.md) - *新規追加*
 *   [2026-07-12: 【中級者向け】AI業界に激震！Apple対OpenAIの提訴と、家庭へ浸震するChatGPT最新活用ガイド](docs/ideas/idea-20260712-apple-openai-lawsuit-chatgpt-home.md) - *新規追加*
@@ -50,7 +50,7 @@
     *   [2026-06-25: 【初心者向け】「あの時の写真」も「あのメール」もAIが即発見！Siri AIの『自分専用検索』プロンプト術](docs/ideas/idea-20260625-siri-ai-personal-context-search.md) - *新規追加*
     *   [2026-04-04: プロンプトは「書く」から「話す」へ！ChatGPT「高度な音声モード」活用術](docs/ideas/idea-20260404-chatgpt-voice-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/chatgpt-voice-beginner/page.tsx)
     *   [2026-04-04: ググるより速い！ChatGPTの「検索機能（Search）」で最新情報を引き出すプロンプト術](docs/ideas/idea-20260404-chatgpt-search-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/chatgpt-search-beginner/page.tsx)
-    *   [2026-04-02: プロンプト不要？感覚でAIを操る「Vibe Working（バイブ・ワーキング）」入門](docs/ideas/idea-20260402-vibe-working-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/vibe-working-beginner/page.tsx)
+    *   [2026-04-02: プロンプト不要？感覚でAIを操る「Vibe Working（バイブ・ワーキング）」入門](docs/ideas/idea-20260402-vibe-working-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/vibe-working-beginner/page.page.tsx)
     *   [2026-04-02: 面倒な指示はAIに覚えさせよう！ChatGPT「Skills」超入門](docs/ideas/idea-20260402-chatgpt-skills-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/chatgpt-skills-beginner/page.tsx)
     *   [2026-04-02: Excelの「わからない」をAIに丸投げ！Copilot Excelエージェント超入門](docs/ideas/idea-20260402-copilot-excel-agent.md) - *新規追加*
     *   [2026-04-02: 「AIに任せる」の第一歩！AIエージェント超入門 - 2026年のAIは「自分で考えて動く」](docs/ideas/idea-20260402-ai-agent-beginner-guide.md) - [記事作成済み](articles/ai-agent-beginner-guide.md)
@@ -60,7 +60,7 @@
     *   [2026-03-30: Windows 11新機能「Click to Do」超入門](docs/ideas/idea-20260330-windows-click-to-do.md) - *新規追加*
     *   [2026-03-29: ChatGPT「ロックモード」とプライバシー保護プロンプト](docs/ideas/idea-20260329-chatgpt-lock-mode-privacy.md) - *新規追加*
     *   [2026-03-29: Google Nano Banana 2 画像生成プロンプトガイド](docs/ideas/idea-20260329-google-nano-banana-2-image-gen.md) - *新規追加*
-    *   [2026-03-28: エージェント型AI（Agentic AI）構築ガイド](docs/ideas/idea-20260328-agentic-ai-workflow.md) - [記事作成済み](articles/agentic-ai-workflow-guide)
+    *   [2026-03-28: エージェント型AI（Agentic AI）構築ガイド](docs/ideas/idea-20260328-agentic-ai-workflow.md) - [記事作成済み](articles/ai-agent-workflow-guide)
     *   [2026-03-28: LLM構造化出力（Structured Output）実践ガイド](docs/ideas/idea-20260328-llm-structured-output.md) - [記事作成済み](articles/llm-structured-output-guide)
     *   [2026-03-27: Google Gemini導入・活用ガイド](docs/ideas/idea-20260327-gemini-beginner-guide.md) - *新規追加*
     *   [2026-03-27: ChatGPT初心者向け完全活用ガイド](docs/ideas/idea-20260327-chatgpt-beginner-guide.md) - *新規追加*
@@ -95,7 +95,76 @@
     *   [2026-04-30: 【初心者向け】もう「コピペ」で悩まない！Geminiの『ファイル直接生成』で資料を即ダウンロードするプロンプト術](docs/ideas/idea-20260430-gemini-file-generation.md) - *新規追加*
     *   [2026-04-30: 【初心者向け】メールの山にさようなら！Outlookの『Copilotエージェント』でAIに秘書を任せるプロンプト術](docs/ideas/idea-20260430-outlook-copilot-agent.md) - *新規追加*
     *   [2026-05-02: 【中級者向け】クリエイティブ作業を「指示」で自動化！Adobe Firefly AI Assistant活用ガイド](docs/ideas/idea-20260502-adobe-firefly-assistant.md) - *新規追加*
-    *   [2026-07-14: 【初心者向け】AIが「あなたのデスク」で仕事する！ChatGPT Workで事務作業を完結させるプロンプト術](docs/ideas/idea-20260714-chatgpt-work-beginner.md) - *新規追加*
-    *   [2026-07-14: 【初心者向け】スマホが「同時通訳者」に！Gemini 3.5 Live Translateで言葉の壁をなくすプロンプト術](docs/ideas/idea-20260714-gemini-live-translate-beginner.md) - *新規追加*
-*   [2026-07-15: 【初心者向け】もう「プロンプト」で悩まない！最新AIの『プロンプト自動生成』で100点の回答を引き出す術](docs/ideas/idea-20260715-ai-prompt-generator-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/ai-prompt-generator-beginner-new/page.tsx)
-*   [2026-07-15: 【初心者向け】スマホで「写真を選ぶだけ」！ソフトバンクの『だれでもAI』で始める魔法の画像・音楽生成術](docs/ideas/idea-20260715-softbank-daredemo-ai-smartphone.md) - *新規追加*
+    *   [2026-05-02: 【中級者向け】ビジネスの意思決定をAIが支援！SAS Viya「統治型AIエージェント」導入ガイド](docs/ideas/idea-20260502-sas-viya-governed-agent.md) - *新規追加*
+    *   [2026-05-03: 【初心者向け】Word・Excelもそのまま出力！Claudeの『コピペ不要』な書類作成プロンプト術](docs/ideas/idea-20260503-claude-file-export.md) - *新規追加*
+    *   [2026-05-03: 【初心者向け】AIがあなたの代わりに「予約」まで完了！最新AIエージェント『Agent i』のおでかけプロンプト術](docs/ideas/idea-20260503-agent-i-travel.md) - *新規追加*
+    *   [2026-05-04: 【初心者向け】AIがあなたの「作業員」に！ChatGPTの新アプリ『Codex』で面倒なファイル整理を丸投げするプロンプト術](docs/ideas/idea-20260504-chatgpt-codex-beginner.md) - *新規追加*
+    *   [2026-05-04: 【初心者向け】AI特有の「不自然な文章」を卒業！『ペルソナ抽出』であなたの言葉を再現する魔法のプロンプト術](docs/ideas/idea-20260504-ai-persona-writing.md) - *新規追加*
+    *   [2026-05-05: 【中級者向け】ChatGPT Canvasで実現する「自律型ドキュメント作成」ワークフロー](docs/ideas/idea-20260505-chatgpt-canvas-advanced.md) - *新規追加*
+    *   [2026-05-07: 【中級者向け】AI動画制作の極意！Google Flow & Veo 3.1で「一貫性のあるストーリー」を作るプロンプト術](docs/ideas/idea-20260507-google-flow-veo-advanced.md) - [記事作成済み](src/articles/website-component-format/app/articles/google-flow-veo-advanced/page.tsx)
+    *   [2026-05-08: 【中級者向け】金融実務をAIが代行！Anthropicの最新『金融特化型エージェント』活用プロンプト術](docs/ideas/idea-20260508-anthropic-financial-agents.md) - *新規追加*
+    *   [2026-05-09: 【初心者向け】Metaの最新AI『Muse Spark』で実現！「指示ひとつ」でマルチメディアを自在に操るプロンプト術](docs/ideas/idea-20260509-meta-muse-spark.md) - [記事作成済み](src/articles/website-component-format/app/articles/meta-muse-spark-beginner/page.tsx)
+    *   [2026-05-14: 【初心者向け】AIが「あなたのこと」を忘れない！GPT-5.5 Instantの『パーソナル記憶術』プロンプトガイド](docs/ideas/idea-20260514-gpt55-instant-memory.md) - *新規追加*
+    *   [2026-05-14: 【初心者向け】Androidスマホが「AIの脳」に進化！Gemini Advancedの『パーソナルインテリジェンス』活用プロンプト術](docs/ideas/idea-20260514-android-gemini-intelligence.md) - *新規追加*
+    *   [2026-05-15: 【中級者向け】OpenAIの次世代開発環境『Codex Mobile』で「どこでもAI開発」を実現する活用ガイド](docs/ideas/idea-20260515-openai-codex-mobile.md) - *新規追加*
+    *   [2026-05-16: 【中級者向け】Perplexity Proで「プロ級の調査」を自動化！AIリサーチの最前線活用ガイド](docs/ideas/idea-20260516-perplexity-pro-advanced.md) - *新規追加*
+    *   [2026-05-17: 【中級者向け】Gemini 2 Proで「マルチモーダルAI」を使いこなす！画像・動画・音声も理解するプロンプト術](docs/ideas/idea-20260517-gemini-2-pro-multimodal.md) - *新規追加*
+    *   [2026-05-19: 【中級者向け】OpenAIが放つ「究極のAIオペレーター」！『Operator』で業務プロセスを完全自動化する活用ガイド](docs/ideas/idea-20260519-openai-operator.md) - *新規追加*
+    *   [2026-05-26: 【初心者向け】Google検索が「AIエージェント」に進化！『Search Agent』で欲しい情報を自動で集めるプロンプト術](docs/ideas/idea-20260526-google-search-agent.md) - *新規追加*
+    *   [2026-05-28: 【中級者向け】マルチモーダル検索の衝撃！AIが「画像」も「動画」も理解する『Multimodal Search Agent』活用ガイド](docs/ideas/idea-20260528-multimodal-search-agent.md) - *新規追加*
+    *   [2026-05-30: 【中級者向け】Claude 4 Previewで「未来のAI」を体験！最新モデルの機能と活用ガイド](docs/ideas/idea-20260530-claude-4-preview-guide.md) - *新規追加*
+    *   [2026-05-31: 【中級者向け】Claude Mythosで「AIの安全性」を確保！企業が知るべきセキュリティ対策と活用ガイド](docs/ideas/idea-20260531-claude-mythos-security.md) - *新規追加*
+    *   [2026-06-03: 【中級者向け】トランプ大統領の「AIに関する大統領令」とは？企業が知るべきAI規制の動向と対策](docs/ideas/idea-20260603-trump-ai-executive-order.md) - *新規追加*
+    *   [2026-06-04: 【初心者向け】Gemma 4で「あなたのPC」がAIに進化！ローカルAIの導入と活用ガイド](docs/ideas/idea-20260604-gemma-4-laptop-guide.md) - *新規追加*
+    *   [2026-06-05: 【初心者向け】ChatGPTが「あなたの健康」を守る！AIヘルスケアの最新活用術](docs/ideas/idea-20260605-chatgpt-health-beginner.md) - *新規追加*
+    *   [2026-06-06: 【初心者向け】AIが「あなたの動画」を自動生成！Google Vidsで手軽にプロ級動画を作るプロンプト術](docs/ideas/idea-20260606-google-vids-free-beginner.md) - *新規追加*
+    *   [2026-06-07: 【中級者向け】GitHub Copilot CLIで「コマンド入力」を自動化！開発効率を爆速にする活用ガイド](docs/ideas/idea-20260607-github-copilot-cli-migration.md) - *新規追加*
+    *   [2026-06-10: 【初心者向け】Microsoft Scoutで「AIが自動で情報収集」！最新AI検索の活用術](docs/ideas/idea-20260610-microsoft-scout-beginner.md) - *新規追加*
+    *   [2026-06-13: 【中級者向け】Claude Fable 5で「AIエージェント」を構築！自律型AIの設計と活用ガイド](docs/ideas/idea-20260613-claude-fable-5-build.md) - *新規追加*
+    *   [2026-06-14: 【中級者向け】ChatGPT Dreaming v3で「AIが夢を見る」！創造性を引き出すプロンプト術](docs/ideas/idea-20260614-chatgpt-dreaming-v3.md) - *新規追加*
+    *   [2026-06-14: 【中級者向け】Gemini Workspace Extensionsで「Google Workspace」をAI強化！業務効率を最大化する活用ガイド](docs/ideas/idea-20260614-gemini-workspace-extensions.md) - *新規追加*
+    *   [2026-06-15: 【初心者向け】Claude Fable 5で「AIと会話」！最新AIの活用術](docs/ideas/idea-20260615-claude-fable-5-beginner.md) - *新規追加*
+    *   [2026-06-15: 【初心者向け】Google検索ボックスが「AI」に進化！『Google Search Box』活用プロンプト術](docs/ideas/idea-20260615-google-search-box-beginner.md) - *新規追加*
+    *   [2026-06-18: 【中級者向け】Apple Intelligenceで「AIが家族を守る」！ペアレンタルコントロールとプライバシー保護](docs/ideas/idea-20260618-apple-intelligence-parental-control.md) - *新規追加*
+    *   [2026-06-18: 【中級者向け】Siri AIが「画面を理解」！『Onscreen Awareness』でiPhoneが賢くなるプロンプト術](docs/ideas/idea-20260618-siri-ai-onscreen-awareness.md) - *新規追加*
+    *   [2026-06-20: 【初心者向け】AIが「あなたの動画」を自動生成！Google Vidsで手軽にプロ級動画を作るプロンプト術](docs/ideas/idea-20260620-ai-exporter-beginner.md) - *新規追加*
+    *   [2026-06-20: 【初心者向け】AIが「あなたの買い物」を代行！『AI Shopping』で賢くお得に買い物するプロンプト術](docs/ideas/idea-20260620-ai-shopping-beginner.md) - *新規追加*
+    *   [2026-06-21: 【中級者向け】Claude Mythosで「AIリスク」を管理！企業が知るべきリスクマネジメントと活用ガイド](docs/ideas/idea-20260621-claude-mythos-risk-management.md) - *新規追加*
+    *   [2026-06-21: 【中級者向け】SiriとGeminiが「連携」！『Siri Gemini Orchestration』でiPhoneがさらに賢くなるプロンプト術](docs/ideas/idea-20260621-siri-gemini-orchestration.md) - *新規追加*
+    *   [2026-06-22: 【初心者向け】Google検索が「AIエージェント」に進化！『Search Agent』で欲しい情報を自動で集めるプロンプト術](docs/ideas/idea-20260622-google-search-agents.md) - *新規追加*
+    *   [2026-06-23: 【初心者向け】iPhoneの「ショートカット」が魔法の杖に！自然言語で自動化プロンプト術](docs/ideas/idea-20260623-apple-shortcuts-natural-language.md) - *新規追加*
+    *   [2026-06-23: 【初心者向け】「ググる」が「買い物代行」に！Google新検索ボックスと『Universal Cart』活用プロンプト術](docs/ideas/idea-20260623-google-universal-cart-shopping.md) - *新規追加*
+    *   [2026-06-24: 【中級者向け】Copilot Workspaceで「AIと共同作業」！プロジェクト管理を効率化する活用ガイド](docs/ideas/idea-20260624-copilot-workspace-input-guide.md) - *新規追加*
+    *   [2026-06-24: 【中級者向け】Siri AIが「画面を理解」！『Onscreen Awareness』でiPhoneが賢くなるプロンプト術](docs/ideas/idea-20260624-siri-ai-onscreen-awareness-guide.md) - *新規追加*
+    *   [2026-06-25: 【初心者向け】Gemini Omniで「マルチメディアAI」を使いこなす！画像・動画・音声も理解するプロンプト術](docs/ideas/idea-20260625-gemini-omni-multimedia.md) - *新規追加*
+    *   [2026-06-25: 【中級者向け】OpenAI Enterpriseで「AI支出」を管理！企業が知るべきコストコントロールと活用ガイド](docs/ideas/idea-20260625-openai-enterprise-spend-controls.md) - *新規追加*
+    *   [2026-06-25: 【初心者向け】言葉が「動くマニュアル」に変身！Google検索の新機能『ジェネレーティブUI』活用プロンプト術](docs/ideas/idea-20260625-google-generative-ui-simulations.md) - [記事作成済み](src/articles/website-component-format/app/articles/google-generative-ui-simulations/page.tsx)
+    *   [2026-06-25: 【初心者向け】「あの時の写真」も「あのメール」もAIが即発見！Siri AIの『自分専用検索』プロンプト術](docs/ideas/idea-20260625-siri-ai-personal-context-search.md) - *新規追加*
+    *   [2026-06-26: 【中級者向け】AIが自律的にタスクを完遂！次世代AIエージェント『Manus』活用ガイド](docs/ideas/idea-20260626-manus-ai-agent-guide.md) - [記事作成済み](src/articles/website-component-format/app/articles/manus-ai-agent-guide/page.tsx)
+    *   [2026-06-27: 【中級者向け】GMO Whisperで「音声AI」を導入！音声認識・合成の活用ガイド](docs/ideas/idea-20260627-gmo-whisper-voice-ai.md) - *新規追加*
+    *   [2026-06-27: 【初心者向け】Google AI Modeで「AIが自動で最適化」！最新AI検索の活用術](docs/ideas/idea-20260627-google-ai-mode-beginner.md) - *新規追加*
+    *   [2026-06-27: 【中級者向け】GPT-5.6 Solで「AIが自律的に問題解決」！最新AIの活用ガイド](docs/ideas/idea-20260627-gpt5-6-sol-beginner.md) - *新規追加*
+    *   [2026-06-27: 【中級者向け】MCP連携で「AIが外部サービスと連携」！API連携の活用ガイド](docs/ideas/idea-20260627-mcp-integration-guide.md) - *新規追加*
+    *   [2026-06-28: 【初心者向け】Copilot Coworkで「AIと共同作業」！プロジェクト管理を効率化する活用ガイド](docs/ideas/idea-20260628-copilot-cowork-beginner.md) - *新規追加*
+    *   [2026-06-30: 【中級者向け】AI自律エージェントの未来！「AIが自分で考えて動く」時代の活用ガイド](docs/ideas/idea-20260630-ai-autonomous-agents-future.md) - *新規追加*
+    *   [2026-07-01: 【中級者向け】GPT-5.6 Sol Enterpriseで「AIが企業を動かす」！最新AIの導入と活用ガイド](docs/ideas/idea-20260701-gpt5-6-sol-enterprise-guide.md) - *新規追加*
+    *   [2026-07-02: 【初心者向け】Copilot Visual Cardsで「AIが情報を整理」！視覚的に分かりやすいAI活用術](docs/ideas/idea-20260702-copilot-visual-cards.md) - *新規追加*
+    *   [2026-07-02: 【初心者向け】Gemini Guided Learningで「AIが学習をサポート」！個別最適化された学習体験](docs/ideas/idea-20260702-gemini-guided-learning.md) - *新規追加*
+    *   [2026-07-03: 【中級者向け】Claude Tag Slackで「AIがチームを支援」！Slack連携の活用ガイド](docs/ideas/idea-20260703-claude-tag-slack-beginner.md) - *新規追加*
+    *   [2026-07-03: 【中級者向け】Googleが放つ究極の自動化！『Gemini Enterprise Agent Platform』導入・活用ガイド](docs/ideas/idea-20260703-gemini-enterprise-agent.md) - *新規追加*
+    *   [2026-07-03: 【初心者向け】Microsoft MAI Imageで「AIが画像を生成」！手軽にプロ級画像を作るプロンプト術](docs/ideas/idea-20260703-microsoft-mai-image-beginner.md) - *新規追加*
+    *   [2026-07-08: 【初心者向け】Copilot Visionで「AIが画像を見る」！画像認識の活用術](docs/ideas/idea-20260708-copilot-vision-beginner.md) - *新規追加*
+    *   [2026-07-08: 【初心者向け】GPT-5.6 Lunaで「AIが文章を生成」！最新AIの活用術](docs/ideas/idea-20260708-gpt-5-6-luna-beginner.md) - *新規追加*
+    *   [2026-07-09: 【初心者向け】Google検索ダッシュボードで「AIが情報を整理」！視覚的に分かりやすいAI活用術](docs/ideas/idea-20260709-google-search-dashboard-beginner.md) - *新規追加*
+    *   [2026-07-09: 【初心者向け】Perplexity Computerで「AIがPCを操作」！自動化の活用術](docs/ideas/idea-20260709-perplexity-computer-beginner.md) - *新規追加*
+    *   [2026-07-10: 【初心者向け】AIが「じっくり考えて」から答えてくれる！Copilotの『Think Deeper』で失敗しない相談術](docs/ideas/idea-20260710-copilot-think-deeper-beginner.md) - *新規追加*
+    *   [2026-07-10: 【初心者向け】「ググる」の終焉？Geminiの新機能『Deep Research』でプロ級 of 調査レポートを自動生成するプロンプト術](docs/ideas/idea-20260710-gemini-deep-research-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-deep-research-beginner/page.tsx)
+    *   [2026-07-11: 【中級者向け】1枚の写真から販促セットを自動生成！最新AI「GPT-5.6 Sol」によるマルチステップ・クリエイティブ活用ガイド](docs/ideas/idea-20260711-gpt56-sol-multistep-creative.md) - [記事作成済み](src/articles/website-component-format/app/articles/gpt56-sol-multistep-creative/page.tsx)
+    *   [2026-07-11: 【中級者向け】Instagramの新AI「Muse Image」で実現する超パーソナライズ広告制作と、企業が守るべきプライバシーガバナンス](docs/ideas/idea-20260711-instagram-muse-image-governance.md) - *新規追加*
+    *   [2026-07-12: 【中級者向け】AI業界に激震！Apple対OpenAIの提訴と、家庭へ浸震するChatGPT最新活用ガイド](docs/ideas/idea-20260712-apple-openai-lawsuit-chatgpt-home.md) - *新規追加*
+    *   [2026-07-14: 【初心者向け】AIが「あなたのデスク」で仕事する！ChatGPT Workで事務作業を完結させるプロンプト術](docs/ideas/idea-20260714-chatgpt-work-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/chatgpt-work-beginner/page.tsx)
+    *   [2026-07-14: 【初心者向け】スマホが「同時通訳者」に！Gemini 3.5 Live Translateで言葉の壁をなくすプロンプト術](docs/ideas/idea-20260714-gemini-live-translate-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-live-translate-beginner/page.page.tsx)
+    *   [2026-07-15: 【初心者向け】もう「プロンプト」で悩まない！最新AIの『プロンプト自動生成』で100点の回答を引き出す術](docs/ideas/idea-20260715-ai-prompt-generator-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/ai-prompt-generator-beginner-new/page.tsx)
+    *   [2026-07-15: 【初心者向け】スマホで「写真を選ぶだけ」！ソフトバンクの『だれでもAI』で始める魔法の画像・音楽生成術](docs/ideas/idea-20260715-softbank-daredemo-ai-smartphone.md) - *新規追加*
+    *   [2026-07-18: 【中級者向け】AI「価格戦争」勃発！Meta vs OpenAIの最新モデルを使い分け、エージェント実行コストを最小化する導入ガイド](docs/ideas/idea-20260718-ai-price-war-agent-optimization.md) - *新規追加*
+    *   [2026-07-18: 【中級者向け】NotebookLMが『Gemini Notebook』へ進化！大量の資料を「脳内同期」させる次世代AIノート術・導入ガイド](docs/ideas/idea-20260718-gemini-notebook-advanced-usage.md) - *新規追加*
