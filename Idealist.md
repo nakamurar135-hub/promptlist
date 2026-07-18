@@ -28,6 +28,7 @@
 
 *   [セット1 (001-020)](docs/ideas/set-1.md) - *未作成*
 *   [最新の個別ネタ](docs/ideas/)
+        *   [2026-07-18: 【中級者向け】Manusを「外部ツール」と連携させて最強の自動化環境を構築するプロンプト術](docs/ideas/idea-20260718-manus-external-integration.md) - [記事作成済み](src/articles/website-component-format/app/articles/manus-external-integration/page.tsx)
         *   [2026-07-09: 【初心者向け】2026年の新常識！AIエージェント「Manus」で日常の面倒なタスクを自動化するプロンプト術](docs/ideas/idea-20260709-manus-ai-agent-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/manus-ai-agent-beginner/page.tsx)
 *   [2026-04-04: プロンプトは「書く」から「話す」へ！ChatGPT「高度な音声モード」活用術](docs/ideas/idea-20260404-chatgpt-voice-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/chatgpt-voice-beginner/page.tsx)
     *   [2026-04-04: ググるより速い！ChatGPTの「検索機能（Search）」で最新情報を引き出すプロンプト術](docs/ideas/idea-20260404-chatgpt-search-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/chatgpt-search-beginner/page.tsx)
