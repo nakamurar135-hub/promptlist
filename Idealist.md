@@ -163,7 +163,7 @@
     *   [2026-07-11: 【中級者向け】Instagramの新AI「Muse Image」で実現する超パーソナライズ広告制作と、企業が守るべきプライバシーガバナンス](docs/ideas/idea-20260711-instagram-muse-image-governance.md) - *新規追加*
     *   [2026-07-12: 【中級者向け】AI業界に激震！Apple対OpenAIの提訴と、家庭へ浸震するChatGPT最新活用ガイド](docs/ideas/idea-20260712-apple-openai-lawsuit-chatgpt-home.md) - *新規追加*
     *   [2026-07-14: 【初心者向け】AIが「あなたのデスク」で仕事する！ChatGPT Workで事務作業を完結させるプロンプト術](docs/ideas/idea-20260714-chatgpt-work-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/chatgpt-work-beginner/page.tsx)
-    *   [2026-07-14: 【初心者向け】スマホが「同時通訳者」に！Gemini 3.5 Live Translateで言葉の壁をなくすプロンプト術](docs/ideas/idea-20260714-gemini-live-translate-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-live-translate-beginner/page.page.tsx)
+    *   [2026-07-14: 【初心者向け】スマホが「同時通訳者」に！Gemini 3.5 Live Translateで言葉の壁をなくすプロンプト術](docs/ideas/idea-20260714-gemini-live-translate-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-live-translate-beginner/page.tsx)
     *   [2026-07-15: 【初心者向け】もう「プロンプト」で悩まない！最新AIの『プロンプト自動生成』で100点の回答を引き出す術](docs/ideas/idea-20260715-ai-prompt-generator-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/ai-prompt-generator-beginner-new/page.tsx)
     *   [2026-07-15: 【初心者向け】スマホで「写真を選ぶだけ」！ソフトバンクの『だれでもAI』で始める魔法の画像・音楽生成術](docs/ideas/idea-20260715-softbank-daredemo-ai-smartphone.md) - *新規追加*
     *   [2026-07-18: 【中級者向け】AI「価格戦争」勃発！Meta vs OpenAIの最新モデルを使い分け、エージェント実行コストを最小化する導入ガイド](docs/ideas/idea-20260718-ai-price-war-agent-optimization.md) - *新規追加*
