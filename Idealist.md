@@ -29,6 +29,8 @@
 * [2026-07-14: 【初心者向け】スマホが「同時通訳者」に！Gemini 3.5 Live Translateで言葉の壁をなくすプロンプト術](docs/ideas/idea-20260714-gemini-live-translate-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-live-translate-beginner/page.tsx)
 *   [2026-07-18: 【中級者向け】AI「価格戦争」勃発！Meta vs OpenAIの最新モデルを使い分け、エージェント実行コストを最小化する導入ガイド](docs/ideas/idea-20260718-ai-price-war-agent-optimization.md) - *新規追加*
 *   [2026-07-18: 【中級者向け】NotebookLMが『Gemini Notebook』へ進化！大量の資料を「脳内同期」させる次世代AIノート術・導入ガイド](docs/ideas/idea-20260718-gemini-notebook-advanced-usage.md) - *新規追加*
+*   [2026-07-19: 【初心者向け】AIと「おしゃべり」して悩みを解決！最新音声モード『GPT-Live』活用プロンプト術](docs/ideas/idea-20260719-gpt-live-beginner-guide.md) - *新規追加*
+*   [2026-07-19: 【初心者向け】AIが「現実世界」の困りごとを解決！最新トレンド『フィジカルAI』超入門](docs/ideas/idea-20260719-physical-ai-beginner-guide.md) - *新規追加*
 *   [2026-07-12: 【中級者向け】AI業界に激震！Apple対OpenAIの提訴と、家庭へ浸震するChatGPT最新活用ガイド](docs/ideas/idea-20260712-apple-openai-lawsuit-chatgpt-home.md) - *新規追加*
 *   [2026-07-11: 【中級者向け】1枚の写真から販促セットを自動生成！最新AI「GPT-5.6 Sol」によるマルチステップ・クリエイティブ活用ガイド](docs/ideas/idea-20260711-gpt56-sol-multistep-creative.md) - [記事作成済み](src/articles/website-component-format/app/articles/gpt56-sol-multistep-creative/page.tsx)
 *   [2026-07-11: 【中級者向け】Instagramの新AI「Muse Image」で実現する超パーソナライズ広告制作と、企業が守るべきプライバシーガバナンス](docs/ideas/idea-20260711-instagram-muse-image-governance.md) - *新規追加*
