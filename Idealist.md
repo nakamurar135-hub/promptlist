@@ -35,6 +35,8 @@
 *   [2026-07-11: 【中級者向け】1枚の写真から販促セットを自動生成！最新AI「GPT-5.6 Sol」によるマルチステップ・クリエイティブ活用ガイド](docs/ideas/idea-20260711-gpt56-sol-multistep-creative.md) - [記事作成済み](src/articles/website-component-format/app/articles/gpt56-sol-multistep-creative/page.tsx)
 *   [2026-07-11: 【中級者向け】Instagramの新AI「Muse Image」で実現する超パーソナライズ広告制作と、企業が守るべきプライバシーガバナンス](docs/ideas/idea-20260711-instagram-muse-image-governance.md) - *新規追加*
 *   [2026-05-22: 【中級者向け】AIが自律的にタスクを完遂！次世代AIエージェント『Manus』活用ガイド](docs/ideas/idea-20260522-manus-autonomous-agent.md) - [記事作成済み](src/articles/website-component-format/app/articles/manus-autonomous-agent/page.tsx)
+*   [2026-07-20: 【初心者向け】AIが「家計の味方」に！新Google Financeの『Key Moments』で投資ニュースを3秒で理解するプロンプト術](docs/ideas/idea-20260720-google-finance-ai-beginner.md) - *新規追加*
+*   [2026-07-20: 【初心者向け】AIが「自分専用の家庭教師」に！Gemini『Study Notebooks』で苦手分野をゼロにするプロンプト術](docs/ideas/idea-20260720-gemini-study-notebooks-beginner.md) - *新規追加*
 
 *   [セット1 (001-020)](docs/ideas/set-1.md) - *未作成*
 *   [2026-06-26: 【中級者向け】AIが自律的にタスクを完遂！次世代AIエージェント『Manus』活用ガイド](docs/ideas/idea-20260626-manus-ai-agent-guide.md) - [記事作成済み](src/articles/website-component-format/app/articles/manus-ai-agent-guide/page.tsx)
@@ -86,7 +88,9 @@
     *   [2026-04-21: 【初心者向け】Gemini「パーソナル インテリジェンス」で自分専用のAIアシスタントを作る](docs/ideas/idea-20260421-gemini-personal-intelligence.md) - *新規追加*
     *   [2026-04-21: 【初心者向け】Copilotで「会議の動画」を自動で短縮！要点だけを見る「動画要約」術](docs/ideas/idea-20260421-copilot-meeting-video-summary.md) - *新規追加*
     *   [2026-04-25: 【中級者向け】AIが勝手に仕事を終わらせる？GPT-5.5の『自律実行モード』活用プロンプト術](docs/ideas/idea-20260425-gpt5-5-autonomous-tasks.md) - *新規追加*
-    *   [2026-04-26: 【初心者向け】プレゼン資料の「わからない」を即解決！PowerPointの新機能『Explainer』活用プロンプト術](docs/ideas/idea-20260426-powerpoint-explainer.md) - [記事作成済み](src/articles/website-component-format/app/articles/powerpoint-explainer/page.tsx)
+    *   [2026-07-20: 【初心者向け】AIが「家計の味方」に！新Google Financeの『Key Moments』で投資ニュースを3秒で理解するプロンプト術](docs/ideas/idea-20260720-google-finance-ai-beginner.md) - *新規追加*
+*   [2026-07-20: 【初心者向け】AIが「自分専用の家庭教師」に！Gemini『Study Notebooks』で苦手分野をゼロにするプロンプト術](docs/ideas/idea-20260720-gemini-study-notebooks-beginner.md) - *新規追加*
+*   [2026-04-26: 【初心者向け】プレゼン資料の「わからない」を即解決！PowerPointの新機能『Explainer』活用プロンプト術](docs/ideas/idea-20260426-powerpoint-explainer.md) - [記事作成済み](src/articles/website-component-format/app/articles/powerpoint-explainer/page.tsx)
     *   [2026-04-26: 【初心者向け】登録不要・プロンプト不要？ソフトバンクの『だれでもAI』で始める「頑張らない」AI活用術](docs/ideas/idea-20260426-softbank-darede-ai.md) - *新規追加*
     *   [2026-04-28: 【初心者向け】Copilotがさらに進化！最新AI「GPT-5.5 Thinking」と「ChatGPT Images 2.0」で変わる相談・画像生成術](docs/ideas/idea-20260428-copilot-gpt55-images2.md) - [記事作成済み](src/articles/website-component-format/app/articles/copilot-gpt55-images2/page.tsx)
     *   [2026-04-28: 【初心者向け】Google ドライブが賢くなった！新機能『AI概要（AI Overviews）』で大量のファイルから答えを即座に見つけるプロンプト術](docs/ideas/idea-20260428-google-drive-ai-overview.md) - *新規追加*
