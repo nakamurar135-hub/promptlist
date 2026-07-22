@@ -25,6 +25,8 @@
     ```
 
 ## ネタ一覧（インデックス）
+*   [2026-07-22: 【初心者向け】いつものWord・Excelが勝手に進化！Copilotの新頭脳「GPT-5.6」活用プロンプト術](docs/ideas/idea-20260722-copilot-gpt56-beginner.md) - *新規追加*
+*   [2026-07-22: 【初心者向け】AIが「部下」のように動く！新機能『ChatGPT Work』で面倒な事務作業を自動化するプロンプト術](docs/ideas/idea-20260722-chatgpt-work-beginner.md) - *新規追加*
 *   [2026-07-21: 【中級者向け】Karpathy流「AI外部脳」を最速構築！Claude Codeで自分専用のナレッジWikiを自動生成する導入ガイド](docs/ideas/idea-20260721-karpathy-ai-brain-claude-code.md) - [記事作成済み](src/articles/website-component-format/app/articles/karpathy-ai-brain-claude-code/page.tsx)
 *   [2026-07-21: 【中級者向け】業務自動化の極致へ！Power Platformと最新AIエージェントを連携させ、Dataverseを自律操作する導入ガイド](docs/ideas/idea-20260721-power-platform-ai-agent-integration.md) - [記事作成済み](src/articles/website-component-format/app/articles/power-platform-ai-agent-integration/page.tsx)
 * [2026-07-14: 【初心者向け】AIが「あなたのデスク」で仕事する！ChatGPT Workで事務作業を完結させるプロンプト術](docs/ideas/idea-20260714-chatgpt-work-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/chatgpt-work-beginner/page.tsx)
