@@ -37,6 +37,8 @@
 *   [2026-07-11: 【中級者向け】1枚の写真から販促セットを自動生成！最新AI「GPT-5.6 Sol」によるマルチステップ・クリエイティブ活用ガイド](docs/ideas/idea-20260711-gpt56-sol-multistep-creative.md) - [記事作成済み](src/articles/website-component-format/app/articles/gpt56-sol-multistep-creative/page.tsx)
 *   [2026-07-11: 【中級者向け】Instagramの新AI「Muse Image」で実現する超パーソナライズ広告制作と、企業が守るべきプライバシーガバナンス](docs/ideas/idea-20260711-instagram-muse-image-governance.md) - *新規追加*
 *   [2026-05-22: 【中級者向け】AIが自律的にタスクを完遂！次世代AIエージェント『Manus』活用ガイド](docs/ideas/idea-20260522-manus-autonomous-agent.md) - [記事作成済み](src/articles/website-component-format/app/articles/manus-autonomous-agent/page.tsx)
+*   [2026-07-23: 【初心者向け】AIの「得意不得意」を使い分け！Copilotの新機能でClaudeとGPTを切り替えるプロンプト術](docs/ideas/idea-20260723-copilot-claude-integration.md) - *新規追加*
+*   [2026-07-23: 【初心者向け】ExcelやWordが勝手に動く？最新AI「GPT-5.6」搭載のCopilotで事務作業を自動化するプロンプト術](docs/ideas/idea-20260723-gpt56-copilot-office-automation.md) - *新規追加*
 
 *   [セット1 (001-020)](docs/ideas/set-1.md) - *未作成*
 *   [2026-06-26: 【中級者向け】AIが自律的にタスクを完遂！次世代AIエージェント『Manus』活用ガイド](docs/ideas/idea-20260626-manus-ai-agent-guide.md) - [記事作成済み](src/articles/website-component-format/app/articles/manus-ai-agent-guide/page.tsx)
