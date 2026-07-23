@@ -26,6 +26,8 @@
 
 ## ネタ一覧（インデックス）
 *   [2026-07-21: 【中級者向け】Karpathy流「AI外部脳」を最速構築！Claude Codeで自分専用のナレッジWikiを自動生成する導入ガイド](docs/ideas/idea-20260721-karpathy-ai-brain-claude-code.md) - [記事作成済み](src/articles/website-component-format/app/articles/karpathy-ai-brain-claude-code/page.tsx)
+*   [2026-07-23: 【中級者向け】IDEの知能をAIに開放！Rider 2026.2の「Agent Skills」で実現する超高精度コーディング導入ガイド](docs/ideas/idea-20260723-rider-ai-agent-intelligence.md) - *新規追加*
+*   [2026-07-23: 【中級者向け】300人のAI部下を同時指揮！最新ツール「Kimi Work」で実現する大規模マルチエージェント運用ガイド](docs/ideas/idea-20260723-kimi-work-multi-agent-deployment.md) - *新規追加*
 *   [2026-07-21: 【中級者向け】業務自動化の極致へ！Power Platformと最新AIエージェントを連携させ、Dataverseを自律操作する導入ガイド](docs/ideas/idea-20260721-power-platform-ai-agent-integration.md) - [記事作成済み](src/articles/website-component-format/app/articles/power-platform-ai-agent-integration/page.tsx)
 * [2026-07-14: 【初心者向け】AIが「あなたのデスク」で仕事する！ChatGPT Workで事務作業を完結させるプロンプト術](docs/ideas/idea-20260714-chatgpt-work-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/chatgpt-work-beginner/page.tsx)
 * [2026-07-14: 【初心者向け】スマホが「同時通訳者」に！Gemini 3.5 Live Translateで言葉の壁をなくすプロンプト術](docs/ideas/idea-20260714-gemini-live-translate-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-live-translate-beginner/page.tsx)
