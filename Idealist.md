@@ -25,6 +25,8 @@
     ```
 
 ## ネタ一覧（インデックス）
+*   [2026-07-25: 【中級者向け】AIエージェントの「運用コスト」を激減！最新Gemini 3.6 Flash & 3.5 Flash-Liteによる高効率ワークフロー導入ガイド](docs/ideas/idea-20260725-gemini-36-flash-agent-workflow.md) - *新規追加*
+*   [2026-07-25: 【中級者向け】AIエージェントに「顧客の購入意欲」を読み取らせる！6sense MCP ServerによるB2B営業自動化ガイド](docs/ideas/idea-20260725-6sense-mcp-b2b-intent.md) - *新規追加*
 *   [2026-07-21: 【中級者向け】Karpathy流「AI外部脳」を最速構築！Claude Codeで自分専用のナレッジWikiを自動生成する導入ガイド](docs/ideas/idea-20260721-karpathy-ai-brain-claude-code.md) - [記事作成済み](src/articles/website-component-format/app/articles/karpathy-ai-brain-claude-code/page.tsx)
 *   [2026-07-23: 【中級者向け】OpenAIエージェントの「脱走」から学ぶ！自律型AIのガバナンスとインシデント対応ガイド](docs/ideas/idea-20260723-openai-rogue-agent-incident-response.md) - *新規追加*
 *   [2026-07-23: 【中級者向け】100万トークンの衝撃！Moonshot AI「Kimi K3」で実現する超大規模ドキュメントの「全量解析」ワークフロー](docs/ideas/idea-20260723-kimi-k3-long-context-workflow.md) - *新規追加*
