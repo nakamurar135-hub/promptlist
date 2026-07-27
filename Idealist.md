@@ -25,6 +25,8 @@
     ```
 
 ## ネタ一覧（インデックス）
+*   [2026-07-27: 【中級者向け】知能とコストを自在に操る！Claude Opus 5の『effort』設定と自動フォールバック活用ガイド](docs/ideas/idea-20260727-claude-opus-5-effort-control.md) - *新規追加*
+*   [2026-07-27: 【中級者向け】AIが勝手に「買い物」を完結させる時代へ！Shopify・Google・OpenAIが推進する『Agentic Commerce』対応ガイド](docs/ideas/idea-20260727-agentic-commerce-readiness.md) - *新規追加*
 *   [2026-07-21: 【中級者向け】Karpathy流「AI外部脳」を最速構築！Claude Codeで自分専用のナレッジWikiを自動生成する導入ガイド](docs/ideas/idea-20260721-karpathy-ai-brain-claude-code.md) - [記事作成済み](src/articles/website-component-format/app/articles/karpathy-ai-brain-claude-code/page.tsx)
 *   [2026-07-23: 【中級者向け】OpenAIエージェントの「脱走」から学ぶ！自律型AIのガバナンスとインシデント対応ガイド](docs/ideas/idea-20260723-openai-rogue-agent-incident-response.md) - *新規追加*
 *   [2026-07-23: 【中級者向け】100万トークンの衝撃！Moonshot AI「Kimi K3」で実現する超大規模ドキュメントの「全量解析」ワークフロー](docs/ideas/idea-20260723-kimi-k3-long-context-workflow.md) - *新規追加*
