@@ -28,6 +28,8 @@
 *   [2026-07-21: 【中級者向け】Karpathy流「AI外部脳」を最速構築！Claude Codeで自分専用のナレッジWikiを自動生成する導入ガイド](docs/ideas/idea-20260721-karpathy-ai-brain-claude-code.md) - [記事作成済み](src/articles/website-component-format/app/articles/karpathy-ai-brain-claude-code/page.tsx)
 *   [2026-07-23: 【中級者向け】OpenAIエージェントの「脱走」から学ぶ！自律型AIのガバナンスとインシデント対応ガイド](docs/ideas/idea-20260723-openai-rogue-agent-incident-response.md) - *新規追加*
 *   [2026-07-23: 【中級者向け】100万トークンの衝撃！Moonshot AI「Kimi K3」で実現する超大規模ドキュメントの「全量解析」ワークフロー](docs/ideas/idea-20260723-kimi-k3-long-context-workflow.md) - *新規追加*
+*   [2026-07-24: 【中級者向け】コストか精度か？Claude Opus 5の「Dynamic Effort」でエージェント実行を最適化する導入ガイド](docs/ideas/idea-20260724-claude-opus-5-dynamic-effort.md) - *新規追加*
+*   [2026-07-25: 【中級者向け】1文でメディアパイプラインを自動構築！ElevenLabs「Flows Agent」による次世代動画制作ワークフロー](docs/ideas/idea-20260725-elevenlabs-flows-agent-workflow.md) - *新規追加*
 *   [2026-07-21: 【中級者向け】業務自動化の極致へ！Power Platformと最新AIエージェントを連携させ、Dataverseを自律操作する導入ガイド](docs/ideas/idea-20260721-power-platform-ai-agent-integration.md) - [記事作成済み](src/articles/website-component-format/app/articles/power-platform-ai-agent-integration/page.tsx)
 * [2026-07-14: 【初心者向け】AIが「あなたのデスク」で仕事する！ChatGPT Workで事務作業を完結させるプロンプト術](docs/ideas/idea-20260714-chatgpt-work-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/chatgpt-work-beginner/page.tsx)
 * [2026-07-14: 【初心者向け】スマホが「同時通訳者」に！Gemini 3.5 Live Translateで言葉の壁をなくすプロンプト術](docs/ideas/idea-20260714-gemini-live-translate-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/gemini-live-translate-beginner/page.tsx)
