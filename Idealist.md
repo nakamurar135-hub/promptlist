@@ -74,6 +74,8 @@
     *   [2026-03-26: Claude Code「Auto Mode」活用術](docs/ideas/idea-20260326-claude-auto-mode.md) - [記事作成済み](articles/claude-auto-mode-guide.md)
     *   [2026-04-08: 【初心者向け】「あのサイト、何だっけ？」をAIが解決！Chromeの『AI履歴検索』活用プロンプト術](docs/ideas/idea-20260408-chrome-ai-history-search.md) - [記事作成済み](src/articles/website-component-format/app/articles/chrome-ai-history-search/page.tsx)
     *   [2026-04-08: 【初心者向け】メールもSNSも「右クリック」で完成！Edgeの『AI書き換え』プロンプト術](docs/ideas/idea-20260408-edge-ai-rewrite.md) - [記事作成済み](src/articles/website-component-format/app/articles/edge-ai-rewrite/page.tsx)
+    *   [2026-05-21: 【初心者向け】プロンプトはもう「書かない」！Googleの新機能『AI Pointer』活用ガイド](docs/ideas/idea-20260521-google-ai-pointer-beginner.md) - *新規追加*
+    *   [2026-05-21: 【初心者向け】もう迷わない！ChatGPT GPT-5.5の『Auto（自動）モード』活用プロンプト術](docs/ideas/idea-20260521-chatgpt-gpt55-auto-mode-beginner.md) - *新規追加*
     *   [2026-04-09: 【初心者向け】検索は「ググる」から「聞く」へ！Yahooの新機能『Yahoo Scout』活用プロンプト術](docs/ideas/idea-20260409-yahoo-scout-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/yahoo-scout-beginner/page.tsx)
     *   [2026-04-09: 【初心者向け】iPhoneのSiriが賢くなった！Google Gemini搭載で「頼み事」が通じるプロンプト術](docs/ideas/idea-20260409-siri-gemini-beginner.md) - [記事作成済み](src/articles/website-component-format/app/articles/siri-gemini-beginner/page.tsx)
     *   [2026-04-12: 【中級者向け】AIエージェントで業務を自動化！「自律型ワークフロー」構築プロンプト術](docs/ideas/idea-20260412-ai-agent-workflow.md) - [記事作成済み](src/articles/website-component-format/app/articles/ai-agent-workflow/page.tsx)
